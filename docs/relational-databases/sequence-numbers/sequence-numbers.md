@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d29cae171cad8f0da3c53a708112167a0a17f749
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463064"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88490464"
   
  행을 삽입하면 생성되는 ID 열 값과는 달리 애플리케이션에서는 [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) 함수를 호출하여 행을 삽입하기 전에 다음 시퀀스 번호를 가져올 수 있습니다. NEXT VALUE FOR가 호출되면 테이블에 삽입되지 않더라도 시퀀스 번호가 할당됩니다. 테이블 정의에서 행의 기본값으로 NEXT VALUE FOR 함수를 사용할 수 있습니다. 일정 범위의 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
- 시퀀스는 임의의 정수 데이터 형식으로 정의할 수 있습니다. 데이터 형식을 지정하지 않으면 시퀀스의 기본값은 **bigint**가 됩니다.  
+ 시퀀스는 임의의 정수 데이터 형식으로 정의할 수 있습니다. 데이터 형식을 지정하지 않으면 시퀀스의 기본값은 **bigint** 가 됩니다.  
   
 ## <a name="using-sequences"></a>시퀀스 사용  
  다음 시나리오에서는 ID 열 대신 시퀀스를 사용하십시오.  

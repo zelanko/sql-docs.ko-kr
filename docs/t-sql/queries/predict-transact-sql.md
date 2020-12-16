@@ -18,13 +18,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest'
+ms.openlocfilehash: 83205b4a11be46888f8c7da8f29c84494d012740
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460856"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "96523052"
 
 ## <a name="syntax"></a>구문
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```syntaxsql
 PREDICT  
@@ -60,7 +60,7 @@ MODEL = @model | model_literal
 
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```syntaxsql
 PREDICT  
@@ -95,19 +95,19 @@ WITH ( <result_set_definition> )
 
 **MODEL**
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 `MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
 
 `PREDICT`는 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 및 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지를 사용하여 학습된 모델을 지원합니다.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 `MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
 
 Azure SQL Managed Instance에서 `PREDICT`는 [ONNX(Open Neural Network Exchange)](https://onnx.ai/get-started.html) 형식의 모델 또는 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 및 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지를 사용하여 학습된 모델을 지원합니다.
 ::: moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 `MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식 또는 스칼라 하위 쿼리로 지정됩니다.
 
 Azure Synapse Analytics에서 `PREDICT`는 [ONNX(Open Neural Network Exchange)](https://onnx.ai/get-started.html) 형식의 모델을 지원합니다.
@@ -139,7 +139,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 데이터, 모델 또는 열 형식과 관련된 오류 메시지는 모델과 연결된 기본 예측 함수에 의해 반환됩니다.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
 ## <a name="remarks"></a>설명
 
 `PREDICT` 함수는 SQL Server 2017 이상 모든 버전 및 Windows와 Linux에서 지원됩니다. `PREDICT`를 사용하기 위해 [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md)를 사용하도록 설정할 필요는 없습니다.
@@ -147,13 +147,13 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017"
 사용하는 모델은 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 또는 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)을 참조하세요.
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 [ONNX](https://onnx.ai/) 모델 형식으로 변환할 수 있는 알고리즘이 지원됩니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 [ONNX](https://onnx.ai/) 모델 형식 및 [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) 또는 [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만든 모델로 변환할 수 있는 알고리즘이 지원됩니다. RevoScaleR 및 revoscalepy에서 현재 지원되는 알고리즘의 목록은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)을 참조하세요.
 ::: moniker-end
 
@@ -169,7 +169,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 이 예제는 `SELECT` 문의 `FROM`절에서 `PREDICT` 함수를 참조합니다.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 SELECT d.*, p.Score
@@ -179,7 +179,7 @@ FROM PREDICT(MODEL = @model,
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
@@ -198,7 +198,7 @@ FROM PREDICT(MODEL = @model,
 - `PREDICT` 함수에 대해 지정된 별칭 **p** 는 `PREDICT` 함수에서 반환한 예측 열을 참조하는 데 사용됩니다. 열 이름에는 모델의 출력 이름과 같은 이름을 지정해야 합니다.
 - 모든 입력 데이터 열 및 예측 열은 SELECT 문에 표시될 수 있습니다.
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 위의 예제 쿼리에서 `MODEL`을 스칼라 하위 쿼리로 지정하여 보기를 만들 수 있습니다.
 
@@ -216,7 +216,7 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 예측에 대한 일반적인 사용 사례는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 애플리케이션이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -228,7 +228,7 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 
 :::moniker-end
 
-::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range=">=azure-sqldw-latest"
 
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
@@ -249,6 +249,6 @@ FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score
 ## <a name="next-steps"></a>다음 단계
 
 - [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
-::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current"
 -   [ONNX 모델에 대한 자세한 정보](/azure/machine-learning/concept-onnx#get-onnx-models)
 ::: moniker-end

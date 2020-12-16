@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dee02959fae06b67779b400c778bd2a465f5e87
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1529ad8758b9d392626f995b0586f115d0ca56e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462434"
 ---
 # <a name="right-transact-sql"></a>RIGHT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,18 +45,18 @@ RIGHT ( character_expression , integer_expression )
 
 ## <a name="arguments"></a>인수
  *character_expression*  
- 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *character_expression*은 **varchar** 또는 **nvarchar**로 변환될 수 있으며 **text** 또는 **ntext**를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression*으로 명시적으로 변환합니다.  
+ 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression* 은 상수, 변수 또는 열일 수 있습니다. *character_expression* 은 **varchar** 또는 **nvarchar** 로 변환될 수 있으며 **text** 또는 **ntext** 를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression* 으로 명시적으로 변환합니다.  
    
 > [!NOTE]  
-> *string_expression*이 **binary** 또는 **varbinary**라면 RIGHT는 **varchar**로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
+> *string_expression* 이 **binary** 또는 **varbinary** 라면 RIGHT는 **varchar** 로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
   
  *integer_expression*  
- 반환될 *character_expression*의 문자 수를 지정하는 양의 정수입니다. *integer_expression*이 음수이면 오류가 반환됩니다. *integer_expression*이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression*은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
+ 반환될 *character_expression* 의 문자 수를 지정하는 양의 정수입니다. *integer_expression* 이 음수이면 오류가 반환됩니다. *integer_expression* 이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression* 은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
+ *character_expression* 이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar** 를 반환합니다.  
   
- *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
+ *character_expression* 이 유니코드 문자 데이터 형식인 경우 **nvarchar** 를 반환합니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용하는 경우 RIGHT 함수가 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  

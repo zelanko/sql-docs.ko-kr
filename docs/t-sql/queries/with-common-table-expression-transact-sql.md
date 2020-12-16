@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e25f277eac838f023e872295073e901edf8e687
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6b29fec08e784e666b92e1682ec452dc9ecb596b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462304"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,15 +56,15 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
 
 ## <a name="arguments"></a>인수
  *expression_name*  
-공통 테이블 식에 대한 유효한 식별자입니다. *expression_name*은 같은 WITH \<common_table_expression> 절에서 정의된 다른 공통 테이블 식의 이름과는 달라야 하지만 *expression_name*이 기본 테이블 또는 뷰의 이름과 같을 수 있습니다. 쿼리에서 *expression_name*에 대한 모든 참조는 기본 개체가 아니라 공통 테이블 식을 사용합니다.
+공통 테이블 식에 대한 유효한 식별자입니다. *expression_name* 은 같은 WITH \<common_table_expression> 절에서 정의된 다른 공통 테이블 식의 이름과는 달라야 하지만 *expression_name* 이 기본 테이블 또는 뷰의 이름과 같을 수 있습니다. 쿼리에서 *expression_name* 에 대한 모든 참조는 기본 개체가 아니라 공통 테이블 식을 사용합니다.
   
  *column_name*  
- 공통 테이블 식에서 열 이름을 지정합니다. 단일 CTE 정의 내에서는 중복 이름이 허용되지 않습니다. 지정한 열 이름 수는 반드시 *CTE_query_definition*의 결과 집합에 있는 열 수와 일치해야 합니다. 열 이름 목록은 쿼리 정의에 모든 결과 열에 대한 고유한 이름을 제공한 경우에만 선택 사항입니다.  
+ 공통 테이블 식에서 열 이름을 지정합니다. 단일 CTE 정의 내에서는 중복 이름이 허용되지 않습니다. 지정한 열 이름 수는 반드시 *CTE_query_definition* 의 결과 집합에 있는 열 수와 일치해야 합니다. 열 이름 목록은 쿼리 정의에 모든 결과 열에 대한 고유한 이름을 제공한 경우에만 선택 사항입니다.  
   
  *CTE_query_definition*  
- 공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. *CTE_query_definition*의 SELECT 문은 CTE가 또 다른 CTE를 정의하지는 못한다는 점을 제외하고는 뷰를 만들 때와 동일한 요구 사항을 만족해야 합니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)과 주의 섹션을 참조하세요.  
+ 공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. *CTE_query_definition* 의 SELECT 문은 CTE가 또 다른 CTE를 정의하지는 못한다는 점을 제외하고는 뷰를 만들 때와 동일한 요구 사항을 만족해야 합니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)과 주의 섹션을 참조하세요.  
   
- *CTE_query_definition*을 두 개 이상 정의하는 경우: UNION ALL, UNION, EXCEPT 또는 INTERSECT 집합 연산자 중 하나로 쿼리 정의를 조인해야 합니다.  
+ *CTE_query_definition* 을 두 개 이상 정의하는 경우: UNION ALL, UNION, EXCEPT 또는 INTERSECT 집합 연산자 중 하나로 쿼리 정의를 조인해야 합니다.  
   
 ## <a name="remarks"></a>설명  
   
@@ -77,9 +77,9 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   CTE는 같은 `WITH` 절에서 자신 및 이전에 정의한 CTE를 참조할 수 있습니다. 전방 참조는 허용되지 않습니다.  
   
--   CTE에 둘 이상의 WITH 절을 지정할 수 없습니다. 예를 들어 *CTE_query_definition*이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 WITH 절을 포함할 수 없습니다.  
+-   CTE에 둘 이상의 WITH 절을 지정할 수 없습니다. 예를 들어 *CTE_query_definition* 이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 WITH 절을 포함할 수 없습니다.  
   
--   *CTE_query_definition*에는 다음 절을 사용할 수 없습니다.  
+-   *CTE_query_definition* 에는 다음 절을 사용할 수 없습니다.  
   
     -   `ORDER BY`(`TOP` 절을 지정하는 경우는 제외)  
   
@@ -108,9 +108,9 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 멤버에 있는 열의 데이터 형식은 앵커 멤버에 있는 해당 열의 데이터 형식과 반드시 같아야 합니다.  
   
--   재귀 멤버의 FROM 절은 CTE *expression_name*을 한 번만 참조해야 합니다.  
+-   재귀 멤버의 FROM 절은 CTE *expression_name* 을 한 번만 참조해야 합니다.  
   
--   다음 항목은 재귀 멤버의 *CTE_query_definition*에서 허용되지 않습니다.  
+-   다음 항목은 재귀 멤버의 *CTE_query_definition* 에서 허용되지 않습니다.  
   
     -   `SELECT DISTINCT`  
   

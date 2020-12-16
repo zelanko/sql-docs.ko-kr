@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462644"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 스키마 변경
 
@@ -26,7 +26,7 @@ ms.locfileid: "89538219"
 
 **ALTER TABLE** 문을 사용하여 열을 추가, 변경 또는 제거합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음은 temporal 테이블의 스키마를 변경하는 몇 가지 예입니다.
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>중요한 주의 사항
 
-- temporal 테이블의 스키마를 변경하려면 현재 및 기록 테이블에 대한**CONTROL** 권한이 필요합니다.
+- temporal 테이블의 스키마를 변경하려면 현재 및 기록 테이블에 대한 **CONTROL** 권한이 필요합니다.
 - **ALTER TABLE** 작업 중 시스템은 두 테이블에 스키마 잠금을 유지합니다.
 - 지정된 스키마 변경은 적절하게 기록 테이블에 전파됩니다(변경 유형에 따라).
 - Null을 허용하지 않는 열을 추가하거나 Null을 허용하지 않게 되도록 기존 열을 변경하는 경우 기존 행에 대한 기본값을 지정해야 합니다. 시스템은 동일한 값으로 추가 기본값을 생성하고 기록 테이블에 적용합니다. **DEFAULT** 를 비어 있지 않은 테이블에 추가하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 이외의 모든 버전에서 데이터 작업의 크기입니다(메타데이터 작업임).
@@ -67,13 +67,13 @@ ALTER TABLE dbo.Department
 - 새 NOT NULL 열로 테이블을 확장한 후 해당 테이블의 모든 열은 시스템에서 자동으로 채워지므로 기록 테이블에 기본 제약 조건을 삭제하는 것이 좋습니다.
 - 시스템 버전 관리 temporal 테이블에서는 Online 옵션 (**WITH (ONLINE = ON**)이 **ALTER TABLE ALTER COLUMN** 에 영향을 주지 않습니다. ONLINE 옵션에 지정된 값과 관계없이 열 변경은 온라인으로 수행되지 않습니다.
 - **ALTER COLUMN** 을(를) 사용하여 기간 열에 대한 **IsHidden** 속성을 변경할 수 있습니다.
-- 다음 스키마 변경에 **ALTER** 을(를) 직접 사용할 수 없습니다. 이러한 종류의 변경은 **SYSTEM_VERSIONING = OFF**를 설정합니다.
+- 다음 스키마 변경에 **ALTER** 을(를) 직접 사용할 수 없습니다. 이러한 종류의 변경은 **SYSTEM_VERSIONING = OFF** 를 설정합니다.
 
   - 계산 열 추가
   - **IDENTITY** 열 추가
-  - 기록 테이블이 **DATA_COMPRESSION = PAGE** 또는 **DATA_COMPRESSION = ROW**로 설정된 경우 **SPARSE** 열 추가 또는 **SPARSE**가 되도록 기존 열 변경은 기록 테이블에 대한 기본값입니다.
-  - **COLUMN_SET**추가
-  - **ROWGUIDCOL** 열 추가 또는 **ROWGUIDCOL**이(가) 되도록 기존 열 변경
+  - 기록 테이블이 **DATA_COMPRESSION = PAGE** 또는 **DATA_COMPRESSION = ROW** 로 설정된 경우 **SPARSE** 열 추가 또는 **SPARSE** 가 되도록 기존 열 변경은 기록 테이블에 대한 기본값입니다.
+  - **COLUMN_SET** 추가
+  - **ROWGUIDCOL** 열 추가 또는 **ROWGUIDCOL** 이(가) 되도록 기존 열 변경
 
 다음 예제에서는 설정 **SYSTEM_VERSIONING = OFF** 가 여전히 필요한 스키마 변경을 보여 줍니다( **IDENTITY** 열 추가). 이 예제에서는 데이터 일관성 확인을 사용하지 않도록 설정합니다. 동시 데이터 변경이 발생할 수 없으므로 트랜잭션 내에서 스키마 변경을 수행하는 경우 이 검사는 필요하지 않습니다.
 

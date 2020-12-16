@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767547"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463104"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Always Encrypted 키 순환
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "85767547"
 열 마스터 키는 일반적으로 하나 이상의 열 암호화 키를 보호합니다. 각 열 암호화 키에는 데이터베이스에 저장된 암호화된 값이 있으며 열 마스터 키로 열 암호화 키를 암호화하는 제품입니다.
 이 단계에서는 순환할 열 마스터 키로 보호된 각 열 암호화 키를 새 열 마스터 키로 암호화하고 새로 암호화된 값을 데이터베이스에 저장합니다. 따라서 순환의 영향을 받는 각 열 암호화 키에는 기존 열 마스터 키로 암호화된 값과 새 열 마스터 키로 암호화된 새 값의 두 가지 암호화된 값이 있습니다.
 
-1.  **개체 탐색기**를 사용하여 **보안>Always Encrypted 키>열 마스터 키** 폴더로 이동한 다음 순환할 열 마스터 키를 찾습니다.
-2.  열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **순환**을 선택합니다.
+1.  **개체 탐색기** 를 사용하여 **보안>Always Encrypted 키>열 마스터 키** 폴더로 이동한 다음 순환할 열 마스터 키를 찾습니다.
+2.  열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **순환** 을 선택합니다.
 3.  **열 마스터 키 순환** 대화 상자의 **대상** 필드에서, 1단계에서 만든 새 열 마스터 키의 이름을 선택합니다.
 4.  기존 열 마스터 키로 보호되는 열 암호화 키의 목록을 검토합니다. 이러한 키에 회전이 적용됩니다.
-5.  **확인**을 클릭합니다.
+5.  **확인** 을 클릭합니다.
 
 SQL Server Management Studio에서 이전 열 마스터 키로 보호된 열 암호화 키의 메타데이터와 이전 및 새 열 마스터 키의 메타데이터를 가져옵니다. 그런 다음 SSMS는 열 마스터 키 메타데이터를 사용하여 이전 열 마스터 키가 포함된 키 저장소에 연결하고 열 암호화 키의 암호를 해독합니다. 이후에 SSMS는 새 열 마스터 키가 포함된 키 저장소에 액세스하여 열 암호화 키의 새로 암호화된 값 집합을 생성한 다음 새 값을 메타데이터에 추가합니다( [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 문 생성 및 실행).
 
@@ -78,10 +78,10 @@ SQL Server Management Studio에서 이전 열 마스터 키로 보호된 열 암
 > [!WARNING]
 > 애플리케이션에 해당 열 마스터 키가 제공되기 전에 열 암호화 키 값을 제거하면 애플리케이션에서 데이터베이스 열의 암호를 더 이상 해독할 수 없습니다.
 
-1.  **개체 탐색기**를 사용하여 **보안>상시 암호화 키** 폴더로 이동한 다음 대체할 기존 열 마스터 키를 찾습니다.
-2.  기존 열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **정리**를 선택합니다.
+1.  **개체 탐색기** 를 사용하여 **보안>상시 암호화 키** 폴더로 이동한 다음 대체할 기존 열 마스터 키를 찾습니다.
+2.  기존 열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **정리** 를 선택합니다.
 3.  제거할 열 암호화 키 값의 목록을 검토합니다.
-4.  **확인**을 클릭합니다.
+4.  **확인** 을 클릭합니다.
 
 SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 문을 실행하여 이전 열 마스터 키로 암호화된 열 암호화 키의 암호화된 값을 삭제합니다.
 
@@ -89,9 +89,9 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 
 데이터베이스에서 이전 열 마스터 키의 정의를 제거하도록 선택한 경우 아래 단계를 따르세요.
 
-1. **개체 탐색기**를 사용하여 **보안>상시 암호화 키>열 마스터 키** 폴더로 이동한 다음 데이터베이스에서 제거할 이전 열 마스터 키를 찾습니다.
-2. 이전 열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. 이렇게 하면 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 문이 생성 및 실행되어 열 마스터 키 메타데이터를 제거합니다.
-3. **확인**을 클릭합니다.
+1. **개체 탐색기** 를 사용하여 **보안>상시 암호화 키>열 마스터 키** 폴더로 이동한 다음 데이터베이스에서 제거할 이전 열 마스터 키를 찾습니다.
+2. 이전 열 마스터 키를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다. 이렇게 하면 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 문이 생성 및 실행되어 열 마스터 키 메타데이터를 제거합니다.
+3. **확인** 을 클릭합니다.
 
 > [!NOTE]
 > 순환 후에 이전 열 마스터 키를 영구적으로 삭제하지 않는 것이 좋습니다. 대신, 이전 열 마스터 키를 현재 키 저장소에 유지하거나 다른 안전한 장소에 보관해야 합니다. 백업 파일에서 새 열 마스터 키가 구성되기 전의 시점으로 데이터베이스를 복원하는 경우 데이터에 액세스하려면 이전 키가 필요합니다.
@@ -120,14 +120,14 @@ SQL Server Management Studio에서 [ALTER COLUMN ENCRYPTION KEY(Transact-SQL)](.
 > 순환할 키로 암호화된 열을 포함하는 테이블이 크면 열 암호화 키를 순환하는 데 시간이 오래 걸릴 수 있습니다. 데이터를 다시 암호화하는 동안에는 애플리케이션이 영향을 받는 테이블에 쓸 수 없습니다. 따라서 조직에서 열 암호화 키 순환을 계획할 때는 주의해야 합니다.
 열 암호화 키를 순환하려면 상시 암호화 마법사를 사용합니다.
 
-1.  데이터베이스에 대한 마법사를 엽니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **열 암호화**를 클릭합니다.
-2.  **소개** 페이지를 검토하고 **다음**을 클릭합니다.
+1.  데이터베이스에 대한 마법사를 엽니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업** 을 가리킨 다음 **열 암호화** 를 클릭합니다.
+2.  **소개** 페이지를 검토하고 **다음** 을 클릭합니다.
 3.  **열 선택** 페이지에서 테이블을 확장하고 이전 열 암호화 키로 현재 암호화된, 바꾸려는 열을 모두 찾습니다.
 4.  이전 열 암호화 키로 암호화된 각 열에 대해 **암호화 키** 를 자동 생성된 새 키로 설정합니다. **참고:** 또는 마법사를 실행하기 전에 새 열 암호화 키를 만들 수 있습니다. 위의 [새 열 암호화 키 대화 상자를 사용하여 열 암호화 키 프로비전](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)을 참조하세요.
-5.  **마스터 키 구성** 페이지에서 새 키를 저장할 위치를 선택하고 마스터 키 원본을 선택한 후 **다음**을 클릭합니다. **참고:** 자동 생성된 열 암호화 키가 아니라 기존 열 암호화 키를 사용하는 경우에는 이 페이지에서 수행할 작업이 없습니다.
-6.  **유효성 검사**페이지에서 스크립트를 즉시 실행할지 아니면 PowerShell 스크립트를 만들지 선택하고 **다음**을 클릭합니다.
+5.  **마스터 키 구성** 페이지에서 새 키를 저장할 위치를 선택하고 마스터 키 원본을 선택한 후 **다음** 을 클릭합니다. **참고:** 자동 생성된 열 암호화 키가 아니라 기존 열 암호화 키를 사용하는 경우에는 이 페이지에서 수행할 작업이 없습니다.
+6.  **유효성 검사** 페이지에서 스크립트를 즉시 실행할지 아니면 PowerShell 스크립트를 만들지 선택하고 **다음** 을 클릭합니다.
 7.  **요약** 페이지에서 선택한 옵션을 검토하고 **마침** 을 클릭합니다. 완료되면 마법사를 닫습니다.
-8.  **개체 탐색기**를 사용하여 **보안/상시 암호화 키/열 암호화 키** 폴더로 이동한 다음 데이터베이스에서 제거할 이전 열 암호화 키를 찾습니다. 키를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.
+8.  **개체 탐색기** 를 사용하여 **보안/상시 암호화 키/열 암호화 키** 폴더로 이동한 다음 데이터베이스에서 제거할 이전 열 암호화 키를 찾습니다. 키를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.
 
 ### <a name="permissions-for-rotating-column-encryption-keys"></a>열 암호화 키를 순환할 수 있는 권한
 

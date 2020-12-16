@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4f6dc92d2d77f453f6838ebe990ed5426c665689
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460476"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85723224"
   
 메모리 최적화 테이블의 해시 인덱스를 만들 때 생성 시 버킷 수를 지정해야 합니다. 대부분의 경우 버킷 수는 인덱스 키에 있는 고유한 값 수의 1~2배 사이여야 합니다. 
 
-그러나 **BUCKET_COUNT**가 기본 범위에서 약간 위에 있거나 약간 아래에 있더라도 해시 인덱스의 성능은 지속할 수 있거나 허용 가능합니다. 최소한 메모리 최적화 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT**를 해시 인덱스에 지정하는 것이 좋습니다.  
+그러나 **BUCKET_COUNT** 가 기본 범위에서 약간 위에 있거나 약간 아래에 있더라도 해시 인덱스의 성능은 지속할 수 있거나 허용 가능합니다. 최소한 메모리 최적화 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT** 를 해시 인덱스에 지정하는 것이 좋습니다.  
 테이블에서 2백만 개의 행이 있고 계속 증가하고 있다고 가정하지만 테이블이 10배인 2천만 개로 증가할 것으로 예측합니다. 이 경우 테이블의 행 수보다 10배 많은 버킷 수로 시작됩니다. 이렇게 하면 증가하는 행 수를 위한 공간이 확보됩니다.  
   
 - 이상적으로는 행 수가 초기 버킷 수에 도달할 때 버킷 수를 늘리는 것이 좋습니다.  
@@ -72,7 +72,7 @@ go
   
 ### <a name="monitor-statistics-for-chains-and-empty-buckets"></a>체인 및 빈 버킷 통계 모니터링  
   
-다음 T-SQL SELECT를 실행하여 해시 인덱스의 통계 상태를 모니터링할 수 있습니다. SELECT는 **sys.dm_db_xtp_hash_index_stats**라는 DMV(Data Management View)를 사용합니다.  
+다음 T-SQL SELECT를 실행하여 해시 인덱스의 통계 상태를 모니터링할 수 있습니다. SELECT는 **sys.dm_db_xtp_hash_index_stats** 라는 DMV(Data Management View)를 사용합니다.  
   
 ```sql
 SELECT  
@@ -116,7 +116,7 @@ ORDER BY [table], [index];
 2. 수천 개의 행으로 테이블을 채웁니다.  
     a. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
     b. 약 1분 이내에 루프에서 26만 2,144개의 행을 삽입합니다.  
-3. **sys.dm_db_xtp_hash_index_stats**에서 이전 SELECT를 실행하라는 메시지가 인쇄됩니다.  
+3. **sys.dm_db_xtp_hash_index_stats** 에서 이전 SELECT를 실행하라는 메시지가 인쇄됩니다.  
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
@@ -171,14 +171,14 @@ go
   
 이전의 `INSERT` 루프는 다음을 수행합니다.  
   
-- 기본 키 인덱스 및 *ix_OrderSequence*에 고유한 값을 삽입합니다.  
-- `StatusCode`에 대해 8개의 고유 값만 표시하는 수백만 개의 행을 삽입합니다. 따라서 인덱스 *ix_StatusCode*에는 값 중복 비율이 높습니다.  
+- 기본 키 인덱스 및 *ix_OrderSequence* 에 고유한 값을 삽입합니다.  
+- `StatusCode`에 대해 8개의 고유 값만 표시하는 수백만 개의 행을 삽입합니다. 따라서 인덱스 *ix_StatusCode* 에는 값 중복 비율이 높습니다.  
   
-버킷 수가 최적이 아닌 경우 문제 해결을 위해 **sys.dm_db_xtp_hash_index_stats**에서 다음 SELECT 출력을 확인합니다. 이러한 결과에 대해 섹션 D.1에서 복사한 SELECT에 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 를 추가했습니다.  
+버킷 수가 최적이 아닌 경우 문제 해결을 위해 **sys.dm_db_xtp_hash_index_stats** 에서 다음 SELECT 출력을 확인합니다. 이러한 결과에 대해 섹션 D.1에서 복사한 SELECT에 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 를 추가했습니다.  
   
 `SELECT` 결과는 향상된 표시를 위해 좀 더 좁은 두 개의 결과 테이블로 분할되어 코드 뒤에 표시됩니다.  
   
-- *버킷 수*에 대한 결과는 다음과 같습니다.  
+- *버킷 수* 에 대한 결과는 다음과 같습니다.  
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
@@ -186,7 +186,7 @@ go
 | ix_StatusCode | 8 | 4 | 50 |  
 | PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
   
-- 다음은 *체인 길이*에 대한 결과입니다.  
+- 다음은 *체인 길이* 에 대한 결과입니다.  
   
 | IndexName | avg_chain_length | max_chain_length |  
 | :-------- | ---------------: | ---------------: |  
@@ -218,7 +218,7 @@ go
   
 ### <a name="balancing-the-trade-off"></a>상충 관계 균형 조정  
   
-OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테이블 검색은 OLTP 작업에서 성능이 중요한 경로에 두지 않습니다. 따라서 **메모리 사용 수량**과 **같음 테스트 및 삽입 작업의 성능** 간에 균형을 맞추어야 합니다.  
+OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테이블 검색은 OLTP 작업에서 성능이 중요한 경로에 두지 않습니다. 따라서 **메모리 사용 수량** 과 **같음 테스트 및 삽입 작업의 성능** 간에 균형을 맞추어야 합니다.  
   
 **메모리 사용률이 더 큰 문제일 경우**  
   

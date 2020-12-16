@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a110938d9b07551b54d361153530ffedeb42d02
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d047aa77ca0587a26225f8c0b180d81a8e48fb2d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380650"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462454"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,16 +48,16 @@ REPLICATE ( string_expression , integer_expression )
  문자 또는 이진 데이터 형식의 식입니다.  
   
 > [!NOTE]  
-> *string_expression*이 **binary** 형식이라면 REPLICATE는 **varchar**로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
+> *string_expression* 이 **binary** 형식이라면 REPLICATE는 **varchar** 로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
 
 > [!NOTE]  
-> *string_expression* 입력이 **varchar(max)** 또는 **nvarchar(max)** 형식이라면 REPLICATE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
+> *string_expression* 입력이 **varchar(max)** 또는 **nvarchar(max)** 형식이라면 REPLICATE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression* 을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
  *integer_expression*  
- **bigint**를 포함하는 정수 유형의 식입니다. *integer_expression*이 음수이면 NULL이 반환됩니다.  
+ **bigint** 를 포함하는 정수 유형의 식입니다. *integer_expression* 이 음수이면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *string_expression*과 같은 유형을 반환합니다.  
+ *string_expression* 과 같은 유형을 반환합니다.  
   
 ## <a name="examples"></a>예제  
   

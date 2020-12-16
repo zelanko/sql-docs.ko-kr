@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cea868a3023b8b69ef69384f03983183d869531b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037113"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464254"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,10 +70,10 @@ _server\_name_
 연결된 서버 이름 또는 원격 서버 이름을 지정합니다.  
   
 _database\_name_  
-개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에 있을 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름을 지정합니다. 개체가 연결된 서버에 있으면 *database_name*은 OLE DB 카탈로그를 지정합니다.  
+개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에 있을 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름을 지정합니다. 개체가 연결된 서버에 있으면 *database_name* 은 OLE DB 카탈로그를 지정합니다.  
   
 _schema\_name_  
-개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있을 경우 해당 개체가 포함된 스키마의 이름을 지정합니다. 개체가 연결된 서버에 있으면 *schema_name*은 OLE DB 스키마 이름을 지정합니다.  
+개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있을 경우 해당 개체가 포함된 스키마의 이름을 지정합니다. 개체가 연결된 서버에 있으면 *schema_name* 은 OLE DB 스키마 이름을 지정합니다.  
   
 _object\_name_  
 개체의 이름을 참조합니다.  
@@ -108,7 +108,7 @@ _object\_name_
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에 있는 대부분의 코드 예는 정렬 시 대/소문자를 구분하는 서버에서 테스트되었으며 일반적으로 테스트 서버에서는 ANSI/ISO 1252 코드 페이지가 실행됩니다.  
   
-많은 코드 예제에서 유니코드 문자열 상수 앞에 문자 **N**을 접두사로 붙입니다. **N** 접두사가 없으면 문자열이 데이터베이스의 기본 코드 페이지로 변환됩니다. 이 기본 코드 페이지는 일부 문자를 인식하지 않을 수 있습니다.  
+많은 코드 예제에서 유니코드 문자열 상수 앞에 문자 **N** 을 접두사로 붙입니다. **N** 접두사가 없으면 문자열이 데이터베이스의 기본 코드 페이지로 변환됩니다. 이 기본 코드 페이지는 일부 문자를 인식하지 않을 수 있습니다.  
   
 ## <a name="applies-to-references"></a>'적용 대상' 참조  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 관련 항목이 포함되어 있습니다.   

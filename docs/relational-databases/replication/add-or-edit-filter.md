@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 15859f0f54804417e1bb0e6a871b1d84d1e40191
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2cc745a35d1444f19da3916f090c231bb1b0f549
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461894"
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "88423647"
   
     1.  **필터 추가** 대화 상자에서 **취소** 를 클릭합니다.  
   
-    2.  **테이블 행 필터** 페이지의 필터 창에서 테이블을 선택하고 **편집**을 클릭합니다.  
+    2.  **테이블 행 필터** 페이지의 필터 창에서 테이블을 선택하고 **편집** 을 클릭합니다.  
   
     3.  **필터 편집** 대화 상자에서 기존 필터를 편집합니다.  
   
 2.  **구독자가 받을 테이블 행을 식별하는 필터 문을 작성하십시오.**  
   
-     새 필터 문을 정의하거나 기존 필터 문을 편집합니다. **열** 목록 상자는 **필터링할 테이블을 선택하십시오**에서 선택한 테이블에서 게시 중인 열을 모두 나열합니다. **필터 문** 텍스트 영역에는 다음 형식의 기본 텍스트가 포함됩니다.  
+     새 필터 문을 정의하거나 기존 필터 문을 편집합니다. **열** 목록 상자는 **필터링할 테이블을 선택하십시오** 에서 선택한 테이블에서 게시 중인 열을 모두 나열합니다. **필터 문** 텍스트 영역에는 다음 형식의 기본 텍스트가 포함됩니다.  
   
      `SELECT <published_columns> FROM [schema].[tablename] WHERE`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88423647"
   
 3.  **이 테이블의 데이터를 받을 구독 수를 지정하십시오.**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전만 해당하며 병합 게시만 사용할 수 있습니다. 병합 복제를 사용하면 데이터 및 애플리케이션에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전만 해당하며 병합 게시만 사용할 수 있습니다. 병합 복제를 사용하면 데이터 및 애플리케이션에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동** 을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
   
  필터를 추가 또는 편집한 후에는 **확인** 을 클릭하여 변경 내용을 저장하고 대화 상자를 닫습니다. 지정한 필터가 구문 분석되고 SELECT 절의 테이블에 대해 실행됩니다. 필터 문에 구문 오류나 기타 문제가 있으면 알림 메시지가 표시되며 이를 보고 필터 문을 편집할 수 있습니다.  
   

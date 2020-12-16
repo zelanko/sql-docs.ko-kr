@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: e1175043f0367a4553c15dce6e627a64e3a5e195
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 8071dbcced9121cef361c2ceb76589a280ca344f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115923"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460886"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-*inputdate*를 대상 표준 시간대의 해당 *datetimeoffset* 값으로 변환합니다. 오프셋 정보 없이 *inputdate*가 제공되면 이 함수는 *inputdate*가 대상 표준 시간대에서 있다고 가정하여 표준 시간대의 오프셋을 적용합니다. *inputdate*가 *datetimeoffset* 값으로 제공되는 경우 **AT TIME ZONE** 절은 표준 시간대 변환 규칙을 사용하여 대상 표준 시간대로 변환합니다.  
+*inputdate* 를 대상 표준 시간대의 해당 *datetimeoffset* 값으로 변환합니다. 오프셋 정보 없이 *inputdate* 가 제공되면 이 함수는 *inputdate* 가 대상 표준 시간대에서 있다고 가정하여 표준 시간대의 오프셋을 적용합니다. *inputdate* 가 *datetimeoffset* 값으로 제공되는 경우 **AT TIME ZONE** 절은 표준 시간대 변환 규칙을 사용하여 대상 표준 시간대로 변환합니다.  
 
 **AT TIME ZONE** 구현은 표준 시간대 전반에 **datetime** 값을 변환하기 위해 Windows 메커니즘을 따릅니다.  
 
@@ -49,7 +49,7 @@ inputdate AT TIME ZONE timezone
 
 ## <a name="return-types"></a>반환 형식
 
-**datetimeoffset**의 데이터 형식을 반환합니다.
+**datetimeoffset** 의 데이터 형식을 반환합니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -57,9 +57,9 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="remarks"></a>설명
 
-**AT TIME ZONE**은 DST 변경에서 영향을 받는 간격에 해당하는 **smalldatetime**, **datetime** 및 **datetime2** 데이터 형식의 입력 값을 변환하기 위한 특정 규칙을 적용합니다.
+**AT TIME ZONE** 은 DST 변경에서 영향을 받는 간격에 해당하는 **smalldatetime**, **datetime** 및 **datetime2** 데이터 형식의 입력 값을 변환하기 위한 특정 규칙을 적용합니다.
 
-- 시간이 미리 설정되어 있으면 현지 시간에는 시간 조정 기간과 동일한 간격이 있습니다. 이 기간은 일반적으로 1시간이지만 표준 시간대에 따라 30분 또는 45분이 될 수 있습니다. 이 간격에 있는 시간대의 지점은 DST 변경 *후*에 오프셋으로 변환됩니다.  
+- 시간이 미리 설정되어 있으면 현지 시간에는 시간 조정 기간과 동일한 간격이 있습니다. 이 기간은 일반적으로 1시간이지만 표준 시간대에 따라 30분 또는 45분이 될 수 있습니다. 이 간격에 있는 시간대의 지점은 DST 변경 *후* 에 오프셋으로 변환됩니다.  
 
     ```sql
     /*  
@@ -90,7 +90,7 @@ inputdate AT TIME ZONE timezone
   
     ```
 
-- 클록을 늦춰 설정한 경우 로컬 시간으로 2시간은 1시간과 겹칩니다.  이 경우 겹친 간격에 속하는 시간대의 지점은 클록 변경 *전*에 오프셋으로 표시됩니다.  
+- 클록을 늦춰 설정한 경우 로컬 시간으로 2시간은 1시간과 겹칩니다.  이 경우 겹친 간격에 속하는 시간대의 지점은 클록 변경 *전* 에 오프셋으로 표시됩니다.  
   
     ```sql
     /*  
@@ -128,7 +128,7 @@ inputdate AT TIME ZONE timezone
 
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. 오프셋 정보 없는 날짜/시간에 대상 표준 시간대 오프셋 추가  
 
-원래 **datetime** 값이 동일한 표준 시간대에서 제공된다는 것을 아는 경우 **AT TIME ZONE**을 사용하여 표준 시간대 규칙에 기반한 오프셋을 추가합니다.  
+원래 **datetime** 값이 동일한 표준 시간대에서 제공된다는 것을 아는 경우 **AT TIME ZONE** 을 사용하여 표준 시간대 규칙에 기반한 오프셋을 추가합니다.  
 
 ```sql
 USE AdventureWorks2016;

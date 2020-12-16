@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 612b353c094a3144669e59ae415b92e862be5ea9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 439e400c4ae4298e7e7c55548ffeb7874917a573
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448144"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463174"
 ---
 # <a name="synchronize-a-pull-subscription"></a>끌어오기 구독 동기화
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88448144"
   
 2.  **복제** 폴더를 확장한 다음 **로컬 구독** 폴더를 확장합니다.  
   
-3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
+3.  동기화할 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기** 를 클릭합니다.  
   
-4.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작**을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
+4.  **동기화 상태 보기 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 **시작** 을 클릭합니다. 동기화가 완료되면 **동기화 완료** 라는 메시지가 표시됩니다.  
   
-5.  **닫기**를 클릭합니다.  
+5.  **닫기** 를 클릭합니다.  
   
 ##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  끌어오기 구독은 명령 프롬프트에서 적합한 복제 에이전트 실행 파일을 호출하여 프로그래밍 방식으로 요청 시 동기화할 수 있습니다. 호출한 복제 에이전트 실행 파일은 끌어오기 구독이 속한 게시 유형에 따라 달라집니다. 자세한 내용은 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)을 참조하세요.  
@@ -62,7 +62,7 @@ ms.locfileid: "88448144"
   
 #### <a name="to-start-the-distribution-agent-from-the-command-prompt-or-from-a-batch-file"></a>명령 프롬프트 또는 배치 파일에서 배포 에이전트를 시작하려면  
   
-1.  _명령 프롬프트 또는 배치 파일에서 [distrib.exe](../../relational-databases/replication/agents/replication-distribution-agent.md) 를 실행하여 **복제 배포 에이전트**를 시작하고 다음 명령줄 인수를 지정합니다.  
+1.  _명령 프롬프트 또는 배치 파일에서 [distrib.exe](../../relational-databases/replication/agents/replication-distribution-agent.md) 를 실행하여 **복제 배포 에이전트** 를 시작하고 다음 명령줄 인수를 지정합니다.  
   
     -   **-Publisher**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88448144"
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>명령 프롬프트 또는 배치 파일에서 병합 에이전트를 시작하려면  
   
-1.  명령 프롬프트 또는 배치 파일에서 [replmerg.exe](../../relational-databases/replication/agents/replication-merge-agent.md) 를 실행하여 **복제 병합 에이전트**를 시작하고 다음 명령줄 인수를 지정합니다.  
+1.  명령 프롬프트 또는 배치 파일에서 [replmerg.exe](../../relational-databases/replication/agents/replication-merge-agent.md) 를 실행하여 **복제 병합 에이전트** 를 시작하고 다음 명령줄 인수를 지정합니다.  
   
     -   **-Publisher**  
   
@@ -204,7 +204,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 구독이 있는지 확인합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 구독자에서 배포 에이전트를 시작합니다.  
   
@@ -231,7 +231,7 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false**를 반환하는 경우 구독이 있는지 확인합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 **false** 를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 구독자에서 병합 에이전트를 시작합니다.  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460586"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 **char** , **varchar** , **text** , **nchar** , **nvarchar** 및 **ntext** 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
+  특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
   
 -   아래 예제와 같이 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 COLLATE 절. 
 

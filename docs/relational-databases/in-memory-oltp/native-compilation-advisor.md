@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdadcfea01226f1076e26a08316f79b1c0d7a4d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460396"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "91868536"
  마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](/previous-versions/dn673538(v=msdn.10))을 참조하세요.  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>네이티브 컴파일 관리자 사용 연습  
- **개체 탐색기**에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자**를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자**시작 페이지가 표시됩니다. **다음**을 클릭하여 계속합니다.  
+ **개체 탐색기** 에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자** 를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자** 시작 페이지가 표시됩니다. **다음** 을 클릭하여 계속합니다.  
   
 ### <a name="stored-procedure-validation"></a>저장 프로시저 유효성 검사  
  이 페이지에는 저장 프로시저에 네이티브 컴파일과 호환되지 않는 구문이 사용되었는지 여부가 표시됩니다. **다음** 을 클릭하여 세부 정보를 볼 수 있습니다. 네이티브 컴파일과 호환되지 않는 구문이 있는 경우 **다음** 을 클릭하여 세부 정보를 볼 수 있습니다.  
   
 ### <a name="stored-procedure-validation-result"></a>저장 프로시저 유효성 검사 결과  
- 네이티브 컴파일과 호환되지 않는 구문이 있는 경우 **저장 프로시저 유효성 검사 결과** 페이지에 세부 정보가 표시됩니다. 보고서를 생성하고( **보고서 생성**클릭), **네이티브 컴파일 관리자**를 종료하고, 코드가 네이티브 컴파일과 호환되도록 업데이트할 수 있습니다.  
+ 네이티브 컴파일과 호환되지 않는 구문이 있는 경우 **저장 프로시저 유효성 검사 결과** 페이지에 세부 정보가 표시됩니다. 보고서를 생성하고( **보고서 생성** 클릭), **네이티브 컴파일 관리자** 를 종료하고, 코드가 네이티브 컴파일과 호환되도록 업데이트할 수 있습니다.  
   
 ## <a name="code-sample"></a>코드 예제  
  다음 예에서는 해석된 저장 프로시저와 네이티브 컴파일을 사용했을 때의 *해당* 저장 프로시저를 보여 줍니다. 이 예에서는 c:\data라는 디렉터리를 사용합니다.  

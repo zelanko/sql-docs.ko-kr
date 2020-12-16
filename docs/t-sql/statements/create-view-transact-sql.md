@@ -37,13 +37,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 026d00e38a94d50bad94c1e95ae91fa5a370f604
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 20351fa344eecb2c46190b1bbd5006128e1640ab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464104"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 
@@ -108,10 +108,10 @@ OR ALTER
  *column*  
  뷰에 있는 열에 사용할 이름입니다. 열이 산술 식, 함수 또는 상수에서 파생된 경우, 일반적으로 조인 때문에 둘 이상의 열이 같은 이름을 갖는 경우, 뷰의 열이 파생된 열과 다른 이름을 갖는 경우에만 열 이름이 필요합니다. SELECT 문에서 열 이름을 할당할 수도 있습니다.  
   
- *column*을 지정하지 않으면 뷰 열의 이름과 SELECT 문에 있는 열의 이름이 같아집니다.  
+ *column* 을 지정하지 않으면 뷰 열의 이름과 SELECT 문에 있는 열의 이름이 같아집니다.  
   
 > [!NOTE]  
->  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문은 **SalesOrderID** 열에 **OrderRef** 등의 다른 이름을 지정할 수 있으며 여전히 **SalesOrderID**를 사용하는 뷰에 연결된 사용 권한을 가집니다.  
+>  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문은 **SalesOrderID** 열에 **OrderRef** 등의 다른 이름을 지정할 수 있으며 여전히 **SalesOrderID** 를 사용하는 뷰에 연결된 사용 권한을 가집니다.  
   
  AS  
  뷰가 수행할 동작을 지정합니다.  
@@ -136,9 +136,9 @@ OR ALTER
   
 -   임시 테이블 또는 테이블 변수 참조  
   
- *select_statement*가 SELECT 문을 사용하므로 \<join_hint> 및 \<table_hint> 힌트를 FROM 절에서 지정된 대로 사용해야 합니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요. 
+ *select_statement* 가 SELECT 문을 사용하므로 \<join_hint> 및 \<table_hint> 힌트를 FROM 절에서 지정된 대로 사용해야 합니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요. 
   
- *select_statement*에는 UNION 또는 UNION ALL로 구분된 함수 및 여러 SELECT 문을 사용할 수 있습니다.  
+ *select_statement* 에는 UNION 또는 UNION ALL로 구분된 함수 및 여러 SELECT 문을 사용할 수 있습니다.  
   
  CHECK OPTION  
  뷰에 대해 실행된 모든 데이터 수정 명령문이 *select_statement* 내의 기준 집합을 준수하도록 설정합니다. 뷰를 통해 행을 수정한 경우에는 WITH CHECK OPTION을 사용하여 수정이 커밋된 후에도 계속 뷰를 통해 데이터를 볼 수 있도록 합니다.  
@@ -152,7 +152,7 @@ OR ALTER
  CREATE VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)의 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement* 에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에는 스키마 바인딩이 있는 뷰에서 사용하는 테이블에서 이러한 문을 실행할 수 없습니다.  
   
@@ -191,7 +191,7 @@ OR ALTER
   
 -   수정하는 열이 GROUP BY, HAVING 또는 DISTINCT 절의 영향을 받지 않습니다.  
   
--   TOP는 위치에 관계없이 뷰의 *select_statement*에서 WITH CHECK OPTION 절과 함께 사용되지 않습니다.  
+-   TOP는 위치에 관계없이 뷰의 *select_statement* 에서 WITH CHECK OPTION 절과 함께 사용되지 않습니다.  
   
  이전의 제한이 뷰 자체에 적용되는 것과 마찬가지로 뷰의 FROM 절 하위 쿼리에 적용됩니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 뷰 정의에서 특정 기본 테이블에 대해 이루어진 수정을 분명하게 추적할 수 있어야 합니다. 자세한 내용은 [뷰를 통해 데이터 수정](../../relational-databases/views/modify-data-through-a-view.md)을 참조하세요.  
   
@@ -301,7 +301,7 @@ FROM Tn;
   
     -   멤버 테이블은 같은 수의 열에 모두 PRIMARY KEY 제약 조건이 있습니다.  
   
-    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같습니다. **sp_configure**에 **user options** 옵션을 사용하거나 SET 문을 사용하여 설정할 수 있습니다.  
+    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같습니다. **sp_configure** 에 **user options** 옵션을 사용하거나 SET 문을 사용하여 설정할 수 있습니다.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>분할된 뷰의 데이터를 수정하기 위한 조건  
  분할된 뷰의 데이터를 수정하는 문에는 다음 제한이 적용됩니다.  
@@ -332,9 +332,9 @@ FROM Tn;
   
 -   작업할 INSERT, UPDATE 또는 DELETE 문에 대해 XACT_ABORT SET 옵션을 ON으로 설정합니다.  
   
--   분할 뷰에서 참조되는 **smallmoney** 형식의 원격 테이블 열은 **money**로 매핑됩니다. 따라서 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)도 **money** 형식이어야 합니다.  
+-   분할 뷰에서 참조되는 **smallmoney** 형식의 원격 테이블 열은 **money** 로 매핑됩니다. 따라서 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)도 **money** 형식이어야 합니다.  
   
--   데이터베이스 호환성 수준 110 이상에서는 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **smalldatetime**으로 매핑됩니다. 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)은 **smalldatetime**이어야 합니다. 이 동작은 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **datetime**으로 매핑되고 로컬 테이블의 해당 열이 **datetime** 형식이어야 하는 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동작에서 달라진 점입니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
+-   데이터베이스 호환성 수준 110 이상에서는 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **smalldatetime** 으로 매핑됩니다. 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)은 **smalldatetime** 이어야 합니다. 이 동작은 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **datetime** 으로 매핑되고 로컬 테이블의 해당 열이 **datetime** 형식이어야 하는 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동작에서 달라진 점입니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
 -   분할 뷰의 연결된 서버는 루프백 연결 서버가 될 수 없습니다. 이 서버는 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키는 연결된 서버입니다.  
   

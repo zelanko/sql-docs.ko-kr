@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71c71e4809b573dae9507b52bc3d32e5b6f5142e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460746"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ RECONFIGURE
  구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
  [ **@configvalue=** ] **'** _value_ **'**  
- 새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
+ 새로운 구성 설정입니다. *value* 는 **int** 이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  **'hadoop connectivity'**  
  PolyBase에서 Hadoop 클러스터 또는 Azure Blob 스토리지(WASB)로의 모든 연결에 대한 Hadoop 데이터 원본 유형을 지정합니다. 이 설정은 외부 블레이드에 대한 외부 데이터 원본을 만드는 데 필요합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.  
@@ -97,7 +97,7 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
 |**maximum**|**int**|구성 옵션의 최대값입니다.|  
-|**config_value**|**int**|**sp_configure**를 사용하여 설정된 값입니다.|  
+|**config_value**|**int**|**sp_configure** 를 사용하여 설정된 값입니다.|  
 |**run_value**|**int**|PolyBase에서 사용 중인 현재 값입니다. 이 값은 RECONFIGURE를 실행하여 설정합니다.<br /><br /> **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.<br /><br /> 재구성이 진행 중인 경우 이 실행 값이 정확하기 위해서는 다시 시작해야 할 수 있습니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  

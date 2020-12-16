@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67d27c5fcf10d5d001820455018ad9462672ff15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ebf85e3455d0024cfc6e7e850b20678717257849
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462514"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,9 @@ EOMONTH ( start_date [, month_to_add ] )
 달의 마지막 날을 반환하는 날짜를 지정하는 날짜 식입니다.  
   
 *month_to_add*  
-*start_date*에 추가할 개월 수를 지정하는 선택적 정수 식입니다.  
+*start_date* 에 추가할 개월 수를 지정하는 선택적 정수 식입니다.  
   
-*month_to_add* 인수가 값을 가지면 `EOMONTH`는 지정한 개월 수를 *start_date*에 추가한 다음, 결과 날짜에 해당하는 달의 마지막 날을 반환합니다. 추가로 인해 유효한 날짜 범위를 벗어날 경우 `EOMONTH`는 오류를 발생시킵니다.  
+*month_to_add* 인수가 값을 가지면 `EOMONTH`는 지정한 개월 수를 *start_date* 에 추가한 다음, 결과 날짜에 해당하는 달의 마지막 날을 반환합니다. 추가로 인해 유효한 날짜 범위를 벗어날 경우 `EOMONTH`는 오류를 발생시킵니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **date**  

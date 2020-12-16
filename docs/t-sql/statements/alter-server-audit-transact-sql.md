@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a044f2d876df2682631bf4df9015290d9b2fc3a1
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 0239db3ed1005d3238853ffd5f058174be823b4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462204"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -88,7 +88,7 @@ ALTER SERVER AUDIT audit_name
  감사 내역의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
   
  MAXSIZE **=** _최대\_크기_  
- 감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 **MB**, **GB**, **TB**가 나오는 정수이거나 **UNLIMITED**여야 합니다. *max_size*에 대해 지정할 수 있는 최소 크기는 2**MB**이고 최대 크기는 2,147,483,647**TB**입니다. **UNLIMITED**를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 **UNLIMITED**입니다.  
+ 감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 **MB**, **GB**, **TB** 가 나오는 정수이거나 **UNLIMITED** 여야 합니다. *max_size* 에 대해 지정할 수 있는 최소 크기는 2 **MB** 이고 최대 크기는 2,147,483,647 **TB** 입니다. **UNLIMITED** 를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 **UNLIMITED** 입니다.  
   
  MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  파일 시스템에 보관할 최대 파일 수를 지정합니다. MAX_ROLLOVER_FILES=0으로 설정하면 롤오버 파일이 무제한으로 만들어집니다. 기본값은 0입니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
@@ -131,7 +131,7 @@ SHUTDOWN
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  number  
- **decimal**을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
+ **decimal** 을 포함한 모든 숫자 유형입니다. 단, 사용 가능한 실제 메모리가 부족한 경우나 값이 너무 커서 64비트 정수로 표현할 수 없는 숫자는 제외됩니다.  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상  
   
  ' string '  

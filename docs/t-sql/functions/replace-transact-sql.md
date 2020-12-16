@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86cb0ce71ee04689a9705e6e07b7679b484c37a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2c6dcf30574b356cc591752469b036c4bc40f68d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110340"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462464"
 ---
 # <a name="replace-transact-sql"></a>REPLACE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,20 +46,20 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 
 ## <a name="arguments"></a>인수
  *string_expression*  
- 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*는 문자 또는 이진 데이터 형식일 수 있습니다.  
+ 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression* 는 문자 또는 이진 데이터 형식일 수 있습니다.  
   
  *string\_pattern*  
- 찾을 부분 문자열입니다. *string_expression*은 문자 또는 이진 데이터 형식일 수 있습니다. *string_pattern*은 빈 문자열('')일 수 없으며 페이지 크기에 맞는 최대 바이트 수를 초과하지 않아야 합니다.  
+ 찾을 부분 문자열입니다. *string_expression* 은 문자 또는 이진 데이터 형식일 수 있습니다. *string_pattern* 은 빈 문자열('')일 수 없으며 페이지 크기에 맞는 최대 바이트 수를 초과하지 않아야 합니다.  
   
  *string\_replacement*  
- 대체 문자열입니다. *string_replacement*는 문자 또는 이진 데이터 형식일 수 있습니다.  
+ 대체 문자열입니다. *string_replacement* 는 문자 또는 이진 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 입력 인수 중 하나의 데이터 형식이 **nvarchar**이면 REPLACE는 **nvarchar**를 반환하고 그렇지 않으면 **varchar**를 반환합니다.  
+ 입력 인수 중 하나의 데이터 형식이 **nvarchar** 이면 REPLACE는 **nvarchar** 를 반환하고 그렇지 않으면 **varchar** 를 반환합니다.  
   
  인수 중에 Null이 있으면 NULL을 반환합니다.  
   
- *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)가 아닌 경우 REPLACE**는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
+ *string_expression* 의 형식이 **varchar(max)** 또는 **nvarchar(max)가 아닌 경우 REPLACE** 는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression* 을 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
 ## <a name="remarks"></a>설명  
  REPLACE는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 [COLLATE](~/t-sql/statements/collations.md)를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  

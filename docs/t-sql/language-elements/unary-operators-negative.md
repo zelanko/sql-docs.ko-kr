@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 808fbbb25bbd91071e4274d29133da11e420d8fc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 77604125d1f69c09283148b59f2dfbdda7f62546
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462324"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92196819"
  숫자 데이터 형식 범주에서 날짜 및 시간 범주를 제외한 임의의 데이터 형식으로 된 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
- *numeric_expression*의 데이터 형식을 반환합니다. 단, 부호 없는 **tinyint** 식은 부호 있는 **smallint** 결과로 승격됩니다.  
+ *numeric_expression* 의 데이터 형식을 반환합니다. 단, 부호 없는 **tinyint** 식은 부호 있는 **smallint** 결과로 승격됩니다.  
   
 ## <a name="examples"></a>예제  
   

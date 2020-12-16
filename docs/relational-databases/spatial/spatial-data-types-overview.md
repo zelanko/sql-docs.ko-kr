@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462964"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 
@@ -38,7 +38,7 @@ ms.locfileid: "92006219"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.png)
 
-geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식인 **FullGlobe**이 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.  
+geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식인 **FullGlobe** 이 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point** 로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point** 로 인식합니다.  
 
 geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.  
 
@@ -78,7 +78,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 
 ### <a name="orientation-of-spatial-data"></a>공간 데이터의 방향
 
-평면 시스템에서 다각형의 링 방향은 중요한 요소가 아닙니다. *OGC Simple Features for SQL Specification*에서는 링 순서를 지정하지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 링 순서를 강제로 지정하지 않습니다.  
+평면 시스템에서 다각형의 링 방향은 중요한 요소가 아닙니다. *OGC Simple Features for SQL Specification* 에서는 링 순서를 지정하지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 링 순서를 강제로 지정하지 않습니다.  
 
 타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. **geography** 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다.
 
@@ -88,7 +88,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 
 - 각 **geography** 인스턴스가 단일 반구 내에 포함되어야 합니다. 반구보다 큰 공간 개체는 저장할 수 없습니다.
 
-- 반구보다 큰 개체를 생성하는 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 또는 WKB(Well-Known Binary) 표현의 모든 **geography** 인스턴스에서 **ArgumentException**이 발생합니다.  
+- 반구보다 큰 개체를 생성하는 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 또는 WKB(Well-Known Binary) 표현의 모든 **geography** 인스턴스에서 **ArgumentException** 이 발생합니다.  
 
 - STIntersection(), STUnion(), STDifference() 및 STSymDifference()와 같이 두 개의 **geography** 인스턴스를 입력해야 하는 **geography** 데이터 형식 메서드는 이 메서드의 결과가 단일 반구 내에 포함되지 않을 경우 null을 반환합니다. STBuffer()도 결과가 단일 반구를 초과할 경우 null을 반환합니다.  
 
@@ -96,7 +96,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>`geography` 데이터 형식의 외부 및 내부 링
 
-*OGC Simple Features for SQL Specification*에서는 외부 링 및 내부 링에 대해 설명하지만 구분이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식에는 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용될 수 있습니다.  
+*OGC Simple Features for SQL Specification* 에서는 외부 링 및 내부 링에 대해 설명하지만 구분이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식에는 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용될 수 있습니다.  
 
 OGC 사양에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -105,7 +105,7 @@ OGC 사양에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 ## <a name="circular-arc-segments"></a>원호 세그먼트
 
-인스턴스화할 수 있는 세 가지 형식인 **CircularString**, **CompoundCurve** 및 **CurvePolygon**을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다. 다음은 원호 세그먼트의 몇 가지 예입니다.
+인스턴스화할 수 있는 세 가지 형식인 **CircularString**, **CompoundCurve** 및 **CurvePolygon** 을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다. 다음은 원호 세그먼트의 몇 가지 예입니다.
 
 ![circular_arc_segments](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
 

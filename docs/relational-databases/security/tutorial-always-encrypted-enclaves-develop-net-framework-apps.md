@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd75e0a63ebbfbf6a5749939442b8b8a2e964d92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 84ab8334a2a34552d0aa301d7fd92d04dd9ce214
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463084"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "88403799"
 
 3. 프로젝트가 .NET Framework 4.7.2 이상을 대상으로 하는지 확인합니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 속성을 선택한 후 대상 프레임워크를 .NET Framework 4.7.2로 설정합니다.
 
-4. **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔**로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
+4. **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔** 로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
-5. 열 마스터 키를 저장하는 데 Azure Key Vault를 사용하는 경우 **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔**로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
+5. 열 마스터 키를 저장하는 데 Azure Key Vault를 사용하는 경우 **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔** 로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56065a74319773012d88ddd9bb09987187e6f4c7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0a2ad9953050271d42aa2770c6bd3a02d787f9d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646659"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462614"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 제약 조건 삭제
 
@@ -54,33 +54,33 @@ ms.locfileid: "88646659"
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>개체 탐색기를 사용하여 UNIQUE 제약 조건을 삭제하려면  
   
-1.  개체 탐색기에서 UNIQUE 제약 조건이 포함된 테이블을 확장한 후 **제약 조건**을 확장합니다.  
+1.  개체 탐색기에서 UNIQUE 제약 조건이 포함된 테이블을 확장한 후 **제약 조건** 을 확장합니다.  
   
-2.  키를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+2.  키를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-3.  **개체 삭제** 대화 상자에서 올바른 키가 지정되었는지 확인하고 **확인**을 클릭합니다.  
+3.  **개체 삭제** 대화 상자에서 올바른 키가 지정되었는지 확인하고 **확인** 을 클릭합니다.  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>테이블 디자이너를 사용하여 UNIQUE 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 UNIQUE 제약 조건이 있는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
+1.  **개체 탐색기** 에서 UNIQUE 제약 조건이 있는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인** 을 클릭합니다.  
   
-2.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+2.  **테이블 디자이너** 메뉴에서 **인덱스/키** 를 클릭합니다.  
   
 3.  **인덱스/키** 대화 상자의 **선택한 기본/고유 키 및 인덱스** 목록에서 고유 키를 선택합니다.  
   
-4.  **삭제**를 클릭합니다.  
+4.  **삭제** 를 클릭합니다.  
   
-5.  **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.** __  
+5.  **파일** 메뉴에서 ‘테이블 이름’ **저장을 클릭합니다.**   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-unique-constraint"></a>UNIQUE 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Return the name of unique constraint.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3e8a42bce62455b998ee9e4c121256bab7953a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4daec2e6e616ef0922e5700c77539e61496b69aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646031"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462604"
 ---
 # <a name="delete-foreign-key-relationships"></a>외래 키 관계 삭제
 
@@ -52,21 +52,21 @@ ms.locfileid: "88646031"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>FOREIGN KEY 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 제약 조건을 포함하는 테이블을 확장하고 **키**를 확장합니다.  
+1.  **개체 탐색기** 에서 제약 조건을 포함하는 테이블을 확장하고 **키** 를 확장합니다.  
   
-2.  제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+2.  제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭합니다.  
   
-3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+3.  **개체 삭제** 대화 상자에서 **확인** 을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>FOREIGN KEY 제약 조건을 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 6de463b09ed654c8469f650ea83e3ebb2ebb653e
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: de472b06f2d6747ced93a36f3563188e3d537d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645974"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461224"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 SQL Server 2016에서 도입된 결정 함수입니다. 
+텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE** 는 SQL Server 2016에서 도입된 결정 함수입니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ STRING_ESCAPE( text , type )
   
 ## <a name="return-types"></a>반환 형식
 
- 이스케이프된 특수 및 제어 문자가 포함된 **nvarchar(max)** 텍스트입니다. 현재 **STRING_ESCAPE**는 다음 표에 나와 있는 JSON 특수 문자만 이스케이프할 수 있습니다.  
+ 이스케이프된 특수 및 제어 문자가 포함된 **nvarchar(max)** 텍스트입니다. 현재 **STRING_ESCAPE** 는 다음 표에 나와 있는 JSON 특수 문자만 이스케이프할 수 있습니다.  
   
 |특수 문자|인코딩된 시퀀스|  
 |-----------------------|----------------------|  

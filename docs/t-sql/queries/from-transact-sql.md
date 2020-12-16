@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 188610b1f6eef0835bf20f7b86e99647df699539
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464224"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -189,12 +189,12 @@ FROM { <table_source> [ ,...n ] }
   
  테이블 또는 뷰가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 다른 데이터베이스에 있는 경우 *database*.*schema*.*object_name* 형식의 정규화된 이름을 사용합니다.  
   
- 테이블 또는 뷰가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 외부에 있는 경우 네 부분으로 구성된 *linked_server*.*catalog*.*schema*.*object* 형식의 이름을 사용합니다. 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 데이터에 액세스하는 방법을 보여 줍니다. [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 이름의 서버 부분으로 사용하여 생성되는 네 부분으로 구성된 이름은 원격 테이블 원본을 지정하는 데 사용할 수도 있습니다. OPENDATASOURCE가 지정되면 *database_name* 및 *schema_name*이 모든 데이터 원본에 적용되지 않을 수 있으며, 원격 개체에 액세스하는 OLE DB 공급자 기능이 적용됩니다.  
+ 테이블 또는 뷰가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 외부에 있는 경우 네 부분으로 구성된 *linked_server*.*catalog*.*schema*.*object* 형식의 이름을 사용합니다. 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 데이터에 액세스하는 방법을 보여 줍니다. [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 이름의 서버 부분으로 사용하여 생성되는 네 부분으로 구성된 이름은 원격 테이블 원본을 지정하는 데 사용할 수도 있습니다. OPENDATASOURCE가 지정되면 *database_name* 및 *schema_name* 이 모든 데이터 원본에 적용되지 않을 수 있으며, 원격 개체에 액세스하는 OLE DB 공급자 기능이 적용됩니다.  
   
  [AS] *table_alias*  
- 편의상 또는 자체 조인이나 하위 쿼리에서 테이블 또는 뷰를 구분하는 데 거나 편리하게 사용할 수 있는 *table_source*에 대한 별칭입니다. 별칭은 조인 내의 테이블의 특정 열을 지칭하는 데 사용하는 단축 테이블 이름인 경우가 많습니다. 조인에서 둘 이상의 테이블에 동일한 열 이름이 있는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름을 테이블 이름, 뷰 이름 또는 별칭으로 정규화해야 합니다. 별칭이 정의되어 있으면 테이블 이름을 사용할 수 없습니다.  
+ 편의상 또는 자체 조인이나 하위 쿼리에서 테이블 또는 뷰를 구분하는 데 거나 편리하게 사용할 수 있는 *table_source* 에 대한 별칭입니다. 별칭은 조인 내의 테이블의 특정 열을 지칭하는 데 사용하는 단축 테이블 이름인 경우가 많습니다. 조인에서 둘 이상의 테이블에 동일한 열 이름이 있는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름을 테이블 이름, 뷰 이름 또는 별칭으로 정규화해야 합니다. 별칭이 정의되어 있으면 테이블 이름을 사용할 수 없습니다.  
   
- 파생 테이블, 행 집합, 테이블 반환 함수 또는 연산자 절(예: PIVOT 또는 UNPIVOT)을 사용하는 경우, 절의 끝 부분에 필요한 *table_alias*는 그룹화 열을 포함하여 반환되는 모든 열에 대해 연결된 테이블 이름입니다.  
+ 파생 테이블, 행 집합, 테이블 반환 함수 또는 연산자 절(예: PIVOT 또는 UNPIVOT)을 사용하는 경우, 절의 끝 부분에 필요한 *table_alias* 는 그룹화 열을 포함하여 반환되는 모든 열에 대해 연결된 테이블 이름입니다.  
   
  WITH (\<table_hint> )  
  쿼리 최적화 프로그램이 이 테이블과 이 문에 최적화 또는 잠금 전략을 사용하도록 지정합니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
@@ -213,7 +213,7 @@ FROM { <table_source> [ ,...n ] }
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
- 결과 집합의 열 이름을 대체할 선택적인 별칭입니다. 열의 별칭은 BULK 옵션과 함께 OPENROWSET 함수를 사용하는 SELECT 문에서만 허용됩니다. *bulk_column_alias*를 사용하는 경우 파일의 열과 동일한 순서로 모든 테이블 열에 대한 별칭을 지정합니다.  
+ 결과 집합의 열 이름을 대체할 선택적인 별칭입니다. 열의 별칭은 BULK 옵션과 함께 OPENROWSET 함수를 사용하는 SELECT 문에서만 허용됩니다. *bulk_column_alias* 를 사용하는 경우 파일의 열과 동일한 순서로 모든 테이블 열에 대한 별칭을 지정합니다.  
   
 > [!NOTE]  
 >  이 별칭은 XML 서식 파일(있는 경우)의 COLUMN 요소에 있는 NAME 특성보다 우선합니다.  
@@ -229,9 +229,9 @@ FROM { <table_source> [ ,...n ] }
  XML 문서를 통해 행 집합 뷰를 제공합니다. 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  
   
  *derived_table*  
- 데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table*은 외부 쿼리에 대한 입력으로 사용됩니다.  
+ 데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table* 은 외부 쿼리에 대한 입력으로 사용됩니다.  
   
- *derived_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. 예들 들어 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`입니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
+ *derived_table* 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. 예들 들어 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`입니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
   
  *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  
@@ -255,19 +255,19 @@ FROM { <table_source> [ ,...n ] }
  ISO 표준에 의해 지정된 구현 방식에 따라 달라지는 샘플링 방법입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 방법이 사용 가능한 유일한 샘플링 방법이므로 기본적으로 적용됩니다. SYSTEM은 테이블의 임의 페이지 집합을 샘플로 선택하는 페이지 기반 샘플링 방법을 적용하고 해당 페이지의 모든 행을 샘플 하위 집합으로 반환합니다.  
   
  *sample_number*  
- 행의 비율 또는 개수를 나타내는 정확하거나 대략적인 상수 식입니다. PERCENT를 사용하여 지정되는 경우 *sample_number*는 암시적으로 **float** 값으로 변환되며, 그렇지 않으면 **bigint**로 변환됩니다. PERCENT는 기본값입니다.  
+ 행의 비율 또는 개수를 나타내는 정확하거나 대략적인 상수 식입니다. PERCENT를 사용하여 지정되는 경우 *sample_number* 는 암시적으로 **float** 값으로 변환되며, 그렇지 않으면 **bigint** 로 변환됩니다. PERCENT는 기본값입니다.  
   
  PERCENT  
  테이블에서 테이블 행의 *sample_number*%를 검색하도록 지정합니다. PERCENT를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 지정된 비율에 가장 가까운 결과를 반환합니다. PERCENT가 지정되면 *sample_number* 식은 0부터 100까지의 값으로 계산되어야 합니다.  
   
  ROWS  
- 대략 *sample_number*개의 행을 검색하도록 지정합니다. ROWS가 지정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 지정된 행 개수에 가장 가까운 결과를 반환합니다. ROWS가 지정되면 *sample_number* 식은 0보다 큰 정수 값으로 계산되어야 합니다.  
+ 대략 *sample_number* 개의 행을 검색하도록 지정합니다. ROWS가 지정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 지정된 행 개수에 가장 가까운 결과를 반환합니다. ROWS가 지정되면 *sample_number* 식은 0보다 큰 정수 값으로 계산되어야 합니다.  
   
  REPEATABLE  
  선택된 샘플이 다시 반환될 수 있음을 나타냅니다. 동일한 *repeat_seed* 값으로 지정되면 테이블의 모든 행이 변경되지 않은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 동일한 행의 하위 집합을 반환합니다. 다른 *repeat_seed* 값으로 지정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블의 일부 다른 행 샘플을 반환합니다. 테이블에 대한 삽입, 업데이트, 삭제, 인덱스 다시 작성, 인덱스 조각 모음, 데이터베이스 복원 및 데이터베이스 연결 동작은 변경 사항으로 간주됩니다.  
   
  *repeat_seed*  
- 난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed*는 **bigint**입니다. *repeat_seed*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
+ 난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed* 는 **bigint** 입니다. *repeat_seed* 를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
   
 ### <a name="tablesample-clause"></a>Tablesample 절
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
@@ -334,11 +334,11 @@ ON (p.ProductID = v.ProductID);
  두 테이블의 교차곱을 지정합니다. SQL-92 형식이 아닌 이전 형식의 조인에서 WHERE 절이 지정되지 않은 경우와 동일한 행을 반환합니다.  
   
  *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
- APPLY 연산자의 *right_table_source*가 *left_table_source*의 모든 행에 대해 계산되도록 지정합니다. 이 기능은 *right_table_source*에 *left_table_source*의 열 값을 해당 인수 중 하나로 사용하는 테이블 반환 함수가 포함된 경우에 유용합니다.  
+ APPLY 연산자의 *right_table_source* 가 *left_table_source* 의 모든 행에 대해 계산되도록 지정합니다. 이 기능은 *right_table_source* 에 *left_table_source* 의 열 값을 해당 인수 중 하나로 사용하는 테이블 반환 함수가 포함된 경우에 유용합니다.  
   
- CROSS 또는 OUTER를 APPLY와 함께 지정해야 합니다. CROSS가 지정되면 *right_table_source*가 *left_table_source*의 지정된 행에 대해 계산되고 빈 결과 집합을 반환할 때 아무 행도 생성되지 않습니다.  
+ CROSS 또는 OUTER를 APPLY와 함께 지정해야 합니다. CROSS가 지정되면 *right_table_source* 가 *left_table_source* 의 지정된 행에 대해 계산되고 빈 결과 집합을 반환할 때 아무 행도 생성되지 않습니다.  
   
- OUTER가 지정되면 *right_table_source*가 해당 행에 대해 계산되고 빈 결과 집합을 반환하는 경우에도 *left_table_source*의 각 행에 대한 하나의 행이 생성됩니다.  
+ OUTER가 지정되면 *right_table_source* 가 해당 행에 대해 계산되고 빈 결과 집합을 반환하는 경우에도 *left_table_source* 의 각 행에 대한 하나의 행이 생성됩니다.  
   
  자세한 내용은 주의 섹션을 참조하세요.  
   
@@ -351,9 +351,9 @@ ON (p.ProductID = v.ProductID);
 ### <a name="pivot-clause"></a>PIVOT 절
 
  *table_source* PIVOT \<pivot_clause>  
- *table_source*가 *pivot_column*에 따라 피벗되도록 지정합니다. *table_source*는 테이블 또는 테이블 식입니다. 출력은 *pivot_column* 및 *value_column*을 제외한 *table_source*의 모든 열을 포함하는 테이블입니다. *pivot_column* 및 *value_column*을 제외한 *table_source*의 열은 PIVOT 연산자의 그룹화 열이라고 합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
+ *table_source* 가 *pivot_column* 에 따라 피벗되도록 지정합니다. *table_source* 는 테이블 또는 테이블 식입니다. 출력은 *pivot_column* 및 *value_column* 을 제외한 *table_source* 의 모든 열을 포함하는 테이블입니다. *pivot_column* 및 *value_column* 을 제외한 *table_source* 의 열은 PIVOT 연산자의 그룹화 열이라고 합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
   
- PIVOT은 그룹화 열과 관련해 입력 테이블에서 그룹화 연산을 수행하고 각각의 그룹마다 한 개의 행을 반환합니다. 또한 출력에는 *input_table*의 *pivot_column*에 나타나는 *column_list*에 지정된 각 값에 대한 하나의 열이 포함됩니다.  
+ PIVOT은 그룹화 열과 관련해 입력 테이블에서 그룹화 연산을 수행하고 각각의 그룹마다 한 개의 행을 반환합니다. 또한 출력에는 *input_table* 의 *pivot_column* 에 나타나는 *column_list* 에 지정된 각 값에 대한 하나의 열이 포함됩니다.  
   
  자세한 내용은 다음에 나오는 주의 섹션을 참조하세요.  
   
@@ -363,23 +363,23 @@ ON (p.ProductID = v.ProductID);
  COUNT(*) 시스템 집계 함수는 허용되지 않습니다.  
   
  *value_column*  
- PIVOT 연산자의 값 열입니다. UNPIVOT과 함께 사용되면 *value_column*은 입력 *table_source*에 있는 기존 열의 이름이 될 수 없습니다.  
+ PIVOT 연산자의 값 열입니다. UNPIVOT과 함께 사용되면 *value_column* 은 입력 *table_source* 에 있는 기존 열의 이름이 될 수 없습니다.  
   
  FOR *pivot_column*  
- PIVOT 연산자의 피벗 열입니다. *pivot_column*은 암시적 또는 명시적으로 **nvarchar()** 로 변환할 수 있는 형식이어야 합니다. 이 열은 **image** 또는 **rowversion**일 수 없습니다.  
+ PIVOT 연산자의 피벗 열입니다. *pivot_column* 은 암시적 또는 명시적으로 **nvarchar()** 로 변환할 수 있는 형식이어야 합니다. 이 열은 **image** 또는 **rowversion** 일 수 없습니다.  
   
- UNPIVOT이 사용되면 *pivot_column*은 *table_source*에서 좁혀진 출력 열의 이름입니다. 해당 이름의 *table_source*에 기존 열이 있을 수 없습니다.  
+ UNPIVOT이 사용되면 *pivot_column* 은 *table_source* 에서 좁혀진 출력 열의 이름입니다. 해당 이름의 *table_source* 에 기존 열이 있을 수 없습니다.  
   
  IN (*column_list* )  
- PIVOT 절에는 출력 테이블의 열 이름이 될 *pivot_column*의 값이 나열됩니다. 이 목록에는 피벗되는 입력 *table_source*에 이미 있는 열 이름이 지정될 수 없습니다.  
+ PIVOT 절에는 출력 테이블의 열 이름이 될 *pivot_column* 의 값이 나열됩니다. 이 목록에는 피벗되는 입력 *table_source* 에 이미 있는 열 이름이 지정될 수 없습니다.  
   
- UNPIVOT 절에는 단일 *pivot_column*으로 좁혀질 *table_source*의 열이 나열됩니다.  
+ UNPIVOT 절에는 단일 *pivot_column* 으로 좁혀질 *table_source* 의 열이 나열됩니다.  
   
  *table_alias*  
- 출력 테이블의 별칭 이름입니다. *pivot_table_alias*는 지정해야 합니다.  
+ 출력 테이블의 별칭 이름입니다. *pivot_table_alias* 는 지정해야 합니다.  
   
  UNPIVOT \<unpivot_clause>  
- 입력 테이블이 *column_list*의 여러 열에서 *pivot_column*이라는 단일 열로 좁혀지도록 지정합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
+ 입력 테이블이 *column_list* 의 여러 열에서 *pivot_column* 이라는 단일 열로 좁혀지도록 지정합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
   
  AS OF \<date_time>  
 
@@ -421,34 +421,34 @@ ON (p.ProductID = v.ProductID);
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열 배포 통계를 제공하는 연결된 서버에서 배포 통계와 카디널리티 통계를 고려하므로, 조인을 원격에서 수행하기 위해 REMOTE 조인 힌트가 필요하지는 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서는 원격 통계를 고려하여 원격 조인 전략이 적절한지 결정합니다. REMOTE 조인 힌트는 열 배포 통계를 제공하지 않는 공급자에게 유용합니다.  
   
 ## <a name="using-apply"></a>APPLY 사용  
- APPLY 연산자의 좌우 피연산자는 모두 테이블 식입니다. 이러한 피연산자 간의 주요 차이점은 *right_table_source*에서 *left_table_source*의 열을 함수의 인수 중 하나로 사용하는 테이블 반환 함수를 사용할 수 있다는 것입니다. *left_table_source*는 테이블 반환 함수를 포함할 수 있지만 *right_table_source*의 열인 인수는 포함할 수 없습니다.  
+ APPLY 연산자의 좌우 피연산자는 모두 테이블 식입니다. 이러한 피연산자 간의 주요 차이점은 *right_table_source* 에서 *left_table_source* 의 열을 함수의 인수 중 하나로 사용하는 테이블 반환 함수를 사용할 수 있다는 것입니다. *left_table_source* 는 테이블 반환 함수를 포함할 수 있지만 *right_table_source* 의 열인 인수는 포함할 수 없습니다.  
   
 APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블 원본을 생성합니다.  
   
-1.  *left_table_source*의 각 행에 대해 *right_table_source*를 평가하여 행 집합을 생성합니다.  
+1.  *left_table_source* 의 각 행에 대해 *right_table_source* 를 평가하여 행 집합을 생성합니다.  
   
-    *right_table_source*의 값은 *left_table_source*에 따라 달라집니다. *right_table_source*는 대략 `TVF(left_table_source.row)`와 같이 표현될 수 있습니다. 여기서 `TVF`는 테이블 반환 함수입니다.  
+    *right_table_source* 의 값은 *left_table_source* 에 따라 달라집니다. *right_table_source* 는 대략 `TVF(left_table_source.row)`와 같이 표현될 수 있습니다. 여기서 `TVF`는 테이블 반환 함수입니다.  
   
-2.  UNION ALL 연산을 수행하여 *right_table_source*를 평가할 때 각 행에 대해 생성된 결과 집합을 *left_table_source*와 결합합니다.  
+2.  UNION ALL 연산을 수행하여 *right_table_source* 를 평가할 때 각 행에 대해 생성된 결과 집합을 *left_table_source* 와 결합합니다.  
   
-    APPLY 연산자의 결과로 생성된 열 목록은 *right_table_source*의 열 목록과 결합된 *left_table_source*의 열 집합입니다.  
+    APPLY 연산자의 결과로 생성된 열 목록은 *right_table_source* 의 열 목록과 결합된 *left_table_source* 의 열 집합입니다.  
   
 ## <a name="using-pivot-and-unpivot"></a>PIVOT 및 UNPIVOT 사용  
- *pivot_column* 및 *value_column*은 PIVOT 연산자에서 사용되는 그룹화 열입니다. PIVOT은 다음과 같은 방식으로 출력 결과 집합을 가져옵니다.  
+ *pivot_column* 및 *value_column* 은 PIVOT 연산자에서 사용되는 그룹화 열입니다. PIVOT은 다음과 같은 방식으로 출력 결과 집합을 가져옵니다.  
   
-1.  *input_table*에서 그룹화 열을 기준으로 GROUP BY를 수행하고 각 그룹에 대해 하나의 출력 행을 생성합니다.  
+1.  *input_table* 에서 그룹화 열을 기준으로 GROUP BY를 수행하고 각 그룹에 대해 하나의 출력 행을 생성합니다.  
   
-     출력 행의 그룹화 열은 *input_table*에서 해당 그룹에 대한 해당 열 값을 가져옵니다.  
+     출력 행의 그룹화 열은 *input_table* 에서 해당 그룹에 대한 해당 열 값을 가져옵니다.  
   
 2.  다음 작업을 수행해 각각의 출력 행에 대한 열 목록의 열 값을 생성합니다.  
   
-    1.  추가적으로 이전 단계의 GROUP BY에서 생성된 행을 *pivot_column*을 기준으로 그룹화합니다.  
+    1.  추가적으로 이전 단계의 GROUP BY에서 생성된 행을 *pivot_column* 을 기준으로 그룹화합니다.  
   
-         *column_list*의 각 출력 열에 대해 조건에 맞는 하위 그룹을 선택합니다.  
+         *column_list* 의 각 출력 열에 대해 조건에 맞는 하위 그룹을 선택합니다.  
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *aggregate_function*이 이 하위 그룹의 *value_column*에 대해 계산되고, 그 결과는 해당 *output_column*의 값으로 반환됩니다. 하위 그룹이 비어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 *output_column*에 대해 null 값을 생성합니다. 집계 함수가 COUNT이고 하위 그룹이 비어 있으면 0이 반환됩니다.  
+    2.  *aggregate_function* 이 이 하위 그룹의 *value_column* 에 대해 계산되고, 그 결과는 해당 *output_column* 의 값으로 반환됩니다. 하위 그룹이 비어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 *output_column* 에 대해 null 값을 생성합니다. 집계 함수가 COUNT이고 하위 그룹이 비어 있으면 0이 반환됩니다.  
 
 > [!NOTE]
 > `UNPIVOT` 절의 열 식별자는 카탈로그 데이터 정렬을 따릅니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 경우 데이터 정렬은 항상 `SQL_Latin1_General_CP1_CI_AS`입니다. 부분적으로 포함된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터 정렬은 항상 `Latin1_General_100_CI_AS_KS_WS_SC`입니다. 열이 다른 열과 결합되면 충돌을 피하기 위해 collate 절(`COLLATE DATABASE_DEFAULT`)이 필요합니다.   
@@ -702,7 +702,7 @@ WHERE ManagerID = 5;
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
- 다음 예제에서는 두 테이블 모두에서 `ProductKey` 조인 키가 일치하는 `FactInternetSales` 및 `DimProduct` 테이블에서 `SalesOrderNumber`, `ProductKey` 및 `EnglishProductName` 열을 반환합니다. `SalesOrderNumber` 및 `EnglishProductName` 열은 각각 테이블 중 하나에만 존재하므로 이러한 열을 표시된 대로 사용하여 테이블 별칭을 지정할 필요가 없습니다. 이러한 별칭은 가독성을 높이기 위해 포함되었습니다. **AS**라는 단어는 별칭 이름 앞에 필요하지 않지만, 가독성을 높이고 ANSI 표준을 준수하기 위해 사용하는 것이 좋습니다.  
+ 다음 예제에서는 두 테이블 모두에서 `ProductKey` 조인 키가 일치하는 `FactInternetSales` 및 `DimProduct` 테이블에서 `SalesOrderNumber`, `ProductKey` 및 `EnglishProductName` 열을 반환합니다. `SalesOrderNumber` 및 `EnglishProductName` 열은 각각 테이블 중 하나에만 존재하므로 이러한 열을 표시된 대로 사용하여 테이블 별칭을 지정할 필요가 없습니다. 이러한 별칭은 가독성을 높이기 위해 포함되었습니다. **AS** 라는 단어는 별칭 이름 앞에 필요하지 않지만, 가독성을 높이고 ANSI 표준을 준수하기 위해 사용하는 것이 좋습니다.  
   
 ```sql
 -- Uses AdventureWorks  

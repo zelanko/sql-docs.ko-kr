@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4105a3c3b0ba43d3ed142cba31b2f991f6dc5287
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418937"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461564"
 ---
 # <a name="dml-triggers"></a>DML 트리거
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,15 +56,15 @@ ms.locfileid: "88418937"
   
  이 표에서는 AFTER 트리거와 INSTEAD OF 트리거의 기능을 비교합니다.  
   
-|기능|AFTER 트리거|INSTEAD OF 트리거|  
+|함수|AFTER 트리거|INSTEAD OF 트리거|  
 |--------------|-------------------|------------------------|  
 |적용 대상|테이블|테이블 및 뷰|  
 |각 테이블이나 뷰에서 가능한 트리거 수|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 여러 개 사용 가능|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 한 개만 사용 가능|  
 |연계 참조|적용되는 제한 없음|연계 참조 무결성 제약 조건이 적용되는 테이블에는 INSTEAD OF UPDATE 트리거와 DELETE 트리거가 허용되지 않습니다.|  
 |실행|이후:<br /><br /> 제약 조건 처리<br /><br /> 선언적 참조 동작<br /><br /> **inserted** 및 **deleted** 테이블 만들기<br /><br /> 트리거 동작|이전: 제약 조건 처리<br /><br /> 대신: 트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
 |실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 없음|  
-|**inserted**및 **deleted**테이블의 **varchar(max)** , **nvarchar(max)** 미 **varbinary(max)** 열 참조|허용됨|허용됨|  
-|**inserted**및 **deleted**테이블의 **text** , **ntext** 및 **image** 열 참조|허용되지 않음|허용|  
+|**inserted** 및 **deleted** 테이블의 **varchar(max)** , **nvarchar(max)** 미 **varbinary(max)** 열 참조|허용됨|허용됨|  
+|**inserted** 및 **deleted** 테이블의 **text** , **ntext** 및 **image** 열 참조|허용되지 않음|허용|  
   
  CLR 트리거  
  CLR 트리거는 AFTER 또는 INSTEAD OF 트리거일 수 있습니다. 또한 CLR 트리거는 DDL 트리거일 수 있습니다. CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  

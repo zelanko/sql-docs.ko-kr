@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a78db68519a0c4aa3a47f1ebaf27e7122a4ca598
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 401c2f4790ed4777b6295ca00bcc36567e01e59c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462314"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>인수
  *Boolean_expression*  
- **TRUE** 또는 **FALSE**를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ **TRUE** 또는 **FALSE** 를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  {*sql_statement* | *statement_block*}  
  문 블록에 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  

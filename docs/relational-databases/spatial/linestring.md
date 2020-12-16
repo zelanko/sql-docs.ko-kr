@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e9a48295949e973b4e371c68f23a000f0308c69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462974"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
-  **LineString**은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
+  **LineString** 은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
 ## <a name="linestring-instances"></a>LineString 인스턴스  
  다음 그림에서는 **LineString** 인스턴스의 예를 보여 줍니다.  
@@ -103,7 +103,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
 ```  
   
 ### <a name="example-c"></a>예 C:   
-다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid` 에 대한 호출은 **LineString** 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 **LineString** 인스턴스가 **Point**로 변환됩니다.  
+다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid` 에 대한 호출은 **LineString** 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 **LineString** 인스턴스가 **Point** 로 변환됩니다.  
   
 ```sql  
 DECLARE @g geometry  

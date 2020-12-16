@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77aa77821afc42c3fa45bf0012003ea100671480
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810119"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461834"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91810119"
   
  롤백 작업도 기록됩니다. 각 트랜잭션은 트랜잭션 로그에 공간을 예약하여 명시적 롤백 문이나 오류로 인해 발생한 롤백을 지원하기에 충분한 로그 공간을 확보합니다. 예약된 공간의 크기는 트랜잭션에서 수행되는 작업에 따라 다르지만 일반적으로 각 작업을 기록하는 데 사용되는 공간의 크기와 같습니다. 이렇게 예약된 공간은 트랜잭션 완료 시 해제됩니다.  
   
-<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분, *활성 로그* 또는 *비상 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 [복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 **최소 복구 LSN(*MinLSN*)** 이라고 합니다. 트랜잭션 로그에서 지원되는 작업에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
+<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분, *활성 로그* 또는 *비상 로그* 라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 [복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 **최소 복구 LSN(*MinLSN*)** 이라고 합니다. 트랜잭션 로그에서 지원되는 작업에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
 
 차등 및 로그 백업의 경우 데이터베이스는 보다 나중의 것으로 복원되며 이는 더 높은 LSN에 해당합니다. 
   
@@ -106,7 +106,7 @@ ms.locfileid: "91810119"
   
 -   로그에 대해 `FILEGROWTH` 설정이 사용하도록 설정되어 있고 디스크에 사용할 수 있는 공간이 있으면 파일은 *growth_increment* 매개 변수에 지정된 크기만큼 확장되며 새 로그 레코드가 확장 부분에 추가됩니다. `FILEGROWTH` 설정에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
--   `FILEGROWTH` 설정이 사용하도록 설정되어 있지 않거나 로그 파일이 있는 디스크의 사용 가능한 공간이 *growth_increment*에 지정된 크기보다 적으면 9002 오류가 발생합니다. 자세한 정보는 [전체 트랜잭션 로그 문제 해결](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
+-   `FILEGROWTH` 설정이 사용하도록 설정되어 있지 않거나 로그 파일이 있는 디스크의 사용 가능한 공간이 *growth_increment* 에 지정된 크기보다 적으면 9002 오류가 발생합니다. 자세한 정보는 [전체 트랜잭션 로그 문제 해결](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
   
  로그에 물리 로그 파일이 여러 개 있으면 논리 로그는 모든 물리 로그 파일을 거친 후 첫 번째 물리 로그 파일의 시작 부분으로 순환됩니다. 
  
@@ -134,7 +134,7 @@ ms.locfileid: "91810119"
 ##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> 미리 쓰기 트랜잭션 로그  
  이 섹션에서는 데이터 수정 내용을 디스크에 기록할 때 미리 쓰기 트랜잭션 로그의 역할에 대해 설명합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 WAL(미리 쓰기 로그)을 사용하여 연결된 로그 레코드가 디스크에 기록되기 전에는 어떠한 데이터 수정 내용도 디스크에 기록되지 않도록 합니다. 따라서 트랜잭션의 ACID 속성이 유지 관리됩니다.  
   
- 미리 쓰기 로그 작동 방식을 이해하려면 수정된 데이터가 디스크에 기록되는 방법을 알아야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터를 검색해야 할 때 데이터 페이지를 읽어오는 버퍼 캐시를 유지 관리합니다. 페이지가 버퍼 캐시에서 수정될 때 페이지는 디스크에 바로 다시 기록되지 않고 대신 *더티*로 표시됩니다. 데이터 페이지는 물리적으로 디스크에 기록되기 전에 두 개 이상의 논리적 쓰기를 수행할 수 있습니다. 각 논리적 쓰기의 경우 트랜잭션 로그 레코드는 수정 사항을 기록하는 로그 캐시에 삽입됩니다. 로그 레코드는 관련된 더티 페이지가 버퍼 캐시에서 디스크로 제거되기 전에 디스크에 기록되어야 합니다. 검사점 프로세스는 주기적으로 버퍼 캐시에서 지정된 특정 데이터베이스의 페이지를 포함하는 버퍼를 검색한 다음 모든 더티 페이지를 디스크에 기록합니다. 검사점은 모든 더티 페이지가 디스크에 기록되었음을 확인하는 지점을 만들어 나중에 복구하는 동안 시간을 절약할 수 있습니다.  
+ 미리 쓰기 로그 작동 방식을 이해하려면 수정된 데이터가 디스크에 기록되는 방법을 알아야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터를 검색해야 할 때 데이터 페이지를 읽어오는 버퍼 캐시를 유지 관리합니다. 페이지가 버퍼 캐시에서 수정될 때 페이지는 디스크에 바로 다시 기록되지 않고 대신 *더티* 로 표시됩니다. 데이터 페이지는 물리적으로 디스크에 기록되기 전에 두 개 이상의 논리적 쓰기를 수행할 수 있습니다. 각 논리적 쓰기의 경우 트랜잭션 로그 레코드는 수정 사항을 기록하는 로그 캐시에 삽입됩니다. 로그 레코드는 관련된 더티 페이지가 버퍼 캐시에서 디스크로 제거되기 전에 디스크에 기록되어야 합니다. 검사점 프로세스는 주기적으로 버퍼 캐시에서 지정된 특정 데이터베이스의 페이지를 포함하는 버퍼를 검색한 다음 모든 더티 페이지를 디스크에 기록합니다. 검사점은 모든 더티 페이지가 디스크에 기록되었음을 확인하는 지점을 만들어 나중에 복구하는 동안 시간을 절약할 수 있습니다.  
   
  버퍼 캐시에 있는 수정된 데이터 페이지를 디스크에 쓰는 작업을 페이지 플러시라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 연결된 로그 레코드가 기록되기 전에 더티 페이지가 플러시되지 않도록 하는 논리가 있습니다. 로그 레코드는 로그 버퍼가 플러시되면 디스크에 기록됩니다.  이는 트랜잭션이 커밋되거나 로그 버퍼가 가득 찰 때마다 발생합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "91810119"
 트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.
   
 ### <a name="the-log-chain"></a>로그 체인  
- 로그 백업의 연속 시퀀스를 *로그 체인*이라고 합니다. 로그 체인은 데이터베이스의 전체 백업으로 시작합니다. 일반적으로 데이터베이스를 처음 백업할 때나 단순 복구 모델에서 전체 또는 대량 로그 복구 모델로 전환한 후에만 새 로그 체인이 시작됩니다. 전체 데이터베이스 백업을 만들 때 기존 백업 집합을 덮어쓰도록 선택하지 않으면 기존 로그 체인이 그대로 유지됩니다. 로그 체인이 그대로 유지되면 미디어 세트의 전체 데이터베이스 백업에서 데이터베이스를 복원한 후 모든 후속 로그 백업을 복구 지점까지 복원할 수 있습니다. 복구 지점은 마지막 로그 백업의 끝이나 로그 백업의 특정 복구 지점일 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
+ 로그 백업의 연속 시퀀스를 *로그 체인* 이라고 합니다. 로그 체인은 데이터베이스의 전체 백업으로 시작합니다. 일반적으로 데이터베이스를 처음 백업할 때나 단순 복구 모델에서 전체 또는 대량 로그 복구 모델로 전환한 후에만 새 로그 체인이 시작됩니다. 전체 데이터베이스 백업을 만들 때 기존 백업 집합을 덮어쓰도록 선택하지 않으면 기존 로그 체인이 그대로 유지됩니다. 로그 체인이 그대로 유지되면 미디어 세트의 전체 데이터베이스 백업에서 데이터베이스를 복원한 후 모든 후속 로그 백업을 복구 지점까지 복원할 수 있습니다. 복구 지점은 마지막 로그 백업의 끝이나 로그 백업의 특정 복구 지점일 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  데이터베이스를 오류 발생 시점까지 복원하려면 로그 체인이 온전해야 합니다. 즉 트랜잭션 로그 백업의 연속적인 시퀀스가 오류 발생 지점까지 이어져야 합니다. 이 로그 시퀀스가 시작되는 위치는 복원 중인 데이터 백업의 유형인 데이터베이스, 부분 또는 파일에 따라 달라집니다. 데이터베이스 또는 부분 백업의 경우 로그 백업의 시퀀스는 데이터베이스 또는 부분 백업의 끝 지점에서 이어져야 합니다. 파일 백업 집합의 경우 로그 백업의 시퀀스는 전체 파일 백업 집합의 시작 지점에서 이어져야 합니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   

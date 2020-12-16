@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 761e940e04bc0d61c7b78102a9c3cc2a37ff016a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 491d0833c8c0a8a730adf696a42fb251fe394780
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462534"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_에서 값의 `CUME_DIST`는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_ 에서 값의 `CUME_DIST`는 행 _r_ 에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,7 +46,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>인수
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-_partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_가 필요합니다. `CUME_DIST`에서는 OVER 구문의 \<rows or range clause>는 허용되지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
+_partition\_by\_clause_ 는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_ 는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_ 가 필요합니다. `CUME_DIST`에서는 OVER 구문의 \<rows or range clause>는 허용되지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
 **float(53)**

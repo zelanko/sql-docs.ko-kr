@@ -13,13 +13,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ca366f274f4880fdb629eab4b77fa180bacb60b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006590"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463514"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 
@@ -114,7 +114,7 @@ SELECT modifiedJson = @json;
 
 SQL Server의 JSON 쿼리에는 사용자 지정 쿼리 언어가 필요 없습니다. JSON 데이터를 쿼리하려면 표준 T-SQL을 사용하면 됩니다. JSON 데이터에 대한 쿼리 또는 보고서를 만들어야 하는 경우 **OPENJSON** 행 집합 함수를 호출하여 JSON 데이터를 행 및 열로 쉽게 변환할 수 있습니다. 자세한 내용은 [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)을 참조하세요.  
   
-다음 예제에서는 **OPENJSON**을 호출하고 `@json` 변수에 저장된 개체 배열을 표준 SQL **SELECT** 문을 사용하여 쿼리할 수 있는 행 집합으로 변환합니다.  
+다음 예제에서는 **OPENJSON** 을 호출하고 `@json` 변수에 저장된 개체 배열을 표준 SQL **SELECT** 문을 사용하여 쿼리할 수 있는 행 집합으로 변환합니다.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);
@@ -141,9 +141,9 @@ FROM OPENJSON(@json)
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
   
-**OPENJSON**은 JSON 개체 배열을 테이블로 변환합니다. 각 개체는 하나의 행으로 표현되고 키/값 쌍은 셀로 반환됩니다. 출력은 다음 규칙을 준수합니다.
+**OPENJSON** 은 JSON 개체 배열을 테이블로 변환합니다. 각 개체는 하나의 행으로 표현되고 키/값 쌍은 셀로 반환됩니다. 출력은 다음 규칙을 준수합니다.
 
-- **OPENJSON**은 JSON 값을 **WITH** 절에 지정된 형식으로 변환합니다.
+- **OPENJSON** 은 JSON 값을 **WITH** 절에 지정된 형식으로 변환합니다.
 - **OPENJSON** 은 기본 키:값 쌍과 계층적으로 구성된 중첩된 개체를 모두 처리할 수 있습니다.
 - JSON 텍스트에 포함된 모든 필드를 반환할 필요가 없습니다.
 - **OPENJSON** 은 JSON 값이 없을 경우 NULL 값을 반환합니다.
@@ -196,7 +196,7 @@ OUTER APPLY OPENJSON(skills)
 >[!NOTE]
 >Azure Synapse Analytics 데이터를 JSON으로 변환하거나 JSON을 내보낼 수 없습니다.
 
-**SELECT** 문에 **FOR JSON** 절을 추가하여 SQL Server 데이터 또는 SQL 쿼리 결과를 JSON으로 서식 지정합니다. **FOR JSON**을 사용하여 JSON 출력의 형식을 클라이언트 애플리케이션에서 SQL Server로 위임합니다. 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
+**SELECT** 문에 **FOR JSON** 절을 추가하여 SQL Server 데이터 또는 SQL 쿼리 결과를 JSON으로 서식 지정합니다. **FOR JSON** 을 사용하여 JSON 출력의 형식을 클라이언트 애플리케이션에서 SQL Server로 위임합니다. 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
 다음 예제에서는 **FOR JSON** 절에서 PATH 모드를 사용합니다.  
   
@@ -287,7 +287,7 @@ SQL Server에서 JSON 데이터를 저장, 인덱싱 및 최적화하는 옵션�
 
 ### <a name="import-json-data-into-sql-server-tables"></a>SQL Server 테이블로 JSON 데이터 가져오기
 
-외부 서비스에서 SQL Server로 JSON 데이터를 로드해야 하는 경우 애플리케이션 계층에서 데이터를 구문 분석하는 대신 **OPENJSON**을 사용하여 데이터를 SQL Server로 가져올 수 있습니다.  
+외부 서비스에서 SQL Server로 JSON 데이터를 로드해야 하는 경우 애플리케이션 계층에서 데이터를 구문 분석하는 대신 **OPENJSON** 을 사용하여 데이터를 SQL Server로 가져올 수 있습니다.  
   
 ```sql  
 DECLARE @jsonVariable NVARCHAR(MAX);
@@ -332,7 +332,7 @@ JSON 변수의 콘텐츠를 외부 REST 서비스에서 제공하거나, 클라�
 
 ## <a name="analyze-json-data-with-sql-queries"></a>SQL 쿼리를 사용하여 JSON 데이터 분석
 
-보고를 위해 JSON 데이터를 필터링하거나 집계해야 하는 경우 **OPENJSON**을 사용하여 JSON을 관계형 형식으로 변환할 수 있습니다. 그런 다음, 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 기본 제공 함수를 사용하여 보고서를 작성할 수 있습니다.  
+보고를 위해 JSON 데이터를 필터링하거나 집계해야 하는 경우 **OPENJSON** 을 사용하여 JSON을 관계형 형식으로 변환할 수 있습니다. 그런 다음, 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 기본 제공 함수를 사용하여 보고서를 작성할 수 있습니다.  
   
 ```sql
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
@@ -352,7 +352,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified;
 
 ## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>SQL Server 테이블에서 JSON으로 서식이 지정된 데이터 반환
 
-데이터베이스 계층에서 데이터를 가져와서 JSON 형식으로 반환하는 웹 서비스가 있거나 JSON 형식의 데이터를 허용하는 JavaScript 프레임워크 또는 라이브러리가 있는 경우 SQL 쿼리에서 직접 JSON 출력의 형식을 지정할 수 있습니다. 테이블 형식 쿼리 결과와 직렬화 개체를 차례로 JSON 형식으로 변환하기 위해 코드를 작성하거나 라이브러리를 포함하는 대신, **FOR JSON**을 사용하여 JSON 형식 지정을 SQL Server에 위임할 수 있습니다.  
+데이터베이스 계층에서 데이터를 가져와서 JSON 형식으로 반환하는 웹 서비스가 있거나 JSON 형식의 데이터를 허용하는 JavaScript 프레임워크 또는 라이브러리가 있는 경우 SQL 쿼리에서 직접 JSON 출력의 형식을 지정할 수 있습니다. 테이블 형식 쿼리 결과와 직렬화 개체를 차례로 JSON 형식으로 변환하기 위해 코드를 작성하거나 라이브러리를 포함하는 대신, **FOR JSON** 을 사용하여 JSON 형식 지정을 SQL Server에 위임할 수 있습니다.  
   
 예를 들어 OData 사양을 준수하는 JSON 출력을 생성할 수 있습니다. 웹 서비스에는 다음과 같은 형식의 요청 및 응답이 필요합니다. 
   
@@ -360,7 +360,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified;
 
 - 응답: `{"@odata.context": "https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity", "ProductID": 1, "ProductName": "Chai"}`  
   
-다음 OData URL은 ProductID 및 ProductName 열에서 `ID`가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON**을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
+다음 OData URL은 ProductID 및 ProductName 열에서 `ID`가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON** 을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity' AS '@odata.context',

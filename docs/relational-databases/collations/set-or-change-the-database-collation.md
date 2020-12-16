@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907388"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460576"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907388"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   Windows 유니코드 전용 데이터 정렬은 COLLATE 절에서 열 수준 및 식 수준 데이터의 **nchar** , **nvarchar** 및 **ntext** 데이터 형식에 데이터 정렬을 적용하기 위해서만 사용할 수 있고 COLLATE 절에서 데이터베이스 또는 서버 인스턴스의 데이터 정렬을 변경하기 위해 사용할 수는 없습니다.  
+-   Windows 유니코드 전용 데이터 정렬은 COLLATE 절에서 열 수준 및 식 수준 데이터의 **nchar**, **nvarchar** 및 **ntext** 데이터 형식에 데이터 정렬을 적용하기 위해서만 사용할 수 있고 COLLATE 절에서 데이터베이스 또는 서버 인스턴스의 데이터 정렬을 변경하기 위해 사용할 수는 없습니다.  
   
 -   지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 오류가 나타납니다.  
 
--   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스를 만든 후에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터 정렬을 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]를 통해서만 변경할 수 있습니다.
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 지원되는 데이터 정렬 이름은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 및 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)에서 확인할 수 있거나 [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 시스템 함수를 사용할 수 있습니다.  
   
 데이터베이스 데이터 정렬을 변경하면 다음 사항이 변경됩니다.  
   
--   시스템 테이블의 **char** , **varchar** , **text** , **nchar** , **nvarchar** 또는 **ntext** 열이 새 데이터 정렬로 변경됩니다.  
+-   시스템 테이블의 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext** 열이 새 데이터 정렬로 변경됩니다.  
   
--   저장 프로시저 및 사용자 정의 함수에 대한 모든 기존 **char** , **varchar** , **text** , **nchar** , **nvarchar** 또는 **ntext** 매개 변수와 스칼라 반환 값이 새 데이터 정렬로 변경됩니다.  
+-   저장 프로시저 및 사용자 정의 함수에 대한 모든 기존 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext** 매개 변수와 스칼라 반환 값이 새 데이터 정렬로 변경됩니다.  
   
--   **char** , **varchar** , **text** , **nchar** , **nvarchar** 또는 **ntext** 시스템 데이터 형식 및 이러한 시스템 데이터 형식을 기반으로 하는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
+-   **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext** 시스템 데이터 형식 및 이러한 시스템 데이터 형식을 기반으로 하는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
   
 사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문의 `COLLATE` 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 **변경하지 않습니다**. 이러한 열은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 `COLLATE` 절을 사용하여 변경할 수 있습니다.  
 

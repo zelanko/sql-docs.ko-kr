@@ -10,13 +10,13 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 35d34b47dbb1c1f8879656895c8b7e3429f95de0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 517aad9dec56520b2f0b86b81ba6bb1b2e4761cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461334"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 
@@ -37,12 +37,12 @@ JSON_MODIFY ( expression , path , newValue )
  *expression*  
  식입니다. 일반적으로 JSON 텍스트를 포함하는 변수 또는 열의 이름입니다.  
   
- **JSON_MODIFY**는 *expression*에 유효한 JSON이 포함되지 않은 경우 오류를 반환합니다.  
+ **JSON_MODIFY** 는 *expression* 에 유효한 JSON이 포함되지 않은 경우 오류를 반환합니다.  
   
  *path*  
  업데이트할 속성을 지정하는 JSON 경로 식입니다.
 
- *path*에는 다음 구문이 있습니다.  
+ *path* 에는 다음 구문이 있습니다.  
   
  `[append] [ lax | strict ] $.<json path>`  
   
@@ -50,7 +50,7 @@ JSON_MODIFY ( expression , path , newValue )
     *\<json path>* 가 참조하는 배열에 새 값을 추가하도록 지정하는 선택적 한정자입니다.  
   
 - *lax*  
-    *\<json path>* 가 참조하는 속성이 존재하지 않아도 된다고 지정합니다. 속성이 없으면 JSON_MODIFY가 지정된 경로에 새 값을 삽입하려고 시도합니다. 속성을 경로에 삽입할 수 없는 경우 삽입이 실패할 수 있습니다. *lax* 또는 *strict*를 지정하지 않으면 *lax*가 기본 모드입니다.  
+    *\<json path>* 가 참조하는 속성이 존재하지 않아도 된다고 지정합니다. 속성이 없으면 JSON_MODIFY가 지정된 경로에 새 값을 삽입하려고 시도합니다. 속성을 경로에 삽입할 수 없는 경우 삽입이 실패할 수 있습니다. *lax* 또는 *strict* 를 지정하지 않으면 *lax* 가 기본 모드입니다.  
   
 - *strict*  
     *\<json path>* 가 참조하는 속성이 JSON 식에 있어야 한다고 지정합니다. 속성이 없으면 JSON_MODIFY가 오류를 반환합니다.  
@@ -60,10 +60,10 @@ JSON_MODIFY ( expression , path , newValue )
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
 
-*path*의 형식이 유효하지 않으면 **JSON_MODIFY**가 오류를 반환합니다.  
+*path* 의 형식이 유효하지 않으면 **JSON_MODIFY** 가 오류를 반환합니다.  
   
  *newValue*  
- *path*로 지정된 속성의 새 값입니다.  
+ *path* 로 지정된 속성의 새 값입니다.  
  새 값은 [n]varchar 또는 text여야 합니다.
   
  lax 모드에서 JSON_MODIFY는 새 값이 NULL일 경우 지정된 키를 삭제합니다.  
@@ -72,13 +72,13 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
 ## <a name="return-value"></a>Return Value
 
- 올바른 형식의 JSON 텍스트로 *expression*의 업데이트된 값을 반환합니다.  
+ 올바른 형식의 JSON 텍스트로 *expression* 의 업데이트된 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명
 
  JSON_MODIFY 함수를 사용하여 기존 속성의 값을 업데이트하거나, 새 키:값 쌍을 삽입하거나, 모드와 제공된 값의 조합을 기반으로 키를 삭제할 수 있습니다.  
   
- 다음 표에서는 lax 모드 및 strict 모드에서 **JSON_MODIFY**의 동작을 비교합니다. 선택적 경로 모드 사양(lax 또는 strict)에 대한 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
+ 다음 표에서는 lax 모드 및 strict 모드에서 **JSON_MODIFY** 의 동작을 비교합니다. 선택적 경로 모드 사양(lax 또는 strict)에 대한 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
   
 |기존 값|경로가 존재|lax 모드|strict 모드|  
 |--------------------|-----------------|--------------|-----------------|  
@@ -274,7 +274,7 @@ PRINT @info
 }
 ```  
   
- 자동 이스케이프를 방지하려면 JSON_QUERY 함수를 사용하여 *newValue*를 제공하세요. JSON_MODIFY는 JSON_MODIFY가 반환한 값이 올바른 형식의 JSON임을 알고 값을 이스케이프하지 않습니다.  
+ 자동 이스케이프를 방지하려면 JSON_QUERY 함수를 사용하여 *newValue* 를 제공하세요. JSON_MODIFY는 JSON_MODIFY가 반환한 값이 올바른 형식의 JSON임을 알고 값을 이스케이프하지 않습니다.  
   
  **쿼리**  
   
