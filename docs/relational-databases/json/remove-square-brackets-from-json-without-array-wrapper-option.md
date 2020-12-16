@@ -12,13 +12,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1140277ee7bb6c1375f7c1f19cbed92da9f19f3a
-ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a89834561766af4458ea8242b1d8dcd0ad5d430e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595214"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483365"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>JSON에서 대괄호 제거 - WITHOUT_ARRAY_WRAPPER 옵션
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482364"
 ---
 # <a name="tables"></a>테이블
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91809979"
 
 ### <a name="temporary-tables"></a>임시 테이블
 
-임시 테이블은 **tempdb**에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 
+임시 테이블은 **tempdb** 에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 
 
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일 감소

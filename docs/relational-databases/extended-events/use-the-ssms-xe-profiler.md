@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 97cad6d2dae1b9ce6e4b97eae221c810cded10d4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: b9e3eb84b5712866e7aabe165639c766869af512
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481304"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler 사용
 
@@ -37,7 +37,7 @@ SQL Profiler와 달리, XEvent Profiler는 SSMS에 직접 통합되고 SQL 엔�
 ## <a name="getting-started"></a><a id="getting-started"></a>시작
 XEvent Profiler에 액세스하려면 다음 단계를 수행합니다.
 
-1. **SQL Server Management Studio**를 엽니다.
+1. **SQL Server Management Studio** 를 엽니다.
 
 2. SQL Server 데이터베이스 엔진의 인스턴스 또는 localhost에 연결합니다.
 
@@ -45,7 +45,7 @@ XEvent Profiler에 액세스하려면 다음 단계를 수행합니다.
 
    ![XEProfiler 메뉴](media/xevents-xe-profiler-menu.png)
 
-4. 이 세션에서 모든 확장 이벤트를 확인하려는 경우 **표준**을 두 번 클릭합니다. 기록된 SQL 문을 확인하려는 경우 **T-SQL**을 클릭합니다. 세션을 아직 만들지 않은 경우 세션이 자동으로 만들어집니다.
+4. 이 세션에서 모든 확장 이벤트를 확인하려는 경우 **표준** 을 두 번 클릭합니다. 기록된 SQL 문을 확인하려는 경우 **T-SQL** 을 클릭합니다. 세션을 아직 만들지 않은 경우 세션이 자동으로 만들어집니다.
 
    ![XEProfiler 세션](media/xevents-xe-profiler-start-session.png)
 

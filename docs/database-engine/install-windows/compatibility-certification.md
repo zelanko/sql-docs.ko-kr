@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80fbe0c833f9b4ac7f3d0ec1f845dfd230f09e64
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481494"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
 
@@ -51,13 +51,13 @@ ms.locfileid: "91603451"
 -  [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작과 관련하여 변경 사항이 있을 경우 정확성을 위해 애플리케이션을 재인증해야 함을 의미합니다. 그러나, [데이터베이스 호환성 수준 설정](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)은 전체 서버가 아닌 지정된 데이터베이스에 대해서만 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 제공합니다. 데이터베이스 호환성 수준을 그대로 유지하면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 전후에 기존 애플리케이션 쿼리가 동일한 동작을 계속 표시하게 할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 및 호환성 수준에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
 
 -  성능에 관련된 사항에서는 모든 버전에서 쿼리 최적화 프로그램의 향상된 기능을 도입하기 때문에 다른 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 버전 간에 쿼리 계획의 차이가 발생할 수 있습니다. 업그레이드 범위에서 쿼리 계획의 차이점은 일반적으로 특정 쿼리 또는 작업에 부정적인 변화가 있을 수 있는 경우 위험으로 변환됩니다. 결과적으로 업그레이드를 지연하고 수명 주기 및 지원 문제를 일으킬 수 있는 이 위험 때문에 재인증을 해야 합니다. 
-   업그레이드 위험을 완화하기 위해서 쿼리 최적화 프로그램의 향상된 기능이 새 릴리스의 기본 호환성 수준으로 제어되는 것입니다(즉, 새 버전에 대해 가장 높은 호환성 수준 사용 가능). 호환성 인증에는 **쿼리 계획 셰이프 보호**가 포함되어 있습니다. 이것은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 직후에 데이터베이스 호환성 수준을 그대로 유지하면 업그레이드 이전처럼 새 버전에서 동일한 쿼리 최적화 모델이 사용되고 쿼리 계획 셰이프가 변경되지 않는다는 개념입니다. 
+   업그레이드 위험을 완화하기 위해서 쿼리 최적화 프로그램의 향상된 기능이 새 릴리스의 기본 호환성 수준으로 제어되는 것입니다(즉, 새 버전에 대해 가장 높은 호환성 수준 사용 가능). 호환성 인증에는 **쿼리 계획 셰이프 보호** 가 포함되어 있습니다. 이것은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 업그레이드 직후에 데이터베이스 호환성 수준을 그대로 유지하면 업그레이드 이전처럼 새 버전에서 동일한 쿼리 최적화 모델이 사용되고 쿼리 계획 셰이프가 변경되지 않는다는 개념입니다. 
    자세한 내용은 이 문서의 [쿼리 계획 셰이프를 사용하는 이유](#queryplan_shape) 섹션을 참조하세요.
    
 호환성 수준에 대한 자세한 내용은 [이전 버전과의 호환성을 위해 호환성 수준 사용](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)을 참조하세요.
    
 > [!IMPORTANT]
-> 지정된 호환성 수준에 대해 이미 인증된 기존 애플리케이션의 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 업그레이드하고 이전 데이터베이스 호환성 수준을 **유지 관리**합니다. 이 시나리오에서는 애플리케이션을 다시 인증할 필요가 없습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [호환성 수준 및 데이터베이스 엔진 업그레이드](#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
+> 지정된 호환성 수준에 대해 이미 인증된 기존 애플리케이션의 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 업그레이드하고 이전 데이터베이스 호환성 수준을 **유지 관리** 합니다. 이 시나리오에서는 애플리케이션을 다시 인증할 필요가 없습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [호환성 수준 및 데이터베이스 엔진 업그레이드](#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
 >
 > 새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우 데이터베이스 호환성 수준을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 최신 수준으로 업그레이드하고, 애플리케이션이 해당 호환성 수준에서 작동하도록 애플리케이션을 다시 인증합니다. 데이터베이스 호환성 수준을 업그레이드하는 방법에 대한 자세한 내용은 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.
    
@@ -66,7 +66,7 @@ ms.locfileid: "91603451"
 
 업그레이드하는 동안 쿼리 성능을 예측 가능하게 유지하려면 기본적으로 동일한 쿼리 계획 셰이프를 사용해야 합니다. 이를 위해서는 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 버전이 다르더라도 업그레이드 직후에 데이터베이스 호환성 수준을 변경하지 않아야 합니다. 사용 가능한 리소스 또는 기본 데이터의 데이터 분산 방식을 획기적으로 변경하는 경우처럼 쿼리 실행 에코시스템을 변경하지 않았다면 쿼리 성능이 변경되지 않은 상태로 유지됩니다. 
 
-그러나 쿼리 계획 셰이프를 유지하는 것이 업그레이드 후 성능에 영향을 미치는 유일한 요인은 아닙니다. 데이터베이스를 최신 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]로 이동하고 환경적 측면을 변경할 경우 쿼리 계획이 버전 간에 동일한 셰이프를 유지하더라도 쿼리 성능에 즉각적으로 영향을 미칠 수 있습니다. 이러한 환경적 변화에는 어느 정도의 사용 가능한 메모리 및 CPU 리소스를 제공하는 새로운 [!INCLUDE[ssde_md](../../includes/ssde_md.md)], 서버 또는 데이터베이스 구성 옵션의 변경, 쿼리 계획을 만드는 방법에 영향을 주는 데이터 분산 방식의 변경 등이 포함될 수 있습니다. 이때문에 데이터베이스 호환성 수준을 유지할 경우 쿼리 계획 **셰이프**의 변경을 방지할 수 있지만, 쿼리 성능에 영향을 주는 사용자가 시작한 변경을 비롯한 기타 다른 환경적 측면에서는 보호를 제공할 수 없다는 사실을 이해하는 것이 중요합니다.
+그러나 쿼리 계획 셰이프를 유지하는 것이 업그레이드 후 성능에 영향을 미치는 유일한 요인은 아닙니다. 데이터베이스를 최신 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]로 이동하고 환경적 측면을 변경할 경우 쿼리 계획이 버전 간에 동일한 셰이프를 유지하더라도 쿼리 성능에 즉각적으로 영향을 미칠 수 있습니다. 이러한 환경적 변화에는 어느 정도의 사용 가능한 메모리 및 CPU 리소스를 제공하는 새로운 [!INCLUDE[ssde_md](../../includes/ssde_md.md)], 서버 또는 데이터베이스 구성 옵션의 변경, 쿼리 계획을 만드는 방법에 영향을 주는 데이터 분산 방식의 변경 등이 포함될 수 있습니다. 이때문에 데이터베이스 호환성 수준을 유지할 경우 쿼리 계획 **셰이프** 의 변경을 방지할 수 있지만, 쿼리 성능에 영향을 주는 사용자가 시작한 변경을 비롯한 기타 다른 환경적 측면에서는 보호를 제공할 수 없다는 사실을 이해하는 것이 중요합니다.
 
 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)를 참조하세요.
    
@@ -90,7 +90,7 @@ ms.locfileid: "91603451"
 > 현재 호환성 수준을 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 **compatibility_level** 열을 쿼리합니다.
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>호환성 수준 및 업그레이드 데이터베이스 엔진
-업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]를 최신 버전으로 업그레이드하려면 **데이터베이스**(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 **애플리케이션**(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 **정적 기능 노출 영역 유효성 검사**를 수행하는 것이 좋습니다.
+업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]를 최신 버전으로 업그레이드하려면 **데이터베이스**(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 **애플리케이션**(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 **정적 기능 노출 영역 유효성 검사** 를 수행하는 것이 좋습니다.
 
 이 작업은 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 도구(DMA)를 사용하여 쉽게 수행할 수 있습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 애플리케이션이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. 데이터베이스가 새 버전에서 작동하도록 변경해야 하는 경우 DMA를 통해 변경이 필요한 위치와 사용 가능한 해결 방법을 정확하게 파악할 수 있습니다. 자세한 내용은 [Data Migration Assistant 개요](../../dma/dma-overview.md)를 참조하세요.   
 

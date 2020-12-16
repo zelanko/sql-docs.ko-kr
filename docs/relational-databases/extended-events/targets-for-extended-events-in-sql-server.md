@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481344"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -82,7 +82,7 @@ SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동
 - [확장 이벤트를 사용하여 시스템 작업 모니터링](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로*처리합니다.
+이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로* 처리합니다.
 
 > [!NOTE]
 > Azure SQL Database는 `etw_classic_sync_target target`을 지원하지 않습니다.
@@ -104,7 +104,7 @@ event_counter 대상은 단순히 지정된 각 이벤트 발생 횟수를 계�
 
 - 대부분의 대상과 달리 event_counter 대상은 수신되는 데이터를 *동기적으로* 처리합니다.
     - event_counter는 처리와 거의 연관되지 않기 때문에 단순 event_counter에 대해 동기 처리가 허용됩니다.
-    - 데이터베이스 엔진은 속도가 너무 느리고 그로 인해 데이터베이스 엔진의 성능을 저하시키는 대상으로부터 연결이 끊어집니다. 이러한 이유로 대부분의 대상은 *비동기적으로*처리합니다.
+    - 데이터베이스 엔진은 속도가 너무 느리고 그로 인해 데이터베이스 엔진의 성능을 저하시키는 대상으로부터 연결이 끊어집니다. 이러한 이유로 대부분의 대상은 *비동기적으로* 처리합니다.
 
 
 #### <a name="example-output-captured-by-event_counter"></a>event_counter에서 캡처된 출력 예제
@@ -151,7 +151,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 선택한 파일 이름은 시스템에서 date-time 기반 긴 정수가 추가되는 접두사로 사용되며, 이어서 .xel 확장이 나타납니다.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Azure SQL Database는 Azure Blob Storage에 `xel` 파일 저장만 지원합니다. 
@@ -232,7 +232,7 @@ SELECT f.*
 ```
 
 
-SQL Server **2014**이상의 경우 다음과 유사한 SELECT에서 데이터를 보고합니다. SQL Server 2014 이후부터 .xem 파일이 더 이상 사용되지 않습니다.
+SQL Server **2014** 이상의 경우 다음과 유사한 SELECT에서 데이터를 보고합니다. SQL Server 2014 이후부터 .xem 파일이 더 이상 사용되지 않습니다.
 
 
 ```
@@ -252,7 +252,7 @@ SELECT f.*
 #### <a name="data-stored-in-the-event_file-target"></a>event_file 대상에 저장된 데이터
 
 
-다음은 SQL Server 2016의 **sys.fn_xe_file_target_read_file**에서 선택한 보고서입니다.
+다음은 SQL Server 2016의 **sys.fn_xe_file_target_read_file** 에서 선택한 보고서입니다.
 
 
 ```
@@ -279,8 +279,8 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 
 **source_type** 매개 변수는 히스토그램 대상을 조정하는 중요 항목입니다.
 
-- **source_type = 0** - *이벤트 필드*에 대한 데이터 수집을 의미합니다.
-- **source_type = 1** - *작업*에 대한 데이터 수집을 의미합니다.
+- **source_type = 0** - *이벤트 필드* 에 대한 데이터 수집을 의미합니다.
+- **source_type = 1** - *작업* 에 대한 데이터 수집을 의미합니다.
     - 1은 기본값입니다.
 
 
@@ -289,10 +289,10 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 예를 들어 slots= 59이면 반올림되어 최대 64가 됩니다.
 
 
-### <a name="action-example-for-histogram"></a>히스토그램에 대한*작업* 예제
+### <a name="action-example-for-histogram"></a>히스토그램에 대한 *작업* 예제
 
 
-TARGET...SET 절에서 다음 Transact-SQL CREATE EVENT SESSION 문은 **source_type = 1**의 대상 매개 변수 할당을 지정합니다. 1은 히스토그램 대상에서 작업을 추적했음을 의미합니다.
+TARGET...SET 절에서 다음 Transact-SQL CREATE EVENT SESSION 문은 **source_type = 1** 의 대상 매개 변수 할당을 지정합니다. 1은 히스토그램 대상에서 작업을 추적했음을 의미합니다.
 
 현재 예에서 EVENT...ACTION 절이 제공되면 선택하는 대상( **sqlos.system_thread_id**)에 대한 작업 하나만 제공됩니다. TARGET...SET 절에는 **source=N'sqlos.system_thread_id'** 할당이 표시됩니다.
 
@@ -361,7 +361,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ### <a name="event-field-example-for-histogram"></a>히스토그램에 대한 이벤트 *필드* 예제
 
 
-다음 예제에서는 **source_type = 0**을 설정합니다. **source=** 에 할당된 값은 이벤트 필드(작업 아님)입니다.
+다음 예제에서는 **source_type = 0** 을 설정합니다. **source=** 에 할당된 값은 이벤트 필드(작업 아님)입니다.
 
 
 
@@ -542,7 +542,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 ```
 
 
-쌍을 이루지 않는 lock_acquired 이벤트에 대한 행에는 잠금이 발생한 T-SQL 텍스트 또는 **sqlserver.sql_text**이 포함될 수 있습니다. 하지만 표시를 블로트하지는 않았습니다.
+쌍을 이루지 않는 lock_acquired 이벤트에 대한 행에는 잠금이 발생한 T-SQL 텍스트 또는 **sqlserver.sql_text** 이 포함될 수 있습니다. 하지만 표시를 블로트하지는 않았습니다.
 
 
 <a name="h2_target_ring_buffer"></a>
@@ -671,7 +671,7 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
 ```
 
 
-이전 XML을 보려면 이벤트 세션이 활성 상태인 동안 다음 SELECT를 실행할 수 있습니다. 시스템 뷰 **sys.dm_xe_session_targets**에서 현재 XML 데이터가 검색됩니다.
+이전 XML을 보려면 이벤트 세션이 활성 상태인 동안 다음 SELECT를 실행할 수 있습니다. 시스템 뷰 **sys.dm_xe_session_targets** 에서 현재 XML 데이터가 검색됩니다.
 
 
 ```sql

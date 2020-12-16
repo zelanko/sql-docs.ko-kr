@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9215ff6f4be0118f83c422451697fda52efef229
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 85ea8a101bb3d12ffc4f1eefd521aeff5ab0df3c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482004"
 ---
 # <a name="left-transact-sql"></a>LEFT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,20 +46,20 @@ LEFT ( character_expression , integer_expression )
 
 ## <a name="arguments"></a>인수
  *character_expression*  
- 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *character_expression*은 **varchar** 또는 **nvarchar**로 변환될 수 있으며 **text** 또는 **ntext**를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression*으로 명시적으로 변환합니다.  
+ 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression* 은 상수, 변수 또는 열일 수 있습니다. *character_expression* 은 **varchar** 또는 **nvarchar** 로 변환될 수 있으며 **text** 또는 **ntext** 를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression* 으로 명시적으로 변환합니다.  
  
 > [!NOTE]  
-> *string_expression*이 **binary** 또는 **varbinary** 형식이라면 LEFT는 **varchar**로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
+> *string_expression* 이 **binary** 또는 **varbinary** 형식이라면 LEFT는 **varchar** 로의 암시적 변환을 수행하며 따라서 이진 입력을 유지하지 않습니다.  
   
  *integer_expression*  
- 반환될 *character_expression*의 문자 수를 지정하는 양의 정수입니다. *integer_expression*이 음수이면 오류가 반환됩니다. *integer_expression*이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression*은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
+ 반환될 *character_expression* 의 문자 수를 지정하는 양의 정수입니다. *integer_expression* 이 음수이면 오류가 반환됩니다. *integer_expression* 이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression* 은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
   
  *integer_expression* 매개 변수는 UTF-16 서로게이트 문자를 한 문자로 계산합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
+ *character_expression* 이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar** 를 반환합니다.  
   
- *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
+ *character_expression* 이 유니코드 문자 데이터 형식인 경우 **nvarchar** 를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  SC 데이터 정렬을 사용하는 경우 *integer_expression* 매개 변수가 UTF-16 서로게이트 쌍을 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  

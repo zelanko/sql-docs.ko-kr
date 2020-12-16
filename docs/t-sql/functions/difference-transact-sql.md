@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db662ad2feeb4b41f56c549f9ff8e1f8c1c94752
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9a8a48b4f628b818f96c3c6a9e896e3e11e26b17
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482054"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ DIFFERENCE ( character_expression , character_expression )
 
 ## <a name="arguments"></a>인수
 *character_expression*  
-문자 데이터의 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
+문자 데이터의 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression* 은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **int**  

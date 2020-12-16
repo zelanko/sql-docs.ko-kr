@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9178b6246c32c54aee6979bec00bac8b53e700fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 339e6ada7ae707d4bb48f5b1d3c1eb3b52e94e72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481374"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
 
@@ -42,9 +42,9 @@ ms.locfileid: "85756863"
   
  다음 사항에 유의하세요.  
   
--   각 Windows 프로세스에는 하나 이상의 모듈(**Win32 프로세스**, **Win32 모듈**)이 있을 수 있습니다. 이를 *바이너리* 또는 *실행 모듈*이라고도 합니다.  
+-   각 Windows 프로세스에는 하나 이상의 모듈(**Win32 프로세스**, **Win32 모듈**)이 있을 수 있습니다. 이를 *바이너리* 또는 *실행 모듈* 이라고도 합니다.  
   
--   각 Windows 프로세스 모듈은 하나 이상의 확장 이벤트 개체(**Type**,**Target**, **Action**, **Map**, **Predicate**및 **Event**)가 포함된 확장 이벤트 패키지( **Package**)를 포함할 수 있습니다.  
+-   각 Windows 프로세스 모듈은 하나 이상의 확장 이벤트 개체(**Type**,**Target**, **Action**, **Map**, **Predicate** 및 **Event**)가 포함된 확장 이벤트 패키지( **Package**)를 포함할 수 있습니다.  
   
 -   호스트 프로세스 내부에는 다음과 같은 역할을 하는 확장 이벤트 엔진(**Extended event engine**)의 인스턴스가 하나만 포함될 수 있습니다.  
   

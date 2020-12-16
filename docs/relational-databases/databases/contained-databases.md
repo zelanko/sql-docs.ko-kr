@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756340"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481434"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85756340"
  데이터베이스 경계를 넘는 요소입니다.  
   
  포함되지 않은 데이터베이스  
- 포함이 **NONE**으로 설정된 데이터베이스입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 모든 데이터베이스는 포함되지 않은 데이터베이스입니다. 기본적으로 모든 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 데이터베이스는 포함이 **NONE**으로 설정되어 있습니다.  
+ 포함이 **NONE** 으로 설정된 데이터베이스입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 모든 데이터베이스는 포함되지 않은 데이터베이스입니다. 기본적으로 모든 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 데이터베이스는 포함이 **NONE** 으로 설정되어 있습니다.  
   
  부분적으로 포함된 데이터베이스  
  부분적으로 포함된 데이터베이스는 데이터베이스 경계를 넘는 일부 기능을 허용할 수 있는 포함된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 포함 경계가 교차할 때 확인할 수 있는 기능이 있습니다.  
@@ -78,14 +78,14 @@ ms.locfileid: "85756340"
 >  부분적으로 포함된 데이터베이스를 사용하도록 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 제어 권한이 데이터베이스 소유자에게 위임됩니다. 자세한 내용은 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)를 참조하세요.  
   
  데이터베이스 경계  
- 부분적으로 포함된 데이터베이스는 인스턴스의 기능에서 데이터베이스 기능을 분리하므로 이 두 요소 사이에 *데이터베이스 경계*라는 명확히 정의된 선이 있습니다.  
+ 부분적으로 포함된 데이터베이스는 인스턴스의 기능에서 데이터베이스 기능을 분리하므로 이 두 요소 사이에 *데이터베이스 경계* 라는 명확히 정의된 선이 있습니다.  
   
- 데이터베이스 경계 내부에는 *데이터베이스 모델*이 있으며 여기에서 데이터베이스가 개발되고 관리됩니다. 데이터베이스 내부에 있는 엔터티에는 **sys.tables**와 같은 시스템 테이블, 암호가 있는 포함된 데이터베이스 사용자, 두 부분으로 구성된 이름으로 참조되는 현재 데이터베이스의 사용자 테이블 등이 있습니다.  
+ 데이터베이스 경계 내부에는 *데이터베이스 모델* 이 있으며 여기에서 데이터베이스가 개발되고 관리됩니다. 데이터베이스 내부에 있는 엔터티에는 **sys.tables** 와 같은 시스템 테이블, 암호가 있는 포함된 데이터베이스 사용자, 두 부분으로 구성된 이름으로 참조되는 현재 데이터베이스의 사용자 테이블 등이 있습니다.  
   
- 데이터베이스 경계의 외부에는 *관리 모델*이 있으며 이 모델은 인스턴스 수준 기능 및 관리와 관련되어 있습니다. 데이터베이스 경계 외부에 있는 엔터티에는 **sys.endpoints**와 같은 시스템 테이블, 로그인에 매핑된 사용자, 세 부분으로 구성된 이름으로 참조되는 다른 데이터베이스의 사용자 테이블 등이 있습니다.  
+ 데이터베이스 경계의 외부에는 *관리 모델* 이 있으며 이 모델은 인스턴스 수준 기능 및 관리와 관련되어 있습니다. 데이터베이스 경계 외부에 있는 엔터티에는 **sys.endpoints** 와 같은 시스템 테이블, 로그인에 매핑된 사용자, 세 부분으로 구성된 이름으로 참조되는 다른 데이터베이스의 사용자 테이블 등이 있습니다.  
   
 ##  <a name="containment"></a><a name="containment"></a> 포함  
- 전적으로 데이터베이스 내부에 있는 사용자 엔터티는 *포함된*것으로 간주됩니다. 데이터베이스 외부에 있거나 데이터베이스 외부 기능과의 상호 작용에 의존하는 사용자 엔터티는 *포함되지 않은*것으로 간주됩니다.  
+ 전적으로 데이터베이스 내부에 있는 사용자 엔터티는 *포함된* 것으로 간주됩니다. 데이터베이스 외부에 있거나 데이터베이스 외부 기능과의 상호 작용에 의존하는 사용자 엔터티는 *포함되지 않은* 것으로 간주됩니다.  
   
  일반적으로 사용자 엔터티는 다음과 같은 포함 범주로 분류됩니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "85756340"
  포함되지 않은 개체 또는 기능에 대한 정보를 반환하려면 [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 및 [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 뷰를 사용하세요. 데이터베이스 요소의 포함 상태를 파악함으로써 포함 상태를 승격시키려면 어떤 개체 또는 기능을 바꾸거나 변경해야 하는지 확인할 수 있습니다.  
   
 > [!IMPORTANT]  
->  일부 개체는 기본 포함 설정이 **NONE**이므로 이 뷰는 거짓 긍정을 반환할 수 있습니다.  
+>  일부 개체는 기본 포함 설정이 **NONE** 이므로 이 뷰는 거짓 긍정을 반환할 수 있습니다.  
   
  부분적으로 포함된 데이터베이스의 동작은 포함되지 않은 데이터베이스의 동작과 데이터 정렬의 측면에서 가장 많이 다릅니다. 데이터 정렬 문제에 대한 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)을 참조하십시오.  
   

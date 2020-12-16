@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8ebdef5d75c430ec5ba208613b72771939fdfc9b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636133"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481484"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External Scripts Enabled 서버 구성 옵션
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-**external scripts enabled** 옵션을 사용하면 특정 원격 언어 확장을 사용하여 스크립트를 실행하도록 설정할 수 있습니다. 이 속성은 기본적으로 해제되어 있습니다. **Machine Learning Services**가 설치되어 있으면 설치 프로그램이 필요에 따라 이 속성을 true로 설정할 수 있습니다.
+**external scripts enabled** 옵션을 사용하면 특정 원격 언어 확장을 사용하여 스크립트를 실행하도록 설정할 수 있습니다. 이 속성은 기본적으로 해제되어 있습니다. **Machine Learning Services** 가 설치되어 있으면 설치 프로그램이 필요에 따라 이 속성을 true로 설정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
-[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 사용하여 외부 스크립트를 실행하려면 외부 스크립트 사용 옵션을 사용하도록 설정해야 합니다. **sp_execute_external_script**를 사용하여 R 또는 Python과 같이 지원되는 언어로 작성된 스크립트를 실행합니다. 
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 사용하여 외부 스크립트를 실행하려면 외부 스크립트 사용 옵션을 사용하도록 설정해야 합니다. **sp_execute_external_script** 를 사용하여 R 또는 Python과 같이 지원되는 언어로 작성된 스크립트를 실행합니다. 
 
 + [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우
 

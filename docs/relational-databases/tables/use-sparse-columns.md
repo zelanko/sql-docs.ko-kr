@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482338"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645940"
 ## <a name="restrictions-for-using-sparse-columns"></a>스파스 열 사용에 대한 제한 사항  
  스파스 열은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용할 수 있으며 다른 모든 열처럼 작동하지만 다음과 같은 제한 사항의 적용을 받습니다.  
   
--   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 스파스 열의 데이터 형식은 **text**, **ntext**, **image**, **timestamp**, 사용자 정의 데이터 형식, **geometry**또는 **geography**일 수 없으며, 스파스 열에 FILESTREAM 특성을 가질 수 없습니다.  
+-   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 스파스 열의 데이터 형식은 **text**, **ntext**, **image**, **timestamp**, 사용자 정의 데이터 형식, **geometry** 또는 **geography** 일 수 없으며, 스파스 열에 FILESTREAM 특성을 가질 수 없습니다.  
   
 -   스파스 열은 기본값을 사용할 수 없습니다.  
   

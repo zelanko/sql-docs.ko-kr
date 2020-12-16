@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c144b9e26ca8f6471bc5b07c7abfcc1f2ed41cc
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e20fc91b1276a2a7bd8e263c18d6a9da1786ba9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482954"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL의 OLE 자동화 개체
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "87332584"
   
  개체의 인스턴스가 생성된 후에는 다음과 같은 저장 프로시저를 호출하여 개체의 속성, 메서드 및 개체 관련 오류 정보에 대한 작업을 수행합니다.  
   
--   속성 값을 가져오는**sp_OAGetProperty**  
+-   속성 값을 가져오는 **sp_OAGetProperty**  
   
--   속성 값을 설정하는**sp_OASetProperty**  
+-   속성 값을 설정하는 **sp_OASetProperty**  
   
--   메서드를 호출하는**sp_OAMethod**  
+-   메서드를 호출하는 **sp_OAMethod**  
   
--   최신 오류 정보를 가져오는**sp_OAGetErrorInfo**  
+-   최신 오류 정보를 가져오는 **sp_OAGetErrorInfo**  
   
- 개체가 더 이상 필요하지 않을 때는 **sp_OADestroy** 를 호출하여 **sp_OACreate**로 생성된 개체의 인스턴스를 할당 취소합니다.  
+ 개체가 더 이상 필요하지 않을 때는 **sp_OADestroy** 를 호출하여 **sp_OACreate** 로 생성된 개체의 인스턴스를 할당 취소합니다.  
   
  OLE 자동화 개체는 속성 값과 메서드를 통해 데이터를 반환합니다. **sp_OAGetProperty** 및 **sp_OAMethod** 는 결과 집합의 형식으로 이러한 데이터 값을 반환합니다.  
   

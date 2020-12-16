@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 820694607e2a4a4828ea720f2292bfc8ab94ab0a
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: caf85043caf455285e4030e3715dca8675d99d7d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380698"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481984"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,10 +47,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 
 ## <a name="arguments"></a>인수
  '*character_string*'  
- 유니코드 문자 데이터로 이루어진 문자열입니다. *character_string*은 **sysname**이며 128자로 제한됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
+ 유니코드 문자 데이터로 이루어진 문자열입니다. *character_string* 은 **sysname** 이며 128자로 제한됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
   
  '*quote_character*'  
- 구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표( **'** ), 왼쪽 또는 오른쪽 대괄호( **[]** ), 큰따옴표( **"** ), 왼쪽 또는 오른쪽 괄호( **()** ), 초과 또는 미만 기호( **><** ), 왼쪽 또는 오른쪽 중괄호( **{}** ) 또는 억음 악센트 기호( **\`** )일 수 있습니다. 허용되지 않는 문자를 입력하는 경우 NULL이 반환됩니다. *quote_character*를 지정하지 않은 경우 대괄호가 사용됩니다.  
+ 구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표( **'** ), 왼쪽 또는 오른쪽 대괄호( **[]** ), 큰따옴표( **"** ), 왼쪽 또는 오른쪽 괄호( **()** ), 초과 또는 미만 기호( **><** ), 왼쪽 또는 오른쪽 중괄호( **{}** ) 또는 억음 악센트 기호( **\`** )일 수 있습니다. 허용되지 않는 문자를 입력하는 경우 NULL이 반환됩니다. *quote_character* 를 지정하지 않은 경우 대괄호가 사용됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(258)**  

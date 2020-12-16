@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 424ff170c28087d0d6d43e153b92583d517baae1
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e759727e998cde4d867454a0dec34f0e29350eec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481814"
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
 
@@ -141,7 +141,7 @@ sp_helprotect 시스템 저장 프로시저는 데이터베이스 수준 보안 
 
 ## <a name="with-grant-option"></a>WITH GRANT OPTION
 
-**부여**... **WITH GRANT OPTION**은 사용 권한을 받는 보안 주체에게 다른 보안 계정에 지정된 권한을 부여할 수 있는 권한이 부여되도록 지정합니다. 사용 권한을 받는 보안 주체가 역할 또는 Windows 그룹인 경우, 그룹 또는 역할의 멤버가 아닌 사용자에게 개체 권한을 추가로 부여해야 할 때는 **AS** 절을 사용해야 합니다. 그룹 또는 역할이 아니라 사용자만 **GRANT** 문을 실행할 수 있으므로 그룹 또는 역할의 특정 멤버는 사용 권한을 부여할 때 **AS** 절을 사용하여 역할 또는 그룹 멤버 자격을 명시적으로 호출해야 합니다. 다음 예에서는 역할 또는 Windows 그룹에 부여될 때 **WITH GRANT OPTION**이 사용되는 방법을 보여 줍니다.  
+**부여**... **WITH GRANT OPTION** 은 사용 권한을 받는 보안 주체에게 다른 보안 계정에 지정된 권한을 부여할 수 있는 권한이 부여되도록 지정합니다. 사용 권한을 받는 보안 주체가 역할 또는 Windows 그룹인 경우, 그룹 또는 역할의 멤버가 아닌 사용자에게 개체 권한을 추가로 부여해야 할 때는 **AS** 절을 사용해야 합니다. 그룹 또는 역할이 아니라 사용자만 **GRANT** 문을 실행할 수 있으므로 그룹 또는 역할의 특정 멤버는 사용 권한을 부여할 때 **AS** 절을 사용하여 역할 또는 그룹 멤버 자격을 명시적으로 호출해야 합니다. 다음 예에서는 역할 또는 Windows 그룹에 부여될 때 **WITH GRANT OPTION** 이 사용되는 방법을 보여 줍니다.  
   
 ```sql
 -- Execute the following as a database owner  

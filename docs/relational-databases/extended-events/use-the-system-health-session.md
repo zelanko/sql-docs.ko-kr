@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d58b32c64ff8114b21f815617ce2daa8b54fc242
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f157320744b80593264225be72d42d6f08ba398f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481324"
 ---
 # <a name="use-the-system_health-session"></a>system_health 세션 사용
 
@@ -48,19 +48,19 @@ system_health 세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 -   선점형 대기로 인해 오래 동안 대기한 모든 세션의 *callstack*, *sql_text* 및 *session_id* 기간은 대기 유형마다 다릅니다. 선점형 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 외부 API 호출을 대기하는 상황입니다.  
   
--   CLR 할당 및 가상 할당 오류의 *callstack* 및 *session_id*입니다.  
+-   CLR 할당 및 가상 할당 오류의 *callstack* 및 *session_id* 입니다.  
   
 -   메모리 브로커, 스케줄러 모니터, 메모리 노드 OOM, 보안 및 연결용 ring buffer 이벤트입니다.  
   
 -   `sp_server_diagnostics`의 시스템 구성 요소 결과입니다.  
   
--   *scheduler_monitor_system_health_ring_buffer_recorded*에 의해 수집되는 인스턴스 상태입니다.  
+-   *scheduler_monitor_system_health_ring_buffer_recorded* 에 의해 수집되는 인스턴스 상태입니다.  
   
 -   CLR 할당 실패  
   
--   *connectivity_ring_buffer_recorded*를 사용하는 동안 연결 오류가 발생합니다.  
+-   *connectivity_ring_buffer_recorded* 를 사용하는 동안 연결 오류가 발생합니다.  
   
--   *security_error_ring_buffer_recorded*를 사용하는 동안 보안 오류가 발생합니다.  
+-   *security_error_ring_buffer_recorded* 를 사용하는 동안 보안 오류가 발생합니다.  
 
 > [!NOTE]
 > 교착 상태에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침에서 교착 상태](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)를 참조하세요.   
@@ -83,7 +83,7 @@ WHERE xe.name = 'system_health'
 이벤트 파일의 세션 데이터를 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 확장 이벤트 사용자 인터페이스를 사용합니다. 자세한 내용은 [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하세요.
   
 ## <a name="restoring-the-system_health-session"></a>system_health 세션 복원  
-system_health 세션을 삭제한 경우 쿼리 편집기에서 **u_tables.sql** 파일을 실행하여 세션을 복원할 수 있습니다. 이 파일은 다음 폴더에 있으며 여기서 **C:** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일을 설치한 드라이브를 나타내며, **MSSQL1x**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 버전을 나타냅니다.  
+system_health 세션을 삭제한 경우 쿼리 편집기에서 **u_tables.sql** 파일을 실행하여 세션을 복원할 수 있습니다. 이 파일은 다음 폴더에 있으며 여기서 **C:** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일을 설치한 드라이브를 나타내며, **MSSQL1x** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 버전을 나타냅니다.  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  
   

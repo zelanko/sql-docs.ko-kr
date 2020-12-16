@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d674ed580a3c4a73a3f136344b8c2c5d76d33ac4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481504"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 엔드포인트* 가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
   
  데이터베이스 미러링 엔드포인트는 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 엔드포인트는 고유의 TCP 포트 번호에서 수신합니다.  
   

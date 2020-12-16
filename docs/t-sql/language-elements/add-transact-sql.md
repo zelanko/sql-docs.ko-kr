@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e80d9da49c844bef15a2bef2e331b4abc51833a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197007"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481904"
 ---
 # <a name="-addition-transact-sql"></a>+(더하기)(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +94,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 문자와 정수 데이터 형식 더하기  
- 다음 예에서는 문자 데이터 형식을 **int**로 변환하여 **int** 데이터 형식 값과 문자 값을 더합니다. **char** 문자열에 유효하지 않은 문자가 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류를 반환합니다.  
+ 다음 예에서는 문자 데이터 형식을 **int** 로 변환하여 **int** 데이터 형식 값과 문자 값을 더합니다. **char** 문자열에 유효하지 않은 문자가 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류를 반환합니다.  
   
 ```sql  
 DECLARE @addvalue INT;  
