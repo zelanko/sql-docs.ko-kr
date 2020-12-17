@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ae05adf9876b572bd01c9b7f239ef8aa08e67337
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194505"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489973"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>데이터베이스 및 사용 권한 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "92194505"
 
 1. SQL Server Management Studio에서 R 사용 데이터베이스 인스턴스에 연결합니다.
 
-2. **데이터베이스**를 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스**를 선택합니다.
+2. **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스** 를 선택합니다.
   
 2. 새 데이터베이스의 이름을 입력합니다. RevoDeepDive.
   
 ## <a name="create-a-login"></a>로그인을 만듭니다.
   
-1. **새 쿼리**를 클릭하고 데이터베이스 컨텍스트를 master 데이터베이스로 변경합니다.
+1. **새 쿼리** 를 클릭하고 데이터베이스 컨텍스트를 master 데이터베이스로 변경합니다.
   
 2. 새 **쿼리** 창에서 다음 명령을 실행하여 사용자 계정을 만들고 이 자습서에 사용되는 데이터베이스에 할당합니다. 필요한 경우 데이터베이스 이름을 변경해야 합니다.
 
-3. 로그인을 확인하려면 새 데이터베이스를 선택하고 **보안** 및 **사용자**를 차례로 확장합니다.
+3. 로그인을 확인하려면 새 데이터베이스를 선택하고 **보안** 및 **사용자** 를 차례로 확장합니다.
   
 **Windows 사용자**
   
@@ -96,17 +96,17 @@ GO
   
     서버를 사용하여 R 코드를 실행하기 전에 R 개발 환경에서 데이터베이스에 연결할 수 있는지 확인하는 것이 좋습니다. [Visual Studio의 서버 탐색기](/previous-versions/x603htbk(v=vs.140)) 및 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 는 둘 다 강력한 데이터베이스 연결 및 관리 기능을 갖춘 무료 도구입니다.
   
-    추가 데이터베이스 관리 도구를 설치하지 않으려는 경우 제어판의 [ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) 를 사용하여 SQL Server 인스턴스에 대한 테스트 연결을 만들 수 있습니다. 데이터베이스가 올바르게 구성되고 올바른 사용자 이름 및 암호를 입력한 경우 방금 만든 데이터베이스가 표시되며 기본 데이터베이스로 선택할 수 있습니다.
+    추가 데이터베이스 관리 도구를 설치하지 않으려는 경우 제어판의 [ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md) 를 사용하여 SQL Server 인스턴스에 대한 테스트 연결을 만들 수 있습니다. 데이터베이스가 올바르게 구성되고 올바른 사용자 이름 및 암호를 입력한 경우 방금 만든 데이터베이스가 표시되며 기본 데이터베이스로 선택할 수 있습니다.
   
     연결 실패의 일반적인 이유로는 서버에 대한 원격 연결이 설정되어 있지 않으며 명명된 파이프 프로토콜이 활성화되어 있지 않습니다. 이 문서에서 더 많은 문제 해결 팁을 찾을 수 있습니다. [SQL Server 데이터베이스 엔진 연결 문제를 해결합니다](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **내 테이블 이름 앞에 datareader가 붙는 것은 무엇 때문인가요?**
   
-    이 사용자에 대한 기본 스키마를 **db_datareader**로 지정하면 이 사용자가 만든 모든 테이블과 기타 새 개체 앞에 이 *스키마* 이름이 붙습니다. 스키마는 개체를 구성하기 위해 데이터베이스에 추가할 수 있는 폴더와 비슷합니다. 또한 스키마는 데이터베이스 내에서 사용자 권한을 정의합니다.
+    이 사용자에 대한 기본 스키마를 **db_datareader** 로 지정하면 이 사용자가 만든 모든 테이블과 기타 새 개체 앞에 이 *스키마* 이름이 붙습니다. 스키마는 개체를 구성하기 위해 데이터베이스에 추가할 수 있는 폴더와 비슷합니다. 또한 스키마는 데이터베이스 내에서 사용자 권한을 정의합니다.
   
-    스키마가 하나의 특정 사용자 이름과 연결된 경우 사용자는 _스키마 소유자_입니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않을 경우 항상 고유한 스키마에서 만듭니다.
+    스키마가 하나의 특정 사용자 이름과 연결된 경우 사용자는 _스키마 소유자_ 입니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않을 경우 항상 고유한 스키마에서 만듭니다.
   
-    예를 들어 이름이 **TestData**인 테이블을 만들고 기본 스키마가 **db_datareader**이면 이름이 `<database_name>.db_datareader.TestData`인 테이블이 만들어집니다.
+    예를 들어 이름이 **TestData** 인 테이블을 만들고 기본 스키마가 **db_datareader** 이면 이름이 `<database_name>.db_datareader.TestData`인 테이블이 만들어집니다.
   
     이러한 이유로 테이블이 서로 다른 스키마에 속하기만 하면 한 데이터베이스에 같은 이름의 테이블이 여러 개 포함될 수 있습니다.
    
