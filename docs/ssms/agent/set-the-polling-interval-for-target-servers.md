@@ -15,13 +15,13 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f3feae6e042868affbb48926958459aa5ff203b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b62b0e833af56de2f7c575a08a7093615c81265e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472254"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,15 +49,15 @@ ms.locfileid: "92035523"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리** 를 가리킨 다음 **대상 서버 관리** 를 클릭합니다.  
   
-3.  **대상 서버 상태** 탭에서 **명령 게시**를 클릭합니다.  
+3.  **대상 서버 상태** 탭에서 **명령 게시** 를 클릭합니다.  
   
-4.  **명령 유형** 목록에서 **폴링 간격 설정**을 선택합니다.  
+4.  **명령 유형** 목록에서 **폴링 간격 설정** 을 선택합니다.  
   
 5.  **폴링 간격** 상자에 대상 서버가 마스터 서버를 폴링하기 전에 경과해야 하는 시간(초)을 10부터 28,800까지 범위에서 입력합니다.  
   
-6.  **받는 사람**에서 다음 중 하나를 수행합니다.  
+6.  **받는 사람** 에서 다음 중 하나를 수행합니다.  
   
     1.  모든 대상 서버가 같은 폴링 간격을 공유할 경우 **모든 대상 서버** 를 클릭합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "92035523"
   
 1.  개체 탐색기에서 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  쿼리 창에서 [sp_post_msx_operation(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md) 시스템 저장 프로시저를 사용하여 대상 서버의 폴링 간격을 설정합니다.  
   

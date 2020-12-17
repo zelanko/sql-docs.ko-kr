@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2302849edafee15448c3485e967c2e792a8b7984
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 2effdf660a0b8a32c0b932b3a7843d0f5ee8944f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098652"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637907"
 ---
 # <a name="ado-md-methods"></a>ADO MD 메서드
 
@@ -30,7 +30,7 @@ ms.locfileid: "92098652"
 |[열기](./open-method-ado-md.md)|다차원 쿼리 결과를 검색 하 고 결과를 셀 집합에 반환 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 참조](./ado-md-object-model.md)   
  [ADO MD 코드 예제](./ado-md-code-examples.md)   
  [ADO MD 컬렉션](./ado-md-collections.md)   
  [ADO MD 열거 상수](./ado-md-enumerated-constants.md)   

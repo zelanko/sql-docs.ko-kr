@@ -24,13 +24,13 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 770f6c82bfdafb20d826ae11b52ada0a0b1a5702
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033065"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478864"
 ---
 # <a name="operators"></a>연산자
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "92033065"
   
 -   **net sendnotification**  
   
-    **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. **net send**에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
+    **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. **net send** 에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
   
     > [!NOTE]  
     > **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "92033065"
   
 -   호출할 경우에는 타사 제품 호출기-전자 메일 소프트웨어 및/또는 하드웨어가 있어야 합니다.  
   
--   **net send**를 사용하려면 운영자가 지정된 컴퓨터에 로그온하고 지정된 컴퓨터가 Windows Messenger에서 메시지를 받도록 허용해야 합니다.  
+-   **net send** 를 사용하려면 운영자가 지정된 컴퓨터에 로그온하고 지정된 컴퓨터가 Windows Messenger에서 메시지를 받도록 허용해야 합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

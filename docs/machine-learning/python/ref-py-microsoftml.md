@@ -7,18 +7,18 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1f7c2c49acebe30b2739115b32643b2423f91cb
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: ec421e1b0e112a535e3caa59cf83e01c4e02086c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956929"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470944"
 ---
 # <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml(SQL Server Machine Learning Services의 Python 패키지)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-**microsoftml**은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 Python 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다.
+**microsoftml** 은 고성능 기계 학습 알고리즘을 제공하는 Microsoft의 Python 패키지입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생하기 위한 기능 추출을 위한 함수가 포함됩니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있으며, 다중 코어 처리 및 빠른 데이터 스트리밍을 사용하여 빅 데이터에 대한 고성능을 지원합니다.
 
 ## <a name="full-reference-documentation"></a>전체 참조 설명서
 
@@ -33,16 +33,16 @@ ms.locfileid: "91956929"
 + [데이터 과학 클라이언트용 Python 클라이언트 라이브러리](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md)의 **microsoftml**에서 둘 다 지원됩니다.
+> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md)의 **microsoftml** 에서 둘 다 지원됩니다.
 
 ## <a name="package-dependencies"></a>패키지 종속성
 
-**microsoftml**의 알고리즘은 다음에 대해 [revoscalepy](ref-py-revoscalepy.md)에 따라 좌우됩니다.
+**microsoftml** 의 알고리즘은 다음에 대해 [revoscalepy](ref-py-revoscalepy.md)에 따라 좌우됩니다.
 
 + 데이터 원본 개체 **microsoftml** 함수에서 사용하는 데이터는 **revoscalepy** 함수를 사용하여 생성됩니다.
 + 원격 컴퓨팅(원격 SQL Server 인스턴스로 함수 실행 이동) **revoscalepy** 패키지는 SQL Server에 대한 원격 컴퓨팅 컨텍스트를 만들고 활성화하는 함수를 제공합니다.
 
-대부분의 경우 **microsoftml**을 사용할 때마다 패키지를 함께 로드하게 됩니다.
+대부분의 경우 **microsoftml** 을 사용할 때마다 패키지를 함께 로드하게 됩니다.
 
 ## <a name="functions-by-category"></a>범주별 함수
 
@@ -121,11 +121,11 @@ ms.locfileid: "91956929"
 
 ## <a name="how-to-call-microsoftml"></a>microsoftml을 호출하는 방법
 
-**microsoftml**의 함수는 저장 프로시저에서 캡슐화된 Python 코드에서 호출할 수 있습니다. 대부분의 개발자는 **microsoftml** 솔루션을 로컬로 빌드한 다음, 완성된 Python 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
+**microsoftml** 의 함수는 저장 프로시저에서 캡슐화된 Python 코드에서 호출할 수 있습니다. 대부분의 개발자는 **microsoftml** 솔루션을 로컬로 빌드한 다음, 완성된 Python 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
 
-Python용 **microsoftml** 패키지는 기본적으로 설치되지만 **revoscalepy**와 달리, SQL Server와 함께 설치된 Python 실행 파일을 사용하여 Python 세션을 시작할 때는 기본적으로 로드되지 않습니다.
+Python용 **microsoftml** 패키지는 기본적으로 설치되지만 **revoscalepy** 와 달리, SQL Server와 함께 설치된 Python 실행 파일을 사용하여 Python 세션을 시작할 때는 기본적으로 로드되지 않습니다.
 
-첫 번째 단계로 **microsoftml** 패키지를 가져오고, 원격 컴퓨팅 컨텍스트 또는 관련된 연결 또는 데이터 원본 개체를 사용해야 하는 경우 **revoscalepy**를 가져옵니다. 그런 다음, 필요한 개별 함수를 참조합니다.
+첫 번째 단계로 **microsoftml** 패키지를 가져오고, 원격 컴퓨팅 컨텍스트 또는 관련된 연결 또는 데이터 원본 개체를 사용해야 하는 경우 **revoscalepy** 를 가져옵니다. 그런 다음, 필요한 개별 함수를 참조합니다.
 
 ```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression

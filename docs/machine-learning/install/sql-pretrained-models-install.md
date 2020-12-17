@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793750"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471124"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습된 기계 학습 모델 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "92793750"
 
 외부 스크립트가 사용하도록 설정되어 있고 SQL Server LaunchPad 서비스가 실행되고 있어야 합니다. 설치 지침은 이러한 기능을 사용하도록 설정하고 확인하는 단계를 제공합니다. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 [MicrosoftML R 패키지](/machine-learning-server/r-reference/microsoftml/microsoftml-package) 또는 [microsoftml Python](/machine-learning-server/python-reference/microsoftml/microsoftml-package) 패키지에는 미리 학습된 모델이 들어 있습니다.
 
 [SQL Server](sql-machine-learning-services-windows-install.md) Machine Learning Services에는 기계 학습 라이브러리의 언어 버전이 모두 포함되어 있으므로 이 사전 요구 사항은 사용자의 추가 작업 없이도 충족됩니다. 라이브러리가 제공되므로 이 문서에 설명된 PowerShell 스크립트를 사용하여 미리 학습된 모델을 이러한 라이브러리에 추가할 수 있습니다.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [MicrosoftML R 패키지](/machine-learning-server/r-reference/microsoftml/microsoftml-package)에는 미리 학습된 모델이 들어 있습니다.
 
 R 전용 [SQL Server R Services](sql-r-services-windows-install.md)에는 기본적으로 [MicrosoftML 패키지](/machine-learning-server/r-reference/microsoftml/microsoftml-package)가 포함되지 않습니다. MicrosoftML을 추가하려면 [구성 요소 업그레이드](../install/upgrade-r-and-python.md)를 수행해야 합니다. 구성 요소 업그레이드의 이점 중 하나는 PowerShell 스크립트를 실행할 필요 없이 미리 학습 된 모델을 동시에 추가할 수 있다는 것입니다. 그러나 이미 업그레이드했지만 처음에 미리 학습된 모델을 추가하지 못한 경우 이 문서에 설명된 대로 PowerShell 스크립트를 실행할 수 있습니다. 이 방법은 SQL Server의 두 버전 모두에서 작동합니다. 이 작업을 수행하기 전에 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`에 MicrosoftML 라이브러리가 있는지 확인합니다.

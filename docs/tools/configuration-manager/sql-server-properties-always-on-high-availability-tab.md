@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c67f5f1e1021a303a1cdb52e02fdb5c8c1f8f2e2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478424"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "88901543"
  **Always On 가용성 그룹 활성화**  
  다음과 같이 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 Always On 가용성 그룹을 사용하거나 사용하지 않도록 설정하려면 이 확인란을 사용합니다.  
   
--   이 확인란이 비어 있으면 현재 Always On 가용성 그룹을 사용하지 않도록 설정되어 있습니다. Always On 가용성 그룹을 사용하도록 설정하려면 이 확인란을 선택하고 **확인**을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 수동으로 다시 시작합니다.  
+-   이 확인란이 비어 있으면 현재 Always On 가용성 그룹을 사용하지 않도록 설정되어 있습니다. Always On 가용성 그룹을 사용하도록 설정하려면 이 확인란을 선택하고 **확인** 을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 수동으로 다시 시작합니다.  
   
--   이 확인란이 이미 선택되어 있으면 현재 Always On 가용성 그룹을 사용하도록 설정되어 있습니다. Always On 가용성 그룹을 사용하지 않도록 설정하려면 이 확인란의 선택을 취소하고 **확인**을 클릭합니다. 이렇게 하면 서버 인스턴스가 다시 시작됩니다.  
+-   이 확인란이 이미 선택되어 있으면 현재 Always On 가용성 그룹을 사용하도록 설정되어 있습니다. Always On 가용성 그룹을 사용하지 않도록 설정하려면 이 확인란의 선택을 취소하고 **확인** 을 클릭합니다. 이렇게 하면 서버 인스턴스가 다시 시작됩니다.  
   
     > [!TIP]  
     >  Always On 가용성 그룹을 사용하지 않도록 설정한 후 서버 인스턴스에서 모든 로컬 가용성 복제본을 제거해야 합니다. 지정된 가용성 그룹의 마지막 복제본을 제거하는 경우 그룹도 제거해야 합니다.  

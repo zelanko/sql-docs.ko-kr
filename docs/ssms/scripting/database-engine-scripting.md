@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae4d356751aa466b6ca13455c514cea91cd95c21
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0972ef38fd5af52b1141e0b14b65b1d08e2c675b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476934"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92039082"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 계층을 파일 시스템 경로와 비슷한 PowerShell 경로로 노출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 클래스를 사용하여 경로의 각 노드에 표현되는 개체를 관리할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 구현하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet 집합. **Invoke-Sqlcmd**는 이러한 cmdlet 중 하나로, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sqlcmd **유틸리티와 함께 실행되도록** 쿼리 스크립트를 실행하는 데 사용됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 구현하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet 집합. **Invoke-Sqlcmd** 는 이러한 cmdlet 중 하나로, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sqlcmd **유틸리티와 함께 실행되도록** 쿼리 스크립트를 실행하는 데 사용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 PowerShell을 실행하기 위한 다음과 같은 기능을 제공합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "92039082"
   
 -   PowerShell 스크립트 파일은 예약된 간격이나 시스템 이벤트에 대한 응답으로 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 작업 단계에 대한 입력으로 사용할 수 있습니다.  
   
--   PowerShell을 시작하고 **모듈을 가져오는** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티. 이를 통해 해당 모듈에서 지원하는 모든 동작을 수행할 수 있습니다. **sqlps** 유틸리티는 명령 프롬프트에서 시작하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 개체 탐색기 트리의 노드를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하여 시작할 수 있습니다.  
+-   PowerShell을 시작하고 **모듈을 가져오는** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티. 이를 통해 해당 모듈에서 지원하는 모든 동작을 수행할 수 있습니다. **sqlps** 유틸리티는 명령 프롬프트에서 시작하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 개체 탐색기 트리의 노드를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작** 을 선택하여 시작할 수 있습니다.  
   
 ## <a name="database-engine-queries"></a>데이터베이스 엔진 쿼리  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트에는 다음과 같은 세 가지 유형의 요소가 포함되어 있습니다.  

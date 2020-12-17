@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e6809a66ce7f5fd425ce9bfeb2b1fea919c4dfaa
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 19f9f1c6cfc293bfba0d44e34e0a30bf386bdb3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956934"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470964"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server"></a>SQL Server의 sp_rxPredict를 사용한 실시간 채점
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -175,7 +175,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-2-call-sp_rxpredict"></a>2단계. sp_rxPredict 호출
 
-다른 저장 프로시저와 마찬가지로 `sp_rxPredict`를 호출합니다. 현재 릴리스에서 저장 프로시저는 두 개의 매개 변수만 사용합니다. 즉, 모델에 대한 이진 형식의 _\@model_과 유효한 SQL 쿼리로 정의된 채점에 사용할 데이터에 대한 _\@inputData_가 그것입니다.
+다른 저장 프로시저와 마찬가지로 `sp_rxPredict`를 호출합니다. 현재 릴리스에서 저장 프로시저는 두 개의 매개 변수만 사용합니다. 즉, 모델에 대한 이진 형식의 _\@model_ 과 유효한 SQL 쿼리로 정의된 채점에 사용할 데이터에 대한 _\@inputData_ 가 그것입니다.
 
 이진 형식은 PREDICT 함수에서 사용하는 것과 같으므로 이전 예제의 모델 및 데이터 테이블을 사용할 수 있습니다.
 

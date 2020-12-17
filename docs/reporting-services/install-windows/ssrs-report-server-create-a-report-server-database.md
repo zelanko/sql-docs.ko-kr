@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474554"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>보고서 서버 데이터베이스 만들기, 보고서 서버 구성 관리자  
 
@@ -23,11 +23,11 @@ ms.locfileid: "91935573"
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 스토리지로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 
 
-데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하면 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다. 이 두 데이터베이스는 **보고서 서버 데이터베이스** 또는 **보고서 서버 카탈로그**로 통칭됩니다.
+데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하면 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb** 입니다. 이 두 데이터베이스는 **보고서 서버 데이터베이스** 또는 **보고서 서버 카탈로그** 로 통칭됩니다.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드**에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 각 SSRS 서비스 애플리케이션에 3개의 데이터베이스가 생성됩니다. 기본적으로 데이터베이스 이름에는 서비스 애플리케이션을 나타내는 GUID가 포함됩니다. 
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드** 에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 각 SSRS 서비스 애플리케이션에 3개의 데이터베이스가 생성됩니다. 기본적으로 데이터베이스 이름에는 서비스 애플리케이션을 나타내는 GUID가 포함됩니다. 
 
 다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.
 
@@ -53,7 +53,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 - **수동**. SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용합니다. 원격 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 사용하여 데이터베이스를 호스팅하는 경우 보고서 서버 데이터베이스를 수동으로 만듭니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>SharePoint 모드 
 **보고서 서버 설치 옵션** 페이지에는 SharePoint 모드의 유일한 **설치만** 옵션이 있습니다. 이 옵션은 모든 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 및 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스를 설치합니다. 다음 단계에는 다음 방법 중 하나를 사용하여 SSRS 서비스 애플리케이션을 하나 이상 만듭니다.  
@@ -67,14 +67,14 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 ## <a name="database-server-version-requirements"></a>데이터베이스 서버 버전 요구 사항
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보고서 서버 데이터베이스를 호스팅하는 데 사용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 로컬 또는 원격 인스턴스일 수 있습니다. 보고서 서버 데이터베이스를 호스팅할 수 있는 지원되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전은 다음과 같습니다.  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Azure SQL Managed Instance
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

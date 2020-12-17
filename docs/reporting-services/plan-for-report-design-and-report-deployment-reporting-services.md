@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477064"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.
@@ -53,7 +53,7 @@ ms.locfileid: "87247542"
   
 -   **웹 포털:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 기본 모드 보고서 서버로 보고서를 업로드합니다.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** SharePoint 모드 보고서 서버로 구성된 SharePoint 사이트에 보고서를 업로드합니다.  
 
@@ -71,11 +71,11 @@ ms.locfileid: "87247542"
   
  보고서 서버에 보고서 정의를 업로드하거나 기존 보고서가 포함된 보고서 서버를 업그레이드할 때 보고서 서버는 원래 형식으로 보고서 정의를 보존합니다. **처음 사용할 때**, 보고서 서버는 보고서 서버 데이터베이스의 보고서를 이후 검토를 위해 보존되는 이진 형식으로 업그레이드합니다. 보고서 정의(.rdl) 자체는 업그레이드되지 않습니다.  
   
- 보고서 정의 파일(.rdl)의 읽기 전용 복사본을 보고서 서버에서 추출할 수 있습니다. 기본 모드 보고서 서버에서는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]로 이동해서 보고서를 선택하고 **다운로드**를 클릭합니다. 
+ 보고서 정의 파일(.rdl)의 읽기 전용 복사본을 보고서 서버에서 추출할 수 있습니다. 기본 모드 보고서 서버에서는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]로 이동해서 보고서를 선택하고 **다운로드** 를 클릭합니다. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-SharePoint 모드 배포에서는 문서 라이브러리로 이동해서 보고서를 선택하고 **복사본 다운로드**를 클릭합니다.  
+SharePoint 모드 배포에서는 문서 라이브러리로 이동해서 보고서를 선택하고 **복사본 다운로드** 를 클릭합니다.  
 
 ::: moniker-end
   

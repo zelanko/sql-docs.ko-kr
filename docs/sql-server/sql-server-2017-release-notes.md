@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985709"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409589"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "91985709"
 
 - **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음 단계를 완료합니다.
 
-    1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
-    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 다음, **적용**을 클릭합니다.
-    3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 다시 선택하고 **적용**을 클릭합니다.
+    1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다. 
+    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용** 을 선택 취소한 다음, **적용** 을 클릭합니다.
+    3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용** 을 다시 선택하고 **적용** 을 클릭합니다.
 
 ### <a name="master-data-services-mds"></a>MDS(Master Data Services)
-- **문제 및 고객에게 미치는 영향:**   사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
+- **문제 및 고객에게 미치는 영향:**  사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
 
 - **해결 방법:** 
   - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
@@ -71,19 +71,19 @@ ms.locfileid: "91985709"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 릴리스 후보(RC1 - 2017년 7월)
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SSIS(SQL Server Integration Services)(RC1 - 2017년 7월)
-- **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
-- **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
+- **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout* 으로 변경되었습니다.
+- **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster* 에서 *runinscaleout* 으로 변경해야만 RC1에서 스크립트가 작동합니다.
 
-- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지는 다음과 같습니다. " *\@runincluster*는 프로시저 **create_execution**의 매개 변수가 아닙니다." 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
+- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지는 다음과 같습니다. " *\@runincluster* 는 프로시저 **create_execution** 의 매개 변수가 아닙니다." 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
 - **해결 방법:** SSMS 버전 17.2가 나올 때까지:
   1. 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성합니다.
-  2. 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경합니다.
+  2. 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout* 으로 변경합니다.
   3. 스크립트를 실행합니다.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1(2017년 5월)
 ### <a name="documentation-ctp-21"></a>설명서(CTP 2.1)
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상** 에서 설명합니다. 
 - **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services(CTP 2.1)
@@ -120,16 +120,16 @@ ms.locfileid: "91985709"
 
 - **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 애플리케이션을 수정하려면 다음 단계를 수행합니다.
 
-   1. **프로그램 추가/제거**로 이동합니다.
-   2. *Microsoft SQL Server 2019 T-SQL 언어 서비스 CTP2.1*을 찾아 마우스 오른쪽 단추로 클릭한 다음, **제거**를 선택합니다.
-   3. 구성 요소를 제거한 후 중단된 애플리케이션을 복구하거나 적절한 버전의 *TSqlLanguageService.MSI*를 다시 설치합니다.
+   1. **프로그램 추가/제거** 로 이동합니다.
+   2. *Microsoft SQL Server 2019 T-SQL 언어 서비스 CTP2.1* 을 찾아 마우스 오른쪽 단추로 클릭한 다음, **제거** 를 선택합니다.
+   3. 구성 요소를 제거한 후 중단된 애플리케이션을 복구하거나 적절한 버전의 *TSqlLanguageService.MSI* 를 다시 설치합니다.
 
    이 해결 방법에서는 이러한 어셈블리의 v14 버전을 제거하므로 v14 버전에 종속된 애플리케이션이 더 이상 작동하지 않습니다. 이러한 어셈블리가 필요한 경우에는 2016 병렬 설치 없이 별도로 설치해야 합니다.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0(2017년 4월)
 ### <a name="documentation-ctp-20"></a>설명서(CTP 2.0)
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상** 에서 설명합니다. 
 - **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
 ### <a name="always-on-availability-groups"></a>Always On 가용성 그룹

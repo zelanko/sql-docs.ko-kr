@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3d86d2b94410f1ffbdd9d0b15226d278d28b3a5c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036236"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476864"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 
@@ -63,7 +63,7 @@ ms.locfileid: "92036236"
 |다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|**디버그** 메뉴에서 **한 단계씩 코드 실행** 을 클릭합니다.<br /><br /> **디버그** 도구 모음에서 **한 단계씩 코드 실행** 단추를 클릭합니다.<br /><br /> F11 키를 누릅니다.|  
 |다음 문 또는 모듈을 프로시저 단위로 실행합니다.|**디버그** 메뉴에서 **프로시저 단위 실행** 을 클릭합니다.<br /><br /> **디버그** 도구 모음에서 **프로시저 단위 실행** 단추를 클릭합니다.<br /><br /> F10 키를 누릅니다.|  
 |모듈 프로시저를 나갑니다.|**디버그** 메뉴에서 **프로시저 나가기** 를 클릭합니다.<br /><br /> **디버그** 도구 모음에서 **프로시저 나가기** 단추를 클릭합니다.<br /><br /> Shift+F11을 누릅니다.|  
-|현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행**을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
+|현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행** 을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
   
 ## <a name="see-also"></a>참고 항목
 

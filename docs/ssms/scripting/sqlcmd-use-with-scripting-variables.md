@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036256"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476884"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "92036256"
   
  스크립팅 변수는 **setvar** 명령을 사용하여 명시적으로 정의하거나 **sqlcmd -v** 옵션을 사용하여 암시적으로 정의할 수 있습니다.  
   
- 이 항목에는 **SET**를 사용하여 Cmd.exe 명령 프롬프트에서 환경 변수를 정의하는 예도 포함되어 있습니다.  
+ 이 항목에는 **SET** 를 사용하여 Cmd.exe 명령 프롬프트에서 환경 변수를 정의하는 예도 포함되어 있습니다.  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>setvar 명령을 사용하여 스크립팅 변수 설정  
- **setvar** 명령은 스크립팅 변수를 정의하는 데 사용됩니다. **setvar** 명령을 사용하여 정의한 변수는 내부적으로 저장됩니다. **SET**를 사용하여 명령 프롬프트에서 정의하는 환경 변수와 스크립팅 변수를 혼동하면 안 됩니다. 스크립트에서 환경 변수가 아니거나 **setvar**을 사용하여 정의되지 않은 변수를 참조하면 오류 메시지가 반환되고 스크립트 실행이 중지됩니다. 자세한 내용은 **sqlcmd 유틸리티** 의 [-b](../../tools/sqlcmd-utility.md)옵션을 참조하세요.  
+ **setvar** 명령은 스크립팅 변수를 정의하는 데 사용됩니다. **setvar** 명령을 사용하여 정의한 변수는 내부적으로 저장됩니다. **SET** 를 사용하여 명령 프롬프트에서 정의하는 환경 변수와 스크립팅 변수를 혼동하면 안 됩니다. 스크립트에서 환경 변수가 아니거나 **setvar** 을 사용하여 정의되지 않은 변수를 참조하면 오류 메시지가 반환되고 스크립트 실행이 중지됩니다. 자세한 내용은 **sqlcmd 유틸리티** 의 [-b](../../tools/sqlcmd-utility.md)옵션을 참조하세요.  
   
 ## <a name="variable-precedence-low-to-high"></a>변수 우선 순위(낮은 순위에서 높은 순위)  
  같은 이름의 변수 유형이 둘 이상인 경우 우선 순위가 가장 높은 변수가 사용됩니다.  
@@ -44,14 +44,14 @@ ms.locfileid: "92036256"
   
 2.  사용자 수준 환경 변수  
   
-3.  **SET X=Y**를 시작하기 전에 명령 프롬프트에서 설정된 명령 셸( **SET X=Y**)  
+3.  **SET X=Y** 를 시작하기 전에 명령 프롬프트에서 설정된 명령 셸( **SET X=Y**)  
   
 4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  환경 변수를 보려면 **제어판**에서 **시스템**을 연 다음 **고급** 탭을 클릭합니다.  
+>  환경 변수를 보려면 **제어판** 에서 **시스템** 을 연 다음 **고급** 탭을 클릭합니다.  
   
 ## <a name="implicitly-setting-scripting-variables"></a>암시적 스크립팅 변수 설정  
  관련 **sqlcmd** 변수가 있는 옵션을 사용하여 **sqlcmd** 를 시작하면 **sqlcmd** 변수는 옵션을 사용하여 지정한 값으로 암시적으로 설정됩니다. 다음 예에서는 `sqlcmd` 를 `-l` 옵션으로 시작합니다. 이 경우 암시적으로 SQLLOGINTIMEOUT 변수가 설정됩니다.  
@@ -101,7 +101,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   변수 값에 따옴표가 포함되는 경우 따옴표를 이스케이프 처리해야 합니다. 예를 들면 :`setvar MyVar "spac""e"`와 같습니다.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Cmd.exe SET 변수 값 및 이름에 대한 지침  
- SET를 사용하여 정의한 변수는 Cmd.exe 환경의 일부이며 **sqlcmd**에서 참조될 수 있습니다. 다음 지침을 고려하세요.  
+ SET를 사용하여 정의한 변수는 Cmd.exe 환경의 일부이며 **sqlcmd** 에서 참조될 수 있습니다. 다음 지침을 고려하세요.  
   
 -   변수 이름은 공백 문자나 따옴표를 포함할 수 없습니다.  
   
@@ -190,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. sqlcmd 내에서 사용자 수준 환경 변수 사용  
- 다음 예에서는 명령 프롬프트에서 사용자 수준 환경 변수인 `%Temp%` 를 설정하고 `sqlcmd` 입력 파일로 전달합니다. 사용자 수준 환경 변수를 얻으려면 **제어판**에서 **시스템**을 두 번 클릭하고 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
+ 다음 예에서는 명령 프롬프트에서 사용자 수준 환경 변수인 `%Temp%` 를 설정하고 `sqlcmd` 입력 파일로 전달합니다. 사용자 수준 환경 변수를 얻으려면 **제어판** 에서 **시스템** 을 두 번 클릭하고 **고급** 탭을 클릭한 다음 **환경 변수** 를 클릭합니다.  
   
  입력 파일 `c:\testscript.txt`의 코드는 다음과 같습니다.
 

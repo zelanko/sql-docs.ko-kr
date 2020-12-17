@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115396"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471354"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio에서 사용자 지정 보고서를 사용하여 Python 및 R 스크립트 실행 모니터링
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ SQL Server Management Studio의 보고서에 대한 자세한 내용은 [Managem
 
 1. GitHub에서 SQL Server Machine Learning Services에 대한 [SSMS 사용자 지정 보고서](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)를 다운로드합니다.
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > **ML Services - 인스턴스 구성** 사용자 지정 보고서는 SQL Managed Instance에서 지원되지 않습니다.
    ::: moniker-end

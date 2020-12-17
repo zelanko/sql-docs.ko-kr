@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2a6edd53f73eeac5b2033ad399f0a46bee66ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: db36e1374b94c95691b73e97837aa025d4fb07d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477104"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
 
@@ -35,7 +35,7 @@ SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 �
   
 1.  데이터 경고를 만든 보고서를 저장한 SharePoint 라이브러리로 이동합니다.  
   
-2.  보고서에서 확장 드롭다운 메뉴 아이콘을 클릭하고 **데이터 경고 관리**를 클릭합니다. 다음 그림에서는 드롭다운 메뉴를 보여 줍니다.  
+2.  보고서에서 확장 드롭다운 메뉴 아이콘을 클릭하고 **데이터 경고 관리** 를 클릭합니다. 다음 그림에서는 드롭다운 메뉴를 보여 줍니다.  
   
      ![보고서 상황에 맞는 메뉴에서 경고 관리자 열기](../reporting-services/media/rs-openalertmanager.gif "보고서 상황에 맞는 메뉴에서 경고 관리자 열기")  
   
@@ -50,7 +50,7 @@ SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 �
   
 ### <a name="to-edit-an-alert-definition"></a>경고 정의를 편집하려면  
   
--   경고 정의를 편집할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
+-   경고 정의를 편집할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **편집** 을 클릭합니다.  
   
      경고 정의가 데이터 경고 디자이너에서 열립니다. 자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md) 및 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)를 참조하세요.  
   
@@ -62,13 +62,13 @@ SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 �
   
 ### <a name="to-delete-an-alert-definition"></a>경고 정의를 삭제하려면  
   
--   삭제할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+-   삭제할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다.  
   
      경고를 삭제하면 더 이상 경고 메시지가 전송되지 않습니다.  
   
 ### <a name="to-run-an-alert"></a>경고를 실행하려면  
   
--   실행할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
+-   실행할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **실행** 을 클릭합니다.  
   
      데이터 경고 디자이너에서 지정한 일정 옵션에 관계없이 경고 인스턴스가 생성되고 데이터 경고 메시지가 즉시 전송됩니다. 예를 들어 매주, 그리고 결과가 변경된 경우에만 전송되도록 구성된 경고가 전송됩니다.  
 

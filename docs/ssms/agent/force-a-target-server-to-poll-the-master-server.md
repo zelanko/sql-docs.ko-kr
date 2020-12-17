@@ -16,13 +16,13 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966acd47edc24294f5ca1a9bd0a0d7f88927f4aa
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4aaac1b02996efdf950e4a0fecac054b25a9055c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474464"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "92037953"
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio 사용  
 **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
   
-1.  **개체 탐색기**에서 마스터 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 마스터 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리** 를 가리킨 다음 **대상 서버 관리** 를 클릭합니다.  
   
-3.  대상 서버를 클릭한 다음 **강제 폴링**을 클릭합니다.  
+3.  대상 서버를 클릭한 다음 **강제 폴링** 을 클릭합니다.  

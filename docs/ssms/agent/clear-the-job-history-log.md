@@ -17,13 +17,13 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb9f95cd3621454b6e6b3aa99f1abd08df446acc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 75d6a1419e86a1adc0b469b16dd5f87a525e5102
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472384"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,27 +44,27 @@ ms.locfileid: "92035686"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장한 다음 **작업**을 확장합니다.  
+2.  **SQL Server 에이전트** 를 확장한 다음 **작업** 을 확장합니다.  
   
-3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **기록 보기**를 클릭합니다.  
+3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **기록 보기** 를 클릭합니다.  
   
-4.  **로그 파일 뷰어**에서 기록을 삭제할 작업을 선택한 후 다음 중 하나를 수행합니다.  
+4.  **로그 파일 뷰어** 에서 기록을 삭제할 작업을 선택한 후 다음 중 하나를 수행합니다.  
   
-    -   **삭제**를 클릭한 다음 **기록 삭제** 대화 상자에서 **모든 기록 삭제** 를 클릭합니다. 모든 작업 기록 또는 지정된 날짜 이전의 기록만 삭제할 수 있습니다. 모든 작업 기록을 제거하려면 **모든 기록 삭제**를 클릭합니다. 이전 작업 기록 로그만 제거하려면 **다음 날짜 이전의 기록 삭제**를 클릭한 다음 날짜를 지정합니다.  
+    -   **삭제** 를 클릭한 다음 **기록 삭제** 대화 상자에서 **모든 기록 삭제** 를 클릭합니다. 모든 작업 기록 또는 지정된 날짜 이전의 기록만 삭제할 수 있습니다. 모든 작업 기록을 제거하려면 **모든 기록 삭제** 를 클릭합니다. 이전 작업 기록 로그만 제거하려면 **다음 날짜 이전의 기록 삭제** 를 클릭한 다음 날짜를 지정합니다.  
   
-    -   다중 서버 작업의 기록 로그를 지우려면 **작업 상태** 를 클릭합니다. **작업**, 작업 이름, **원격 작업 기록 보기**를 차례로 클릭합니다.  
+    -   다중 서버 작업의 기록 로그를 지우려면 **작업 상태** 를 클릭합니다. **작업**, 작업 이름, **원격 작업 기록 보기** 를 차례로 클릭합니다.  
   
-5.  **삭제**를 클릭합니다.  
+5.  **삭제** 를 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   
 #### <a name="to-clear-the-job-history-log"></a>작업 기록 로그를 지우려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- example removes the history for a job named NightlyBackups.  

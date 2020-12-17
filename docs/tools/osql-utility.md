@@ -25,13 +25,13 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 29f495dda754d3456e8d8df8811620548426cd89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002983"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478444"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 
@@ -94,19 +94,19 @@ C:\>osql
 ```  
   
 > [!IMPORTANT]  
->  암호를 마스킹하려면 **-U** 옵션과 함께 **-P** 옵션을 지정하지 마세요. 대신 **-U** 옵션 및 기타 스위치와 함께 **osql** 을 지정한 후 **-P**를 지정하지 말고 Enter 키를 누릅니다. 그러면 **osql** 이 암호를 묻는 메시지를 표시합니다. 이 방법을 사용하면 암호 입력 시 암호가 마스킹됩니다.  
+>  암호를 마스킹하려면 **-U** 옵션과 함께 **-P** 옵션을 지정하지 마세요. 대신 **-U** 옵션 및 기타 스위치와 함께 **osql** 을 지정한 후 **-P** 를 지정하지 말고 Enter 키를 누릅니다. 그러면 **osql** 이 암호를 묻는 메시지를 표시합니다. 이 방법을 사용하면 암호 입력 시 암호가 마스킹됩니다.  
   
  **-E**  
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
  **-S** _server\_name_[ **\\** _instance\_name_]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 _server\_name_ **\\** _instance\_name_을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 _server\_name_ **\\** _instance\_name_ 을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
  **-H** _wksta_name_  
- 워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
+ 워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who** 에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
   
  **-d** _db_name_  
- *osql* 을 시작할 때 USE **db_name**문을 실행합니다.  
+ *osql* 을 시작할 때 USE **db_name** 문을 실행합니다.  
   
  **-l** _time_out_  
  **osql** 로그인 제한 시간(초)을 지정합니다. 기본 **osql** 로그인 제한 시간은 8초입니다.  
@@ -115,7 +115,7 @@ C:\>osql
  명령 제한 시간(초)을 지정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다.  
   
  **-h** _headers_  
- 열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 머리글을 출력하지 않으려면 -1을 사용합니다. -1을 사용하는 경우는 **-h -1**이 아니라 **-h-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
+ 열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 머리글을 출력하지 않으려면 -1을 사용합니다. -1을 사용하는 경우는 **-h -1** 이 아니라 **-h-1** 과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
  **-s** _col_separator_  
  열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에서 특별한 의미를 갖는 문자(예: | ; & < >)를 사용하려면 해당 문자를 큰따옴표(")로 묶습니다.  
@@ -152,22 +152,22 @@ osql -E -q "select name, object_id from %table%"
  쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다.  
   
  **-Q"** _query_ **"**  
- 쿼리를 실행하고 바로 **osql**을 끝냅니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다.  
+ 쿼리를 실행하고 바로 **osql** 을 끝냅니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다.  
   
  **-n**  
  입력 줄에서 번호 및 프롬프트 기호(>)를 제거합니다.  
   
  **-m** _error_level_  
- 오류 메시지 표시를 사용자 지정합니다. 지정한 심각도 이상의 오류에 대한 메시지 번호, 상태 및 오류 수준이 표시됩니다. 지정한 수준보다 낮은 심각도의 오류에 대해서는 표시되지 않습니다. **-1** 을 사용하여 모든 머리글을 메시지(정보 메시지도 포함)와 함께 반환합니다. **-1**을 사용하는 경우에는 **-m -1**이 아니라 **-m-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
+ 오류 메시지 표시를 사용자 지정합니다. 지정한 심각도 이상의 오류에 대한 메시지 번호, 상태 및 오류 수준이 표시됩니다. 지정한 수준보다 낮은 심각도의 오류에 대해서는 표시되지 않습니다. **-1** 을 사용하여 모든 머리글을 메시지(정보 메시지도 포함)와 함께 반환합니다. **-1** 을 사용하는 경우에는 **-m -1** 이 아니라 **-m-1** 과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
  **-r** { **0**| **1**}  
- 메시지 출력을 화면으로 리디렉션합니다(**stderr**). 매개 변수를 지정하지 않거나 **0**을 지정하면 심각도가 11 이상인 오류 메시지만 리디렉션됩니다. **1**을 지정하면 "print"를 포함하는 모든 메시지 출력이 리디렉션됩니다.  
+ 메시지 출력을 화면으로 리디렉션합니다(**stderr**). 매개 변수를 지정하지 않거나 **0** 을 지정하면 심각도가 11 이상인 오류 메시지만 리디렉션됩니다. **1** 을 지정하면 "print"를 포함하는 모든 메시지 출력이 리디렉션됩니다.  
   
  **-i** _input_file_  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. **\<** -i **대신 보다 작음(** ) 비교 연산자를 사용할 수 있습니다.  
   
  **-o** _output_file_  
- **osql**에서 출력을 받는 파일을 나타냅니다. **>** -o **대신 보다 큼(** ) 비교 연산자를 사용할 수 있습니다.  
+ **osql** 에서 출력을 받는 파일을 나타냅니다. **>** -o **대신 보다 큼(** ) 비교 연산자를 사용할 수 있습니다.  
   
  *input_file* 이 유니코드가 아니고 **-u** 가 지정되지 않은 경우 *output_file* 이 OEM 형식으로 지정됩니다. *input_file* 이 유니코드이거나 **-u** 가 지정된 경우에는 *output_file* 이 유니코드 형식으로 지정됩니다.  
   
@@ -178,13 +178,13 @@ osql -E -q "select name, object_id from %table%"
  오류가 발생하면 **osql** 을 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 메시지의 심각도가 11 이상이면 DOS ERRORLEVEL 변수에 1을 반환하고 아니면 0을 반환합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 배치 파일은 DOS ERRORLEVEL 값을 검사하여 오류를 적절하게 처리할 수 있습니다.  
   
  **-u**  
- *input_file* 형식에 관계없이 *output_file*이 유니코드 형식으로 저장되도록 지정합니다.  
+ *input_file* 형식에 관계없이 *output_file* 이 유니코드 형식으로 저장되도록 지정합니다.  
   
  **-R**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC 드라이버가 통화, 날짜 및 시간 데이터를 문자 데이터로 변환할 때 클라이언트 설정을 사용하도록 지정합니다.  
   
  **-O**  
- 이전 버전의 **osql** 동작과 일치하도록 특정 **isql**기능을 비활성화합니다. 다음 기능이 비활성화됩니다.  
+ 이전 버전의 **osql** 동작과 일치하도록 특정 **isql** 기능을 비활성화합니다. 다음 기능이 비활성화됩니다.  
   
 -   EOF 일괄 처리  
   
@@ -195,14 +195,14 @@ osql -E -q "select name, object_id from %table%"
  DOS ERRORLEVEL의 기본값을 -1로 설정합니다.  
   
 > [!NOTE]  
->  **osql**에서는 **-n** , **-O** 및 **-D**옵션이 더 이상 지원되지 않습니다.  
+>  **osql** 에서는 **-n** , **-O** 및 **-D** 옵션이 더 이상 지원되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- 위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
+ 위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql** 을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql** 을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
- **osql**을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(** _user_ **)** 또는 **osqlserver=(** _server_ **)** 를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
+ **osql** 을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(** _user_ **)** 또는 **osqlserver=(** _server_ **)** 를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
   
- **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의**Windows 계정에 기반합니다.  
+ **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의** Windows 계정에 기반합니다.  
   
  **osql** 유틸리티는 ODBC API를 사용합니다. 이 유틸리티는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO 연결 옵션의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC 드라이버 기본 설정을 사용합니다. 자세한 내용은 ANSI 옵션 효과를 참조하십시오.  
   
@@ -210,17 +210,17 @@ osql -E -q "select name, object_id from %table%"
 >  **osql** 유틸리티는 CLR 사용자 정의 데이터 형식을 지원하지 않습니다. 이 데이터 형식을 처리하려면 **sqlcmd** 유틸리티를 사용해야 합니다. 자세한 내용은 [sqlcmd Utility](../tools/sqlcmd-utility.md)을(를) 참조하십시오.  
   
 ## <a name="osql-commands"></a>OSQL 명령  
- [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서**문 외에도 다음 명령을 사용할 수 있습니다.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서** 문 외에도 다음 명령을 사용할 수 있습니다.  
   
 |명령|Description|  
 |-------------|-----------------|  
 |이동|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
 |RESET|입력한 모든 문을 지웁니다.|  
-|QUIT 또는 EXIT( )|**osql**을 끝냅니다.|  
-|CTRL+C|**osql**을 끝내지 않고 쿼리를 끝냅니다.|  
+|QUIT 또는 EXIT( )|**osql** 을 끝냅니다.|  
+|CTRL+C|**osql** 을 끝내지 않고 쿼리를 끝냅니다.|  
   
 > [!NOTE]  
->  !! 및 ED 명령은 **osql**에서 더 이상 지원되지 않습니다.  
+>  !! 및 ED 명령은 **osql** 에서 더 이상 지원되지 않습니다.  
   
  명령 종료 문자인 GO(기본 문자), RESET EXIT, QUIT 및 Ctrl+C는 **osql** 프롬프트 바로 뒤의 줄 시작 부분에 나올 때만 인식합니다.  
   
@@ -257,18 +257,18 @@ osql -E -i titles.qry -o titles.res
 ```  
   
 > [!IMPORTANT]  
->  가능하면 **-E**옵션(신뢰할 수 있는 연결)을 사용합니다.  
+>  가능하면 **-E** 옵션(신뢰할 수 있는 연결)을 사용합니다.  
   
- **osql**을 대화형으로 사용하면 **:r**_file\_name_을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
+ **osql** 을 대화형으로 사용하면 **:r**_file\_name_ 을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
   
 > [!NOTE]  
->  **osql**을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  
+>  **osql** 을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  
   
 ## <a name="inserting-comments"></a>주석 삽입  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **을 사용하여**에 전송하는 Transact-SQL 문에 주석을 포함할 수 있습니다. 허용되는 두 가지 주석 유형은 `--` 및 `/*...*/`입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **을 사용하여** 에 전송하는 Transact-SQL 문에 주석을 포함할 수 있습니다. 허용되는 두 가지 주석 유형은 `--` 및 `/*...*/`입니다.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>EXIT를 사용하여 osql의 결과 반환  
- SELECT 문의 결과를 **osql**의 반환 값으로 사용할 수 있습니다. 숫자일 경우 마지막 결과 행의 마지막 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
+ SELECT 문의 결과를 **osql** 의 반환 값으로 사용할 수 있습니다. 숫자일 경우 마지막 결과 행의 마지막 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
 ```  
 EXIT ( < query > )  

@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956964"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471034"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>SQL 기계 학습에서 PREDICT T-SQL 함수를 사용하는 네이티브 채점
 
@@ -60,13 +60,13 @@ ms.locfileid: "91956964"
 | Azure SQL Edge | 예 | 예 |
 | Azure Synapse Analytics | 예 | 예 |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>ONNX 모델
 
 이 모델은 [ONNX(Open Neural Network Exchange)](https://onnx.ai/get-started.html) 모델 형식이어야 합니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>RevoScale 모델
 
 이 모델은 [RevoScaleR](../r/ref-r-revoscaler.md) 또는 [revoscalepy](../python/ref-py-revoscalepy.md) 패키지를 사용하여 아래 나열된 지원되는 **rx** 알고리즘 중 하나로 미리 학습되어야 합니다.
@@ -106,7 +106,7 @@ MicrosoftML 또는 microsoftml의 알고리즘을 사용해야 하는 경우 [sp
 ::: moniker-end
 
 ## <a name="examples"></a>예제
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>ONNX 모델을 사용하는 PREDICT
 
 이 예제에서는 네이티브 채점을 위해 `dbo.models` 테이블에 저장된 ONNX 모델을 사용하는 방법을 보여 줍니다.
@@ -142,13 +142,13 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 ```
 
 > [!NOTE]
-> **PREDICT**에서 반환된 열과 값은 모델 유형에 따라 다를 수 있으므로 **WITH** 절을 사용하여 반환된 데이터의 스키마를 정의해야 합니다.
+> **PREDICT** 에서 반환된 열과 값은 모델 유형에 따라 다를 수 있으므로 **WITH** 절을 사용하여 반환된 데이터의 스키마를 정의해야 합니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>RevoScale 모델을 사용하는 PREDICT
 
-이 예제에서는 R에서 **RevoScaleR**을 사용하여 모델을 만든 다음 T-SQL에서 실시간 예측 함수를 호출합니다.
+이 예제에서는 R에서 **RevoScaleR** 을 사용하여 모델을 만든 다음 T-SQL에서 실시간 예측 함수를 호출합니다.
 
 #### <a name="step-1-prepare-and-save-the-model"></a>1단계. 모델 준비 및 저장
 
@@ -192,7 +192,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-다음 코드는 **아이리스** 데이터 세트를 기반으로 하는 모델을 만들고 이를 **models**라는 테이블에 저장합니다.
+다음 코드는 **아이리스** 데이터 세트를 기반으로 하는 모델을 만들고 이를 **models** 라는 테이블에 저장합니다.
 
 ```sql
 DECLARE @model varbinary(max);
@@ -238,7 +238,7 @@ go
 "PREDICT 함수를 실행하는 동안 오류가 발생했습니다. 모델이 손상되었거나 잘못되었습니다"라는 오류가 표시된다면 일반적으로 쿼리가 모델을 반환하지 않았다는 의미입니다. 모델 이름을 올바르게 입력했는지, 아니면 모델 테이블이 비어 있는지 확인합니다.
 
 > [!NOTE]
-> **PREDICT**에서 반환된 열과 값은 모델 유형에 따라 다를 수 있으므로 **WITH** 절을 사용하여 반환된 데이터의 스키마를 정의해야 합니다.
+> **PREDICT** 에서 반환된 열과 값은 모델 유형에 따라 다를 수 있으므로 **WITH** 절을 사용하여 반환된 데이터의 스키마를 정의해야 합니다.
 ::: moniker-end
 
 ## <a name="next-steps"></a>다음 단계

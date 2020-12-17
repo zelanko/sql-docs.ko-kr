@@ -15,13 +15,13 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75bb7c1f392487db9a9c851753d0c3c2591f106e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 18cb7d2e1c6ccf51ed1921d65a0c31fa84c54b5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478824"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,21 +54,21 @@ ms.locfileid: "92035542"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 예약할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 예약할 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
-3.  **일정** 페이지를 선택한 다음 **새로 만들기**를 클릭합니다.  
+3.  **일정** 페이지를 선택한 다음 **새로 만들기** 를 클릭합니다.  
   
 4.  **이름** 입력란에 새 일정의 이름을 입력합니다.  
   
 5.  만든 즉시 일정이 적용되지 않게 하려면 **사용** 확인란의 선택을 해제합니다.  
   
-6.  **일정 유형**에 대해 다음 중 하나를 선택합니다.  
+6.  **일정 유형** 에 대해 다음 중 하나를 선택합니다.  
   
     -   **SQL Server 에이전트가 시작될 때 자동으로 시작** 을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작할 때 작업을 시작합니다.  
   
     -   **CPU가 유휴 상태로 될 때마다 시작** 을 클릭하여 CPU가 유휴 상태일 때 작업을 시작합니다.  
   
-    -   일정을 반복적으로 실행하려면 **되풀이** 를 클릭합니다. 반복 수행 일정을 설정하려면 대화 상자에서 **빈도**, **일별 빈도**및 **기간** 그룹을 입력하세요.  
+    -   일정을 반복적으로 실행하려면 **되풀이** 를 클릭합니다. 반복 수행 일정을 설정하려면 대화 상자에서 **빈도**, **일별 빈도** 및 **기간** 그룹을 입력하세요.  
   
     -   한 번만 실행하도록 예약하려면 **한 번** 을 클릭합니다. **한 번** 예약을 설정하려면 대화 상자에서 **한 번 발생** 그룹을 입력합니다.  
   
@@ -76,27 +76,27 @@ ms.locfileid: "92035542"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 예약할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 예약할 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
-3.  **일정** 페이지를 선택한 다음 **선택**을 클릭합니다.  
+3.  **일정** 페이지를 선택한 다음 **선택** 을 클릭합니다.  
   
-4.  연결하려는 일정을 선택한 다음 **확인**을 클릭합니다.  
+4.  연결하려는 일정을 선택한 다음 **확인** 을 클릭합니다.  
   
 5.  **작업 속성** 대화 상자에서 연결된 일정을 두 번 클릭합니다.  
   
-6.  **시작 날짜** 가 올바르게 설정되었는지 확인합니다. 올바르게 설정되지 않았으면 일정을 시작하려는 날짜를 설정한 다음 **확인**을 클릭합니다.  
+6.  **시작 날짜** 가 올바르게 설정되었는지 확인합니다. 올바르게 설정되지 않았으면 일정을 시작하려는 날짜를 설정한 다음 **확인** 을 클릭합니다.  
   
-7.  **작업 속성** 대화 상자에서 **확인**을 클릭합니다.  
+7.  **작업 속성** 대화 상자에서 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   
 #### <a name="to-schedule-a-job"></a>작업을 예약하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE msdb ;  

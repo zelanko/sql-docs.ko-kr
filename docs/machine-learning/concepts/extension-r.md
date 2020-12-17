@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 41c0eb01dbcd2838a1c6f388e8b4304ef1eb3c7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471284"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 R 언어 확장
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,7 +40,7 @@ SQL Server는 기본 R 실행 파일을 수정하지 않지만, 설치 프로그
 
 | 라이브러리 | 설명 |
 |---------|-------------|
-| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
+| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod** 와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. 분석에 사용되는 데이터를 더 빠르게 이동하고 스토리지하기 위해 RevoScaleR 패키지는 XDF 파일 형식도 지원합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
 | [**MicrosoftML**](/r-server/r/concept-what-is-the-microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server의 MicrosoftML](../r/ref-r-microsoftml.md)을 참조하세요. | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server에서 R 사용

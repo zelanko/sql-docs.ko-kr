@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472514"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(보고서 서버 구성 관리자)
 
@@ -42,9 +42,9 @@ ms.locfileid: "91935269"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 **System.Data.SqlClient** 를 사용하여 보고서 서버 데이터베이스를 호스트하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
 
-인스턴스가 원격 연결을 허용하는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**를 차례로 클릭한 다음 각 서비스에 대해 TCP/IP 프로토콜이 설정되어 있는지 확인합니다.  
+인스턴스가 원격 연결을 허용하는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자** 를 차례로 클릭한 다음 각 서비스에 대해 TCP/IP 프로토콜이 설정되어 있는지 확인합니다.  
 
-원격 연결을 설정하면 클라이언트 및 서버 프로토콜도 설정됩니다. 프로토콜이 설정되었는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**, **SQL Server 네트워크 구성**, **MSSQLSERVER에 대한 프로토콜**을 차례로 클릭합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  
+원격 연결을 설정하면 클라이언트 및 서버 프로토콜도 설정됩니다. 프로토콜이 설정되었는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**, **SQL Server 네트워크 구성**, **MSSQLSERVER에 대한 프로토콜** 을 차례로 클릭합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  
 
 ## <a name="defining-a-report-server-database-connection"></a>보고서 서버 데이터베이스 연결 정의
 
@@ -91,7 +91,7 @@ ms.locfileid: "91935269"
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 Windows 인증이 구성되어 있고 이 인스턴스가 보고서 서버 컴퓨터와 같은 도메인이나 트러스트된 도메인에 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 연결 속성으로 관리되는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성할 수 있습니다. 데이터베이스 서버가 다른 도메인에 있거나 작업 그룹 보안을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 연결을 구성해야 합니다. 이 경우 연결을 암호화해야 합니다.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Azure SQL Managed Instance를 사용하여 보고서 서버 데이터베이스를 호스트하는 경우 지원되는 자격 증명 유형은 SQL Server 인증뿐입니다. 또한 Managed Instance는 보고서 서버 인스턴스를 호스트할 수 없습니다.
@@ -120,7 +120,7 @@ Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통�
 
 - **ReportServer** 데이터베이스에 대한 **public** 및 **RSExecRole** 역할  
 
-- **master** , **msdb**및 **ReportServerTempDB**데이터베이스에 대한 **RSExecRole** 역할  
+- **master** , **msdb** 및 **ReportServerTempDB** 데이터베이스에 대한 **RSExecRole** 역할  
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 만들거나 수정하는 경우에는 이러한 권한이 자동으로 부여됩니다. rsconfig 유틸리티를 사용하는 경우 연결에 대해 다른 계정을 지정하면 해당 새 계정에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 스크립트 파일을 만들어 보고서 서버에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트할 수 있습니다.  
 

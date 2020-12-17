@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 966121ea88b5456b2068b87e8736685f0f064605
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 915ad9a9429c9200613a0bb443b42237162ea9c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036196"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476824"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 디버거 - 중단점 창
 
@@ -33,7 +33,7 @@ ms.locfileid: "92036196"
 
 **중단점 창에 액세스하려면**
 
-- **디버그** 메뉴에서 **Windows**을 선택한 다음, **중단점**을 선택합니다.
+- **디버그** 메뉴에서 **Windows** 을 선택한 다음, **중단점** 을 선택합니다.
 
 ## <a name="breakpoints-window-columns"></a>중단점 창 열
 
@@ -46,7 +46,7 @@ ms.locfileid: "92036196"
 **(조건 없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.
 
 **적중 횟수**  
-**항상 중단**을 표시합니다.
+**항상 중단** 을 표시합니다.
 
 **열** 목록에서 다음 열을 선택하여 해당 열을 추가하거나 제거할 수 있습니다.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "92036196"
 **(없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.
 
 **적중될 때**  
-**중단**을 표시합니다.
+**중단** 을 표시합니다.
 
 **언어**  
 **의 경우** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]을 표시합니다.  
@@ -82,10 +82,10 @@ ms.locfileid: "92036196"
 **중단점** 창에 표시된 모든 중단점을 삭제합니다.  
 
 **모든 중단점 해제**  
-더 이상 코드 실행을 중지하지 않도록 모든 중단점을 해제하지만 중단점은 그대로 남아 있습니다. 모든 중단점을 해제하면 **모든 중단점 설정**단추로 바뀝니다.
+더 이상 코드 실행을 중지하지 않도록 모든 중단점을 해제하지만 중단점은 그대로 남아 있습니다. 모든 중단점을 해제하면 **모든 중단점 설정** 단추로 바뀝니다.
 
 **모든 중단점 설정**  
-코드 실행을 중지하도록 모든 중단점을 설정합니다. 모든 중단점이 설정되면 **모든 중단점 해제**단추로 바뀝니다.  
+코드 실행을 중지하도록 모든 중단점을 설정합니다. 모든 중단점이 설정되면 **모든 중단점 해제** 단추로 바뀝니다.  
 
 **소스 코드로 이동**  
 쿼리 편집기에서 선택한 중단점을 포함하는 줄에 커서를 놓습니다.

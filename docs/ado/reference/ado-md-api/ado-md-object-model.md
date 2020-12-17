@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e8a7371760076e300fc4eb8dd75365682e34974
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: ed7b8c7dec95183dc66204ca63cc3bf6951d4bf3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098662"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639746"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 개체 모델
 이 항목에서는 ADO MD에서 개체를 표시 하 고 관련 하는 방법에 대해 설명 합니다.  
@@ -32,7 +32,6 @@ ms.locfileid: "92098662"
  [축](./axis-object-ado-md.md), [셀](./cell-object-ado-md.md), 셀 [집합](./cellset-object-ado-md.md), [CubeDef](./cubedef-object-ado-md.md), [차원](./dimension-object-ado-md.md), [계층](./hierarchy-object-ado-md.md), [수준](./level-object-ado-md.md)및 [멤버](./member-object-ado-md.md) 개체에는 각각 표준 ADO [속성](../ado-api/properties-collection-ado.md) 컬렉션이 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO MD API 참조](?view=sql-server-ver15)   
  [ADO MD 코드 예제](./ado-md-code-examples.md)   
  [ADO MD 컬렉션](./ado-md-collections.md)   
  [ADO MD 열거 상수](./ado-md-enumerated-constants.md)   

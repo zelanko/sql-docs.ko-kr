@@ -17,13 +17,13 @@ ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 14d926337076113671d2dd9eae71ad5a9211bbd9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c4dc7dbfa0f06275b52c76aacabccb9bff935718
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477094"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>마스터 서버에서 대상 서버 제거
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "92036512"
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>마스터 서버에서 대상 서버를 제거하려면  
   
-1.  **개체 탐색기**에서 대상 서버로 구성된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 대상 서버로 구성된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **제거**를 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리** 를 가리킨 다음 **제거** 를 클릭합니다.  
   
 3.  **예** 를 클릭하여 마스터 서버에서 이 대상 서버를 제거할 것을 확인합니다.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "92036512"
   
 1.  [!INCLUDE[ssDE](../../includes/ssde_md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
 ```  
 sp_msx_defect ;  
@@ -67,7 +67,7 @@ sp_msx_defect ;
 자세한 내용은 [sp_msx_defect(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)를 참조하세요.  
   
 ## <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>SMO(SQL Server 관리 개체) 사용  
-**MsxDefect 메서드**를 사용합니다.  
+**MsxDefect 메서드** 를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md)  

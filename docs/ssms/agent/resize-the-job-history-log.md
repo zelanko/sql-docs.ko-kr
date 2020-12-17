@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 122f94d8eab17caf22d532c1dd81fec31c334205
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 8eb8f92d5420f55da487f9ba7f96a9a7b7a7547c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037836"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472284"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
 
@@ -55,9 +55,9 @@ ms.locfileid: "92037836"
 
 1. **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2. **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.
+2. **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.
 
-3. **기록** 페이지를 선택한 다음, **작업 기록 로그 크기 제한**이 선택되었는지 확인합니다.
+3. **기록** 페이지를 선택한 다음, **작업 기록 로그 크기 제한** 이 선택되었는지 확인합니다.
 
 4. **작업 기록 로그의 최대 크기(행 수)** 입력란에 작업 기록 로그에서 허용할 최대 행 수를 입력합니다.
 
@@ -65,10 +65,10 @@ ms.locfileid: "92037836"
 
 **시간에 따라 작업 기록 로그의 크기를 조정하려면**
 
-1. **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1. **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 
-2. **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.
+2. **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.
 
-3. **기록** 페이지를 선택한 다음 **에이전트 기록 제거**를 선택합니다.
+3. **기록** 페이지를 선택한 다음 **에이전트 기록 제거** 를 선택합니다.
 
 4. 적절한 **일**, **주** 또는 **월** 수를 선택합니다.
