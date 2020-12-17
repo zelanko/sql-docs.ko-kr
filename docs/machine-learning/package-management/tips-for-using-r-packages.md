@@ -8,13 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869963"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470984"
 ---
 # <a name="tips-for-using-r-packages"></a>R 패키지 사용 팁
 
@@ -36,11 +36,11 @@ R 패키지는 여러 다른 패키지에 종속되는 경우가 많으며, 그�
 
 R 패키지에 대해 [CRAN](https://cran.r-project.org/) 및 [Bioconductor](https://www.bioconductor.org/)와 같은 여러 출처가 있습니다. R 언어 공식 사이트(<https://www.r-project.org/>)에 다양한 리소스가 나와 있습니다. Microsoft는 오픈 소스 R([MRAN](https://mran.microsoft.com/)) 및 기타 패키지의 배포판에 대해 [MRAN](https://mran.microsoft.com/open)을 제공합니다. 많은 패키지는 개발자가 소스 코드를 볼 수 있는 GitHub에도 게시됩니다.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 R 패키지는 여러 컴퓨팅 플랫폼에서 실행됩니다. 설치한 버전은 Windows 이진 파일이어야 합니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 R 패키지는 여러 컴퓨팅 플랫폼에서 실행됩니다. 설치한 버전은 Linux 이진 파일이어야 합니다.
 ::: moniker-end
 
@@ -90,9 +90,9 @@ SQL Server에서 R 패키지를 설치하는 방법에 대한 내용은 [SQL Ser
 
 ## <a name="see-also"></a>참고 항목
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [R 도구를 사용하여 패키지 설치](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

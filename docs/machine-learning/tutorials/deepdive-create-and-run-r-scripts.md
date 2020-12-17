@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d8b04d384d7ee5f846197ff3465b9c0914ca94c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: bb362f078dd4fbebedf88dc41e997a5feb702f55
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470644"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R의 컴퓨팅 요약 통계(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92196317"
 
 이전 자습서를 완료한 경우, sqlCompute 및 sqlComputeTrace라는 원격 컴퓨팅 컨텍스트가 있어야 합니다. 이후 자습서에서는 sqlCompute 및 로컬 컴퓨팅 컨텍스트를 사용합니다.
 
-이 자습서에서는 R IDE 또는 **Rgui**를 사용하여 R 스크립트를 실행합니다.
+이 자습서에서는 R IDE 또는 **Rgui** 를 사용하여 R 스크립트를 실행합니다.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>원격 데이터에 대한 요약 통계 컴퓨팅
 
@@ -52,7 +52,7 @@ R 코드를 원격으로 실행하기 전에 원격 컴퓨팅 컨텍스트를 �
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 언어는 많은 요약 함수를 제공하지만 **RevoScaleR**의 **rxSummary**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 비롯한 다양한 원격 컴퓨팅 컨텍스트에서의 실행을 지원합니다. 유사한 함수에 대한 자세한 내용은 [RevoScaleR을 사용한 데이터 요약](/machine-learning-server/r/how-to-revoscaler-data-summaries)을 참조하세요.
+    R 언어는 많은 요약 함수를 제공하지만 **RevoScaleR** 의 **rxSummary** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 비롯한 다양한 원격 컴퓨팅 컨텍스트에서의 실행을 지원합니다. 유사한 함수에 대한 자세한 내용은 [RevoScaleR을 사용한 데이터 요약](/machine-learning-server/r/how-to-revoscaler-data-summaries)을 참조하세요.
   
 3. sumOut의 내용을 콘솔에 인쇄합니다.
   
@@ -103,7 +103,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. 새 데이터 원본에 대해 **rxSummary**를 호출합니다.
+3. 새 데이터 원본에 대해 **rxSummary** 를 호출합니다.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)

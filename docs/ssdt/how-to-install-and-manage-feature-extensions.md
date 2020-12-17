@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518983"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559085"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>방법: 기능 확장 설치 및 관리
 
@@ -37,7 +37,7 @@ ms.locfileid: "85518983"
 |확장 유형|명령줄 서비스|설치 폴더|  
 |------------------|------------------------|------------------|  
 |SQL Server 단위 테스트의 사용자 지정 테스트 조건|MSBuild/MSTest를 사용하여 Visual Studio 2013용 개발자 명령 프롬프트 및 유사한 명령줄 도구에서 단위 테스트를 실행할 수 있습니다.|Visual Studio 내에서 실행되는 경우와 동일합니다.|  
-|빌드 참가자<br /><br />배포 참가자|[SqlPackage.exe](../tools/sqlpackage.md) 또는 데이터베이스 프로젝트를 빌드할 때 MSBuild 배포 또는 게시 대상 사용|MSBuild: Visual Studio 내에서 실행되는 경우와 동일합니다.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): Visual Studio 디렉터리 내에 있는 경우 이전과 동일합니다.<br /><br />SqlPackage.exe 및 기타 DacFx DLL이 해당 디렉터리 외부에 있는 경우 확장은 동일한 디렉터리나 C:\Program Files (x86)\\\MicrosoftSQL Server\120\DAC\bin\Extensions에 배치되어야 합니다.|  
+|빌드 참가자<br /><br />배포 참가자|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) 또는 데이터베이스 프로젝트를 빌드할 때 MSBuild 배포 또는 게시 대상 사용|MSBuild: Visual Studio 내에서 실행되는 경우와 동일합니다.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md): Visual Studio 디렉터리 내에 있는 경우 이전과 동일합니다.<br /><br />SqlPackage.exe 및 기타 DacFx DLL이 해당 디렉터리 외부에 있는 경우 확장은 동일한 디렉터리나 C:\Program Files (x86)\\\MicrosoftSQL Server\120\DAC\bin\Extensions에 배치되어야 합니다.|  
 |정적 코드 분석 규칙|MSBuild를 사용하여 프로젝트를 빌드하고 정적 코드 분석을 실행할 수 있습니다.<br /><br />또한 사용자 고유의 애플리케이션에서 CodeAnalysisService API를 사용하여 코드 분석을 실행할 수 있습니다. 이 경우에 확장 조회 규칙은 SqlPackage.exe가 사용되는 경우와 동일하게 작동합니다.|빌드 및 배포 참가자의 경우와 동일|  
   
 > [!NOTE]  

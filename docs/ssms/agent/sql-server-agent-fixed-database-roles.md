@@ -20,13 +20,13 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c59f04c31e6400f58d872a98da8498ca6ec38ff5
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: dd46f133a98263a721e0dfb56a7bd5cc25c591cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235680"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474364"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "93235680"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |생성/수정/삭제|예|아니요|예(소유한 작업만 해당)<br /><br />작업 소유권을 변경할 수 없습니다.|아니요|예(소유한 작업만 해당)|아니요|  
 |목록 보기(열거)|예|예<br /><br />**sp_notify_operator** 및 Management Studio의 **작업 속성** 대화 상자에서 사용할 수 있는 운영자 목록을 가져올 수 있습니다.|예|예|예|예|  
-|설정/해제|예|아니요|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **\@enabled** 및 **\@job_id** (또는 **\@job_name** ) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니요|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **\@enabled** 및 **\@schedule_id** (또는 **name\@** ) 매개 변수를 지정하여 자신이 소유하지 않은 일정을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 없음|  
+|설정/해제|예|아니요|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **\@enabled** 및 **\@job_id** (또는 **\@job_name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니요|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **\@enabled** 및 **\@schedule_id** (또는 **name\@** ) 매개 변수를 지정하여 자신이 소유하지 않은 일정을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 없음|  
 |속성 보기|예|예|예|예|예|예|  
 |속성 편집|예|아니요|예(소유한 작업만 해당)|아니요|예(소유한 작업만 해당)|아니요|  
 |실행/중지/시작|해당 없음|해당 없음|예|아니요|해당 없음|해당 없음|  

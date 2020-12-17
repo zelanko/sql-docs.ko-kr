@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470684"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server에서 실행 패드 서비스 및 외부 스크립트 실행에 대한 문제 해결
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "92194525"
 
 ## <a name="determine-whether-launchpad-is-running"></a>실행 패드 실행 여부 확인
 
-1. **서비스** 패널(Services.msc)을 엽니다. 또는 명령줄에서 **SQLServerManager13.msc** 또는 **SQLServerManager14.msc**를 입력하여 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 엽니다.
+1. **서비스** 패널(Services.msc)을 엽니다. 또는 명령줄에서 **SQLServerManager13.msc** 또는 **SQLServerManager14.msc** 를 입력하여 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 엽니다.
 
-2. 실행 패드를 실행하는 서비스 계정을 적어 둡니다. R 또는 Python이 사용하도록 설정된 각 인스턴스에는 실행 패드 서비스의 고유한 인스턴스가 있어야 합니다. 예를 들어 명명된 인스턴스의 서비스는 _MSSQLLaunchpad$InstanceName_과 같이 표시될 수 있습니다.
+2. 실행 패드를 실행하는 서비스 계정을 적어 둡니다. R 또는 Python이 사용하도록 설정된 각 인스턴스에는 실행 패드 서비스의 고유한 인스턴스가 있어야 합니다. 예를 들어 명명된 인스턴스의 서비스는 _MSSQLLaunchpad$InstanceName_ 과 같이 표시될 수 있습니다.
 
 3. 서비스가 중지된 경우 서비스를 다시 시작합니다. 다시 시작할 때 구성에 문제가 있으면 시스템 이벤트 로그에 메시지가 게시되고 서비스가 다시 중지됩니다. 서비스가 중지된 이유에 대한 자세한 내용은 시스템 이벤트 로그를 확인하세요.
 
@@ -51,11 +51,11 @@ ms.locfileid: "92194525"
 
 ## <a name="user-group-for-launchpad-cannot-log-on-locally"></a>실행 패드의 사용자 그룹은 로컬로 로그온할 수 없음
 
-Machine Learning Services를 설치하는 동안 SQL Server는 Windows 사용자 그룹 **SQLRUserGroup**을 만든 후 실행 패드가 SQL Server에 연결되고 외부 스크립트 작업을 실행하는 데 필요한 모든 권한을 사용하여 해당 그룹을 프로비저닝합니다. 이 사용자 그룹을 사용하도록 설정하면 Python 스크립트를 실행하는 데도 사용됩니다.
+Machine Learning Services를 설치하는 동안 SQL Server는 Windows 사용자 그룹 **SQLRUserGroup** 을 만든 후 실행 패드가 SQL Server에 연결되고 외부 스크립트 작업을 실행하는 데 필요한 모든 권한을 사용하여 해당 그룹을 프로비저닝합니다. 이 사용자 그룹을 사용하도록 설정하면 Python 스크립트를 실행하는 데도 사용됩니다.
 
 그러나 더 제한적인 보안 정책이 적용되는 조직에서는 이 그룹에 필요한 권한이 수동으로 제거되었거나 정책에 의해 자동으로 철회될 수 있습니다. 권한이 제거된 경우 실행 패드는 더 이상 SQL Server에 연결할 수 없으며 SQL Server는 외부 런타임을 호출할 수 없습니다.
 
-문제를 해결하려면 그룹 **SQLRUserGroup**에 시스템 권한 **로컬 로그온 허용**이 있는지 확인합니다.
+문제를 해결하려면 그룹 **SQLRUserGroup** 에 시스템 권한 **로컬 로그온 허용** 이 있는지 확인합니다.
 
 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.
 
@@ -77,7 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 이 섹션에는 실행 패드에서 반환하는 가장 일반적인 오류 메시지가 나와 있습니다.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>“R 스크립트에 대해 런타임을 시작할 수 없음”
 
 R 사용자의 Windows 그룹(Python에도 사용됨)이 R Services를 실행하는 인스턴스에 로그온할 수 없으면 다음 오류가 표시될 수 있습니다.
@@ -123,9 +123,9 @@ R 사용자의 Windows 그룹(Python에도 사용됨)이 R Services를 실행하
 
 1. Windows 명령 프롬프트에서 SQL Server 구성 관리자를 엽니다. 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.
 
-2. 인스턴스의 SQL Server 실행 패드를 마우스 오른쪽 단추로 클릭한 후 **속성**을 선택합니다.
+2. 인스턴스의 SQL Server 실행 패드를 마우스 오른쪽 단추로 클릭한 후 **속성** 을 선택합니다.
 
-3. **서비스** 탭을 선택하고 서비스가 실행 중인지 확인합니다. 실행되고 있지 않으면 **시작 모드**를 **자동**으로 변경한 후 **적용**을 선택합니다.
+3. **서비스** 탭을 선택하고 서비스가 실행 중인지 확인합니다. 실행되고 있지 않으면 **시작 모드** 를 **자동** 으로 변경한 후 **적용** 을 선택합니다.
 
 4. 서비스를 다시 시작하면 일반적으로 문제가 해결되므로 기계 학습 스크립트를 실행할 수 있습니다. 다시 시작해도 문제가 해결되지 않으면 **이진 경로** 속성의 경로 및 인수를 기록해 두고 다음을 수행합니다.
 
@@ -186,12 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 이 문제를 해결하려면 패키지를 SQL Server 인스턴스 라이브러리에 다시 설치해야 합니다.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >최신 Microsoft R 버전을 사용하도록 SQL Server 2016 인스턴스를 업그레이드한 경우 기본 라이브러리 위치가 다릅니다. 자세한 내용은 [SqlBindR.exe를 사용하여 R Services 인스턴스 업그레이드](../install/upgrade-r-and-python.md)를 참조하세요.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>DLL이 일치하지 않아 실행 패드가 종료됨
 
 다른 기능과 함께 데이터베이스 엔진을 설치하는 경우 서버를 패치한 후 나중에 원본 미디어를 사용하여 Machine Learning 기능을 추가하면 잘못된 버전의 Machine Learning 구성 요소가 설치될 수 있습니다. 버전 불일치를 감지한 실행 패드는 종료되고 덤프 파일을 만듭니다.

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fce7b2b128920038f20967c72567d2d51db8b48
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4530aebde58448903015b8f948ad8f005d9134ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038807"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472244"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스에 대한 SQL Server 별칭 설정
 
@@ -58,12 +58,12 @@ ms.locfileid: "92038807"
   
 #### <a name="to-set-a-sql-server-alias-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스에 대한 SQL Server 별칭을 설정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
-3.  **SQL Server 에이전트 속성**_server\_name_ 대화 상자의 **페이지 선택**아래에서 **연결**을 선택합니다.  
+3.  **SQL Server 에이전트 속성**_server\_name_ 대화 상자의 **페이지 선택** 아래에서 **연결** 을 선택합니다.  
   
 4.  **로컬 호스트 서버 별칭** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 연결할 서버의 별칭을 입력합니다.  
   
-5.  **확인**을 클릭합니다.  
+5.  **확인** 을 클릭합니다.  

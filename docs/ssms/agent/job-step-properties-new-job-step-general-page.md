@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c7575152ff23cec3096c9f5e1e22f1f0ea1a8094
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e13935b59d22a6184de14a29910117b9611ad4cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466474"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036563"
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
   
-이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
+이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장한 다음 **작업** 을 마우스 오른쪽 단추로 클릭하고 **새 작업** 을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기** 를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입** 또는 **편집** 을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   
 ## <a name="options"></a>옵션  
 **단계 이름**  
@@ -40,7 +40,7 @@ ms.locfileid: "92036563"
 작업 단계에서 사용하는 하위 시스템을 설정합니다. 선택한 하위 시스템에 따라 작업 단계 정의에 표시되는 옵션이 달라집니다.  
   
 **다음 계정으로 실행**  
-작업 단계에 사용할 프록시 계정을 설정합니다. sysadmin 고정 서버 역할의 멤버는 **SQL 에이전트 서비스 계정**도 지정할 수 있습니다.  
+작업 단계에 사용할 프록시 계정을 설정합니다. sysadmin 고정 서버 역할의 멤버는 **SQL 에이전트 서비스 계정** 도 지정할 수 있습니다.  
   
 **Database**  
 작업 단계가 실행되는 데이터베이스를 설정합니다. 일부 작업 단계 유형에 대해서는 이 옵션을 사용할 수 없습니다.  
@@ -222,13 +222,13 @@ ms.locfileid: "92036563"
 -   **SSIS 패키지 저장소**  
   
 **Server**  
-[!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지가 저장된 서버 이름을 입력합니다. 이 옵션은 **패키지 원본** 에 대해 **SQL Server** 또는 **SSIS 패키지 저장소**를 지정한 경우에만 사용할 수 있습니다.  
+[!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지가 저장된 서버 이름을 입력합니다. 이 옵션은 **패키지 원본** 에 대해 **SQL Server** 또는 **SSIS 패키지 저장소** 를 지정한 경우에만 사용할 수 있습니다.  
   
 **Windows 인증 사용**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 인증이 사용됩니다.  
   
 **SQL Server 인증 사용**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호**를 입력합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호** 를 입력합니다.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 이전 버전과의 호환성을 위해 제공됩니다. 보안 향상을 위해 가능하면 Windows 인증을 사용합니다.  

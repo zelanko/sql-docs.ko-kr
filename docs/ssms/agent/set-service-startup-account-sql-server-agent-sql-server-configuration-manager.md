@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5356abbfc1dbafb110c18a7ea60b4dd5282a987
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 094261f20c1b673df6041d477018f76b5189c595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030694"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472264"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 
@@ -59,24 +59,24 @@ ms.locfileid: "92030694"
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>SQL Server 에이전트에 대한 서비스 시작 계정을 설정하려면  
   
-1.  **등록된 서버**에서 더하기 기호를 클릭하여 **데이터베이스 엔진**을 확장합니다.  
+1.  **등록된 서버** 에서 더하기 기호를 클릭하여 **데이터베이스 엔진** 을 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **로컬 서버 그룹** 폴더를 확장합니다.  
   
 3.  서비스 시작 계정을 설정하려는 서버 인스턴스를 마우스 오른쪽 단추로 클릭하고 **SQL Server 구성 관리자...** 를 선택합니다.  
   
-4.  **사용자 계정 컨트롤** 대화 상자에서 **예**를 클릭합니다.  
+4.  **사용자 계정 컨트롤** 대화 상자에서 **예** 를 클릭합니다.  
   
-5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 서비스**를 선택합니다.  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 서비스** 를 선택합니다.  
   
-6.  세부 정보 창에서 **SQL Server 에이전트**_(server\_name)_ 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name*은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성**을 선택합니다.  
+6.  세부 정보 창에서 **SQL Server 에이전트**_(server\_name)_ 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name* 은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성** 을 선택합니다.  
   
-7.  **SQL Server 에이전트**_(server\_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
+7.  **SQL Server 에이전트**_(server\_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온** 에서 다음 옵션 중 하나를 선택합니다.  
   
     -   **기본 제공 계정**: 로컬 서버의 리소스만 작업에 필요한 경우 이 옵션을 선택합니다. Windows 기본 제공 계정 유형을 선택하는 방법은 [SQL Server 에이전트 서비스에 대한 계정 선택](./select-an-account-for-the-sql-server-agent-service.md)을 참조하세요.  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 **** 에서 로컬 서비스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]계정을 지원하지 않습니다.  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는  에서 로컬 서비스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]계정을 지원하지 않습니다.  
   
     -   **이 계정**: 작업을 수행하는 데 애플리케이션 리소스를 포함하여 네트워크의 리소스가 필요할 경우나, 다른 Windows 애플리케이션 로그에 이벤트를 전달하거나, 전자 메일 또는 호출기로 운영자에게 알리려고 할 경우 이 옵션을 선택합니다.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "92030694"
   
         2.  **암호** 상자에 계정 암호를 입력합니다. **암호 확인** 상자에 암호를 다시 입력합니다.  
   
-8.  **확인**을 클릭합니다.  
+8.  **확인** 을 클릭합니다.  
   
 9. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **닫기** 단추를 클릭합니다.  

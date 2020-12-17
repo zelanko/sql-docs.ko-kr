@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 689bb92eabac3b909291845cb44bdf951f4f7977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b8ad8329967249d200fabc46a7bb808f5ac143a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427105"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472484"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
 
@@ -27,15 +27,15 @@ ms.locfileid: "88427105"
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>공유 서비스에 대한 전자 메일 구성 방법  
   
-1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 **애플리케이션 관리** 를 클릭합니다.  
   
-2.  **서비스 애플리케이션** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
+2.  **서비스 애플리케이션** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
 3.  **이름** 목록에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 클릭합니다.  
   
 4.  **Reporting Services 애플리케이션 관리** 페이지에서 **메일 설정** 을 클릭합니다.  
   
-5.  **SMTP 서버 사용**을 선택합니다.  
+5.  **SMTP 서버 사용** 을 선택합니다.  
   
 6.  **아웃바운드 SMTP 서버** 상자에 SMTP 서버 이름을 입력합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88427105"
   
     -   메일 전송 실패: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 클라이언트가 인증되지 않았습니다. 메일이 다시 전송되지 않습니다.  
   
-     "2" 값을 사용하도록 **SMTP 인증**을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
+     "2" 값을 사용하도록 **SMTP 인증** 을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
@@ -66,7 +66,7 @@ ms.locfileid: "88427105"
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
-2.  서비스 애플리케이션 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet**을 실행합니다.  
+2.  서비스 애플리케이션 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet** 을 실행합니다.  
   
     ```  
     get-sprsserviceapplication  

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e9158976b1827eb32e807af1cc97279b0866ff97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470484"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>R을 사용하여 SQL Server 데이터 시각화(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,8 +25,8 @@ ms.locfileid: "92196273"
 
 > [!div class="checklist"]
 > * 히스토그램 입력을 위한 최소-최대 변수 만들기
-> * **RevoScaleR**의 **rxHistogram**을 사용하여 히스토그램의 데이터 시각화
-> * 기본 R 분포에 포함된 **lattice**에서 **levelplot**을 사용하여 산점도로 시각화
+> * **RevoScaleR** 의 **rxHistogram** 을 사용하여 히스토그램의 데이터 시각화
+> * 기본 R 분포에 포함된 **lattice** 에서 **levelplot** 을 사용하여 산점도로 시각화
 
 이 자습서에 나와 있는 것처럼 동일 스크립트에서 오픈 소스 및 Microsoft 전용 함수를 결합할 수 있습니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "92196273"
   
 2. 이전 자습서에서 만든 *ccColInfo* 변수를 사용하여 데이터 소스의 열을 정의합니다.
   
-   새로 계산된 열(*numTrans*, *numIntlTrans* 및 *creditLine*)을 원래 정의를 재정의하는 열 컬렉션에 추가합니다. 아래 스크립트는 **rxSummary**의 메모리 내 출력을 저장하는 sumOut에서 가져온 최솟값 및 최댓값을 기준으로 요소를 추가합니다. 
+   새로 계산된 열(*numTrans*, *numIntlTrans* 및 *creditLine*)을 원래 정의를 재정의하는 열 컬렉션에 추가합니다. 아래 스크립트는 **rxSummary** 의 메모리 내 출력을 저장하는 sumOut에서 가져온 최솟값 및 최댓값을 기준으로 요소를 추가합니다. 
   
     ```R 
     ccColInfo <- list(
@@ -75,7 +75,7 @@ ms.locfileid: "92196273"
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    이제 sqlFraudDS 데이터 원본에 *ccColInfo*를 사용하여 추가된 새 열이 포함됩니다.
+    이제 sqlFraudDS 데이터 원본에 *ccColInfo* 를 사용하여 추가된 새 열이 포함됩니다.
   
 이 시점에서 수정 내용은 R의 데이터 원본 개체에만 영향을 주고 데이터베이스 테이블에는 아직 새 데이터가 기록되지 않습니다. 그러나 sumOut 변수에서 캡처된 데이터를 사용하여 시각화 및 요약을 만들 수 있습니다. 
 
@@ -90,7 +90,7 @@ ms.locfileid: "92196273"
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    내부적으로 **rxHistogram** 은 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/rxcube) 패키지에 포함된 **rxCube** 함수를 호출합니다. **rxCube**는 수식에 지정된 각 변수마다 하나의 열과 개수 열이 포함된 단일 목록(또는 데이터 프레임)을 출력합니다.
+    내부적으로 **rxHistogram** 은 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/rxcube) 패키지에 포함된 **rxCube** 함수를 호출합니다. **rxCube** 는 수식에 지정된 각 변수마다 하나의 열과 개수 열이 포함된 단일 목록(또는 데이터 프레임)을 출력합니다.
     
 2. 다음으로, 계산 컨텍스트를 원격 SQL Server 컴퓨터로 설정하고 다시 **rxHistogram** 을 실행합니다.
   
@@ -116,7 +116,7 @@ ms.locfileid: "92196273"
   
     그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예에서 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수의 정수가 각 정수 값마다 하나의 수준을 사용하여 범주 변수로 처리되어야 함을 나타냅니다.
   
-    **rxCube**의 기본 반환 값은 교차 집계를 나타내는 *rxCube 개체*입니다. 
+    **rxCube** 의 기본 반환 값은 교차 집계를 나타내는 *rxCube 개체* 입니다. 
   
 2. [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 호출하여 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환합니다.
   
@@ -124,7 +124,7 @@ ms.locfileid: "92196273"
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **rxCube** 함수는 결과를 데이터 프레임으로 직접 변환하기 위해 사용할 수 있는 선택적 인수인 *returnDataFrame* = **TRUE**를 포함합니다. 다음은 그 예입니다.
+    **rxCube** 함수는 결과를 데이터 프레임으로 직접 변환하기 위해 사용할 수 있는 선택적 인수인 *returnDataFrame* = **TRUE** 를 포함합니다. 다음은 그 예입니다.
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

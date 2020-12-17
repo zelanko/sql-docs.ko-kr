@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636163"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471114"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Python 및 R을 사용하여 인터넷에 연결되지 않은 컴퓨터에 SQL Server Machine Learning Services를 오프라인으로 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91636163"
 
 격리된 서버에서 기계 학습 및 R/Python 언어 관련 기능은 CAB 파일을 통해 추가됩니다. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>SQL Server 2019 오프라인 설치
 
 격리된 서버에 SQL Server Machine Learning Services(R 및 Python)를 설치하려면 먼저 SQL Server 초기 릴리스와 R 및 Python 지원을 위한 해당 CAB 파일을 다운로드합니다. 최신 누적 업데이트를 사용하도록 서버를 즉시 업데이트할 계획인 경우에도 초기 릴리스를 먼저 설치해야 합니다.
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 오프라인 설치
 
 격리된 서버에 SQL Server Machine Learning Services(R 및 Python)를 설치하려면 먼저 SQL Server 초기 릴리스와 R 및 Python 지원을 위한 해당 CAB 파일을 다운로드합니다. 최신 누적 업데이트를 사용하도록 서버를 즉시 업데이트할 계획인 경우에도 초기 릴리스를 먼저 설치해야 합니다.
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 오프라인 설치
 
@@ -128,11 +128,11 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 
 1. 설치를 시작하려면 .iso 또는 .cab 파일을 두 번 클릭하여 설치 미디어에 액세스합니다. **setup.exe** 파일이 보일 것입니다.
 
-2. **setup.exe**를 마우스 오른쪽 단추로 클릭하고 관리자 권한으로 실행합니다.
+2. **setup.exe** 를 마우스 오른쪽 단추로 클릭하고 관리자 권한으로 실행합니다.
 
-3. 설치 마법사가 오픈 소스 R 또는 Python 구성 요소에 대한 라이선스 페이지를 표시하면 **수락**을 클릭합니다. 사용 조건에 동의하면 다음 단계를 진행할 수 있습니다.
+3. 설치 마법사가 오픈 소스 R 또는 Python 구성 요소에 대한 라이선스 페이지를 표시하면 **수락** 을 클릭합니다. 사용 조건에 동의하면 다음 단계를 진행할 수 있습니다.
 
-4. **오프라인 설치** 페이지가 표시되면 **설치 경로**에서 이전에 복사한 CAB 파일이 포함된 폴더를 지정합니다.
+4. **오프라인 설치** 페이지가 표시되면 **설치 경로** 에서 이전에 복사한 CAB 파일이 포함된 폴더를 지정합니다.
 
 5. 계속해서 화면의 지시에 따라 설치를 완료합니다.
 
@@ -142,7 +142,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 
 데이터베이스 엔진과 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용하는 것이 좋습니다. 누적 업데이트는 설치 프로그램을 통해 설치됩니다. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. 기준선 인스턴스를 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
@@ -150,7 +150,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
    + SQL Server 2019 업데이트 *(2019용 업데이트는 아직 없음)*
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. 기준선 인스턴스를 시작합니다. SQL Server 초기 릴리스의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
@@ -158,7 +158,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
    + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. 기준선 인스턴스를 시작합니다. SQL Server 2016 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 SP 2의 기존 설치에만 누적 업데이트를 적용할 수 있습니다.
 
 2. 인터넷에 연결된 장치에서 SQL Server 버전에 대한 누적 업데이트 목록으로 이동합니다.
@@ -182,7 +182,7 @@ SQL Server 설치 미디어(.iso 또는 .cab) 및 데이터베이스 내 분석 
 
 R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel MKL(Math Kernel Library) 계산에서 [일관성 있는 출력을 보장](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)해야 합니다.
 
-1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수** 를 클릭합니다.
 
 2. 새 사용자 또는 시스템 변수를 만듭니다. 
 
@@ -193,7 +193,7 @@ R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel
 
 ## <a name="post-install-configuration"></a>설치 후 구성
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 설치가 완료되면 서비스를 다시 시작하고 스크립트 실행을 사용하도록 서버를 구성합니다.
 
 + [외부 스크립트 실행을 사용하도록 설정](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ SQL Server Machine Learning Services의 초기 오프라인 설치에는 다음�
 + [필요에 따른 추가 구성](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 설치가 완료되면 서비스를 다시 시작하고 스크립트 실행을 사용하도록 서버를 구성합니다.
 
 + [외부 스크립트 실행을 사용하도록 설정](sql-r-services-windows-install.md#bkmk_enableFeature)

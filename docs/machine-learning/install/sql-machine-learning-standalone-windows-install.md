@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d446416076160642f86c035082481d318479d594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956815"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471184"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치 프로그램을 사용하여 Machine Learning Server(독립 실행형) 또는 R Server 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. 이 기능은 **Machine Learning Server(독립 실행형)** 라고 하며 Python 및 R을 포함하고 있습니다. 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 합니다.  
 ::: moniker-end
 
@@ -59,23 +59,23 @@ SQL Server 2016만 해당: Microsoft는 SQL Server에서 필수 조건으로 설
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="run-setup"></a>설치 프로그램 실행
 
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
 
 1. 설치 마법사를 시작합니다.
 
-2. **설치** 탭을 클릭하고, **새 Machine Learning Server(독립 실행형) 설치**를 선택합니다.
+2. **설치** 탭을 클릭하고, **새 Machine Learning Server(독립 실행형) 설치** 를 선택합니다.
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![독립 실행형 Machine Learning Server 설치](media/2017setup-installation-page-mlsvr.png "독립 실행형 Machine Learning Server 설치 시작")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![독립 실행형 Machine Learning Server 설치](media/2019setup-installation-page-mlsvr.png "독립 실행형 Machine Learning Server 설치 시작")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. 규칙 검사가 완료되면 SQL Server 사용 약관에 동의하고 새 설치를 선택합니다.
 
@@ -83,29 +83,29 @@ SQL Server 2016만 해당: Microsoft는 SQL Server에서 필수 조건으로 설
 
     - **Microsoft Machine Learning Server(독립 실행형)**
 
-    - **R** 및 **Python**은 기본적으로 선택됩니다. 두 언어 중 하나를 선택 취소할 수 있지만, 지원되는 언어 중 하나 이상을 설치하는 것이 좋습니다.
+    - **R** 및 **Python** 은 기본적으로 선택됩니다. 두 언어 중 하나를 선택 취소할 수 있지만, 지원되는 언어 중 하나 이상을 설치하는 것이 좋습니다.
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![R 또는 Python 기능 선택](media/2017setup-features-page-mlsvr-rpy.png "독립 실행형 Machine Learning Server 설치 시작")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![R 또는 Python 기능 선택](media/2019setup-features-page-mlsvr-rpy.png "독립 실행형 Machine Learning Server 설치 시작")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    기타 모든 옵션은 무시해야 합니다. 
     
    > [!NOTE]
-   > SQL Server 데이터베이스 내 분석을 위해 컴퓨터에 이미 Machine Learning Services가 설치되어 있는 경우 **공유 기능**을 설치하지 마세요. 설치하면 중복 라이브러리가 생성됩니다.
+   > SQL Server 데이터베이스 내 분석을 위해 컴퓨터에 이미 Machine Learning Services가 설치되어 있는 경우 **공유 기능** 을 설치하지 마세요. 설치하면 중복 라이브러리가 생성됩니다.
    > 
    > 또한 SQL Server에서 실행되는 R 또는 Python 스크립트는 다른 데이터베이스 엔진 서비스에서 사용하는 메모리와 충돌하지 않도록 SQL Server를 통해 관리되는 반면, 독립 실행형 기계 학습 서버는 이러한 제약 조건이 없으며 다른 데이터베이스 작업과 간섭을 일으킬 수 있습니다. 마지막으로, 운영화에 자주 사용되는 RDP 세션을 통한 원격 액세스는 일반적으로 데이터베이스 관리자에 의해 차단됩니다.
    > 
    > 따라서 일반적으로 SQL Server Machine Learning Services와 분리된 컴퓨터에 Machine Learning Server(독립 실행형)를 설치하는 것이 좋습니다.
 
-5. 기본 언어 배포판을 다운로드하여 설치하려면 사용 조건에 동의합니다. **동의** 단추를 사용할 수 없게 되면 **다음**을 클릭할 수 있습니다. 
+5. 기본 언어 배포판을 다운로드하여 설치하려면 사용 조건에 동의합니다. **동의** 단추를 사용할 수 없게 되면 **다음** 을 클릭할 수 있습니다. 
 
-6. **설치 준비 완료** 페이지에서 선택 내용을 확인하고 **설치**를 클릭합니다.
+6. **설치 준비 완료** 페이지에서 선택 내용을 확인하고 **설치** 를 클릭합니다.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -115,7 +115,7 @@ SQL Server 2016만 해당: Microsoft는 SQL Server에서 필수 조건으로 설
 
 1. 설치 마법사를 시작합니다.
 
-2. **설치** 탭에서 **새 R Server(독립 실행형) 설치**를 클릭합니다.
+2. **설치** 탭에서 **새 R Server(독립 실행형) 설치** 를 클릭합니다.
     
    ![독립 실행형 R Server 설치 시작](media/2016-setup-installation-rsvr.png "독립 실행형 R Server 설치 시작")
 
@@ -130,22 +130,22 @@ SQL Server 2016만 해당: Microsoft는 SQL Server에서 필수 조건으로 설
    기타 모든 옵션은 무시해도 됩니다. 
     
    > [!NOTE]
-   > SQL Server 데이터베이스 내 분석을 위해 이미 R Services가 설치되어 있는 컴퓨터에서 설치를 실행하는 경우 **공유 기능**을 설치하지 마세요. 설치하면 중복 라이브러리가 생성됩니다.
+   > SQL Server 데이터베이스 내 분석을 위해 이미 R Services가 설치되어 있는 컴퓨터에서 설치를 실행하는 경우 **공유 기능** 을 설치하지 마세요. 설치하면 중복 라이브러리가 생성됩니다.
    > 
    > SQL Server에서 실행되는 R 스크립트는 다른 데이터베이스 엔진 서비스에서 사용하는 메모리와 충돌하지 않도록 SQL Server를 통해 관리되는 반면, 독립 실행형 R Server는 이러한 제약 조건이 없으며 다른 데이터베이스 작업과 간섭을 일으킬 수 있습니다.
    > 
    > 일반적으로 SQL Server R Services(데이터베이스 내)와 분리된 컴퓨터에 R Server(독립 실행형)를 설치하는 것이 좋습니다.
 
-5. 기본 언어 배포판을 다운로드하여 설치하려면 사용 조건에 동의합니다. **동의** 단추를 사용할 수 없게 되면 **다음**을 클릭할 수 있습니다. 
+5. 기본 언어 배포판을 다운로드하여 설치하려면 사용 조건에 동의합니다. **동의** 단추를 사용할 수 없게 되면 **다음** 을 클릭할 수 있습니다. 
 
-6. **설치 준비 완료** 페이지에서 선택 내용을 확인하고 **설치**를 클릭합니다.
+6. **설치 준비 완료** 페이지에서 선택 내용을 확인하고 **설치** 를 클릭합니다.
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>환경 변수 설정
 
 R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel MKL(Math Kernel Library) 계산에서 [일관성 있는 출력을 보장](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)해야 합니다.
 
-1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수** 를 클릭합니다.
 
 2. 새 사용자 또는 시스템 변수를 만듭니다. 
 
@@ -206,7 +206,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 
    + .exe 파일을 두 번 클릭하여 설치 프로그램을 실행합니다. 인터넷에 연결되지 않은 서버에 누적 업데이트를 설치하는 경우 R 및 Python에 대한 .cab 파일의 위치를 선택하라는 메시지가 표시됩니다.
 
-8. 설치 후 웹 노드 및 컴퓨팅 노드를 사용하여 배포를 설정한 서버에서 "MMLNativePath" 바로 아래에 "MMLResourcePath" 항목을 추가하여 **AppSettings.json**을 편집합니다. 다음은 그 예입니다.
+8. 설치 후 웹 노드 및 컴퓨팅 노드를 사용하여 배포를 설정한 서버에서 "MMLNativePath" 바로 아래에 "MMLResourcePath" 항목을 추가하여 **AppSettings.json** 을 편집합니다. 다음은 그 예입니다.
 
     ```json
     "ScorerParameters": {
@@ -228,7 +228,7 @@ R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서
 + [빠른 시작: T-SQL에서 R 사용](../tutorials/quickstart-r-create-script.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.
 
 + [Python 자습서: SQL Server Machine Learning Services에서 선형 회귀를 사용하여 스키 대여 예측](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

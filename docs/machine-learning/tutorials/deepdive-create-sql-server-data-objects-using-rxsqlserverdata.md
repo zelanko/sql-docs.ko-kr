@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 47864a26c3a5090543c842b45fb6f39ef9862380
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470604"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,9 +29,9 @@ R에서 SQL Server에 연결하고 **RevoScaleR** 함수를 사용하여 다음 
 > * 학습 데이터 및 예측용 테이블 만들기
 > * 로컬 .csv 파일의 데이터를 사용하여 테이블 로드
 
-샘플 데이터는 학습 및 채점 데이터 세트로 분할된, 시뮬레이션된 신용 카드 사기 데이터(ccFraud 데이터 세트)입니다. 데이터 파일은 **RevoScaleR**에 포함되어 있습니다.
+샘플 데이터는 학습 및 채점 데이터 세트로 분할된, 시뮬레이션된 신용 카드 사기 데이터(ccFraud 데이터 세트)입니다. 데이터 파일은 **RevoScaleR** 에 포함되어 있습니다.
 
-이러한 작업을 완료하려면 R IDE 또는 **Rgui**를 사용합니다. 이 위치에 있는 R 실행 파일을 사용해야 합니다. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64(해당 도구를 사용하는 경우 Rgui.exe 또는 C:\Program Files\Microsoft\R Client\R_SERVER를 가리키는 경우 R IDE). 이러한 실행 파일이 포함된 [R 클라이언트 워크스테이션](../r/set-up-a-data-science-client.md)을 갖는 것은 이 자습서의 사전 요구 사항으로 간주됩니다.
+이러한 작업을 완료하려면 R IDE 또는 **Rgui** 를 사용합니다. 이 위치에 있는 R 실행 파일을 사용해야 합니다. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64(해당 도구를 사용하는 경우 Rgui.exe 또는 C:\Program Files\Microsoft\R Client\R_SERVER를 가리키는 경우 R IDE). 이러한 실행 파일이 포함된 [R 클라이언트 워크스테이션](../r/set-up-a-data-science-client.md)을 갖는 것은 이 자습서의 사전 요구 사항으로 간주됩니다.
 
 ## <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
 
@@ -55,15 +55,15 @@ R에서 SQL Server에 연결하고 **RevoScaleR** 함수를 사용하여 다음 
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    서버 인스턴스 및 데이터베이스 이름이 연결 문자열의 일부로 이미 지정되었으므로 두 변수를 결합할 경우 새 테이블의 *정규화된* 이름은 *instance.database.schema.ccFraudSmall*이 됩니다.
+    서버 인스턴스 및 데이터베이스 이름이 연결 문자열의 일부로 이미 지정되었으므로 두 변수를 결합할 경우 새 테이블의 *정규화된* 이름은 *instance.database.schema.ccFraudSmall* 이 됩니다.
   
-3.  필요한 경우 *rowsPerRead*를 지정하여 각 배치에서 읽는 데이터 행 수를 제어합니다.
+3.  필요한 경우 *rowsPerRead* 를 지정하여 각 배치에서 읽는 데이터 행 수를 제어합니다.
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    이 매개 변수는 선택 사항이지만 이 매개 변수를 설정하면 보다 효율적인 계산을 수행할 수 있습니다. **RevoScaleR** 및 **MicrosoftML**의 고급 분석 함수는 대부분은 데이터를 청크로 처리합니다. *rowsPerRead* 매개 변수는 각 청크의 행 수를 결정합니다.
+    이 매개 변수는 선택 사항이지만 이 매개 변수를 설정하면 보다 효율적인 계산을 수행할 수 있습니다. **RevoScaleR** 및 **MicrosoftML** 의 고급 분석 함수는 대부분은 데이터를 청크로 처리합니다. *rowsPerRead* 매개 변수는 각 청크의 행 수를 결정합니다.
   
     올바른 균형을 찾기 위해 이 설정으로 실험해 보아야 할 수 있습니다. 값이 너무 크면 해당 크기의 청크로 데이터를 처리하는 데 충분한 메모리가 없는 경우 데이터 액세스가 느릴 수 있습니다. 반대로, 일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다.
   
@@ -81,13 +81,13 @@ R에서 SQL Server에 연결하고 **RevoScaleR** 함수를 사용하여 다음 
 
 동일한 단계를 따라 채점 데이터를 저장하는 테이블을 만듭니다.
 
-1. 새 R 변수 *sqlScoreTable*을 만들어 점수 매기기에 사용되는 테이블의 이름을 저장합니다.
+1. 새 R 변수 *sqlScoreTable* 을 만들어 점수 매기기에 사용되는 테이블의 이름을 저장합니다.
   
     ```R
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. 해당 변수를 **RxSqlServerData** 함수에 대한 인수로 제공하여 두 번째 데이터 원본 개체 *sqlScoreDS*를 정의합니다.
+2. 해당 변수를 **RxSqlServerData** 함수에 대한 인수로 제공하여 두 번째 데이터 원본 개체 *sqlScoreDS* 를 정의합니다.
   
     ```R
     sqlScoreDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -110,13 +110,13 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
 
 ### <a name="load-data-into-the-training-table"></a>학습 테이블에 데이터 로드
 
-1. R 변수 *ccFraudCsv*를 만들고 이 변수에 샘플 데이터를 포함하는 CSV 파일의 파일 경로를 할당합니다. 이 데이터 세트는 **RevoScaleR**에 제공됩니다. "sampleDataDir"은 **rxGetOption** 함수의 키워드입니다.
+1. R 변수 *ccFraudCsv* 를 만들고 이 변수에 샘플 데이터를 포함하는 CSV 파일의 파일 경로를 할당합니다. 이 데이터 세트는 **RevoScaleR** 에 제공됩니다. "sampleDataDir"은 **rxGetOption** 함수의 키워드입니다.
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    **RevoScaleR**의 [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions)와 연결된 GET 메서드인 **rxGetOption**에 대한 호출을 확인하세요. 기본 공유 디렉터리 또는 계산에 사용할 프로세서(코어) 수와 같은 로컬 및 원격 컴퓨팅 컨텍스트와 관련된 옵션을 설정하고 나열하려면 이 유틸리티를 사용합니다.
+    **RevoScaleR** 의 [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions)와 연결된 GET 메서드인 **rxGetOption** 에 대한 호출을 확인하세요. 기본 공유 디렉터리 또는 계산에 사용할 프로세서(코어) 수와 같은 로컬 및 원격 컴퓨팅 컨텍스트와 관련된 옵션을 설정하고 나열하려면 이 유틸리티를 사용합니다.
     
     이 함수는 코드를 실행하는 위치와 관계없이 올바른 라이브러리에서 샘플을 가져옵니다. 예를 들어 SQL Server 및 개발 컴퓨터에서 함수를 실행해 보고 경로가 어떻게 다른지 확인하세요.
   
@@ -147,7 +147,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
   
     *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
-5. 테이블 목록을 새로 고칩니다. 각 변수의 데이터 형식이 올바르고 각 변수를 가져왔는지 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1,000개의 행 선택**을 선택할 수도 있습니다.
+5. 테이블 목록을 새로 고칩니다. 각 변수의 데이터 형식이 올바르고 각 변수를 가져왔는지 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1,000개의 행 선택** 을 선택할 수도 있습니다.
 
 ### <a name="load-data-into-the-scoring-table"></a>채점 테이블에 데이터 로드
 
@@ -159,7 +159,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
     ccScoreCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudScoreSmall.csv")
     ```
   
-2. **RxTextData** 함수를 사용하여 데이터를 가져와 *inTextData*변수에 저장합니다.
+2. **RxTextData** 함수를 사용하여 데이터를 가져와 *inTextData* 변수에 저장합니다.
   
     ```R
     inTextData <- RxTextData(file = ccScoreCsv,      colClasses = c(
@@ -190,7 +190,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
 
 [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep)은 R 데이터 프레임에서 여러 변환을 수행할 수 있는 강력한 함수입니다. rxDataStep을 사용하여 대상에 필요한 표현으로 데이터를 변환할 수도 있습니다(이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
 
-필요에 따라 **rxDataStep**에 대한 인수에 R 함수를 사용하여 데이터에 대한 변환을 지정할 수 있습니다. 이러한 작업의 예는 이 자습서의 뒷부분에서 제공됩니다.
+필요에 따라 **rxDataStep** 에 대한 인수에 R 함수를 사용하여 데이터에 대한 변환을 지정할 수 있습니다. 이러한 작업의 예는 이 자습서의 뒷부분에서 제공됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

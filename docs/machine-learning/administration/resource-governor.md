@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 85ee78e0d7558cf2ad683321a13a842ff5d8daf5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471334"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Resource Governor를 사용하여 Python 및 R 워크로드 관리
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ Python 및 R의 기계 학습 알고리즘은 일반적으로 컴퓨팅 집약�
  
 기본적으로 외부 프로세스는 로컬 서버에서 총 호스트 메모리를 최대 20%까지 사용합니다. 기본 리소스 풀을 수정하여 외부 프로세스에 대해 지정한 용량이 R 및 Python 프로세스에 사용되도록 서버 전체의 설정을 변경할 수 있습니다.
 
-선택적으로 특정 프로그램이나 호스트로부터 시작되는 요청 또는 사용자가 제공한 다른 기준에 따라 리소스 할당을 결정하기 위해 워크로드 그룹 및 분류자가 연결된 사용자 지정 **외부 리소스 풀**을 만들 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부의 R 및 Python 프로세스 관리를 돕기 위해 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 도입된 리소스 풀 유형입니다.
+선택적으로 특정 프로그램이나 호스트로부터 시작되는 요청 또는 사용자가 제공한 다른 기준에 따라 리소스 할당을 결정하기 위해 워크로드 그룹 및 분류자가 연결된 사용자 지정 **외부 리소스 풀** 을 만들 수 있습니다. 외부 리소스 풀은 데이터베이스 엔진 외부의 R 및 Python 프로세스 관리를 돕기 위해 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 도입된 리소스 풀 유형입니다.
 
 1. [리소스 관리를 사용하도록 설정합니다](../../relational-databases/resource-governor/enable-resource-governor.md)(기본적으로 해제되어 있음).
 
@@ -54,7 +54,7 @@ Python 및 R의 기계 학습 알고리즘은 일반적으로 컴퓨팅 집약�
 
 ## <a name="processes-under-resource-governance"></a>리소스 관리 중인 프로세스
   
- *외부 리소스 풀*을 사용하여 데이터베이스 엔진 인스턴스에서 다음과 같은 실행 파일에 사용되는 리소스를 관리합니다.
+ *외부 리소스 풀* 을 사용하여 데이터베이스 엔진 인스턴스에서 다음과 같은 실행 파일에 사용되는 리소스를 관리합니다.
 
 + Rterm.exe - SQL Server에서 로컬로 호출되거나 원격 계산 컨텍스트로 SQL Server로 원격으로 호출되는 경우
 + Python.exe - SQL Server에서 로컬로 호출되거나 원격 계산 컨텍스트로 SQL Server로 원격으로 호출되는 경우

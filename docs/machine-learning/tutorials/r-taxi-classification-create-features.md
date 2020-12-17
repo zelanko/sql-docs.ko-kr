@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470174"
 ---
 # <a name="r-tutorial-create-data-features"></a>R 자습서: 데이터 기능 만들기
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "92412571"
 
 이 자습서 준비의 일환으로 _fnCalculateDistance_ 함수를 다운로드하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록한 상태여야 합니다. 코드를 검토하는 데 몇 분 정도가 걸립니다.
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능** , **함수** , **스칼라 반환 함수** 를 차례로 확장합니다.   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능**, **함수** , **스칼라 반환 함수** 를 차례로 확장합니다.   
 
 2. _fnCalculateDistance_ 를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
   

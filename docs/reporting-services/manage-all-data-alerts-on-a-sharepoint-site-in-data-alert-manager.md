@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9ef302fbbcc11fa5363538092f35b65a94906b8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235706"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466644"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
 
@@ -35,11 +35,11 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
   
 1.  데이터 경고 정의가 저장된 SharePoint 사이트로 이동합니다.  
   
-2.  홈 페이지에서 **사이트 작업**을 클릭합니다.  
+2.  홈 페이지에서 **사이트 작업** 을 클릭합니다.  
   
-3.  목록 아래로 스크롤하고 **사이트 설정**을 클릭합니다.  
+3.  목록 아래로 스크롤하고 **사이트 설정** 을 클릭합니다.  
   
-4.  **Reporting Services**아래에서 **데이터 경고 관리**를 클릭합니다.  
+4.  **Reporting Services** 아래에서 **데이터 경고 관리** 를 클릭합니다.  
   
 5.  **사용자 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 보려는 경고를 소유하는 사용자를 선택합니다.  
   
@@ -49,7 +49,7 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
   
 ## <a name="delete-an-alert-definition"></a>경고 정의 삭제  
   
--   삭제할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+-   삭제할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다.  
   
     > [!NOTE]  
     >  경고를 삭제하면 더 이상 경고 메시지가 전송되지 않습니다. 하지만 경고 데이터베이스를 쿼리하면 경고 정의가 계속 존재하는 것을 확인할 수 있습니다. 경고 서비스는 예약에 따라 정리를 수행하며 다음 정리 작업 시 경고 정의가 영구적으로 삭제됩니다. 기본 정리 간격은 20분입니다. 이러한 정리 간격은 구성할 수 있습니다. 자세한 내용은 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)를 참조하세요.  

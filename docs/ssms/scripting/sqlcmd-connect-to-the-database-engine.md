@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e11f3aa1eb4221790241c4beaaebc4b8ae0cfa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9cf769ae3dc43e6e8c0601d25322627d7dec4920
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901556"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466234"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - 데이터베이스 엔진에 연결
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88901556"
   
 -   **sqlcmd** 는 다음 설명과 같이 연결 문자열의 일부로 지정된 프로토콜을 사용합니다.  
   
--   프로토콜을 연결 문자열의 일부로 지정하지 않으면 **sqlcmd** 는 연결하고 있는 별칭의 일부로 정의된 프로토콜을 사용합니다. 별칭을 만들어 특정 네트워크 프로토콜을 사용하도록 **sqlcmd**를 구성하려면 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
+-   프로토콜을 연결 문자열의 일부로 지정하지 않으면 **sqlcmd** 는 연결하고 있는 별칭의 일부로 정의된 프로토콜을 사용합니다. 별칭을 만들어 특정 네트워크 프로토콜을 사용하도록 **sqlcmd** 를 구성하려면 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   
 -   기타 다른 방법으로 프로토콜을 지정하지 않으면 **sqlcmd** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 프로토콜 순서에 따라 결정되는 네트워크 프로토콜을 사용합니다.  
   

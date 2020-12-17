@@ -14,13 +14,13 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a17be8d63b2ecea316819b90ae5cc8051bd0c2a6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: <= sql-server-2016
+ms.openlocfilehash: 5c4e73f37930c9c2bfc7458b5ec035739c67bf08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035086"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464404"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX script job step
 
@@ -50,13 +50,13 @@ ActiveX 하위 시스템은 SQL Server 2016부터 중단됩니다. ActiveX 스�
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
+2.  **SQL Server 에이전트** 를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
   
-3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기** 를 클릭합니다.  
   
-4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름** 을 입력합니다.  
   
-5.  **유형** 목록에서 **ActiveX 스크립트**를 클릭합니다.  
+5.  **유형** 목록에서 **ActiveX 스크립트** 를 클릭합니다.  
   
 6.  **다음 계정으로 실행** 목록에서 작업에 사용할 자격 증명을 가진 프록시 계정을 선택합니다.  
   
@@ -70,11 +70,11 @@ ActiveX 하위 시스템은 SQL Server 2016부터 중단됩니다. ActiveX 스�
   
 #### <a name="to-create-an-activex-script-job-step"></a>ActiveX 스크립트 작업 단계를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- create an ActiveX Script job step written in VBScript that creates a restore point  

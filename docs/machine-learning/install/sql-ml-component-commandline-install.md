@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96122757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471144"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>명령줄에서 R 및 Python을 사용하여 SQL Server Machine Learning Services 설치
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "96122757"
 
 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **/Q** 매개 변수를 사용하는 완전 자동 모드 또는 **/QS** 매개 변수를 사용하는 단순 자동 모드를 지원합니다. **/QS** 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. **/QS** 매개 변수는 **/Action=install** 이 지정된 경우에만 지원됩니다.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server R Services(데이터베이스 내))  |
@@ -52,7 +52,7 @@ ms.locfileid: "96122757"
 | /MRCACHEDIRECTORY | 오프라인 설치의 경우 R 구성 요소 CAB 파일이 포함된 폴더를 설정합니다. |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server Machine Learning Services(데이터베이스 내))  |
@@ -67,7 +67,7 @@ ms.locfileid: "96122757"
 | /MPYCACHEDIRECTORY | 다음에 사용하도록 예약됩니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server Machine Learning Services(데이터베이스 내))  |
@@ -92,7 +92,7 @@ ms.locfileid: "96122757"
 > [!IMPORTANT]
 > 설치 후에는 두 개의 추가 구성 단계가 남습니다. 이러한 작업을 수행하기 전에는 통합이 완료되지 않습니다. 지침은 [설치 후 작업](#post-install)을 참조하세요.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning Services: 데이터베이스 엔진, Python 및 R을 사용한 고급 분석
 
 데이터베이스 엔진 인스턴스의 동시 설치를 위해 인스턴스 이름 및 관리자(Windows) 로그인을 제공합니다. 코어 및 언어 구성 요소를 설치하는 기능뿐만 아니라 모든 사용 약관에 대한 동의를 포함합니다.
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: 데이터베이스 엔진, R을 사용한 고급 분석
 
 데이터베이스 엔진 인스턴스의 동시 설치를 위해 인스턴스 이름 및 관리자(Windows) 로그인을 제공합니다. 코어 및 언어 구성 요소를 설치하는 기능뿐만 아니라 모든 사용 약관에 대한 동의를 포함합니다.
@@ -141,13 +141,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 설치를 완료하려면 다음 두 가지 작업을 더 수행해야 합니다.
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. 데이터베이스 엔진 서비스를 다시 시작합니다.
 
 1. SQL Server Machine Learning Services: 기능을 사용하려면 외부 스크립트를 사용하도록 설정합니다. 다음 단계로 [SQL Server Machine Learning Services(데이터베이스 내) 설치](sql-machine-learning-services-windows-install.md)의 지침을 수행합니다. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. 데이터베이스 엔진 서비스를 다시 시작합니다.
 
 1. SQL Server R Services: 기능을 사용하려면 외부 스크립트를 사용하도록 설정합니다. 다음 단계로 [SQL Server R Services(데이터베이스 내) 설치](sql-r-services-windows-install.md)의 지침을 수행합니다. 
@@ -177,7 +177,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다. 다음 예제에서는 독립 실행형 서버를 설치하기 위한 올바른 구문을 보여 줍니다.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server Machine Learning Server는 독립 실행형 서버에서 Python 및 R을 지원합니다.
 
 ```cmd
@@ -185,7 +185,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server R Server는 R 전용입니다.
 
 ```cmd

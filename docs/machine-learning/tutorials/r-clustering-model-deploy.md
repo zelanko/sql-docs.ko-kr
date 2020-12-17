@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b4f2d934a8591063e7c14ada914ac3a556866a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 35a2b00b671d70849de0c191aae113ce1635b68c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470204"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링 모델 배포
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 SQL Server R Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 클러스터링 모델을 Azure SQL Managed Instance Machine Learning Services를 사용하여 데이터베이스에 배포합니다.
 ::: moniker-end
 

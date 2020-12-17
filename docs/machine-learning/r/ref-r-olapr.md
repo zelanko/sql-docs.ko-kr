@@ -7,18 +7,18 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fc9c222bfb1229deea7ef734658b1d3b6b86149d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470804"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR(SQL Server Machine Learning Services의 R 패키지)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-**olapR**은 SQL Server Analysis Services OLAP 큐브에 대한 MDX 쿼리에 사용되는 Microsoft의 R 패키지입니다. 함수는 일부 MDX 작업을 지원하지 않지만 차원에서 조각화, 분석, 드릴다운, 롤업 및 피벗을 수행하는 쿼리를 작성할 수 있습니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
+**olapR** 은 SQL Server Analysis Services OLAP 큐브에 대한 MDX 쿼리에 사용되는 Microsoft의 R 패키지입니다. 함수는 일부 MDX 작업을 지원하지 않지만 차원에서 조각화, 분석, 드릴다운, 롤업 및 피벗을 수행하는 쿼리를 작성할 수 있습니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
 지원되는 모든 SQL Server 버전에서 Analysis Services OLAP 큐브에 연결하는 데 이 패키지를 사용할 수 있습니다. 현재, 테이블 형식 모델에는 연결할 수 없습니다.
 

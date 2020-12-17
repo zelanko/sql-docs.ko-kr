@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: eb35ae0143b2146d5d5d38ebf0f2ab6d51a94049
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439328"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 백업 및 복원
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91933765"
   
  **기본 모드:** 보고서 서버 구성 관리자 또는 **rskeymgmt** 유틸리티  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint 모드:** SharePoint 중앙 관리 페이지 또는 PowerShell  
   
@@ -62,13 +62,13 @@ ms.locfileid: "91933765"
   
 1.  보고서 서버 Configuration Manager를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
-2.  **암호화 키**를 클릭한 다음 **백업**을 선택합니다.  
+2.  **암호화 키** 를 클릭한 다음 **백업** 을 선택합니다.  
   
 3.  강력한 암호를 입력합니다.  
   
 4.  저장된 키를 보관할 파일을 지정합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 해당 파일에 .snk 파일 확장명을 붙입니다. 보고서 서버와는 분리되도록 해당 파일을 디스크에 저장하세요.  
   
-5.  **확인**을 선택합니다.  
+5.  **확인** 을 선택합니다.  
   
 ###  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a> 암호화 키 백업 - rskeymgmt(기본 모드)  
   
@@ -95,13 +95,13 @@ ms.locfileid: "91933765"
   
 1.  보고서 서버 Configuration Manager를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
-2.  암호화 키 페이지에서 **복원**을 선택합니다.  
+2.  암호화 키 페이지에서 **복원** 을 선택합니다.  
   
 3.  백업 복사본이 들어 있는 .snk 파일을 선택합니다.  
   
 4.  파일의 잠금을 해제하는 암호를 입력합니다.  
   
-5.  **확인**을 선택합니다. 
+5.  **확인** 을 선택합니다. 
   
 ###  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> 암호화 키 복원 - rskeymgmt(기본 모드)  
   

@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02bc27675493e7e8d1b5c5012d7541c0ad295bae
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9e13e201f6ddac0cad1f63364caca4fa99dfd3d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408609"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
 
@@ -61,13 +61,13 @@ ms.locfileid: "92038757"
   
 #### <a name="to-start-stop-or-restart-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스를 시작, 중지 또는 다시 시작하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 SQL Server 에이전트 서비스를 관리할 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 SQL Server 에이전트 서비스를 관리할 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **시작**, **중지**또는 **다시 시작**을 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **시작**, **중지** 또는 **다시 시작** 을 선택합니다.  
   
-3.  **사용자 계정 컨트롤** 대화 상자에서 **예**를 클릭합니다.  
+3.  **사용자 계정 컨트롤** 대화 상자에서 **예** 를 클릭합니다.  
   
-4.  작업을 수행할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
+4.  작업을 수행할지 묻는 메시지가 표시되면 **예** 를 클릭합니다.  
   
 자세한 내용은 다음을 참조하세요.  
   

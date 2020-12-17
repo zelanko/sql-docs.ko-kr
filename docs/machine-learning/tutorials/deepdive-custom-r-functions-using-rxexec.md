@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3088409167e41aa478ef831c72eee100650919a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195155"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470584"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>rxExec(SQL Server 및 RevoScaleR 자습서)를 사용하여 SQL Server에서 사용자 지정 R 함수 실행
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "92195155"
 
 [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec)를 통해 함수를 전달하여 SQL Server 컨텍스트에서 사용자 지정 R 함수를 실행할 수 있습니다.이 경우 스크립트에 필요한 모든 라이브러리도 서버에 설치되고 해당 라이브러리가 R의 기본 배포판과 호환된다고 가정합니다. 
 
-**RevoScaleR**의 **rxExec** 함수는 필요한 R 스크립트를 실행할 수 있는 메커니즘을 제공합니다. 또한 **rxExec**는 단일 서버의 여러 코어에 작업을 명시적으로 배포하여 네이티브 R 엔진의 리소스 제약 조건으로 제한되는 스크립트에 규모를 추가할 수 있습니다.
+**RevoScaleR** 의 **rxExec** 함수는 필요한 R 스크립트를 실행할 수 있는 메커니즘을 제공합니다. 또한 **rxExec** 는 단일 서버의 여러 코어에 작업을 명시적으로 배포하여 네이티브 R 엔진의 리소스 제약 조건으로 제한되는 스크립트에 규모를 추가할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -39,7 +39,7 @@ ms.locfileid: "92195155"
 
 ## <a name="create-the-remote-compute-context"></a>원격 컴퓨팅 컨텍스트 만들기
 
-클라이언트 워크스테이션에서 다음 R 명령을 실행합니다. 예를 들어 **Rgui**를 사용하는 경우 다음 위치에서 시작합니다. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+클라이언트 워크스테이션에서 다음 R 명령을 실행합니다. 예를 들어 **Rgui** 를 사용하는 경우 다음 위치에서 시작합니다. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
 1. 계산이 수행되는 SQL Server 인스턴스에 대한 연결 문자열을 지정합니다. 해당 서버는 R 통합용으로 구성되어야 합니다. 이 연습에서는 데이터베이스 이름이 사용되지 않지만 연결 문자열에는 데이터베이스 이름이 필요합니다. 테스트 또는 샘플 데이터베이스가 있는 경우 해당 데이터베이스를 사용하면 됩니다.
 
@@ -114,13 +114,13 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
   
     이겼나요, 졌나요?
   
-이제 제대로 작동하는 스크립트가 만들어졌으므로 **rxExec**를 통해 함수를 여러 번 실행하여 이길 확률을 확인하는 데 도움이 되는 시뮬레이션을 만드는 방법을 살펴보겠습니다.
+이제 제대로 작동하는 스크립트가 만들어졌으므로 **rxExec** 를 통해 함수를 여러 번 실행하여 이길 확률을 확인하는 데 도움이 되는 시뮬레이션을 만드는 방법을 살펴보겠습니다.
 
 ## <a name="pass-rolldice-in-rxexec"></a>rxExec에 rollDice() 전달
 
 원격 SQL Server 컨텍스트에서 임의 함수를 실행하려면 **rxExec** 함수를 호출합니다.
 
-1. 시뮬레이션을 수정하는 다른 몇 가지 매개 변수와 함께 **rxExec**에 대한 인수로 사용자 지정 함수를 호출합니다.
+1. 시뮬레이션을 수정하는 다른 몇 가지 매개 변수와 함께 **rxExec** 에 대한 인수로 사용자 지정 함수를 호출합니다.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -129,9 +129,9 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
   
     + *timesToRun* 인수를 사용하여 함수를 실행해야 하는 횟수를 나타냅니다.  이 경우 주사위를 20회 굴립니다.
   
-    + *RNGseed* 및 *RNGkind* 인수를 사용하여 난수 생성을 제어할 수 있습니다. *RNGseed* 를 **auto**로 설정하면 병렬 난수 스트림이 각 작업자에 대해 초기화됩니다.
+    + *RNGseed* 및 *RNGkind* 인수를 사용하여 난수 생성을 제어할 수 있습니다. *RNGseed* 를 **auto** 로 설정하면 병렬 난수 스트림이 각 작업자에 대해 초기화됩니다.
   
-2. **rxExec** 함수는 각 실행에 대한 하나의 요소가 포함된 목록을 만듭니다. 그러나 목록이 완성될 때까지 큰 변화는 없습니다. 모든 반복이 완료되면 **length**로 시작하는 줄에 값이 반환됩니다.
+2. **rxExec** 함수는 각 실행에 대한 하나의 요소가 포함된 목록을 만듭니다. 그러나 목록이 완성될 때까지 큰 변화는 없습니다. 모든 반복이 완료되면 **length** 로 시작하는 줄에 값이 반환됩니다.
   
     그러면 다음 단계로 이동하여 승패 레코드 요약을 가져올 수 있습니다.
   
@@ -157,4 +157,4 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
 
 ## <a name="next-steps"></a>다음 단계
 
-**rxExec**를 사용하는 더 복잡한 예는 다음 문서를 참조하세요. [foreach 및 rxExec를 사용하는 대략적인 미세 병렬 처리](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+**rxExec** 를 사용하는 더 복잡한 예는 다음 문서를 참조하세요. [foreach 및 rxExec를 사용하는 대략적인 미세 병렬 처리](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.custom: contperfq1, seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3704d0faa89ffbc2151f31aa6e41b320e0d33ca0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471304"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 확장성 프레임워크의 보안 아키텍처
 
@@ -72,7 +72,7 @@ SQL Server를 실행 컨텍스트로 사용하여 외부 스크립트를 실행�
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리에 사용되는 서비스(실행 패드)
 
@@ -88,7 +88,7 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리에 사용되는 서비스(실행 패드)
 
@@ -104,7 +104,7 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="services-used-in-external-processing"></a>외부 처리에 사용되는 서비스
 
@@ -118,7 +118,7 @@ SQL Server는 위성 프로세스를 시작하는 데 사용되는 권한이 낮
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="identities-used-in-processing-sqlrusergroup"></a>처리에 사용되는 ID(SQLRUserGroup)
 
@@ -148,7 +148,7 @@ SQL Server의 중요한 리소스를 보호하기 위해 필요에 따라 **SQLR
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="appcontainer-isolation"></a>AppContainer 격리
 
@@ -165,7 +165,7 @@ SQL Server에서 구현되므로 AppContainer는 내부 메커니즘입니다. �
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="identity-mapping"></a>ID 매핑
 
@@ -189,7 +189,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="implied-authentication-loopback-requests"></a>암시적 인증(루프백 요청)
 
@@ -209,7 +209,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>암시적 인증(루프백 요청)
 
@@ -227,7 +227,7 @@ AppContainer는 ID 및 자격 증명을 관리하여 사용자 자격 증명을 
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>암시적 인증(루프백 요청)
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 2cd28eaa17a52e0e0ae525f5977dbd5f6a26bf64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471364"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -85,7 +85,7 @@ AND p.name = 'SQLSatellite';
 
 SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실행되는 일부 서비스를 시작합니다. 외부 프로세스 관련 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치해야 합니다.  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > SQL Server 2019부터 격리 메커니즘이 변경되었습니다. 따라서 이벤트 추적 구성 파일이 저장되는 디렉터리에 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
 ::: moniker-end
@@ -96,7 +96,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
-+ **BXLServer**는 R 또는 Python과 같은 외부 스크립트 언어를 사용하여 SQL 확장성을 지원하는 위성 프로세스입니다. 각 외부 언어 인스턴스에 대해 별도의 BxlServer 인스턴스가 실행됩니다.
++ **BXLServer** 는 R 또는 Python과 같은 외부 스크립트 언어를 사용하여 SQL 확장성을 지원하는 위성 프로세스입니다. 각 외부 언어 인스턴스에 대해 별도의 BxlServer 인스턴스가 실행됩니다.
   
     BXLServer 관련 이벤트를 캡처하려면 R 또는 Python 설치 디렉터리에 *.xml* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.
      

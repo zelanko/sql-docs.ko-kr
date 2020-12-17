@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fe74893641ae7aa69b7e388631a418a1ab973cd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470724"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -48,9 +48,9 @@ SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 �
 
 1. [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 엽니다.
 
-2. SQL Server Services 아래에서 SQL Server 실행 패드를 마우스 오른쪽 버튼으로 클릭하고 **속성**을 선택합니다.
+2. SQL Server Services 아래에서 SQL Server 실행 패드를 마우스 오른쪽 버튼으로 클릭하고 **속성** 을 선택합니다.
   + 서비스 계정을 변경하려면 **로그온** 탭을 클릭합니다.
-  + 사용자 수를 늘리려면 **고급** 탭을 클릭하고 **보안 컨텍스트 수**를 변경합니다.
+  + 사용자 수를 늘리려면 **고급** 탭을 클릭하고 **보안 컨텍스트 수** 를 변경합니다.
 
 > [!Note]
 > 초기 버전의 SQL Server 2016 R Services에서는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 구성 파일을 편집하여 서비스의 일부 속성을 변경할 수 있었습니다. 이 파일은 더 이상 구성 변경을 위해 사용되지 않습니다. 서비스 계정 및 사용자 수와 같은 서비스 구성을 변경하기 위해서는 SQL Server 구성 관리자를 사용해야 합니다.
@@ -76,7 +76,7 @@ SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 �
 
 암호를 주기적으로 변경해야 하는 정책이 조직에 있는 경우에는 실행 패드 서비스를 통해 실행 패드에서 작업자 계정용으로 유지 관리하는 암호화된 암호를 강제로 다시 생성해야 할 수 있습니다.
 
-이 설정을 사용하도록 설정하고 암호를 강제로 새로 고치려면 SQL Server 구성 관리자에서 실행 패드 서비스에 대한 **속성** 창을 열고, **고급**을 클릭하고, **외부 사용자 암호 다시 설정**을 **예**로 변경합니다. 이 변경을 적용하면 모든 사용자 계정의 암호가 즉시 다시 생성됩니다. 이 변경 후에 외부 스크립트를 실행하려면 실행 패드 서비스를 다시 시작해야 합니다. 이때 새로 생성된 암호를 읽습니다.
+이 설정을 사용하도록 설정하고 암호를 강제로 새로 고치려면 SQL Server 구성 관리자에서 실행 패드 서비스에 대한 **속성** 창을 열고, **고급** 을 클릭하고, **외부 사용자 암호 다시 설정** 을 **예** 로 변경합니다. 이 변경을 적용하면 모든 사용자 계정의 암호가 즉시 다시 생성됩니다. 이 변경 후에 외부 스크립트를 실행하려면 실행 패드 서비스를 다시 시작해야 합니다. 이때 새로 생성된 암호를 읽습니다.
 
 암호를 주기적으로 다시 설정하려면 이 플래그를 수동으로 설정하거나 스크립트를 사용합니다.
 

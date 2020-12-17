@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b50750368dd5c8b9d558a587699fde1e7d94af15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: db28a38415d62abe9bab3540c47567a92df25104
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180357"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470354"
 ---
 # <a name="python-tutorial-create-data-features-using-t-sql"></a>Python 자습서: T-SQL을 사용하여 데이터 기능 만들기
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "88180357"
 
 원래 데이터에 보고된 거리 값은 보고된 미터 거리를 기반으로 하며 지리적 거리 또는 이동한 거리를 나타내지 않을 수도 있습니다. 따라서 원본 NYC Taxi 데이터 세트에서 사용할 수 있는 좌표를 통해 승하차 지점 사이의 직접 거리를 계산해야 합니다. 이렇게 하려면 사용자 지정 [함수에](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 수식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용합니다.
 
-사용자 지정 T-SQL 함수 _fnCalculateDistance_를 사용하여 Haversine 수식을 통해 거리를 컴퓨팅하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
+사용자 지정 T-SQL 함수 _fnCalculateDistance_ 를 사용하여 Haversine 수식을 통해 거리를 컴퓨팅하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_ 를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
 
 ### <a name="calculate-trip-distance-using-fncalculatedistance"></a>fnCalculateDistance를 사용하여 트립 거리 계산
 
 1. _fnCalculateDistance_ 함수는 샘플 데이터베이스에 포함되어 있습니다. 코드를 검토하는 데 몇 분 정도가 걸립니다.
   
-2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능**, **함수** , **스칼라 반환 함수**를 차례로 확장합니다.
-   _fnCalculateDistance_를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능**, **함수** , **스칼라 반환 함수** 를 차례로 확장합니다.
+   _fnCalculateDistance_ 를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -80,13 +80,13 @@ ms.locfileid: "88180357"
 + 함수는 스칼라 반환 함수이며, 미리 정의된 형식의 단일 데이터 값을 반환합니다.
 + 여정 승하차 위치에서 얻은 위도 및 경도 값을 입력으로 사용합니다. Haversine 수식은 위치를 라디안으로 변환하고 해당 값을 사용하여 두 위치 사이의 직접 거리(마일)를 컴퓨팅합니다.
 
-모델 학습에 사용할 수 있는 테이블에 계산 값을 추가하려면 다른 함수 _fnEngineerFeatures_를 사용합니다.
+모델 학습에 사용할 수 있는 테이블에 계산 값을 추가하려면 다른 함수 _fnEngineerFeatures_ 를 사용합니다.
 
-### <a name="save-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_를 사용하여 기능 저장
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_ 를 사용하여 기능 저장
 
-1. 잠시 시간을 내어 샘플 데이터베이스에 포함된 사용자 지정 T-SQL 함수 _fnEngineerFeatures_의 코드를 검토해 보세요.
+1. 잠시 시간을 내어 샘플 데이터베이스에 포함된 사용자 지정 T-SQL 함수 _fnEngineerFeatures_ 의 코드를 검토해 보세요.
   
-   이 함수는 여러 열을 입력으로 사용하고 여러 기능 열이 있는 테이블을 출력하는 테이블 반환 함수입니다.  이 함수는 모델 작성에 사용할 기능 집합을 만드는 데 사용됩니다. _fnEngineerFeatures_ 함수는 이전에 만든 T-SQL 함수 _fnCalculateDistance_를 호출하여 승하차 위치 사이의 직접 거리를 가져옵니다.
+   이 함수는 여러 열을 입력으로 사용하고 여러 기능 열이 있는 테이블을 출력하는 테이블 반환 함수입니다.  이 함수는 모델 작성에 사용할 기능 집합을 만드는 데 사용됩니다. _fnEngineerFeatures_ 함수는 이전에 만든 T-SQL 함수 _fnCalculateDistance_ 를 호출하여 승하차 위치 사이의 직접 거리를 가져옵니다.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (

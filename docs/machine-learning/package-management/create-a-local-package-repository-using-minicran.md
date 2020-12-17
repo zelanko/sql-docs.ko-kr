@@ -9,13 +9,13 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870471"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471174"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN을 사용하여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 필요한 패키지가 포함된 로컬 리포지토리를 만든 후에는 패키지 리포지토리를 SQL Server 컴퓨터로 이동합니다. 다음 절차에서는 R 도구를 사용하여 패키지를 설치하는 방법을 설명합니다.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > 패키지는 **sqlmlutils** 를 사용하여 설치하는 것이 좋습니다. [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)를 참조하세요.
 ::: moniker-end
@@ -125,21 +125,21 @@ pdb[, c("Package", "Version", "License")]
 
 2. 인스턴스와 연결된 R 도구를 엽니다(예를 들어 Rgui.exe를 사용할 수 있음). 마우스 오른쪽 단추를 클릭하고 **관리자 권한으로 실행** 을 선택하여 도구에서 시스템을 업데이트할 수 있도록 허용합니다.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - 예를 들어 RGUI의 기본 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`입니다.
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - 예를 들어 RGUI의 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`입니다.
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - 예를 들어 RGUI의 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`입니다.
    ::: moniker-end
 
 3. 인스턴스 라이브러리의 경로를 가져와서 라이브러리 경로 목록에 추가합니다.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    예를 들면 다음과 같습니다.
 
    ```R
@@ -148,7 +148,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    예를 들면 다음과 같습니다.
 
    ```R
@@ -157,7 +157,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    예를 들면 다음과 같습니다.
 
    ```R

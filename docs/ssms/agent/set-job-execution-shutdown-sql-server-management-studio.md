@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c026afb3b77baf2fb274909e73e3dd527487d2e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 6b94cc2703613e53703b9531f574bc5e925a1c55
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474394"
 ---
 # <a name="set-job-execution-shutdown"></a>작업 실행 종료 설정
 
@@ -52,8 +52,8 @@ ms.locfileid: "92036532"
   
 1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 작업 실행 종료 간격을 설정하려는 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-3.  **페이지 선택**아래에서 **작업 시스템**을 선택합니다.  
+3.  **페이지 선택** 아래에서 **작업 시스템** 을 선택합니다.  
   
 4.  **시스템 종료 제한 시간 간격** 을 설정하여 시스템 종료 제한 시간 간격을 늘리거나 줄입니다. 이 값에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 자체적으로 종료하기 전에 실행 중인 작업을 종료하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 대기하는 시간이 결정됩니다.  

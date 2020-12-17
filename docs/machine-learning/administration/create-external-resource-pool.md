@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: da6f6817856efd9dd0310211998230d49e6f3d1b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471394"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 사용자 계정 풀 만들기
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -92,7 +92,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
   
      우선 순위가 있는 워크로드를 보다 세부적으로 제어하려면 사용자 정의 외부 리소스 풀을 새로 만들 수 있습니다. 분류 함수를 정의하고 외부 리소스 풀에 할당합니다. **EXTERNAL** 키워드가 새로 생성되었습니다.
   
-     새 사용자 정의 외부 리소스 풀을 만듭니다. 다음 예제에서는 풀 이름이 **ds_ep**로 지정됩니다.
+     새 사용자 정의 외부 리소스 풀을 만듭니다. 다음 예제에서는 풀 이름이 **ds_ep** 로 지정됩니다.
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -113,7 +113,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
   
 분류 함수는 수신되는 태스크를 검사하여 현재 리소스 풀을 사용하여 실행할 수 있는 태스크인지 여부를 판단합니다. 분류 함수의 조건을 충족하지 않는 태스크는 서버의 기본 리소스 풀에 다시 할당됩니다.
   
-1. 리소스 Resource Governor가 리소스 풀을 확인하기 위해 분류자 함수를 사용해야 함을 지정하여 시작합니다. 분류자 함수의 자리 표시자로 **null**을 할당할 수 있습니다.
+1. 리소스 Resource Governor가 리소스 풀을 확인하기 위해 분류자 함수를 사용해야 함을 지정하여 시작합니다. 분류자 함수의 자리 표시자로 **null** 을 할당할 수 있습니다.
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);

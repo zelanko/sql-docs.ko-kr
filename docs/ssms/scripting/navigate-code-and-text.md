@@ -21,13 +21,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69892b05d5e9d34784a06551b929fe9664e2ca4b
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c96185636472a1bf7cc512fa4947597289f38e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093499"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474284"
 ---
 # <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
 
@@ -68,7 +68,7 @@ ms.locfileid: "89093499"
 -   Ctrl+위쪽 화살표 및 Ctrl+아래쪽 화살표를 사용하여 삽입 지점을 이동하지 않고 화면을 스크롤합니다.  
   
 ## <a name="go-to-command"></a>이동 명령  
- **이동** 명령을 사용하여 특정 줄 번호로 이동합니다. 줄 번호를 표시하려면 **옵션** 대화 상자에서 **텍스트 편집기**, **모든 언어**, **일반**을 차례로 클릭한 다음 **줄 번호**를 선택합니다.  
+ **이동** 명령을 사용하여 특정 줄 번호로 이동합니다. 줄 번호를 표시하려면 **옵션** 대화 상자에서 **텍스트 편집기**, **모든 언어**, **일반** 을 차례로 클릭한 다음 **줄 번호** 를 선택합니다.  
   
  **특정 줄 번호로 이동하려면**  
   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772291"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559205"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>DataReader로 데이터 검색
 
@@ -53,7 +53,7 @@ reader = command.ExecuteReader();
 > **DataReader** 가 열려 있는 동안에는 해당 **DataReader** 에서 **Connection** 을 단독으로 사용합니다. 원래 **DataReader** 를 닫아야 다른 **DataReader** 의 생성을 비롯하여 **Connection** 에 대해 명령을 실행할 수 있습니다.  
 
 > [!NOTE]
-> **Connection**, **DataReader** 또는 클래스의 **Finalize** 메서드에 있는 다른 모든 관리형 개체에 대해 **Close** 또는 **Dispose** 를 호출하지 마세요. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 비관리형 리소스가 없는 경우 클래스 정의에 **Finalize** 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/standard/garbage-collection/index.md)을 참조하세요.
+> **Connection**, **DataReader** 또는 클래스의 **Finalize** 메서드에 있는 다른 모든 관리형 개체에 대해 **Close** 또는 **Dispose** 를 호출하지 마세요. 종료자에서는 클래스에 직접 속한 관리되지 않는 리소스만 해제합니다. 클래스에 비관리형 리소스가 없는 경우 클래스 정의에 **Finalize** 메서드를 포함하지 마세요. 자세한 내용은 [가비지 수집](/dotnet/standard/garbage-collection/index)을 참조하세요.
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>NextResult를 사용하여 여러 개의 결과 집합 검색
 

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 314520a54bb9052fb091932b63b9cf4c817a0f16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195087"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470504"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>새 데이터 점수 매기기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -65,8 +65,8 @@ ms.locfileid: "92195087"
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + **rxSqlServerTableExists**는 ODBC 드라이버를 쿼리하고, 테이블이 있으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
-    + **rxSqlServerDropTable**은 DDL을 실행하고, 테이블이 성공적으로 삭제되었으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
+    + **rxSqlServerTableExists** 는 ODBC 드라이버를 쿼리하고, 테이블이 있으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
+    + **rxSqlServerDropTable** 은 DDL을 실행하고, 테이블이 성공적으로 삭제되었으면 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다.
 
 5. [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict)를 실행하여 점수를 만들어 데이터 원본 sqlScoreDS에 정의된 새 테이블에 저장합니다.
   
@@ -86,7 +86,7 @@ ms.locfileid: "92195087"
   
     - *predVarNames* 매개 변수는 결과를 저장할 변수를 지정합니다. 여기에 새 변수 `ccFraudLogitScore`를 전달합니다.
   
-    - *rxPredict* 에 대한 **type** 매개 변수는 예측 계산 방법을 정의합니다. 응답 변수의 소수 자릿수를 기준으로 점수를 생성하려면 키워드 **응답**을 지정합니다. 또는 키워드 **link**를 사용하여 기본 링크 함수를 기반으로 점수를 생성합니다. 이 경우 로지스틱 스케일을 사용하여 예측을 만듭니다.
+    - *rxPredict* 에 대한 **type** 매개 변수는 예측 계산 방법을 정의합니다. 응답 변수의 소수 자릿수를 기준으로 점수를 생성하려면 키워드 **응답** 을 지정합니다. 또는 키워드 **link** 를 사용하여 기본 링크 함수를 기반으로 점수를 생성합니다. 이 경우 로지스틱 스케일을 사용하여 예측을 만듭니다.
 
 6. 잠시 후 Management Studio에서 테이블 목록을 새로 고쳐 새 테이블 및 해당 데이터를 확인할 수 있습니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "92195087"
         connectionString = sqlConnString)
     ```
 
-     이 예제에서는 **RxSqlServerData** 데이터 원본 개체를 사용하여 SQL 쿼리, 함수 또는 저장 프로시저를 기반으로 임의 데이터 세트를 정의한 다음, 이를 R 코드에서 사용하기가 얼마나 쉬운지를 확인할 수 있습니다. 변수는 실제 값을 저장하는 것이 아니라 데이터 원본 정의를 저장할 뿐입니다. 쿼리는 **rxImport**와 같은 함수에서 변수를 사용할 때만 실행되어 값을 생성합니다.
+     이 예제에서는 **RxSqlServerData** 데이터 원본 개체를 사용하여 SQL 쿼리, 함수 또는 저장 프로시저를 기반으로 임의 데이터 세트를 정의한 다음, 이를 R 코드에서 사용하기가 얼마나 쉬운지를 확인할 수 있습니다. 변수는 실제 값을 저장하는 것이 아니라 데이터 원본 정의를 저장할 뿐입니다. 쿼리는 **rxImport** 와 같은 함수에서 변수를 사용할 때만 실행되어 값을 생성합니다.
       
 2. [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출하여 컴퓨팅 컨텍스트 간에 공유할 수 있는 데이터 프레임에 값을 저장합니다.
   

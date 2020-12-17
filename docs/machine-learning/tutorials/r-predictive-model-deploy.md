@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bed9217da00b7ca2cdd9bbb43e92d58c8f59b678
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: bc5cb5f0b5a79b7e9ff81171e0a1b7b31ad580db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470164"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 예측 모델 배포
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 기계 학습 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터에 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 4부로 구성된 이 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 R에서 개발한 기계 학습 모델을 SQL Server에 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 4부로 구성된 이 자습서 시리즈의 4부에서는 SQL Server R Services를 사용하여 R에서 개발한 기계 학습 모델을 SQL Server에 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 4부로 구성된 이 자습서 시리즈의 4부에서는 R에서 개발한 기계 학습 모델을 Machine Learning Services를 사용하여 Azure SQL Managed Instance에 배포합니다.
 ::: moniker-end
 

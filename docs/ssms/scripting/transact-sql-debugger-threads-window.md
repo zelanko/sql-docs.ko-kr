@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da80bf7a847e6724eaad79d2efd86a0b095b6b52
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 976d10c246c2364129341986a9f16e4e053b86df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036150"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474204"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 디버거 - 스레드 창
 
@@ -33,7 +33,7 @@ ms.locfileid: "92036150"
 
 **스레드 창에 액세스하려면**
   
--   **디버그** 메뉴에서 **창**을 선택한 다음 **스레드**를 클릭합니다.  
+-   **디버그** 메뉴에서 **창** 을 선택한 다음 **스레드** 를 클릭합니다.  
   
 ## <a name="columns"></a>열  
  **ID**  

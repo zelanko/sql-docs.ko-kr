@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384692"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559295"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -175,19 +175,19 @@ ms.locfileid: "94384692"
   
 -   연결 문자열 속성 '사용자 ID'에 값 'SharePoint  Principal'이 지원되지 않습니다."  
   
-**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지( **spPowerPivot.msi** )를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에서 기능 팩을 다운로드할 수 있습니다.  
+**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지(**spPowerPivot.msi**)를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://www.microsoft.com/download/details.aspx?id=35575)에서 기능 팩을 다운로드할 수 있습니다.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>예약된 데이터 새로 고침 후 PowerPivot 통합 문서의 파워 뷰 시트가 삭제됨  
-**문제** : SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침** 을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
+**문제**: SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침** 을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
   
-**해결 방법** : 파워 뷰 통합 문서에 **예약된 데이터 새로 고침** 을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
+**해결 방법**: 파워 뷰 통합 문서에 **예약된 데이터 새로 고침** 을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
   
 ### <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS를 잘못된 버전의 SQL Server 2012에서 사용할 수 있음  
 **문제:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 릴리스에서 DQS(Data Quality Services) 기능은 Enterprise, Business Intelligence 및 Developer 버전 이외의 SQL Server 버전에서 사용할 수 있습니다. SQL  Server  2012  SP1을 설치하면 DQS는 Enterprise,  Business  Intelligence  및 Developer  버전을 제외한 모든 버전에서 사용할 수 있습니다.  
   
-**해결 방법** : 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 애플리케이션에서 이 기능에 대한 종속성을 제거합니다.  
+**해결 방법**: 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 애플리케이션에서 이 기능에 대한 종속성을 제거합니다.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 -   BACPAC 가져오기 – .bacpac 파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Azure SQL Database를 채웁니다.  
   
-MSDN의 전체 SqlPackage.exe 설명서는 [여기](../tools/sqlpackage.md)에 있습니다.  
+MSDN의 전체 SqlPackage.exe 설명서는 [여기](../tools/sqlpackage/sqlpackage.md)에 있습니다.  
   
 **패키지 호환성**  
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 87c453d6b896a998d6a3229d57db905cf57cc0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472534"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
 
@@ -36,19 +36,19 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
   
 1.  사용 권한을 부여할 SharePoint 사이트로 이동합니다.  
   
-2.  도구 모음에서 **사이트 작업** 을 클릭한 후 **사이트 사용 권한**을 클릭합니다.  
+2.  도구 모음에서 **사이트 작업** 을 클릭한 후 **사이트 사용 권한** 을 클릭합니다.  
   
      이 옵션이 나타나지 않으면 다른 사람에게 권한을 부여할 권한이 없는 것입니다.  
   
-3.  **권한 부여**를 클릭합니다.  
+3.  **권한 부여** 를 클릭합니다.  
   
-4.  **사용자/그룹**에서 권한을 부여할 대상의 사용자 이름, 그룹 이름 또는 메일 주소를 입력합니다.  
+4.  **사용자/그룹** 에서 권한을 부여할 대상의 사용자 이름, 그룹 이름 또는 메일 주소를 입력합니다.  
   
 5.  **SharePoint 그룹에 사용자 추가** 또는 **사용자에게 사용 권한 직접 부여** 옵션을 선택합니다. **SharePoint 그룹에 사용자 추가** 를 선택했는지, 아니면 **사용자에게 사용 권한 직접 부여** 를 선택했는지에 따라 다음 중 하나를 수행합니다.  
   
-    -   **SharePoint 그룹에 사용자 추가**를 선택한 경우 드롭다운 목록에서 권한 수준을 선택합니다.  
+    -   **SharePoint 그룹에 사용자 추가** 를 선택한 경우 드롭다운 목록에서 권한 수준을 선택합니다.  
   
-    -   **사용자에게 사용 권한 직접 부여**를 선택한 경우 권한 수준을 선택합니다.  
+    -   **사용자에게 사용 권한 직접 부여** 를 선택한 경우 권한 수준을 선택합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 

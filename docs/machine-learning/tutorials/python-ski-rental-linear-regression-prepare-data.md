@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e80e3414271d520b5fd74d4a943a173a1ecdbfac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173412"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470404"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 선형 회귀 모델을 학습시킬 데이터 준비
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서 이 데이터를 사용하여 SQL Server Machine Learning Services 또는 빅 데이터 클러스터에서 Python으로 선형 회귀 모델을 학습시키고 배포할 것입니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 뒷부분에서 이 데이터를 사용하여 SQL Server Machine Learning Services를 통해 Python에서 선형 회귀 모델을 학습하고 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 준비합니다. 이 시리즈의 후반부에서 이 데이터를 사용하여 Azure SQL Managed Instance Machine Learning Services를 통해 Python에서 선형 회귀 모델을 학습시키고 배포합니다.
 ::: moniker-end
 
@@ -52,7 +52,7 @@ Python에서 데이터를 사용하려면 데이터베이스에서 pandas 데이
 
 Azure Data Studio에서 새 Python Notebook을 만들고 아래 스크립트를 실행합니다. 
 
-아래 Python 스크립트는 데이터베이스의 **dbo.rental_data** 테이블에서 pandas 데이터 프레임 **df**로 데이터 세트를 가져옵니다.
+아래 Python 스크립트는 데이터베이스의 **dbo.rental_data** 테이블에서 pandas 데이터 프레임 **df** 로 데이터 세트를 가져옵니다.
 
 연결 문자열에서 필요에 따라 연결 세부 정보를 바꿉니다.
 

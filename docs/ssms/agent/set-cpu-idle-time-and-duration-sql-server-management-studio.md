@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472294"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>CPU 유휴 시간 및 기간 설정
 
@@ -40,11 +40,11 @@ ms.locfileid: "92037796"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **고급** 페이지를 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭한 다음 **고급** 페이지를 선택합니다.  
   
-3.  **CPU 유휴 상태 판단 기준**에서 다음을 수행합니다.  
+3.  **CPU 유휴 상태 판단 기준** 에서 다음을 수행합니다.  
   
-    -   **CPU 유휴 상태 판단 기준 정의**를 선택합니다.  
+    -   **CPU 유휴 상태 판단 기준 정의** 를 선택합니다.  
   
     -   **평균 CPU 사용량이 다음 미만인 경우** (모든 CPU에서) 상자에 백분율(%)을 지정합니다. 이 옵션은 CPU가 유휴 상태로 간주되기 전에 도달해야 하는 사용량 수준을 설정합니다.  
   

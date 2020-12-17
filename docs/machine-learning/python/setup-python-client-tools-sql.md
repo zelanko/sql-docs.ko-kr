@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5199f22e5e72e68be3b1a76769fb8bd3a9518413
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: 690955608e705ff61cadd15730ff12fb05780fee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956604"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470924"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -55,7 +55,7 @@ SSMS는 Python 코드를 포함하는 저장 프로시저를 포함하여 SQL Se
 
    + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)에서는 Microsoft Python 패키지의 버전 9.3을 설치합니다. 이 버전은 원격 SQL Server 인스턴스가 [Machine Learning Server 9.3에 바인딩](../install/upgrade-r-and-python.md)되는 경우에 더 적합합니다.
 
-2. 관리자 권한으로 PowerShell 창을 엽니다(**관리자 권한으로 실행**을 마우스 오른쪽 단추 클릭).
+2. 관리자 권한으로 PowerShell 창을 엽니다(**관리자 권한으로 실행** 을 마우스 오른쪽 단추 클릭).
 
 3. 설치 프로그램을 다운로드한 폴더로 이동하여 스크립트를 실행합니다. `-InstallFolder` 명령줄 인수를 추가하여 라이브러리의 폴더 위치를 지정합니다. 다음은 그 예입니다. 
 
@@ -77,7 +77,7 @@ PowerShell에서 설치 폴더의 내용을 나열하여 Python.exe, 스크립�
 
 1. `cd \`를 입력하여 루트 드라이브로 이동한 다음, 이전 단계에서 `-InstallFolder`에 대해 지정한 경로를 입력합니다. 설치하는 동안 이 매개 변수를 생략한 경우 기본값은 `cd C:\Program Files\Microsoft\PyForMLS`입니다.
 
-2. `dir *.exe`를 입력하여 실행 파일을 나열합니다. **python.exe**, **pythonw.exe**, **uninstall-anaconda.exe**가 표시됩니다.
+2. `dir *.exe`를 입력하여 실행 파일을 나열합니다. **python.exe**, **pythonw.exe**, **uninstall-anaconda.exe** 가 표시됩니다.
 
    ![Python 실행 파일 목록](media/powershell-python-exe.png)
    
@@ -100,9 +100,9 @@ Anaconda에는 Jupyter Notebook이 포함되어 있습니다. 다음 단계로, 
 
    `https://localhost:8889/tree`의 기본 브라우저에서 노트가 열립니다.
 
-   **jupyter-notebook.exe**를 두 번 클릭하여 시작할 수도 있습니다. 
+   **jupyter-notebook.exe** 를 두 번 클릭하여 시작할 수도 있습니다. 
 
-2. **새로 만들기**를 클릭한 다음 **Python 3**를 클릭합니다.
+2. **새로 만들기** 를 클릭한 다음 **Python 3** 를 클릭합니다.
 
    ![새 Python 3 선택 항목이 있는 Jupyter Notebook](media/jupyter-notebook-new-p3.png)
 
@@ -140,7 +140,7 @@ SQL Server 인스턴스에 연결하여 스크립트를 실행하고 데이터�
 + 모델 학습에 사용되는 쿼리를 실행하는 **db_datareader** 권한.
 + 학습 데이터 또는 점수가 매겨진 데이터를 쓰는 **db_datawriter**.
 + 저장 프로시저, 테이블, 함수 등의 개체를 만드는 **db_owner**. 
-  또한 샘플 및 테스트 데이터베이스를 만들기 위한 **db_owner**도 필요합니다. 
+  또한 샘플 및 테스트 데이터베이스를 만들기 위한 **db_owner** 도 필요합니다. 
 
 코드에 기본적으로 SQL Server와 함께 설치되지 않은 패키지가 필요한 경우 데이터베이스 관리자와 조정하여 패키지가 인스턴스와 함께 설치되도록 합니다. SQL Server는 보안 환경으로, 패키지를 설치할 수 있는 위치에 대한 제한 사항이 있습니다. 권한이 있는 경우에도 패키지를 코드의 일부로 임시 설치하지 않는 것이 좋습니다. 또한 서버 라이브러리에 새 패키지를 설치하기 전에 항상 보안 문제를 신중하게 고려해야 합니다.
 
@@ -228,7 +228,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>함수를 SQL Server로 보내기
 
-이 예에서는 원격 컴퓨팅 컨텍스트를 만든 다음 [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec)를 사용하여 함수 실행을 SQL Server로 보냅니다. **rx_exec** 함수는 컴퓨팅 컨텍스트를 인수로 허용하므로 유용합니다. 원격으로 실행하려는 모든 함수에는 컴퓨팅 컨텍스트 인수가 있어야 합니다. [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)와 같은 일부 함수는 이 인수를 직접 지원합니다. 지원하지 않는 작업의 경우 **rx_exec**를 사용하여 원격 컴퓨팅 컨텍스트에서 코드를 전달할 수 있습니다.
+이 예에서는 원격 컴퓨팅 컨텍스트를 만든 다음 [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec)를 사용하여 함수 실행을 SQL Server로 보냅니다. **rx_exec** 함수는 컴퓨팅 컨텍스트를 인수로 허용하므로 유용합니다. 원격으로 실행하려는 모든 함수에는 컴퓨팅 컨텍스트 인수가 있어야 합니다. [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)와 같은 일부 함수는 이 인수를 직접 지원합니다. 지원하지 않는 작업의 경우 **rx_exec** 를 사용하여 원격 컴퓨팅 컨텍스트에서 코드를 전달할 수 있습니다.
 
 이 예제에서는 SQL Server에서 Jupyter Notebook으로 원시 데이터를 전송할 필요가 없었습니다. 모든 계산은 Iris 데이터베이스 내에서 발생하며 이미지 파일만 클라이언트에 반환됩니다.
 
@@ -256,13 +256,13 @@ display.Image(data=image)
 
 ## <a name="7---start-python-from-tools"></a>7 - 도구에서 Python 시작
 
-개발자가 여러 버전의 Python에서 자주 작업하므로 설치 프로그램은 Python을 경로에 추가하지 않습니다. 설치 프로그램에서 설치된 Python 실행 파일과 라이브러리를 사용하려면 IDE를 **revoscalepy** 및 **microsoftml**을 제공하는 경로의 **Python.exe**에 연결합니다. 
+개발자가 여러 버전의 Python에서 자주 작업하므로 설치 프로그램은 Python을 경로에 추가하지 않습니다. 설치 프로그램에서 설치된 Python 실행 파일과 라이브러리를 사용하려면 IDE를 **revoscalepy** 및 **microsoftml** 을 제공하는 경로의 **Python.exe** 에 연결합니다. 
 
 ### <a name="command-line"></a>명령 줄
 
-C:\Program Files\Microsoft\PyForMLS(또는 Python 클라이언트 라이브러리 설치에 지정한 위치)에서 **Python.exe**를 실행하면 전체 Anaconda 배포 및 Microsoft Python 모듈인 **revoscalepy** 및 **microsoftml**에 액세스할 수 있습니다.
+C:\Program Files\Microsoft\PyForMLS(또는 Python 클라이언트 라이브러리 설치에 지정한 위치)에서 **Python.exe** 를 실행하면 전체 Anaconda 배포 및 Microsoft Python 모듈인 **revoscalepy** 및 **microsoftml** 에 액세스할 수 있습니다.
 
-1. C:\Program Files\Microsoft\PyForMLS로 이동한 다음 **Python.exe**를 두 번 클릭합니다.
+1. C:\Program Files\Microsoft\PyForMLS로 이동한 다음 **Python.exe** 를 두 번 클릭합니다.
 2. 대화형 도움말을 가져옵니다. `help()`
 3. 도움말 프롬프트에 다음 모듈 이름을 입력합니다. `help> revoscalepy`. 도움말은 이름, 패키지 콘텐츠, 버전 및 파일 위치를 반환합니다.
 4. **도움말>** 프롬프트: `revoscalepy`에서 버전 및 패키지 정보를 반환합니다. Enter 키를 몇 번 눌러 도움말을 종료합니다.
@@ -271,7 +271,7 @@ C:\Program Files\Microsoft\PyForMLS(또는 Python 클라이언트 라이브러�
 
 ### <a name="jupyter-notebooks"></a>Jupyter Notebook
 
-이 문서에서는 기본 제공 Jupyter Notebook을 사용하여 **revoscalepy**에 대한 함수 호출을 보여 줍니다. 이 도구를 처음 접하는 경우 다음 스크린샷에서는 해당 부분이 결합되는 방식과 함께 "작동"하는 이유를 보여 줍니다. 
+이 문서에서는 기본 제공 Jupyter Notebook을 사용하여 **revoscalepy** 에 대한 함수 호출을 보여 줍니다. 이 도구를 처음 접하는 경우 다음 스크린샷에서는 해당 부분이 결합되는 방식과 함께 "작동"하는 이유를 보여 줍니다. 
 
 C:\Program Files\Microsoft\PyForMLS 상위 폴더에는 Anaconda 및 Microsoft 패키지가 포함되어 있습니다. Jupyter Notebook은 Anaconda의 Scripts 폴더 아래에 포함되어 있으며 Python 실행 파일은 Jupyter Notebook에 자동으로 등록됩니다. 데이터 과학 및 기계 학습에 사용되는 세 가지 Microsoft 패키지를 포함하여 사이트 패키지에서 찾을 수 있는 패키지를 노트로 가져올 수 있습니다.
 
@@ -295,11 +295,11 @@ Python 환경을 구성하는 방법에 대한 도움말은 [Visual Studio의 Py
 
 PyCharm에서 인터프리터를 Machine Learning Server가 설치한 Python 실행 파일로 설정합니다.
 
-1. 새 프로젝트의 설정에서 **로컬 추가**를 클릭합니다.
+1. 새 프로젝트의 설정에서 **로컬 추가** 를 클릭합니다.
 
 2. `C:\Program Files\Microsoft\PyForMLS\`를 입력합니다.
 
-이제 **revoscalepy**, **microsoftml** 또는 **azureml** 모듈을 가져올 수 있습니다. **도구** > **Python 콘솔**을 선택하여 대화형 창을 열 수도 있습니다.
+이제 **revoscalepy**, **microsoftml** 또는 **azureml** 모듈을 가져올 수 있습니다. **도구** > **Python 콘솔** 을 선택하여 대화형 창을 열 수도 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035939"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559035"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio FAQ
 
@@ -93,7 +93,7 @@ Linux 또는 macOS에서는 아직 SMO API를 사용할 수 없습니다. Azure 
 
 예.
 
-[SqlPackage.exe](../tools/sqlpackage-download.md)는 이제 Windows, macOS 및 Linux용 .NET Core에서 사용할 수 있습니다.  SQL 프로젝트(SSDT) 기능은 Azure Data Studio의 [SQL Database 프로젝트 확장](extensions/sql-database-project-extension.md)에서 사용하도록 설정됩니다.
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md)는 이제 Windows, macOS 및 Linux용 .NET Core에서 사용할 수 있습니다.  SQL 프로젝트(SSDT) 기능은 Azure Data Studio의 [SQL Database 프로젝트 확장](extensions/sql-database-project-extension.md)에서 사용하도록 설정됩니다.
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell cmdlet을 Linux 및 macOS에서 사용할 수 있나요?
 

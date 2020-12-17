@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c082a4dc31ffcbed20a4b5c855346dd8d52f2056
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1cc420302bb8d1610adcc1848fda226c4c55b492
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935103"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472474"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -49,7 +49,7 @@ ms.locfileid: "91935103"
   
  설치 프로그램은 더 이상 인터넷 정보 서비스(IIS) 또는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]이 설치되어 있는지 확인하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 MDAC 2.0 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0이 필요하므로 이들이 설치되어 있지 않은 경우 설치 프로그램에서 설치합니다.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
   
@@ -88,7 +88,7 @@ ms.locfileid: "91935103"
   
 1.  SharePoint 2013/2016 중앙 관리를 실행하는 컴퓨터에서  
   
-    1.  관리자 권한으로 SharePoint 2013/2016 관리 셸을 엽니다. 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다. 셸에서 다음 세 cmdlet을 실행합니다.  
+    1.  관리자 권한으로 SharePoint 2013/2016 관리 셸을 엽니다. 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행** 을 클릭합니다. 셸에서 다음 세 cmdlet을 실행합니다.  
   
     2.  ```  
         Install-SPRSService  
@@ -113,11 +113,11 @@ ms.locfileid: "91935103"
   
  **해결 방법:** 다음 작업 중 하나를 수행합니다.  
   
--   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능인 **rssharepoint.msi**를 실행합니다.  
+-   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능인 **rssharepoint.msi** 를 실행합니다.  
   
 -   SQL Server 2005 설치 미디어에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치합니다.  
   
- 해결 방법 중 하나를 완료할 때 **SharePoint 2013/2016 관리 셸**이 열려 있는 경우 관리 셸을 닫고 다시 엽니다.  
+ 해결 방법 중 하나를 완료할 때 **SharePoint 2013/2016 관리 셸** 이 열려 있는 경우 관리 셸을 닫고 다시 엽니다.  
   
  자세한 내용은 다음 아티클을 참조하세요.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91935103"
  
  - SSRS 서비스 애플리케이션이 이 웹 애플리케이션에 매핑되지 않습니다. SSRS 서비스 애플리케이션 페이지를 사용하여 SSRS 서비스 애플리케이션 프록시를 이 웹 애플리케이션의 애플리케이션 프록시 그룹에 연결합니다. 
   
- **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. '보고서 서버 URL이 구성되지 않았습니다.'라는 메시지의 첫 번째 제안은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 애플리케이션 설정**페이지에서 완료됩니다.  
+ **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. '보고서 서버 URL이 구성되지 않았습니다.'라는 메시지의 첫 번째 제안은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 애플리케이션 설정** 페이지에서 완료됩니다.  
   
  **추가 정보:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스에 연결해야 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 하면 이 오류 메시지가 표시됩니다. 다음 내용이 포함됩니다.  
   
@@ -222,13 +222,13 @@ ms.locfileid: "91935103"
   
 1.  레지스트리 편집기를 엽니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+    1.  **시작** 을 클릭한 다음 **실행** 을 클릭합니다.  
   
-    2.  **실행** 대화 상자의 **열기** 상자에 **regedit**를 입력합니다.  
+    2.  **실행** 대화 상자의 **열기** 상자에 **regedit** 를 입력합니다.  
   
 2.  레지스트리 편집기에서 레지스트리 키를 선택합니다. `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  **Performance** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **다중 문자열 값**을 클릭합니다.  
+3.  **Performance** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기** 를 가리킨 다음 **다중 문자열 값** 을 클릭합니다.  
   
 4.  **Counter Names** 를 입력한 다음 Enter 키를 누릅니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "91935103"
   
 6.  레지스트리 키로 이동합니다. `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  **Performance** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **다중 문자열 값**을 클릭합니다.  
+7.  **Performance** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기** 를 가리킨 다음 **다중 문자열 값** 을 클릭합니다.  
   
 8.  **Counter Names** 를 입력한 다음 Enter 키를 누릅니다.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91935103"
  64비트 인스턴스를 복구하거나 레지스트리 키를 수동으로 추가하면 성능 모니터를 사용하여 모니터링하려는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 개체를 구성할 수 있습니다.  
   
 ###  <a name="reportserverexternalurl-and-passthroughcookies-configuration-properties-are-not-configured-after-an-upgrade-from-sql-server-2005"></a><a name="ConfigPropsMissing"></a> SQL Server 2005에서 업그레이드한 후 ReportServerExternalURL 및 PassThroughCookies 구성 속성이 구성되지 않는 경우  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 경우 **ReportServerExternalURL** 및 **PassThroughCookies** 구성 속성은 업그레이드 프로세스에 의해 구성되지 않습니다. **ReportServerExternalURL** 은 선택적 속성이며, SharePoint 2.0 웹 파트를 사용 중이고 사용자가 보고서를 검색하여 새 브라우저 창에서 열 수 있도록 하려는 경우에만 설정해야 합니다. **ReportServerExternalURL**에 대한 자세한 내용은 [구성 파일의 URL&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)을 참조하세요. **PassThroughCookies** 는 사용자 지정 인증 방법을 사용할 때만 필요합니다. **PassThroughCookies**에 대한 자세한 내용은 [웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)을 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 경우 **ReportServerExternalURL** 및 **PassThroughCookies** 구성 속성은 업그레이드 프로세스에 의해 구성되지 않습니다. **ReportServerExternalURL** 은 선택적 속성이며, SharePoint 2.0 웹 파트를 사용 중이고 사용자가 보고서를 검색하여 새 브라우저 창에서 열 수 있도록 하려는 경우에만 설정해야 합니다. **ReportServerExternalURL** 에 대한 자세한 내용은 [구성 파일의 URL&#40;보고서 서버 구성 관리자&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)을 참조하세요. **PassThroughCookies** 는 사용자 지정 인증 방법을 사용할 때만 필요합니다. **PassThroughCookies** 에 대한 자세한 내용은 [웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)을 참조하세요.  
   
 > [!NOTE]  
 >  사용자 지정 인증을 사용할 때는 업그레이드를 수행하는 대신 설치를 마이그레이션하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 마이그레이션에 대한 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)을 참조하세요.  
@@ -256,7 +256,7 @@ ms.locfileid: "91935103"
 
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 NTLM 인증에 보고서 서버 서비스 계정에 대한 기본 제공 계정을 사용하는 경우 업그레이드 후에 보고서 서버 또는 웹 포털에 액세스할 때 401-권한이 없음 오류가 발생할 수 있습니다.  
   
- Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 이 메시지가 표시됩니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 **AuthenticationType** 을 **RSWindowsNTLM**으로 구성하면 됩니다. 자세한 내용은 [Report Server에서 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
+ Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 이 메시지가 표시됩니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 **AuthenticationType** 을 **RSWindowsNTLM** 으로 구성하면 됩니다. 자세한 내용은 [Report Server에서 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
 
 ### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> 64비트 인스턴스와 함께 배포된 환경에서 SQL Server 2016 Reporting Services의 32비트 인스턴스를 제거하면 64비트 인스턴스가 중단되는 경우
 

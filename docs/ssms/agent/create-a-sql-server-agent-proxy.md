@@ -13,13 +13,13 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2a02fa7761564ce1e10a041399058c564b183fcb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5c1d585b1d769c35f63cd608c266ee510613a9bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035129"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464434"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92035129"
   
 #### <a name="permissions"></a><a name="Permissions"></a>권한  
   
--   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 프록시를 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의** 에이전트 고정 데이터베이스 역할 **SQLAgentUserRole**, **SQLAgentReaderRole**또는 **SQLAgentOperatorRole**중 하나에 추가해야 합니다.  
+-   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 프록시를 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의** 에이전트 고정 데이터베이스 역할 **SQLAgentUserRole**, **SQLAgentReaderRole** 또는 **SQLAgentOperatorRole** 중 하나에 추가해야 합니다.  
   
 -   프록시와 자격 증명을 만드는 경우 **ALTER ANY CREDENTIAL** 권한이 필요합니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "92035129"
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시를 만들려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 SQL Server 에이전트에 프록시를 만들려는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 SQL Server 에이전트에 프록시를 만들려는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **프록시** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 프록시**를 선택합니다.  
+3.  **프록시** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 프록시** 를 선택합니다.  
   
 4.  **새 프록시 계정** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 프록시 계정의 이름을 입력합니다.  
   
@@ -68,21 +68,21 @@ ms.locfileid: "92035129"
   
 6.  **설명** 상자에 프록시 계정에 대한 설명을 입력합니다.  
   
-7.  **다음 하위 시스템에 대해 활성화**에서 이 프록시에 대한 적절한 하위 시스템을 선택합니다.  
+7.  **다음 하위 시스템에 대해 활성화** 에서 이 프록시에 대한 적절한 하위 시스템을 선택합니다.  
   
 8.  **보안 주체** 페이지에서 프록시 계정에 대한 액세스 권한을 부여 또는 제거할 로그인이나 역할을 추가하거나 제거합니다.  
   
-9. 완료되었으면 **확인**을 클릭합니다.  
+9. 완료되었으면 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- creates credential CatalogApplicationCredential  

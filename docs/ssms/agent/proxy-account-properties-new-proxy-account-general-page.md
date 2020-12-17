@@ -13,13 +13,13 @@ ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a70ba36150771ef90f3cfc9461c018c212da4c73
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: efff382c4b65711f71e619ff33cee26c13210c87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037307"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474404"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>프록시 계정 속성 - 새 프록시 계정(일반 페이지)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
