@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409221"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,19 +45,19 @@ ms.locfileid: "92035639"
   
 #### <a name="to-create-a-job-category"></a>작업 범주를 만들려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 만들려는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 작업 범주를 만들려는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
+3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리** 를 선택합니다.  
   
-4.  **작업 범주 관리**_server_name_ 대화 상자에서 **추가**를 클릭합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 **추가** 를 클릭합니다.  
   
 5.  새 대화 상자의 **이름** 상자에서 새 작업 범주의 이름을 입력합니다.  
   
 6.  **모든 작업 표시** 확인란을 선택합니다. 새 범주에 대한 작업을 해당 확인란을 선택하여 하나 이상 선택합니다.  
   
-7.  **확인**을 클릭합니다.  
+7.  **확인** 을 클릭합니다.  
   
 8.  **작업 범주 관리**_server_name_ 대화 상자에서 **새로 고침** 을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "92035639"
   
 #### <a name="to-create-a-job-category"></a>작업 범주를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- creates a local job category named AdminJobs   

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 074597a032fbcaa8231dfea22d567204cb079f58
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470554"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>계산 컨텍스트 정의 및 사용(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92195145"
 > * 원격 SQL Server 계산 컨텍스트에 대한 요소 알아보기
 > * 계산 컨텍스트 개체에서 추적 사용
 
-**RevoScaleR**은 Hadoop, Spark on HDFS 및 SQL Server 데이터베이스 내와 같은 여러 계산 컨텍스트를 지원합니다. SQL Server에서 **RxInSqlServer** 함수는 서버 연결과 로컬 컴퓨터와 원격 실행 컨텍스트 사이의 개체 전달을 위해 사용됩니다.
+**RevoScaleR** 은 Hadoop, Spark on HDFS 및 SQL Server 데이터베이스 내와 같은 여러 계산 컨텍스트를 지원합니다. SQL Server에서 **RxInSqlServer** 함수는 서버 연결과 로컬 컴퓨터와 원격 실행 컨텍스트 사이의 개체 전달을 위해 사용됩니다.
 
 ## <a name="create-and-set-a-compute-context"></a>계산 컨텍스트 만들기 및 설정
 
@@ -79,7 +79,7 @@ SQL Server 계산 컨텍스트를 만드는 **RxInSqlServer** 함수는 다음 �
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. **RxInSqlServer** 생성자에 인수를 전달하여 *계산 컨텍스트 개체*를 만듭니다.
+4. **RxInSqlServer** 생성자에 인수를 전달하여 *계산 컨텍스트 개체* 를 만듭니다.
 
     ```R
     sqlCompute <- RxInSqlServer(  

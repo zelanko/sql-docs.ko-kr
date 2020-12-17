@@ -9,13 +9,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd724e9caf8f104e366e34b7f64f6461681620b0
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 98fd46528437cd9a82ec7d47539db230b8be8eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200314"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409399"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드
 
@@ -25,7 +25,7 @@ ms.locfileid: "88200314"
 
 SQL Server 허브 페이지는에서 [https://aka.ms/sqldocs](https://aka.ms/sqldocs)에서 찾을 수 있으며 관련 SQL Server 콘텐츠를 찾기 위한 진입점입니다.
 
-SQL Server 기술 설명서 내의 모든 페이지 상단에 있는 헤더에서 **SQL 설명서**를 선택하여 이 페이지로 언제든지 다시 이동할 수 있습니다. 
+SQL Server 기술 설명서 내의 모든 페이지 상단에 있는 헤더에서 **SQL 설명서** 를 선택하여 이 페이지로 언제든지 다시 이동할 수 있습니다. 
 
 ![헤더의 SQL 설명서](media/sql-server-docs-navigation-guide/sql-docs-in-header.png)
 
@@ -64,7 +64,7 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ![SQL 설명서 버전 필터](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**모든 SQL** \> **모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. **모두 표시** 옵션은 같은 문서 내에 여러 다른 버전의 SQL Server와 관련된 콘텐츠를 표시할 수 있으며 이는 모순되거나 명확하지 않거나 혼동될 수 있습니다. 이러한 [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
+**모든 SQL** \> **모두 표시** 를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. **모두 표시** 옵션은 같은 문서 내에 여러 다른 버전의 SQL Server와 관련된 콘텐츠를 표시할 수 있으며 이는 모순되거나 명확하지 않거나 혼동될 수 있습니다. 이러한 [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>이동 경로
 
@@ -81,7 +81,7 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ## <a name="submit-docs-feedback"></a>설명서 피드백 제출
 
-설명서 내에서 잘못된 점을 발견하면 페이지 맨 아래로 스크롤하고 **콘텐츠 피드백**을 선택하여 해당 설명서에 대해 SQL 콘텐츠 팀에 피드백을 제출할 수 있습니다.
+설명서 내에서 잘못된 점을 발견하면 페이지 맨 아래로 스크롤하고 **콘텐츠 피드백** 을 선택하여 해당 설명서에 대해 SQL 콘텐츠 팀에 피드백을 제출할 수 있습니다.
 
 ![Git 문제 콘텐츠 피드백](media/sql-server-get-help/git-issues.png)
 

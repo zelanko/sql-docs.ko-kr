@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465734"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "88901027"
   
 ## <a name="options"></a>옵션  
  **시작 매개 변수 지정**  
- 매개 변수를 추가하려면 매개 변수를 입력한 다음 **추가**를 클릭합니다.  
+ 매개 변수를 추가하려면 매개 변수를 입력한 다음 **추가** 를 클릭합니다.  
   
- 필수 매개 변수 중 하나를 수정하려면 **기존 매개 변수** 상자에서 매개 변수를 선택하고 **시작 매개 변수 지정** 상자에서 값을 변경한 다음 **업데이트**를 클릭합니다.  
+ 필수 매개 변수 중 하나를 수정하려면 **기존 매개 변수** 상자에서 매개 변수를 선택하고 **시작 매개 변수 지정** 상자에서 값을 변경한 다음 **업데이트** 를 클릭합니다.  
   
  **기존 매개 변수**  
- 매개 변수를 제거하려면 매개변수를 선택한 다음 **제거**를 클릭합니다.  
+ 매개 변수를 제거하려면 매개변수를 선택한 다음 **제거** 를 클릭합니다.  
   
 ## <a name="parameter-format"></a>매개 변수 형식  
  매개 변수 사이에 구분 기호를 입력하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 구분 기호를 자동으로 추가합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 매개 변수 요구 사항을 적용합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "88901027"
  master 데이터베이스를 이동하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "시스템 데이터베이스 이동" 항목을 참조하십시오.  
   
 ## <a name="optional-parameters"></a>선택적 매개 변수  
- 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T*trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[tsql](../../includes/tsql-md.md)])" 항목을 참조하세요.  
+ 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T *trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시* 인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[tsql](../../includes/tsql-md.md)])" 항목을 참조하세요.  
   
 > [!CAUTION]  
 >  인터넷에서 문서화되지 않은 추가 시작 매개 변수 및 추적 플래그를 참조할 수 있습니다. 문서화되지 않은 시작 매개 변수 및 추적 플래그를 만들어 특수한 문제를 해결하거나 테스트하는 데 필요한 특정 조건을 강제 적용할 수 있습니다. 문서화되지 않은 시작 매개 변수를 사용하면 예기치 못한 결과가 발생할 수 있습니다. 문서화되지 않은 매개 변수는 Microsoft 고객 지원 서비스에서 안내하는 경우에만 사용하십시오.  

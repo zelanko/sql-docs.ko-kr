@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 637ee3a6e45c69f2ab0ff89d5330b54553c69345
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461494"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -60,7 +60,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
   
 2.  **Microsoft SharePoint 제품** 그룹을 클릭합니다.  
   
-3.  **SharePoint 관리 셸**을 클릭합니다.  
+3.  **SharePoint 관리 셸** 을 클릭합니다.  
   
  cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell 'Get-Help' 명령을 사용합니다. 예를 들면 다음과 같습니다.  
   

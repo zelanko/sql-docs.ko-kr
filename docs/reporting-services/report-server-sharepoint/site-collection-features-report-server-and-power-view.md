@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f79af39e2ba871a0ee4acf9f33c23f54f2bfd3b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764896"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461464"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
 
@@ -39,33 +39,33 @@ ms.locfileid: "83764896"
   
 1.  Reporting Services 기능을 활성화하려는 사이트로 브라우저를 엽니다.  
   
-2.  **사이트 작업**을 클릭합니다.  
+2.  **사이트 작업** 을 클릭합니다.  
   
-3.  **사이트 설정**을 클릭합니다.  
+3.  **사이트 설정** 을 클릭합니다.  
   
 4.  사이트 모음 관리 그룹에서 **사이트 모음 기능** 을 클릭합니다.  
   
 5.  목록에서 **보고서 통합 기능** 이나 **파워 뷰 통합 기능** 을 찾습니다.  
   
-6.  **활성화**를 클릭합니다.  
+6.  **활성화** 를 클릭합니다.  
   
- 기능을 비활성화하려면 동일한 절차를 수행하고 **활성화** 대신 **비활성화**를 클릭합니다.  
+ 기능을 비활성화하려면 동일한 절차를 수행하고 **활성화** 대신 **비활성화** 를 클릭합니다.  
   
 ## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Reporting Services 중앙 관리 사이트 모음 기능 활성화 또는 비활성화
   
 1.  SharePoint 중앙 관리로 브라우저를 엽니다.  
   
-2.  **사이트 작업**을 클릭합니다.  
+2.  **사이트 작업** 을 클릭합니다.  
   
-3.  **사이트 설정**을 클릭합니다.  
+3.  **사이트 설정** 을 클릭합니다.  
   
 4.  사이트 모음 관리 그룹에서 **사이트 모음 기능** 을 클릭합니다.  
   
 5.  목록에서 **보고서 서버 중앙 관리 기능** 을 찾습니다.  
   
-6.  **활성화**를 클릭합니다.  
+6.  **활성화** 를 클릭합니다.  
   
- 기능을 비활성화하려면 동일한 절차를 따르면서 **활성화** 대신 **비활성화**를 클릭합니다.  
+ 기능을 비활성화하려면 동일한 절차를 따르면서 **활성화** 대신 **비활성화** 를 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계
 

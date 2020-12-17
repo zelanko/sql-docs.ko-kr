@@ -18,13 +18,13 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8a5a8ceb8aaa26d9c18a9b37e4acb84247f2e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 11ea9a4bff085843b571fbf69df5b79d9c3a9f8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038823"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466454"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "92038823"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
 3.  **작업 속성** 대화 상자에서 **알림** 페이지를 선택합니다.  
   
-4.  전자 메일을 통해 운영자에게 알리려면 **전자 메일**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
+4.  전자 메일을 통해 운영자에게 알리려면 **전자 메일** 확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
     -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "92038823"
   
     -   **작업 완료 시** - 완료 상태에 관계없이 운영자에게 알립니다.  
   
-5.  무선 호출기를 통해 운영자에게 알리려면 **호출**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
+5.  무선 호출기를 통해 운영자에게 알리려면 **호출** 확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
     -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92038823"
   
     -   **작업 완료 시** - 완료 상태에 관계없이 운영자에게 알립니다.  
   
-6.  Net Send로 운영자에게 알리려면 **Net Send**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
+6.  Net Send로 운영자에게 알리려면 **Net Send** 확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
     -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "92038823"
   
 #### <a name="to-notify-an-operator-of-job-status"></a>운영자에게 작업 상태를 알리려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  

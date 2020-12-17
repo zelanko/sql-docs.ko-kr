@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 0d033bdfe9ae0d2773e7c3d8622b7321ed60e02e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935490"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461424"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
 
@@ -36,13 +36,13 @@ SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>라이브러리에 보고서 정의 또는 보고서 모델 추가
   
-1.  라이브러리 또는 라이브러리 내의 폴더를 엽니다. 라이브러리가 열려 있지 않으면 빠른 실행에서 해당 이름을 클릭합니다. 라이브러리 이름이 나타나지 않으면 **모든 사이트 콘텐츠 보기**를 클릭한 다음 라이브러리 이름을 클릭합니다.  
+1.  라이브러리 또는 라이브러리 내의 폴더를 엽니다. 라이브러리가 열려 있지 않으면 빠른 실행에서 해당 이름을 클릭합니다. 라이브러리 이름이 나타나지 않으면 **모든 사이트 콘텐츠 보기** 를 클릭한 다음 라이브러리 이름을 클릭합니다.  
   
-2.  **업로드** 메뉴에서 **문서 업로드**를 클릭합니다.  
+2.  **업로드** 메뉴에서 **문서 업로드** 를 클릭합니다.  
   
-3.  단일 보고서 또는 보고서 모델 파일을 업로드하려면 보고서 정의 파일(.rdl) 또는 보고서 모델 파일(.smdl)을 선택한 다음 **확인**을 클릭합니다.  
+3.  단일 보고서 또는 보고서 모델 파일을 업로드하려면 보고서 정의 파일(.rdl) 또는 보고서 모델 파일(.smdl)을 선택한 다음 **확인** 을 클릭합니다.  
   
-     보고서 정의가 공유 데이터 원본 파일(.rsds)을 사용하여 외부 데이터 원본에 대한 연결 정보를 저장하는 경우 .rdl 파일 및 .rsds 파일을 동시에 업로드할 수 있습니다. 이렇게 하려면 **여러 문서 업로드**를 클릭하고 두 파일을 모두 지정한 다음 **확인**을 클릭합니다.  
+     보고서 정의가 공유 데이터 원본 파일(.rsds)을 사용하여 외부 데이터 원본에 대한 연결 정보를 저장하는 경우 .rdl 파일 및 .rsds 파일을 동시에 업로드할 수 있습니다. 이렇게 하려면 **여러 문서 업로드** 를 클릭하고 두 파일을 모두 지정한 다음 **확인** 을 클릭합니다.  
   
  공유 데이터 원본, 보고서 모델 또는 보고서에 대한 참조를 포함하는 보고서를 업로드하는 경우 파일을 업로드하면 해당 참조가 손상됩니다. 참조를 다시 설정하는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](/previous-versions/sql/)를 참조하세요.  
   

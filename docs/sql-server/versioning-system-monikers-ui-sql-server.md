@@ -7,25 +7,25 @@ ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
+ms.openlocfilehash: 0ea96bf157c6ab781e8e0fa34dc8146e590c4b2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461374"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
 
 [!INCLUDE[includes_appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-이 문서에서는 SQL 설명서의 _버전 관리 시스템_에 대해 설명합니다. 버전 관리 시스템은 제품 및 해당 버전을 인식합니다. 이 시스템에서는 원하는 제품 및 버전을 선택할 수 있습니다. 그러면 해당 설명서가 표시됩니다.
+이 문서에서는 SQL 설명서의 _버전 관리 시스템_ 에 대해 설명합니다. 버전 관리 시스템은 제품 및 해당 버전을 인식합니다. 이 시스템에서는 원하는 제품 및 버전을 선택할 수 있습니다. 그러면 해당 설명서가 표시됩니다.
 
 ## <a name="applies-to-products"></a>적용 대상 제품
 
-대부분의 SQL Server 아티클에는 제목 아래에 **적용 대상**이 표시됩니다. 같은 줄에서 아티클과 제품의 관련성을 나타내는 편리한 SQL _제품_ 목록이 표시됩니다. 예를 들어, 제품 SQL Server는 해당 아티클과 관련된 것으로 표시될 수 있지만, Azure SQL Database는 관련이 없는 것으로 표시될 수 있습니다.
+대부분의 SQL Server 아티클에는 제목 아래에 **적용 대상** 이 표시됩니다. 같은 줄에서 아티클과 제품의 관련성을 나타내는 편리한 SQL _제품_ 목록이 표시됩니다. 예를 들어, 제품 SQL Server는 해당 아티클과 관련된 것으로 표시될 수 있지만, Azure SQL Database는 관련이 없는 것으로 표시될 수 있습니다.
 
-**적용 대상** 줄에는 제품의 _버전_에 대한 정보가 없습니다. 버전 관리 시스템 구성의 **적용 대상** 줄과 제품 측면 간이 맞지 않는 경우를 방지하기 위해 노력하고 있습니다.
+**적용 대상** 줄에는 제품의 _버전_ 에 대한 정보가 없습니다. 버전 관리 시스템 구성의 **적용 대상** 줄과 제품 측면 간이 맞지 않는 경우를 방지하기 위해 노력하고 있습니다.
 
 ## <a name="history-of-separate-file-sets"></a>별도의 파일 세트 기록
 
@@ -35,7 +35,7 @@ SQL Server 2014 및 이전 버전의 경우 각 버전에는 설명서 파일의
 
 ## <a name="multiple-versions-in-the-same-files"></a>동일한 파일의 여러 버전
 
-이러한 이유로 SQL Server 2016용 설명서 파일은 2017, 2019에도 해당되며 \<vNext\>에도 해당될 수 있습니다. 이제 SQL Server 설명서 파일에 _버전 관리 모니커_를 할당하게 되므로 이러한 통합이 좀 더 실질적으로 이루어질 수 있습니다. 버전 관리 모니커가 지정된 각 설명서 파일에 대해 의미가 있는 모든 세분성 수준에서 할당되거나 명시적으로 포함됩니다.
+이러한 이유로 SQL Server 2016용 설명서 파일은 2017, 2019에도 해당되며 \<vNext\>에도 해당될 수 있습니다. 이제 SQL Server 설명서 파일에 _버전 관리 모니커_ 를 할당하게 되므로 이러한 통합이 좀 더 실질적으로 이루어질 수 있습니다. 버전 관리 모니커가 지정된 각 설명서 파일에 대해 의미가 있는 모든 세분성 수준에서 할당되거나 명시적으로 포함됩니다.
 
 ## <a name="versioning-control-in-the-ui"></a>UI의 버전 제어
 
@@ -51,13 +51,13 @@ SQL Server 2014 및 이전 버전의 경우 각 버전에는 설명서 파일의
 
 웹 주소가 `https://docs.microsoft.com/sql/`로 시작하는 각 아티클의 주소에는 `?view=`라는 매개 변수가 추가되어 있습니다. 이 매개 변수 값은 버전 관리 모니커 코드입니다.
 
-`https` 주소의 모니커 _코드_는 버전 관리 컨트롤에 표시되는 모니커 _name_과 항상 일치합니다.
+`https` 주소의 모니커 _코드_ 는 버전 관리 컨트롤에 표시되는 모니커 _name_ 과 항상 일치합니다.
 
 ## <a name="products-not-editions"></a>제품, 에디션 아님
 
 ### <a name="editions"></a>에디션
 
-1990년대부터 2000년대에 접어들면서 Microsoft SQL Server는 1개의 제품만 있었습니다. 각 SQL Server 버전에는 SQL Server 2008 _Developer_ 및 _Enterprise_ 버전과 같은 다양한 _버전_이 있었습니다. 에디션은 약간 다른 기능 세트를 제공하지만 코어 제품은 동일했습니다. 새 SQL Server 릴리스에는 여전히 다양한 에디션이 있을 수 있습니다.
+1990년대부터 2000년대에 접어들면서 Microsoft SQL Server는 1개의 제품만 있었습니다. 각 SQL Server 버전에는 SQL Server 2008 _Developer_ 및 _Enterprise_ 버전과 같은 다양한 _버전_ 이 있었습니다. 에디션은 약간 다른 기능 세트를 제공하지만 코어 제품은 동일했습니다. 새 SQL Server 릴리스에는 여전히 다양한 에디션이 있을 수 있습니다.
 
 ### <a name="products"></a>Products
 
@@ -84,29 +84,29 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 
 다음 시나리오는 현재 아티클 내의 섹션에 중점을 둡니다.
 
-1. 현재 버전 관리 모니커는 **SQL Server 2017**입니다.
+1. 현재 버전 관리 모니커는 **SQL Server 2017** 입니다.
 2. SQL Server 버전 2017에 처음 추가된 기능을 설명하는 섹션을 읽고 있습니다.
-3. 모니커를 **SQL Server 2016**으로 변경합니다.
+3. 모니커를 **SQL Server 2016** 으로 변경합니다.
 4. 읽던 섹션이 없어진 것을 알 수 있습니다.
-5. 모니커를 다시 변경합니다. 이번에는 **SQL Server 2019**로 변경합니다.
+5. 모니커를 다시 변경합니다. 이번에는 **SQL Server 2019** 로 변경합니다.
 6. 읽고 있던 2017 섹션이 다시 표시됩니다.
 
-위의 시나리오에서 새 2017 기능은 다음 모니커 코드를 포함하는 _모니커 범위_로 표시될 수 있습니다.
+위의 시나리오에서 새 2017 기능은 다음 모니커 코드를 포함하는 _모니커 범위_ 로 표시될 수 있습니다.
 
 - `>=sql-server-2017`
 
-모니커 **SQL Server 2019**를 선택하면 버전 관리 시스템에서 2019를 2017보다 크거나 같다고 인식하고 해당 섹션을 표시합니다.
+모니커 **SQL Server 2019** 를 선택하면 버전 관리 시스템에서 2019를 2017보다 크거나 같다고 인식하고 해당 섹션을 표시합니다.
 
 ### <a name="scenario-2-click-a-link-to-a-hidden-article"></a>시나리오 2: 숨겨진 아티클에 대한 링크 클릭
 
 다음의 일반적이지 않은 시나리오는 TOC(목차)에서 현재 숨겨진 아티클에 대한 링크를 클릭하면 어떻게 되는지 설명합니다. 간단히 말해서 링크는 다음과 같이 작동합니다.
 
-1. 현재 버전 관리 모니커는 **SQL Server 2017**입니다.
+1. 현재 버전 관리 모니커는 **SQL Server 2017** 입니다.
 2. 현재 아티클 :::no-loc text="A":::에서 SQL Server 2016에만 적용되는 아티클 :::no-loc text="B":::에 대한 링크를 클릭합니다.
     - 클릭하기 전에 목차에는 숨겨진 :::no-loc text="B"::: 아티클에 대한 항목이 있습니다.
 3. 클릭하면 아티클 :::no-loc text="B":::가 표시됩니다.
     - 아티클 :::no-loc text="B":::가 표시되면 버전 관리 컨트롤이 **SQL Server 2016** 모니커로 전환됩니다.
-    - 원본 모니커 **SQL Server 2017**은 중단되어야 하기 때문입니다. 이러한 중단으로 인해 웹 페이지의 위쪽에 정보 메시지가 표시됩니다. [메시지](#anchor-message-unavailable-for-moniker)는 새 아티클 :::no-loc text="B":::를 수용하도록 현재 모니커를 전환해야 함을 설명합니다.
+    - 원본 모니커 **SQL Server 2017** 은 중단되어야 하기 때문입니다. 이러한 중단으로 인해 웹 페이지의 위쪽에 정보 메시지가 표시됩니다. [메시지](#anchor-message-unavailable-for-moniker)는 새 아티클 :::no-loc text="B":::를 수용하도록 현재 모니커를 전환해야 함을 설명합니다.
 
 ### <a name="scenario-3-navigate-to-an-https-address"></a>시나리오 3: https 주소 이동
 
@@ -115,7 +115,7 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 | attribute | 값 |
 | :-------- | :---- |
 | 제목 | SQL Server 2017의 새로운 기능 |
-| 모니커 범위 | `>= sql-server-2017 || = sqlallproducts-allversions` |
+| 모니커 범위 | `=">= sql-server-2017"` |
 | `https` 주소 | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
 
@@ -131,7 +131,7 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 
 ### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> 모든 SQL - 모두 표시, 특수 모니커
 
-**모든 SQL**의 특별한 모니커 제품 이름은 하나이며 유일한 버전은 **모두 표시**입니다. 이 모니커는 특정 변경 내용을 내부적으로 테스트하기 위한 것입니다. 고객이 이 모니커를 사용할 경우 유익하기보다 오해를 일으킬 가능성이 높습니다.
+**모든 SQL** 의 특별한 모니커 제품 이름은 하나이며 유일한 버전은 **모두 표시** 입니다. 이 모니커는 특정 변경 내용을 내부적으로 테스트하기 위한 것입니다. 고객이 이 모니커를 사용할 경우 유익하기보다 오해를 일으킬 가능성이 높습니다.
 
 일부 아티클에는 여러 버전의 SQL Server 관련 정보가 포함되어 있습니다. 모든 일반 모니커는 모니커 버전에 대해 부정확하거나, 혼동을 일으키거나, 모순되는 정보를 표시할 수 있는 버전 관련 섹션을 숨깁니다. 특별한 **모든 SQL** 모니커는 모든 버전 섹션을 표시하며, 부정확한 정보가 표시되고 있음을 명확하게 나타내지 않을 수 있습니다.
 
@@ -139,10 +139,10 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 
 다음 시나리오에서는 :::no-loc text="Docs"::: 웹 페이지 맨 위에 있는 정보 메시지를 표시합니다.
 
-1. 현재 버전 관리 모니커는 **SQL Server 2017**입니다.
+1. 현재 버전 관리 모니커는 **SQL Server 2017** 입니다.
 2. SQL Server 2017과 관련된 아티클을 읽고 있습니다.
     - 이 아티클은 제품 Azure SQL Database와 관련이 _없습니다_.
-3. 모니커를 **Azure SQL Database - 최신**으로 변경하려고 합니다.
+3. 모니커를 **Azure SQL Database - 최신** 으로 변경하려고 합니다.
 4. 그러면 해당 시도가 거부되고 메시지가 표시됩니다.
 
 이 시나리오의 끝부분에서는 Docs 웹 페이지의 위쪽에 다음과 같은 정보 메시지가 표시됩니다.
@@ -158,7 +158,7 @@ _최신_ 버전은 아직 완전히 릴리스되지 않았으며 _미리 보기_
 버전 관리 시스템은 SQL Server 버전 2016부터 완전히 구현됩니다.
 
 - _2012 및 이전 버전:_ &nbsp; 버전 관리 시스템은 SQL Server 2012 이전 버전에는 사용되지 않습니다.
-    - **SQL Server - 이전**의 특별한 모니커는 거의 모든 문서를 숨기기 위한 것입니다. 드물지만 예외적으로 이전 버전의 고객에게 한 번만 필요할 수 있는 아티클도 일부 있습니다.
+    - **SQL Server - 이전** 의 특별한 모니커는 거의 모든 문서를 숨기기 위한 것입니다. 드물지만 예외적으로 이전 버전의 고객에게 한 번만 필요할 수 있는 아티클도 일부 있습니다.
     - [SQL Server 이전 버전, 2012-2005](./previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; 버전 관리 시스템은 SQL Server 2014에서는 절반 정도 구현됩니다. 버전 관리 컨트롤에서 SQL Server 2014를 선택할 수 있으며 문제없이 작동합니다. 그러나 기본적으로 2014용 파일은 2014 전용이고, 마찬가지로 2008용 파일도 2008 전용입니다.

@@ -8,13 +8,13 @@ ms.date: 08/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: =sql-server-2016
+ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470764"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
 
@@ -55,7 +55,7 @@ R Services에서 R 스크립트를 실행하는 방법에는 다음 두 가지�
 
 + 가장 일반적인 방법은 T-SQL 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하는 것입니다.
 
-+ 기본 설정 R 클라이언트를 사용하고 실행(*원격 컴퓨팅 컨텍스트*라고도 함)을 원격 SQL Server로 푸시하는 스크립트를 작성할 수도 있습니다. 자세한 내용은 [데이터 과학 클라이언트 R 개발 설정](../r/set-up-a-data-science-client.md) 방법을 참조하세요.
++ 기본 설정 R 클라이언트를 사용하고 실행(*원격 컴퓨팅 컨텍스트* 라고도 함)을 원격 SQL Server로 푸시하는 스크립트를 작성할 수도 있습니다. 자세한 내용은 [데이터 과학 클라이언트 R 개발 설정](../r/set-up-a-data-science-client.md) 방법을 참조하세요.
 
 <a name="version"></a>
 

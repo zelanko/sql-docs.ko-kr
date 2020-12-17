@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: de98a94f997d7107f0a2157d80919b16631ee7de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173411"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470424"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 선형 회귀 모델 배포
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 4부로 구성된 이 자습서 시리즈의 4부에서는 Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 이 4부 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 Python에서 개발한 선형 회귀 모델을 SQL Server 데이터베이스에 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 이 4부 자습서 시리즈의 4부에서는 Python에서 개발한 선형 회귀 모델을 Machine Learning Services를 사용하여 Azure SQL Managed Instance에 배포합니다.
 ::: moniker-end
 
@@ -50,7 +50,7 @@ ms.locfileid: "88173411"
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>모델을 생성하는 저장 프로시저 만들기
 
-이제 개발한 Python 스크립트를 사용하여 scikit-learn에서 LinearRegression을 사용하여 선형 회귀 모델을 학습하고 생성하는 저장 프로시저인 **generate_rental_py_model**을 만듭니다.
+이제 개발한 Python 스크립트를 사용하여 scikit-learn에서 LinearRegression을 사용하여 선형 회귀 모델을 학습하고 생성하는 저장 프로시저인 **generate_rental_py_model** 을 만듭니다.
 
 Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 학습하는 저장 프로시저를 만듭니다.
 
@@ -96,7 +96,7 @@ GO
 
 TutorialDB 데이터베이스에 테이블을 만든 다음, 모델을 테이블에 저장합니다.
 
-1. Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 저장하는 데 사용되는 **dbo.rental_py_models**라는 테이블을 만듭니다.
+1. Azure Data Studio에서 다음 T-SQL 문을 실행하여 모델을 저장하는 데 사용되는 **dbo.rental_py_models** 라는 테이블을 만듭니다.
 
    ```sql
    USE TutorialDB;
@@ -109,7 +109,7 @@ TutorialDB 데이터베이스에 테이블을 만든 다음, 모델을 테이블
    GO
    ```
 
-1. 이름이 **linear_model**인 모델이 있는 이진 개체로 테이블에 저장합니다.
+1. 이름이 **linear_model** 인 모델이 있는 이진 개체로 테이블에 저장합니다.
 
    ```sql
    DECLARE @model VARBINARY(MAX);
@@ -120,7 +120,7 @@ TutorialDB 데이터베이스에 테이블을 만든 다음, 모델을 테이블
 
 ## <a name="create-a-stored-procedure-that-makes-predictions"></a>예측을 수행하는 저장 프로시저 만들기
 
-1. 학습된 모델과 새 데이터 세트를 사용하여 예측을 수행하는 저정 프로시저 **py_predict_rentalcount**를 만듭니다. 아래의 Azure Data Studio에서 T-SQL을 실행합니다.
+1. 학습된 모델과 새 데이터 세트를 사용하여 예측을 수행하는 저정 프로시저 **py_predict_rentalcount** 를 만듭니다. 아래의 Azure Data Studio에서 T-SQL을 실행합니다.
 
    ```sql
    DROP PROCEDURE IF EXISTS py_predict_rentalcount;

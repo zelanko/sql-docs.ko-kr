@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a12ed0026afa31592d4b2f5f9f5dcc1cc30ae94
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 497ac3d6bd46de41ca9bd682381afca4919f6ef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035653"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466554"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
 
@@ -60,14 +60,14 @@ ms.locfileid: "92035653"
   
 #### <a name="to-configure-sql-server-agent"></a>SQL Server 에이전트를 구성하려면  
   
-1.  **시작** 단추를 클릭한 다음 **시작**  메뉴에서 **제어판**을 클릭합니다.  
+1.  **시작** 단추를 클릭한 다음 **시작**  메뉴에서 **제어판** 을 클릭합니다.  
   
-2.  제어판에서 **시스템 및 보안**, **관리 도구**를 차례로 클릭한 다음 **로컬 보안 정책**을 선택합니다.  
+2.  제어판에서 **시스템 및 보안**, **관리 도구** 를 차례로 클릭한 다음 **로컬 보안 정책** 을 선택합니다.  
   
 3.  로컬 보안 정책에서 펼침 단추를 클릭하여 **로컬 정책** 폴더를 확장하고 **사용자 권한 할당** 폴더를 클릭합니다.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 사용하도록 구성할 사용 권한을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 사용하도록 구성할 사용 권한을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-5.  사용 권한의 속성 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정이 나열되는지 확인합니다. 나열되지 않으면 **사용자 또는 그룹 추가**를 클릭하고 **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정을 입력한 다음 **확인**을 클릭합니다.  
+5.  사용 권한의 속성 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정이 나열되는지 확인합니다. 나열되지 않으면 **사용자 또는 그룹 추가** 를 클릭하고 **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 계정을 입력한 다음 **확인** 을 클릭합니다.  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트와 함께 실행하기 위해 추가할 각 사용 권한에 대해 이 작업을 반복합니다. 완료되었으면 **확인**을 클릭합니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트와 함께 실행하기 위해 추가할 각 사용 권한에 대해 이 작업을 반복합니다. 완료되었으면 **확인** 을 클릭합니다.  

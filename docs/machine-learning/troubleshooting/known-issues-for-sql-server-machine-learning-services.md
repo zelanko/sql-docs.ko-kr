@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7772c0307732809cb7d5d6d0767ad7bcd29c7c89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196348"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470674"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ R_SERVER는 Intel MKL(Math Kernel Library)을 사용합니다. MKL을 포함하�
 
 **해결 방법**
 
-1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수** 를 클릭합니다.
 
 2. 새 사용자 또는 시스템 변수를 만듭니다. 
 
@@ -45,7 +45,7 @@ R_SERVER는 Intel MKL(Math Kernel Library)을 사용합니다. MKL을 포함하�
 3. R_SERVER를 다시 시작합니다. SQL Server에서 SQL Server 실행 패드 서비스를 다시 시작할 수 있습니다.
 
 > [!NOTE]
-> Linux에서 SQL Server 2019를 실행하는 경우 사용자 홈 디렉터리에서 *.bash_profile*을 편집하거나 만들어 `export MKL_CBWR="AUTO"` 줄을 추가합니다. Bash 명령 프롬프트에서 `source .bash_profile`을 입력하여 이 파일을 실행합니다. R 명령 프롬프트에서 `Sys.getenv()`를 입력하여 R_SERVER를 다시 시작합니다.
+> Linux에서 SQL Server 2019를 실행하는 경우 사용자 홈 디렉터리에서 *.bash_profile* 을 편집하거나 만들어 `export MKL_CBWR="AUTO"` 줄을 추가합니다. Bash 명령 프롬프트에서 `source .bash_profile`을 입력하여 이 파일을 실행합니다. R 명령 프롬프트에서 `Sys.getenv()`를 입력하여 R_SERVER를 다시 시작합니다.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. R 스크립트 런타임 오류(SQL Server 2017 CU5~CU7 재발)
 
@@ -61,7 +61,7 @@ R 스크립트를 실행할 때 표시되는 오류에는 다음 메시지가 �
 
 **해결 방법**
 
-CU8을 사용할 수 있게 되면 CU8을 적용합니다. 또는 관리자 권한 명령 프롬프트에서 uninstall/install로 **registerrext**를 실행하여 **rlauncher**를 다시 만들 수 있습니다. 
+CU8을 사용할 수 있게 되면 CU8을 적용합니다. 또는 관리자 권한 명령 프롬프트에서 uninstall/install로 **registerrext** 를 실행하여 **rlauncher** 를 다시 만들 수 있습니다. 
 
 ```cmd
 <SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
@@ -116,7 +116,7 @@ R 패키지 문제를 방지하기 위해 [다음 섹션](#bkmk_sqlbindr)에 설
 구성 요소를 설치하고 SQL Server 2017 CU3를 복구하려면 CU3를 제거하고 업데이트된 버전을 다시 설치해야 합니다.
 
 1. R 설치 관리자를 포함하는 업데이트된 CU3 설치 파일을 다운로드합니다.
-2. CU3를 제거합니다. 제어판에서 **업데이트 제거**를 검색한 다음 "SQL Server 2017에 대한 핫픽스 3015(KB4052987)(64비트)"를 선택합니다. 제거 단계를 진행합니다.
+2. CU3를 제거합니다. 제어판에서 **업데이트 제거** 를 검색한 다음 "SQL Server 2017에 대한 핫픽스 3015(KB4052987)(64비트)"를 선택합니다. 제거 단계를 진행합니다.
 3. 방금 다운로드한 KB4052987에 대한 업데이트를 두 번 클릭하여 CU3 업데이트를 다시 설치합니다`SQLServer2017-KB4052987-x64.exe`. 설치 지침을 따릅니다.
 
 ### <a name="6-unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>6. SQL Server 2017 CTP 2.0 이상 버전의 오프라인 설치에서 Python 구성 요소를 설치할 수 없음
@@ -138,7 +138,7 @@ SQL Server 2016 컴퓨팅 컨텍스트에서 R 코드를 실행하면 다음과 
 + [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 설치 마법사를 사용하여 클라이언트 컴퓨터에 Microsoft R Server(독립 실행형)를 설치했습니다.
 + [별도의 Windows Installer](/machine-learning-server/install/r-server-install-windows)를 사용하여 Microsoft R Server를 설치했습니다.
 
-서버와 클라이언트가 동일한 버전을 사용하도록 하려면 Microsoft R Server 9.0 이상 릴리스에서 지원되는 _바인딩_을 사용하여 SQL Server 2016 인스턴스의 R 구성 요소를 업그레이드해야 할 수 있습니다. 업그레이드 지원이 가능한 R Services 버전인지 확인하려면 [SqlBindR.exe를 사용하여 R Services 인스턴스 업그레이드](../install/upgrade-r-and-python.md)를 참조하세요.
+서버와 클라이언트가 동일한 버전을 사용하도록 하려면 Microsoft R Server 9.0 이상 릴리스에서 지원되는 _바인딩_ 을 사용하여 SQL Server 2016 인스턴스의 R 구성 요소를 업그레이드해야 할 수 있습니다. 업그레이드 지원이 가능한 R Services 버전인지 확인하려면 [SqlBindR.exe를 사용하여 R Services 인스턴스 업그레이드](../install/upgrade-r-and-python.md)를 참조하세요.
 
 **적용 대상:** SQL Server 2016 R Services(Microsoft R Server 버전 9.0.0 이전 버전)
 
@@ -170,11 +170,11 @@ SQL Server 2016 컴퓨팅 컨텍스트에서 R 코드를 실행하면 다음과 
 
 Azure 가상 머신에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 경우 가상 머신의 작업 영역을 사용해야 하는 컴퓨팅 컨텍스트를 사용하지 못할 수 있습니다. 이는 기본적으로 Azure 가상 머신 방화벽에 로컬 R 사용자 계정에 대한 네트워크 액세스를 차단하는 규칙이 있기 때문입니다.
 
-이 문제를 해결하려면 Azure VM에서 **고급 보안이 포함된 Windows 방화벽**을 열고 **아웃바운드 규칙**을 선택한 후 다음 규칙을 사용하지 않도록 설정합니다. **SQL Server 인스턴스 MSSQLSERVER의 R 로컬 사용자 계정에 대한 네트워크 액세스를 차단합니다**. 규칙을 사용하도록 설정된 상태로 둘 수도 있지만 보안 속성을 **안전한 경우 허용**으로 변경합니다.
+이 문제를 해결하려면 Azure VM에서 **고급 보안이 포함된 Windows 방화벽** 을 열고 **아웃바운드 규칙** 을 선택한 후 다음 규칙을 사용하지 않도록 설정합니다. **SQL Server 인스턴스 MSSQLSERVER의 R 로컬 사용자 계정에 대한 네트워크 액세스를 차단합니다**. 규칙을 사용하도록 설정된 상태로 둘 수도 있지만 보안 속성을 **안전한 경우 허용** 으로 변경합니다.
 
 ### <a name="10-implied-authentication-in-sqlexpress"></a>10. SQLEXPRESS의 암시적 인증
 
-통합 Windows 인증을 사용하여 원격 데이터 과학 워크스테이션에서 R 작업을 실행하는 경우 SQL Server는 *암시적 인증*을 사용하여 스크립트에 필요할 수 있는 로컬 ODBC 호출을 생성합니다. 그러나 SQL Server Express Edition의 RTM 빌드에서는 이 기능이 작동하지 않았습니다.
+통합 Windows 인증을 사용하여 원격 데이터 과학 워크스테이션에서 R 작업을 실행하는 경우 SQL Server는 *암시적 인증* 을 사용하여 스크립트에 필요할 수 있는 로컬 ODBC 호출을 생성합니다. 그러나 SQL Server Express Edition의 RTM 빌드에서는 이 기능이 작동하지 않았습니다.
 
 이 문제를 해결하려면 이후 서비스 릴리스로 업그레이드하는 것이 좋습니다.
 
@@ -276,11 +276,11 @@ SQL Server 인스턴스가 `Program Files` 폴더 외부와 같이 기본이 아
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": 액세스가 거부되었습니다*
 
-그 이유는 기본 제공 사용자 그룹 **SQLRUserGroup**에 읽기 권한이 없는 경우에 R 함수가 경로를 읽으려고 시도하고 실패하기 때문입니다. 발생한 경고는 현재 R 스크립트의 실행을 차단하지 않지만 사용자가 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이될 수 있습니다.
+그 이유는 기본 제공 사용자 그룹 **SQLRUserGroup** 에 읽기 권한이 없는 경우에 R 함수가 경로를 읽으려고 시도하고 실패하기 때문입니다. 발생한 경고는 현재 R 스크립트의 실행을 차단하지 않지만 사용자가 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이될 수 있습니다.
 
 SQL Server를 기본 위치에 설치한 경우에는 모든 Windows 사용자에게 `Program Files` 폴더에 대한 읽기 권한이 있으므로 이 오류가 발생하지 않습니다.
 
-이 문제는 예정된 서비스 릴리스에서 해결됩니다. 해결 방법으로 그룹 **SQLRUserGroup**에게 `ExternalLibraries`의 모든 부모 폴더에 대한 읽기 액세스 권한을 제공하세요.
+이 문제는 예정된 서비스 릴리스에서 해결됩니다. 해결 방법으로 그룹 **SQLRUserGroup** 에게 `ExternalLibraries`의 모든 부모 폴더에 대한 읽기 액세스 권한을 제공하세요.
 
 ### <a name="2-serialization-error-between-old-and-new-versions-of-revoscaler"></a>2. RevoScaleR 이전 버전과 새 버전 간의 직렬화 오류
 
@@ -378,7 +378,7 @@ R 스크립트에서는 다음 유형의 쿼리 결과를 사용할 수 없습�
 
 ### <a name="10-arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>10. SQL Server 데이터 원본의 경우 *varsToKeep* 및 *varsToDrop* 인수가 지원되지 않습니다.
 
-rxDataStep 함수를 사용하여 테이블에 결과를 쓸 때 *varsToKeep* 및 *varsToDrop*을 사용하면 작업의 일부로 포함하거나 제외할 열을 쉽게 지정할 수 있습니다. 하지만 SQL Server 데이터 원본의 경우 이러한 인수가 지원되지 않습니다.
+rxDataStep 함수를 사용하여 테이블에 결과를 쓸 때 *varsToKeep* 및 *varsToDrop* 을 사용하면 작업의 일부로 포함하거나 제외할 열을 쉽게 지정할 수 있습니다. 하지만 SQL Server 데이터 원본의 경우 이러한 인수가 지원되지 않습니다.
 
 ### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11. sp\_execute\_external\_script에서 SQL 데이터 형식 지원이 제한됨
 
@@ -495,26 +495,26 @@ R에서 `data.table`을 `OutputDataSet`로 사용하는 것은 SQL Server 2017 �
 
 ```sql
 USE MASTER
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
-DECLARE @input_data_1 nvarchar(max) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
+DECLARE @input_data_1 nvarchar(max) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
 go
 ```
 
 dbo가 병렬로 LibraryManagementFunctional에 라이브러리를 설치하는 동안:
 
 ```sql
-USE [LibraryManagementFunctional]
+USE [LibraryManagementFunctional]
 go
 
-CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
+CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
 go
 
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(14) = N'library(RODBC)'
-DECLARE @input_data_1 nvarchar(8) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(14) = N'library(RODBC)'
+DECLARE @input_data_1 nvarchar(8) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
 go
 ```
 
@@ -617,7 +617,7 @@ SQL Server 2017 누적 업데이트 12(CU12)부터 `sp_execute_external_script`�
 
 ### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Linux에서 pip를 사용하여 Python 패키지를 설치할 때 잘못된 인터프리터 오류 
 
-SQL Server 2019에서 **pip**를 사용하려는 경우. 예를 들면 다음과 같습니다.
+SQL Server 2019에서 **pip** 를 사용하려는 경우. 예를 들면 다음과 같습니다.
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -629,7 +629,7 @@ SQL Server 2019에서 **pip**를 사용하려는 경우. 예를 들면 다음과
 
 **해결 방법**
 
-[Python Package Authority(PyPA)](https://www.pypa.io)에서 **pip**를 설치합니다.
+[Python Package Authority(PyPA)](https://www.pypa.io)에서 **pip** 를 설치합니다.
 
 ```bash
 wget 'https://bootstrap.pypa.io/get-pip.py' 
@@ -644,7 +644,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7. Windows에 SQL Server 2019를 설치한 후 pip를 사용하 여 Python 패키지를 설치할 수 없음
 
-Windows에 SQL Server 2019를 설치한 후 DOS 명령줄에서 **pip**를 통해 python 패키지를 설치하려고 하면 실패합니다. 예를 들면 다음과 같습니다.
+Windows에 SQL Server 2019를 설치한 후 DOS 명령줄에서 **pip** 를 통해 python 패키지를 설치하려고 하면 실패합니다. 예를 들면 다음과 같습니다.
 
 ```bash
 pip install quantfolio
@@ -681,13 +681,13 @@ pip install quantfolio
 
 ```text
 EXEC sp_execute_external_script
-    @language = N'Python'
-    , @script = N'
+    @language = N'Python'
+    , @script = N'
 OutputDataSet = InputDataSet'
-    , @input_data_1 = N'select 1'
-    , @input_data_1_name = N'InputDataSet'
-    , @output_data_1_name = N'OutputDataSet'
-    WITH RESULT SETS (([output] int not null));
+    , @input_data_1 = N'select 1'
+    , @input_data_1_name = N'InputDataSet'
+    , @output_data_1_name = N'OutputDataSet'
+    WITH RESULT SETS (([output] int not null));
 Msg 39012, Level 16, State 14, Line 0
 Unable to communicate with the runtime for 'Python' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Python' runtime.
 STDERR message(s) from external script:
@@ -698,10 +698,10 @@ SqlSatelliteCall error: Failed to load library /opt/mssql-extensibility/lib/sqls
 STDOUT message(s) from external script:
 SqlSatelliteCall function failed. Please see the console output for more information.
 Traceback (most recent call last):
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
-    rx_native_call("SqlSatelliteCall", params)
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
-    ret = px_call(functionname, params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
+    rx_native_call("SqlSatelliteCall", params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
+    ret = px_call(functionname, params)
 RuntimeError: revoscalepy function failed.
 Total execution time: 00:01:00.387
 ```
@@ -716,7 +716,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **적용 대상:** Linux의 SQL Server 2019
 
-### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9. **sqlmlutils**를 사용하여 **tensorflow** 패키지를 설치할 수 없음
+### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9. **sqlmlutils** 를 사용하여 **tensorflow** 패키지를 설치할 수 없음
 
 [sqlmlutils 패키지](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)는 SQL Server 2019에 Python 패키지를 설치하는 데 사용됩니다. [Microsoft Visual C++ 2015-2019 재배포 가능 패키지(x64)](https://visualstudio.microsoft.com/downloads/)를 다운로드하여 설치하고 업데이트해야 합니다. 그러나 sqlmlutils를 사용하여 **tensorflow** 패키지를 설치할 수는 없습니다. tensorflow 패키지는 SQL Server에 설치된 버전보다 최신 버전의 numpy에 종속됩니다. 그러나 numpy는 미리 설치된 시스템 패키지이기 때문에 sqlmlutils가 tensorflow를 설치할 때 업데이트할 수 없습니다.
 

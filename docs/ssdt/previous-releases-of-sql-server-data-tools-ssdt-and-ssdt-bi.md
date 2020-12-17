@@ -10,13 +10,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c88e83bcc0b4722bf52da697bdaa03af37b972d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c16a4184665052781ae88ad37635ede298d668
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988589"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440504"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
 
@@ -26,7 +26,7 @@ SSDT(SQL Server Data Tools)는 관계형 데이터베이스, Analysis Services �
 
 SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-server-data-tools-ssdt.md)를 사용하여 이전 버전의 SQL Server에서 실행되는 데이터베이스, 모델, 보고서 및 패키지를 설계하고 배포할 수 있습니다.
 
-기존에 SQL Server 콘텐츠 형식을 만드는 데 사용하는 Visual Studio 셸은 **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, **Business Intelligence Development Studio**등과 같은 다양한 이름으로 출시되었습니다. 이전 버전에는 고유한 프로젝트 템플릿 집합이 함께 제공되었습니다. 하나의 SSDT에서 모든 프로젝트를 함께 이용하려면 [최신 버전](download-sql-server-data-tools-ssdt.md)이 있어야 합니다. 그러지 않으면 여러 이전 버전을 설치하여 SQL Server에서 사용되는 모든 템플릿을 가져와야 합니다. Visual Studio 버전당 셸이 하나만 설치되지만, 두 번째 SSDT를 설치하기만 하면 누락된 템플릿이 추가됩니다.
+기존에 SQL Server 콘텐츠 형식을 만드는 데 사용하는 Visual Studio 셸은 **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, **Business Intelligence Development Studio** 등과 같은 다양한 이름으로 출시되었습니다. 이전 버전에는 고유한 프로젝트 템플릿 집합이 함께 제공되었습니다. 하나의 SSDT에서 모든 프로젝트를 함께 이용하려면 [최신 버전](download-sql-server-data-tools-ssdt.md)이 있어야 합니다. 그러지 않으면 여러 이전 버전을 설치하여 SQL Server에서 사용되는 모든 템플릿을 가져와야 합니다. Visual Studio 버전당 셸이 하나만 설치되지만, 두 번째 SSDT를 설치하기만 하면 누락된 템플릿이 추가됩니다.
 
 ## <a name="previous-ssdt-releases"></a>이전 SSDT 릴리스
 
@@ -152,7 +152,7 @@ BI 템플릿은 SSAS 모델, SSRS 보고서 및 SSIS 패키지를 만드는 데 
 
 BIDS(Business Intelligence Development Studio)는 SQL Server 설치 프로그램을 통해 설치됩니다. 웹 다운로드(SQL Server 2008, 2008 R2)가 없습니다.
 
-SQL Server 2012 또는 2014의 경우 **Visual Studio 2012용 SSDT-BI** 또는 **SSDT-BI f또는 Visual Studio 2013**등과 같은 다양한 이름으로 출시되었습니다. 두 버전은 Visual Studio 버전만 다릅니다.
+SQL Server 2012 또는 2014의 경우 **Visual Studio 2012용 SSDT-BI** 또는 **SSDT-BI f또는 Visual Studio 2013** 등과 같은 다양한 이름으로 출시되었습니다. 두 버전은 Visual Studio 버전만 다릅니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 99fad5d6f8ec325e51eb898e34400c1ce8bbaea8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195125"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470544"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server와 XDF 파일 간에 데이터 이동(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92195125"
     ----|----|----
     5|38|48
     
-2. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 SQL Server에서 가져올 데이터를 정의합니다.  나중에 이 변수를 **rxImport**에 대한 *inData* 인수로 사용합니다.
+2. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 SQL Server에서 가져올 데이터를 정의합니다.  나중에 이 변수를 **rxImport** 에 대한 *inData* 인수로 사용합니다.
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -59,7 +59,7 @@ ms.locfileid: "92195125"
             )
     ```
   
-4. 로컬 컴퓨터에서 모든 데이터를 사용할 수 있도록 컴퓨팅 컨텍스트를 **local**로 설정합니다.
+4. 로컬 컴퓨터에서 모든 데이터를 사용할 수 있도록 컴퓨팅 컨텍스트를 **local** 로 설정합니다.
   
     ```R
     rxSetComputeContext("local")
@@ -67,7 +67,7 @@ ms.locfileid: "92195125"
     
     [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 함수는 지원되는 데이터 원본의 데이터를 로컬 XDF 파일로 가져올 수 있습니다. 데이터에 대해 여러 분석을 수행해야 하지만 동일 쿼리를 계속해서 반복적으로 실행하고 싶지 않을 때는 데이터의 로컬 복사본을 사용하는 것이 편리합니다.
 
-5. 이전에 정의된 변수를 **RxSqlServerData**에 인수로 전달하여 데이터 원본 개체를 만듭니다.
+5. 이전에 정의된 변수를 **RxSqlServerData** 에 인수로 전달하여 데이터 원본 개체를 만듭니다.
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -76,7 +76,7 @@ ms.locfileid: "92195125"
         colInfo = importColInfo)
     ```
   
-6. 현재 작업 디렉터리에서 **rxImport**를 호출하여 이름이 `ccFraudSub.xdf`인 파일에 데이터를 기록합니다.
+6. 현재 작업 디렉터리에서 **rxImport** 를 호출하여 이름이 `ccFraudSub.xdf`인 파일에 데이터를 기록합니다.
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -112,7 +112,7 @@ ms.locfileid: "92195125"
 
 이 자습서를 끝으로 **RevoScaleR** 및 SQL Server에 대해 여러 파트로 구성된 자습서 시리즈를 마칩니다. 여기에서는 여러 가지 데이터 관련 및 계산 관련 개념을 소개하고, 사용자의 고유 데이터 및 프로젝트 요구 사항에 맞게 작업을 진행하기 위한 기본 사항들을 살펴봤습니다.
 
-**RevoScaleR**에 대한 지식을 더 넓히기 위해서는 R 자습서 목록으로 돌아가서 누락된 연습을 진행하시기 바랍니다. 또는 목차에서 방법 도움말 문서들을 검토하여 일반적인 작업들에 대한 정보를 확인하세요.
+**RevoScaleR** 에 대한 지식을 더 넓히기 위해서는 R 자습서 목록으로 돌아가서 누락된 연습을 진행하시기 바랍니다. 또는 목차에서 방법 도움말 문서들을 검토하여 일반적인 작업들에 대한 정보를 확인하세요.
 
 > [!div class="nextstepaction"]
 > [SQL Server용 R 자습서](./r-tutorials.md)

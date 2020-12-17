@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8b9d2d95bb16ea5d94245a2a50866d6ff0701b92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470084"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -174,7 +174,7 @@ GO
 기본적으로 쿼리 최적화 프로그램은 행이 256개를 초과하는 테이블의 `@parallel=1`에서 작동하는 경향이 있지만, 가능하다면 이 스크립트에서 보여드리는 것처럼 `@parallel=1`을 설정하여 명시적으로 처리할 수 있습니다.
 
 > [!Tip]
-> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 그러나 새 매개 변수를 사용하면 오픈 소스 R 함수를 포함하여 해당 기능을 사용하여 특별히 엔지니어링되지 않은 함수를 호출하는 스크립트를 병렬화할 수 있습니다. 이는 파티션이 특정 스레드에 대한 선호도를 갖고 있기 때문이며, 따라서 스크립트에서 호출되는 모든 작업은 특정 에서 파티션별로 실행됩니다`thread.`<a name="training-step"></a>
+> 학습 워크로드의 경우 비-Microsoft-rx 알고리즘을 사용 중이어도 임의의 학습 스크립트에 `@parallel`을 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘(rx 접두사 포함)만이 SQL Server의 학습 시나리오에서 병렬 처리를 제공합니다. 그러나 새 매개 변수를 사용하면 오픈 소스 R 함수를 포함하여 해당 기능을 사용하여 특별히 엔지니어링되지 않은 함수를 호출하는 스크립트를 병렬화할 수 있습니다. 이는 파티션이 특정 스레드에 대한 선호도를 갖고 있기 때문이며, 따라서 스크립트에서 호출되는 모든 작업은 특정`thread.`<a name="training-step">에서 파티션별로 실행됩니다</a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>프로시저를 실행하고 모델 학습
 

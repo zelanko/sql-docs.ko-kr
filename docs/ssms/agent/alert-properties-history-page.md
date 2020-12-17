@@ -13,13 +13,13 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a97862543bfb4daa3a78a3d4ea7828fe8b36ab37
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: fd0cc61cdb5d0a212de686157fb9fd705412f3d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036673"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466624"
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,13 +9,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 436ef0f3d46fde6744624ea182c7c0433f9b491b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409469"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -42,12 +42,12 @@ ms.locfileid: "92005841"
 1. 다음 페이지에서 오른쪽 상단의 **연필** 아이콘을 선택합니다.
 1. 다음 페이지의 **파일 편집** 텍스트 창에서 변경하려는 텍스트를 직접 편집합니다.
     새 텍스트 또는 변경된 텍스트의 서식을 지정하는 데 도움이 필요한 경우 [Markdown 참고 자료](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)를 참조하세요.
-1. 편집한 후 **변경 내용 커밋**에서 다음을 수행합니다.
+1. 편집한 후 **변경 내용 커밋** 에서 다음을 수행합니다.
     1. 첫 번째 텍스트 상자에 변경 내용에 대한 간략한 설명을 입력합니다.
     1. **자세한 설명(선택 사항) 추가** 상자에 변경 내용에 대한 간략한 설명을 제공합니다.
 1. **Propose file change(파일 변경 제안)** 를 선택합니다.
-1. **변경 내용 비교** 페이지에서 **끌어오기 요청 만들기**를 선택합니다. 
-1. **끌어오기 요청 열기** 페이지에서 **끌어오기 요청 만들기**를 선택합니다. 
+1. **변경 내용 비교** 페이지에서 **끌어오기 요청 만들기** 를 선택합니다. 
+1. **끌어오기 요청 열기** 페이지에서 **끌어오기 요청 만들기** 를 선택합니다. 
 
 다음 GIF는 브라우저에서 변경 사항을 제출하는 엔드투엔드 프로세스를 보여 줍니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "92005841"
 이 섹션에서는 **sql-docs** 리포지토리에서 사용에 대한 일부 추가 지침을 제공합니다.
 
 > [!IMPORTANT]
-> 이 섹션의 정보는 **sql-docs**에 관련된 것입니다. Azure 설명서에서 SQL 문서를 편집하는 경우 [GitHub의 azure-docs 리포지토리에 대한 추가 정보](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md)를 참조하세요.
+> 이 섹션의 정보는 **sql-docs** 에 관련된 것입니다. Azure 설명서에서 SQL 문서를 편집하는 경우 [GitHub의 azure-docs 리포지토리에 대한 추가 정보](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md)를 참조하세요.
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 리포지토리는 콘텐츠를 구성하기 위해 여러 개의 표준 폴더를 사용합니다.
 
@@ -107,8 +107,8 @@ ms.locfileid: "92005841"
 - 일반적으로 사용되는 목록은 [SQL Server 버전 및 applies-to include 파일](applies-to-includes.md)을 참조하세요.
 - 동일한 기능 또는 관련된 작업을 다루는 다른 문서를 살펴봅니다. 해당 문서를 편집하는 경우 applies-to include에 대한 Markdown을 복사할 수 있습니다(제출하지 않고 편집을 취소할 수 있음).
 - 텍스트 "applies-to"를 포함하는 파일에 대한 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 디렉터리를 검색합니다. github에서 **찾기** 버튼을 사용하여 신속하게 필터링할 수 있습니다. 파일을 클릭하여 렌더링되는 방법을 확인합니다.
-- 명명 규칙에 유의하십시오. 이름에 x가 있는 경우 일반적으로 서비스에 대한 지원 부족을 나타내는 자리 표시자입니다. 예를 들어 **appliesto-xx-xxxx-asdw-xxx-md.md**는 **asdw**만 지정되고 다른 필드는 x로 표시되었기 때문에 Azure Synapse Analytics만 지원됨을 나타냅니다.
-- 일부 includes는 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**와 같은 버전 번호를 지정합니다. 특정 버전의 SQL Server를 사용하여 도입된 기능을 아는 경우 이러한 includes를 사용합니다.
+- 명명 규칙에 유의하십시오. 이름에 x가 있는 경우 일반적으로 서비스에 대한 지원 부족을 나타내는 자리 표시자입니다. 예를 들어 **appliesto-xx-xxxx-asdw-xxx-md.md** 는 **asdw** 만 지정되고 다른 필드는 x로 표시되었기 때문에 Azure Synapse Analytics만 지원됨을 나타냅니다.
+- 일부 includes는 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md** 와 같은 버전 번호를 지정합니다. 특정 버전의 SQL Server를 사용하여 도입된 기능을 아는 경우 이러한 includes를 사용합니다.
 
 ## <a name="contributor-resources"></a>참가자 리소스
 

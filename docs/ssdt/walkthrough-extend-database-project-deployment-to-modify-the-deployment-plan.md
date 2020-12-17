@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987707"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559115"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정
 
@@ -60,13 +60,13 @@ ms.locfileid: "91987707"
   
 2.  "Class1.cs" 파일 이름을 "SqlRestartableScriptContributor.cs"로 바꿉니다.  
   
-3.  솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭한 후 **참조 추가**를 클릭합니다.  
+3.  솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭한 후 **참조 추가** 를 클릭합니다.  
   
-4.  [프레임워크] 탭에서 **System.ComponentModel.Composition**을 선택합니다.  
+4.  [프레임워크] 탭에서 **System.ComponentModel.Composition** 을 선택합니다.  
   
-5.  **찾아보기**를 클릭하고 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 디렉터리로 이동하고 **Microsoft.SqlServer.TransactSql.ScriptDom.dll**을 선택한 후 **확인**을 클릭합니다.  
+5.  **찾아보기** 를 클릭하고 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 디렉터리로 이동하고 **Microsoft.SqlServer.TransactSql.ScriptDom.dll** 을 선택한 후 **확인** 을 클릭합니다.  
   
-6.  필요한 SQL 참조 추가: 프로젝트 노드를 마우스 오른쪽 단추로 클릭한 후 **참조 추가**를 클릭합니다. **찾아보기**를 클릭하고 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 폴더로 이동합니다. **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** 및 **Microsoft.Data.Tools.Schema.Sql.dll** 항목을 선택하고 **추가**를 클릭한 후 **확인**을 클릭합니다.  
+6.  필요한 SQL 참조 추가: 프로젝트 노드를 마우스 오른쪽 단추로 클릭한 후 **참조 추가** 를 클릭합니다. **찾아보기** 를 클릭하고 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 폴더로 이동합니다. **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** 및 **Microsoft.Data.Tools.Schema.Sql.dll** 항목을 선택하고 **추가** 를 클릭한 후 **확인** 을 클릭합니다.  
   
 그런 후 클래스에 코드 추가를 시작합니다.  
   
@@ -619,23 +619,23 @@ ms.locfileid: "91987707"
   
 #### <a name="to-sign-and-build-the-assembly"></a>어셈블리를 서명하고 빌드하려면  
   
-1.  **프로젝트** 메뉴에서 **MyOtherDeploymentContributor 속성**을 클릭합니다.  
+1.  **프로젝트** 메뉴에서 **MyOtherDeploymentContributor 속성** 을 클릭합니다.  
   
 2.  **서명** 탭을 클릭합니다.  
   
-3.  **어셈블리 서명**을 클릭합니다.  
+3.  **어셈블리 서명** 을 클릭합니다.  
   
-4.  **강력한 이름 키 파일 선택**에서 **<New>** 를 클릭합니다.  
+4.  **강력한 이름 키 파일 선택** 에서 **<New>** 를 클릭합니다.  
   
-5.  **강력한 이름 키 만들기** 대화 상자의 **키 파일 이름**에 **MyRefKey**를 입력합니다.  
+5.  **강력한 이름 키 만들기** 대화 상자의 **키 파일 이름** 에 **MyRefKey** 를 입력합니다.  
   
 6.  (선택 사항) 강력한 이름 키 파일에 대한 암호를 지정할 수 있습니다.  
   
-7.  **확인**을 클릭합니다.  
+7.  **확인** 을 클릭합니다.  
   
-8.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
+8.  **파일** 메뉴에서 **모두 저장** 을 클릭합니다.  
   
-9. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
+9. **빌드** 메뉴에서 **솔루션 빌드** 를 클릭합니다.  
   
     그런 다음 SQL 프로젝트를 배포할 때 로드되도록 어셈블리를 설치해야 합니다.  
   
@@ -711,7 +711,7 @@ ms.locfileid: "91987707"
   
     3.  게시할 서버 이름 및 데이터베이스 이름을 설정합니다.  
   
-    4.  대화 상자 아래쪽에 있는 옵션 중에서 **스크립트 생성**을 선택합니다. 그러면 배포에 사용할 수 있는 스크립트가 생성됩니다. 이제 이 스크립트를 조사해서 스크립트를 다시 시작할 수 있도록 IF 문이 추가되었는지 확인합니다.  
+    4.  대화 상자 아래쪽에 있는 옵션 중에서 **스크립트 생성** 을 선택합니다. 그러면 배포에 사용할 수 있는 스크립트가 생성됩니다. 이제 이 스크립트를 조사해서 스크립트를 다시 시작할 수 있도록 IF 문이 추가되었는지 확인합니다.  
   
     5.  생성된 배포 스크립트를 조사합니다. "Pre-Deployment Script Template" 섹션 바로 앞에 다음과 비슷한 Transact-SQL 구문이 표시되어야 합니다.  
   
@@ -775,7 +775,7 @@ ms.locfileid: "91987707"
         > 대상 데이터베이스와 동일한 데이터베이스 프로젝트를 배포할 경우 결과 보고서가 큰 의미가 없습니다. 의미 있는 결과를 얻기 위해서는 데이터베이스에 변경 내용을 배포하거나 새 데이터베이스를 배포하십시오.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>생성된 dacpac 파일을 사용해서 명령줄 배포  
-SQL 프로젝트가 빌드된 다음에는 명령줄에서 스키마를 배포하는 데 사용할 수 있는 dacpac 파일이 생성되어, 빌드 시스템과 같은 다른 시스템에서 배포를 수행할 수 있습니다. SqlPackage는 다른 여러 작업 중에서도 dacpac를 배포하거나 배포 스크립트를 생성하는 등 다양한 옵션이 포함된 dacpac 배포를 지원하는 명령줄 유틸리티입니다. 자세한 내용은 [SqlPackage.exe](../tools/sqlpackage.md)를 참조하세요.  
+SQL 프로젝트가 빌드된 다음에는 명령줄에서 스키마를 배포하는 데 사용할 수 있는 dacpac 파일이 생성되어, 빌드 시스템과 같은 다른 시스템에서 배포를 수행할 수 있습니다. SqlPackage는 다른 여러 작업 중에서도 dacpac를 배포하거나 배포 스크립트를 생성하는 등 다양한 옵션이 포함된 dacpac 배포를 지원하는 명령줄 유틸리티입니다. 자세한 내용은 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)를 참조하세요.  
   
 > [!NOTE]  
 > DeploymentContributors 속성이 정의된 프로젝트로부터 빌드된 dacpac를 성공적으로 배포할 수 있으려면 배포 참가자가 포함된 DLL이 사용 중인 컴퓨터에 설치되어 있어야 합니다. 배포를 성공적으로 완료하기 위해서는 필수로 표시되어 있기 때문입니다.  

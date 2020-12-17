@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470114"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 자습서: SQL 저장 프로시저에서 예측 실행
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "92412520"
 
 이 문서에서는 채점을 수행하는 두 가지 방법을 보여 줍니다.
 
-+ **일괄 처리 채점 모드** : 저장 프로시저에 대한 입력으로 SELECT 쿼리를 사용합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
++ **일괄 처리 채점 모드**: 저장 프로시저에 대한 입력으로 SELECT 쿼리를 사용합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
 
-+ **개별 점수 매기기 모드** : 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
++ **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
 이 문서에서는 다음을 수행합니다.
 

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 38920a0d7dda05b2dbd853035c4ce0c17ffd74f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192633"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470034"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server를 사용하여 데이터 기능 만들기(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92192633"
 > * 사용자 지정 R 함수 사용
 > * [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 지정 T-SQL 함수 사용
 
-목표는 원본 열과 새로운 숫자 기능인 *direct_distance*를 포함하는 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 세트를 만드는 것입니다.
+목표는 원본 열과 새로운 숫자 기능인 *direct_distance* 를 포함하는 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 세트를 만드는 것입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -42,7 +42,7 @@ ms.locfileid: "92192633"
 
 R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있지만 여전히 사용자 지정 데이터 변환을 만들어야 할 수 있습니다.
 
-R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 랩톱으로 가져온 다음, 위도 및 경도 값으로 지정된 두 지점 사이의 직선 거리를 계산하는 사용자 지정 R 함수 *ComputeDist*를 실행합니다.
+R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 랩톱으로 가져온 다음, 위도 및 경도 값으로 지정된 두 지점 사이의 직선 거리를 계산하는 사용자 지정 R 함수 *ComputeDist* 를 실행합니다.
 
 1. 앞에서 만든 데이터 원본 개체는 상위 1000개 행만 가져온다는 사실을 기억하세요. 모든 데이터를 가져오는 쿼리를 정의하겠습니다.
 
@@ -85,7 +85,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     + 첫 번째 줄에서는 새 환경을 정의합니다. R에서는 환경을 사용하여 네임스페이스를 패키지 등에 캡슐화할 수 있습니다. `search()` 함수를 사용하여 작업 영역의 환경을 볼 수 있습니다. 특정 환경의 개체를 보려면 `ls(<envname>)`를 입력합니다.
     + `$env.ComputeDist` 로 시작하는 줄에는 구의 두 점 간 *대권 거리* 를 계산하는 haversine 수식을 정의하는 코드가 포함되어 있습니다.
 
-4. 함수를 정의했으므로, 데이터에 함수를 적용하여 새 기능 열 *direct_distance*를 만듭니다. 그러나 변환을 실행하기 전에 컴퓨팅 컨텍스트를 로컬로 변경합니다.
+4. 함수를 정의했으므로, 데이터에 함수를 적용하여 새 기능 열 *direct_distance* 를 만듭니다. 그러나 변환을 실행하기 전에 컴퓨팅 컨텍스트를 로컬로 변경합니다.
 
     ```R
     rxSetComputeContext("local");
@@ -115,7 +115,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     
     다른 데이터 원본에서는 *varsToKeep* 및 *varsToDrop* 인수를 사용할 수 있지만, SQL Server 데이터 원본에는 지원되지 않습니다. 따라서 이 예에서는 _transform_ 인수를 사용하여 통과 열과 변환된 열을 모두 지정했습니다. 또한 SQL Server 컴퓨팅 컨텍스트에서 실행하는 경우 _inData_ 인수는 SQL Server 데이터 원본만 사용할 수 있습니다.
 
-    이전 코드를 더 큰 데이터 세트에서 실행하면 경고 메시지가 생성될 수도 있습니다. 행 수와 생성되는 열 수를 곱한 값이 설정된 값(기본값은 3,000,000)을 초과하면 rxDataStep은 경고를 반환하고, 반환된 데이터 프레임의 행 수는 잘립니다. 이 경고를 제거하려면 rxDataStep 함수에서 _maxRowsByCols_ 인수를 수정하면 됩니다. 그러나 _maxRowsByCols_가 너무 크면 데이터 프레임을 메모리에 로드할 때 문제가 발생할 수 있습니다.
+    이전 코드를 더 큰 데이터 세트에서 실행하면 경고 메시지가 생성될 수도 있습니다. 행 수와 생성되는 열 수를 곱한 값이 설정된 값(기본값은 3,000,000)을 초과하면 rxDataStep은 경고를 반환하고, 반환된 데이터 프레임의 행 수는 잘립니다. 이 경고를 제거하려면 rxDataStep 함수에서 _maxRowsByCols_ 인수를 수정하면 됩니다. 그러나 _maxRowsByCols_ 가 너무 크면 데이터 프레임을 메모리에 로드할 때 문제가 발생할 수 있습니다.
 
 7. 원한다면 [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo)를 호출하여 변환된 데이터 원본의 스키마를 검사할 수 있습니다.
 
@@ -129,7 +129,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
 
 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 또는 다른 쿼리 편집기로 전환하여 T-SQL 스크립트를 실행합니다.
 
-1. *fnCalculateDistance*라는 SQL 함수를 사용합니다. 이 함수가 이미 NYCTaxi_Sample 데이터베이스에 있어야 합니다. 개체 탐색기에서 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > dbo.fnCalculateDistance 경로를 탐색하여 이 함수가 있는지 확인합니다.
+1. *fnCalculateDistance* 라는 SQL 함수를 사용합니다. 이 함수가 이미 NYCTaxi_Sample 데이터베이스에 있어야 합니다. 개체 탐색기에서 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > dbo.fnCalculateDistance 경로를 탐색하여 이 함수가 있는지 확인합니다.
 
     이 함수가 없으면 SQL Server Management Studio를 사용하여 NYCTaxi_Sample 데이터베이스에서 함수를 생성합니다.
 
@@ -192,7 +192,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
     > [!TIP]
     > 이 연습을 더 빨리 진행하기 위해 이 쿼리는 더 작은 데이터 샘플을 가져오도록 수정되었습니다. 환경에 따라 모든 데이터를 가져오기 위해 TABLESAMPLE 절을 제거해도 됩니다. 그러나 환경에 따라 전체 데이터 세트를 R에 로드할 수 없는 경우도 있으며, 이 경우 오류가 발생합니다.
   
-5. 다음 코드 줄을 사용하여 R 환경에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 호출하고 *featureEngineeringQuery*에서 정의된 데이터에 적용합니다.
+5. 다음 코드 줄을 사용하여 R 환경에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 호출하고 *featureEngineeringQuery* 에서 정의된 데이터에 적용합니다.
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
@@ -203,7 +203,7 @@ R 사용자에게 익숙한 방식부터 해보겠습니다. 즉, 데이터를 �
       connectionString = connStr)
     ```
   
-6.  새 기능을 만들었으므로, 이제 **rxGetVarsInfo**를 호출하여 기능 테이블에 데이터 요약을 만듭니다.
+6.  새 기능을 만들었으므로, 이제 **rxGetVarsInfo** 를 호출하여 기능 테이블에 데이터 요약을 만듭니다.
   
     ```R
     rxGetVarInfo(data = featureDataSource)
@@ -246,7 +246,7 @@ SQL 사용자 지정 함수 예제에서 이 코드를 사용하여 SQL 함수�
 네트워크 속도 및 하드웨어 구성에 따라 시간이 크게 달라질 수 있습니다. 우리가 테스트한 구성에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 방법이 사용자 지정 R 함수를 사용하는 것보다 빨랐습니다. 따라서 이후 단계에서 이러한 계산에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하고 있습니다.
 
 > [!TIP]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 기능 엔지니어링이 R보다 빠른 경우가 매우 많습니다. 예를 들어 T-SQL에는 데이터 과학자가 연속 이동 평균 및 *n*타일과 같은 일반적인 데이터 과학 계산에 적용할 수 있는 빠른 기간 이동 및 순위 함수가 포함되어 있습니다. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
+> [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 기능 엔지니어링이 R보다 빠른 경우가 매우 많습니다. 예를 들어 T-SQL에는 데이터 과학자가 연속 이동 평균 및 *n* 타일과 같은 일반적인 데이터 과학 계산에 적용할 수 있는 빠른 기간 이동 및 순위 함수가 포함되어 있습니다. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

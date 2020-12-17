@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1974c58ad2adbad3b7e136ffa36ffa88b5783fc6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470054"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 빌드하여 SQL Server에 저장(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -119,7 +119,7 @@ GO
 
     + 이 예제를 더 간소화하기 위해 로지스틱 회귀 모델에 대한 입력은 모델 학습에 사용한 것과 동일한 기능 데이터 원본(`sql_feature_ds`)입니다.  대체로 점수를 매길 새 데이터가 있거나, 테스트 및 학습을 위해 일부 데이터를 따로 보관했을 수 있습니다.
   
-    + 예측 결과는 _taxiscoreOutput_테이블에 저장됩니다. rxSqlServerData를 사용하여 만들 때 이 테이블에 대한 스키마는 정의되지 않습니다. 스키마는 rxPredict 출력에서 가져옵니다.
+    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장됩니다. rxSqlServerData를 사용하여 만들 때 이 테이블에 대한 스키마는 정의되지 않습니다. 스키마는 rxPredict 출력에서 가져옵니다.
   
     + 예측된 값을 저장하는 테이블을 만들려면 rxSqlServer 데이터 함수를 실행하는 SQL 로그인에 데이터베이스에 대한 DDL 권한이 있어야 합니다. 로그인이 테이블을 만들 수 없는 경우에는 문이 실패합니다.
 
@@ -155,7 +155,7 @@ GO
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    이 호출은 ROC 차트 계산에 사용되는 값을 반환합니다. 레이블 열은 _tipped_로, _점수_ 열에는 예측이 있는 반면, 예측하려는 실제 결과를 포함합니다.
+    이 호출은 ROC 차트 계산에 사용되는 값을 반환합니다. 레이블 열은 _tipped_ 로, _점수_ 열에는 예측이 있는 반면, 예측하려는 실제 결과를 포함합니다.
 
 2. 실제로 차트를 그리려면 ROC 개체를 저장한 다음, 플롯 함수를 사용하여 그릴 수 있습니다. 이 그래프는 원격 컴퓨팅 컨텍스트에서 생성된 다음, R 환경으로 반환됩니다.
 
@@ -203,7 +203,7 @@ GO
 
 ## <a name="deploy-the-model"></a>모델 배포
 
-모델을 빌드하고 잘 작동됨을 확인한 후 조직의 사용자나 사람들이 모델을 사용할 수 있는 사이트에 배치하거나, 정기적으로 모델을 다시 학습하고 다시 보정할 수 있습니다. 이 프로세스를 모델 *운영화*라고도 합니다. SQL Server에서 운영화는 저장 프로시저에 R 코드를 포함하여 달성할 수 있습니다. 코드는 프로시저에 있으므로 SQL Server에 연결할 수 있는 모든 애플리케이션에서 호출될 수 있습니다.
+모델을 빌드하고 잘 작동됨을 확인한 후 조직의 사용자나 사람들이 모델을 사용할 수 있는 사이트에 배치하거나, 정기적으로 모델을 다시 학습하고 다시 보정할 수 있습니다. 이 프로세스를 모델 *운영화* 라고도 합니다. SQL Server에서 운영화는 저장 프로시저에 R 코드를 포함하여 달성할 수 있습니다. 코드는 프로시저에 있으므로 SQL Server에 연결할 수 있는 모든 애플리케이션에서 호출될 수 있습니다.
 
 그러나 외부 애플리케이션에서 모델을 호출하려면 먼저 프로덕션에서 사용되는 데이터베이스에 모델을 저장해야 합니다. 학습된 모델은 **varbinary(max)** 형식의 단일 열에 이진 형식으로 저장됩니다.
 
@@ -223,7 +223,7 @@ GO
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. **RODBC**를 사용하여 ODBC 연결을 엽니다. 패키지를 이미 로드한 경우 RODBC에 대한 호출을 생략할 수 있습니다.
+2. **RODBC** 를 사용하여 ODBC 연결을 엽니다. 패키지를 이미 로드한 경우 RODBC에 대한 호출을 생략할 수 있습니다.
 
     ```R
     library(RODBC);
@@ -237,9 +237,9 @@ GO
     sqlQuery (conn, q);
     ```
 
-4. Management Studio를 사용하여 모델이 있는지 확인합니다. 개체 탐색기에서 **nyc_taxi_models** 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택**을 클릭합니다. 결과에서 **models** 열에 이진 표현이 표시됩니다.
+4. Management Studio를 사용하여 모델이 있는지 확인합니다. 개체 탐색기에서 **nyc_taxi_models** 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택** 을 클릭합니다. 결과에서 **models** 열에 이진 표현이 표시됩니다.
 
-테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 *PersistModel*과 같이 저장 프로시저에 래핑되는 경우가 많습니다.
+테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 *PersistModel* 과 같이 저장 프로시저에 래핑되는 경우가 많습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

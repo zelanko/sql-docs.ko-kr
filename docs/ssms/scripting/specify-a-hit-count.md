@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae3ee2fe3e8219229d3975cfb59819f4fa8e1513
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036286"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466224"
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
 
@@ -59,7 +59,7 @@ ms.locfileid: "92036286"
   
 2.  **중단점 적중 횟수** 대화 상자의 **중단점이 적중될 때** 상자에서 원하는 동작을 선택합니다.  
   
-     **항상 중단**이 아닌 다른 설정을 선택하면 목록 오른쪽에 입력란이 나타납니다. 이 입력란에 정수를 입력하여 원하는 적중 횟수를 지정합니다.  
+     **항상 중단** 이 아닌 다른 설정을 선택하면 목록 오른쪽에 입력란이 나타납니다. 이 입력란에 정수를 입력하여 원하는 적중 횟수를 지정합니다.  
   
 3.  **확인** 을 클릭하여 변경 내용을 구현하거나 **취소** 를 클릭하여 변경 내용을 적용하지 않고 종료합니다.  
   

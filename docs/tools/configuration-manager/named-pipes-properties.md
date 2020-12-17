@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: efeb00d679ca93e45da50988b36710a8f4c9dbe2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c4929816503430c151c80735078d6a71b0221e71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463848"
 ---
 # <a name="named-pipes-properties"></a>명명된 파이프 속성
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88900453"
   
 ## <a name="options"></a>옵션  
  **Enabled**  
- 가능한 값은 **예** 및 **아니요**입니다.  
+ 가능한 값은 **예** 및 **아니요** 입니다.  
   
  **파이프 이름**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수신 대기하는 명명된 파이프를 지정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 기본 인스턴스의 경우 `\\.\pipe\sql\query` 에서 수신하고, 명명된 인스턴스의 경우 `\\.\pipe\MSSQL$<instancename>\sql\query` 에서 수신합니다. 이 필드는 2047자로 제한됩니다.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bdf33a22b10a5a10dc14f0ecce870ce43fc33aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036381"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466314"
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "92036381"
   
 1.  검색할 항목을 엽니다.  
   
-2.  **편집** 메뉴에서 **찾기 및 바꾸기** 를 가리킨 다음 **빠른 찾기**를 클릭합니다.  
+2.  **편집** 메뉴에서 **찾기 및 바꾸기** 를 가리킨 다음 **빠른 찾기** 를 클릭합니다.  
   
 3.  **찾기 및 바꾸기** 입력란에 검색할 텍스트를 입력합니다.  
   
-4.  **찾는 위치** 목록에서 **모든 열린 문서**를 선택합니다.  
+4.  **찾는 위치** 목록에서 **모든 열린 문서** 를 선택합니다.  
   
     > [!NOTE]  
     >  **모든 열린 문서** 를 선택한 경우 열려 있는 특정 파일이 검색되지 않을 수 있습니다. 텍스트 뷰(예: 코드 뷰)에서 현재 열려 있는 파일만 검색에 포함됩니다. 디자이너 뷰의 파일은 검색에 포함되지 않습니다.  
@@ -47,21 +47,21 @@ ms.locfileid: "92036381"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>모든 활성 파일에서 대화형으로 바꾸려면  
   
-1.  **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 바꾸기**를 클릭합니다.  
+1.  **편집** 메뉴에서 **찾기 및 바꾸기** 를 가리킨 다음 **빠른 바꾸기** 를 클릭합니다.  
   
 2.  **찾을 내용** 상자에 검색할 텍스트를 입력합니다.  
   
 3.  **바꿀 내용** 상자에 검색 텍스트를 바꿀 텍스트를 입력합니다.  
   
-4.  **찾는 위치** 목록에서 **모든 열린 문서**를 선택합니다.  
+4.  **찾는 위치** 목록에서 **모든 열린 문서** 를 선택합니다.  
   
-5.  **바꾸기**를 클릭하고 마지막 파일의 마지막 항목이 바뀔 때까지 계속해서 **바꾸기** 를 클릭합니다. 바꾸지 않을 항목을 건너뛰려면 **다음 찾기** 를 클릭합니다.  
+5.  **바꾸기** 를 클릭하고 마지막 파일의 마지막 항목이 바뀔 때까지 계속해서 **바꾸기** 를 클릭합니다. 바꾸지 않을 항목을 건너뛰려면 **다음 찾기** 를 클릭합니다.  
   
      또는  
   
      **모두 바꾸기** 를 선택하여 일치하는 모든 항목을 바꿉니다. 바뀐 항목의 총 개수가 표시되는 메시지 상자가 나타납니다.  
   
- **모두 바꾸기** 명령은 **다음 찾기** 단추로 건너뛴 항목을 비롯하여 일치하는 모든 항목을 바꿉니다. **모두 바꾸기**를 취소하려면 파일을 닫기 전에 **편집** 메뉴에서 **실행 취소** 를 클릭합니다.  
+ **모두 바꾸기** 명령은 **다음 찾기** 단추로 건너뛴 항목을 비롯하여 일치하는 모든 항목을 바꿉니다. **모두 바꾸기** 를 취소하려면 파일을 닫기 전에 **편집** 메뉴에서 **실행 취소** 를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [활성 문서에서 입력하는 순서대로 검색](./search-an-active-document-incrementally.md)   

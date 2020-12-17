@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a04c680b5f9753619c0f069ad6c9956bc675cc1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f8e9ba976f3b5c0689eb69aec3a10bba38f70fd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466414"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
 
@@ -28,7 +28,7 @@ ms.locfileid: "89093569"
 ## <a name="creating-a-transact-sql-snippet-file"></a>Transact-SQL 코드 조각 파일 만들기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 만드는 첫 번째 단계는 사용자 코드 조각의 텍스트가 포함된 XML 파일을 만드는 것입니다. 이 파일은 파일 확장명이 .snippet이고 [코드 조각 스키마](https://go.microsoft.com/fwlink/?LinkId=207504)의 요구 사항을 충족해야 합니다. 코드 조각 언어는 SQL로 설정합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 제공되는 미리 정의된 코드 조각을 예로 사용할 수 있습니다. 미리 정의된 코드 조각을 찾으려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 **도구** 메뉴를 선택한 다음 **코드 조각 관리자**를 클릭합니다. **언어** 목록 상자에서 **SQL** 을 선택하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각의 경로가 **위치** 상자에 표시됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 제공되는 미리 정의된 코드 조각을 예로 사용할 수 있습니다. 미리 정의된 코드 조각을 찾으려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 **도구** 메뉴를 선택한 다음 **코드 조각 관리자** 를 클릭합니다. **언어** 목록 상자에서 **SQL** 을 선택하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각의 경로가 **위치** 상자에 표시됩니다.  
   
 ## <a name="registering-the-code-snippet"></a>코드 조각 등록  
  코드 조각 파일을 만든 후에는 코드 조각 관리자를 사용하여 코드 조각을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 등록합니다. 여러 코드 조각이 들어 있는 폴더를 추가하거나 개별 코드 조각을 **내 코드 조각** 폴더로 가져올 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "89093569"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  **도구** 메뉴를 선택하고 **코드 조각 관리자**를 클릭합니다.  
+2.  **도구** 메뉴를 선택하고 **코드 조각 관리자** 를 클릭합니다.  
   
 3.  **추가** 단추를 클릭합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "89093569"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  **도구** 메뉴를 선택하고 **코드 조각 관리자**를 클릭합니다.  
+2.  **도구** 메뉴를 선택하고 **코드 조각 관리자** 를 클릭합니다.  
   
 3.  **가져오기** 단추를 클릭합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "89093569"
   
 2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-3.  **도구** 메뉴를 선택하고 **코드 조각 관리자**를 클릭합니다.  
+3.  **도구** 메뉴를 선택하고 **코드 조각 관리자** 를 클릭합니다.  
   
 4.  **가져오기** 단추를 클릭합니다.  
   

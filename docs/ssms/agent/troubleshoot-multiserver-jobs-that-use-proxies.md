@@ -14,13 +14,13 @@ ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cc15f5e73a52a74d5b73dfa8df704123f122b66
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 620069c07ebd5f355f93b486a0430182d80ea613
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038748"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466374"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>프록시를 사용하는 다중 서버 작업 문제 해결
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92038748"
   
 -   "작업 단계에 프록시 계정이 필요하지만 일치하는 프록시를 대상 서버에서 사용할 수 없습니다."  
   
-    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL**의 값입니다.\<*n*> 인스턴스 이름입니다. 예: **MSSQL.1** 또는 **MSSQL.3**.  
+    이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위키를 **1(true)** 로 설정합니다. 기본적으로 이 하위 키는 **0** (**false**)으로 설정됩니다. **MSSQL** 의 값입니다.\<*n*> 인스턴스 이름입니다. 예: **MSSQL.1** 또는 **MSSQL.3**.  
   
 -   "프록시를 찾을 수 없습니다."  
   

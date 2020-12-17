@@ -15,13 +15,13 @@ ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a41c43454c91a95f3d359319f99597704c6b859e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 480872ee1465590fc7beb3c002b11a99bbfde79c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440434"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "92038260"
   
 #### <a name="to-define-transact-sql-job-step-options"></a>Transact-SQL 작업 단계 옵션을 정의하려면  
   
-1.  **개체 탐색기**에서 **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+1.  **개체 탐색기** 에서 **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
-2.  **단계** 페이지를 클릭하고 작업 단계를 클릭한 다음 **편집**을 클릭합니다.  
+2.  **단계** 페이지를 클릭하고 작업 단계를 클릭한 다음 **편집** 을 클릭합니다.  
   
-3.  **작업 단계 속성** 대화 상자에서 작업 유형이 **T-SQL(Transact-SQL) 스크립트**임을 확인한 다음 **고급** 페이지를 선택합니다.  
+3.  **작업 단계 속성** 대화 상자에서 작업 유형이 **T-SQL(Transact-SQL) 스크립트** 임을 확인한 다음 **고급** 페이지를 선택합니다.  
   
 4.  **성공한 경우 동작** 목록에서 작업이 성공한 경우에 수행할 동작을 선택합니다.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "92038260"
   
 8.  작업이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트인 경우 다음 옵션을 선택할 수 있습니다.  
   
-    -   **출력 파일**이름을 입력합니다. 기본적으로 작업 단계가 실행될 때마다 파일을 덮어씁니다. 출력 파일을 덮어쓰지 않으려면 **기존 파일에 출력 추가**를 선택합니다. 이 옵션은 **sysadmin** 고정 서버 역할의 멤버만 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 사용자가 파일 시스템의 임의 파일을 볼 수 없으므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 파일 시스템에 기록된 작업 단계 로그를 볼 수 없습니다.  
+    -   **출력 파일** 이름을 입력합니다. 기본적으로 작업 단계가 실행될 때마다 파일을 덮어씁니다. 출력 파일을 덮어쓰지 않으려면 **기존 파일에 출력 추가** 를 선택합니다. 이 옵션은 **sysadmin** 고정 서버 역할의 멤버만 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 사용자가 파일 시스템의 임의 파일을 볼 수 없으므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 파일 시스템에 기록된 작업 단계 로그를 볼 수 없습니다.  
   
-    -   작업 단계를 데이터베이스 테이블에 기록하려면 **테이블에 기록** 을 선택합니다. 기본적으로 작업 단계가 실행될 때마다 테이블 내용을 덮어씁니다. 테이블 내용을 덮어쓰지 않으려면 **테이블의 기존 항목에 출력 추가**를 선택합니다. 작업 단계가 실행된 다음에는 **뷰**를 클릭하여 이 테이블의 내용을 볼 수 있습니다.  
+    -   작업 단계를 데이터베이스 테이블에 기록하려면 **테이블에 기록** 을 선택합니다. 기본적으로 작업 단계가 실행될 때마다 테이블 내용을 덮어씁니다. 테이블 내용을 덮어쓰지 않으려면 **테이블의 기존 항목에 출력 추가** 를 선택합니다. 작업 단계가 실행된 다음에는 **뷰** 를 클릭하여 이 테이블의 내용을 볼 수 있습니다.  
   
     -   출력을 단계 기록에 포함하려면 **기록에 단계 출력 포함** 을 선택합니다. 출력은 오류가 없을 때만 표시됩니다. 또한 출력이 잘릴 수도 있습니다.  
   

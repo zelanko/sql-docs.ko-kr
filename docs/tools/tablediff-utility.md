@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fc5868edc1456f2588d450f60a23a4de36afaa07
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71becc4645aa71a3e6d60a00766b913546ff7c22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463714"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -133,13 +133,13 @@ tablediff
  큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. 이 데이터 형식에는 **text**, **ntext**, **이미지**, **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 가 포함됩니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
   
  **-bf**  _number_of_statements_  
- [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements* 를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
   
  **-c**  
  열 수준에서 차이점을 비교합니다.  
   
  **-dt**  
- *table_name*에 지정된 결과 테이블이 이미 있는 경우 삭제합니다.  
+ *table_name* 에 지정된 결과 테이블이 이미 있는 경우 삭제합니다.  
   
  **-et** _table_name_  
  만들 결과 테이블의 이름을 지정합니다. 이 테이블이 이미 있을 경우 **-DT** 를 사용해야 합니다. 그렇지 않으면 작업이 실패합니다.  
@@ -182,7 +182,7 @@ tablediff
   
 |원본 데이터 형식|대상 데이터 형식|  
 |----------------------|---------------------------|  
-|**tinyint**|**smallint**, **int**또는 **bigint**|  
+|**tinyint**|**smallint**, **int** 또는 **bigint**|  
 |**smallint**|**int** 또는 **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  

@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 28dcbe177f5bc91ea73170978e2da9022154976f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470664"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server에서 일반적인 R 스크립팅 오류
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ R 스크립트는 다음과 같은 여러 가지 이유로 SQL Server 컨텍스�
 
 그 이유는 R Services에 대해 만들어진 작업자 계정에 서버에 연결할 수 있는 권한이 없기 때문입니다. 따라서 ODBC 호출은 사용자를 대신하여 실행할 수 없습니다. SQL 로그인을 사용하면 자격 증명이 R 클라이언트에서 SQL Server 인스턴스로 명시적으로 전달된 다음, ODBC에 전달되기 때문에 SQL 로그인에 문제가 발생하지 않습니다. 그러나 SQL 로그인 사용은 Windows 인증을 사용하는 것보다 안전성이 더 떨어집니다.
 
-원격으로 시작된 스크립트에서 Windows 자격 증명을 안전하게 전달할 수 있도록 하려면 SQL Server에서 자격 증명을 에뮬레이션해야 합니다. 이 프로세스를 _암시적 인증_이라고 합니다. 이 작업을 수행하려면 SQL Server 컴퓨터에서 R 또는 Python 스크립트를 실행하는 작업자 계정에 올바른 권한이 있어야 합니다.
+원격으로 시작된 스크립트에서 Windows 자격 증명을 안전하게 전달할 수 있도록 하려면 SQL Server에서 자격 증명을 에뮬레이션해야 합니다. 이 프로세스를 _암시적 인증_ 이라고 합니다. 이 작업을 수행하려면 SQL Server 컴퓨터에서 R 또는 Python 스크립트를 실행하는 작업자 계정에 올바른 권한이 있어야 합니다.
 
 1. R 코드를 실행할 인스턴스에서 관리자 권한으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.
 
