@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9601deea339bbbc8875bbb593a4efef42cdd070d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92257770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477154"
 ---
 # <a name="editions-and-supported-features-of-sssqlv15-md"></a>의 버전 및 지원하는 기능[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
@@ -148,29 +148,29 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |기능|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |-------|:--------:|:------:|:-:|--------------------------------:|:-----:|
 |Server Core 지원<sup>1</sup>|예|예|예|예|예|
-|로그 전달|예|예|예|아니요|아니요|
+|로그 전달|예|예|예|예|아니요|
 |데이터베이스 미러링|예|예<sup>2</sup>|예<sup>3</sup>|예<sup>3</sup>|예<sup>3</sup>|
-|백업 압축|예|예|아니요|아니요|예|
+|백업 압축|예|예|예|예|예|
 |데이터베이스 스냅샷|예|예|예|예|예|
-|Always On 장애 조치(failover) 클러스터 인스턴스<sup>4</sup>|예|예|아니요|아니요|아니요|
-|Always On 가용성 그룹<sup>5</sup>|예|아니요|아니요|아니요|아니요|
-|기본 가용성 그룹<sup>6</sup>|아니요|예|아니요|아니요|아니요|
-|자동 읽기 쓰기 연결 다시 라우팅 |예|아니요|아니요|아니요|예|
-|온라인 페이지 및 파일 복원|예|아니요|아니요|아니요|아니요|
-|온라인 인덱스 만들기 및 다시 작성|예|아니요|아니요|아니요|예|
-|다시 시작 가능한 온라인 인덱스 다시 작성|예|아니요|아니요|아니요|예|
-|온라인 스키마 변경|예|아니요|아니요|아니요|예|
-|빠른 복구|예|아니요|아니요|아니요|아니요|
-|가속 데이터베이스 복구|예|예|예|아니요|예|
-|미러된 백업|예|아니요|아니요|아니요|예|
-|Hot Add 메모리 및 CPU|예|아니요|아니요|아니요|아니요|
+|Always On 장애 조치(failover) 클러스터 인스턴스<sup>4</sup>|예|예|예|예|아니요|
+|Always On 가용성 그룹<sup>5</sup>|예|예|예|예|아니요|
+|기본 가용성 그룹<sup>6</sup>|아니요|예|예|예|아니요|
+|자동 읽기 쓰기 연결 다시 라우팅 |예|예|예|예|예|
+|온라인 페이지 및 파일 복원|예|예|예|예|아니요|
+|온라인 인덱스 만들기 및 다시 작성|예|예|예|예|예|
+|다시 시작 가능한 온라인 인덱스 다시 작성|예|예|예|예|예|
+|온라인 스키마 변경|예|예|예|예|예|
+|빠른 복구|예|예|예|예|아니요|
+|가속 데이터베이스 복구|예|예|예|예|예|
+|미러된 백업|예|예|예|예|예|
+|Hot Add 메모리 및 CPU|예|예|예|예|아니요|
 |데이터베이스 복구 관리자|예|예|예|예|예|
-|암호화된 백업|예|예|아니요|아니요|아니요|
-|Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|예|아니요|아니요|
-|클러스터 없는 가용성 그룹<sup>5, 6</sup>|예|예|아니요|아니요|아니요|
-|재해 복구용 장애 조치(failover) 서버<sup>7</sup>|예|예|아니요|아니요|아니요|
-|고가용성용 장애 조치(failover) 서버<sup>7</sup>|예|예|아니요|아니요|아니요|
-|Azure 내 재해 복구용 장애 조치(failover) 서버<sup>7</sup>|예|예|아니요|아니요|아니요|
+|암호화된 백업|예|예|예|예|아니요|
+|Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|예|예|아니요|
+|클러스터 없는 가용성 그룹<sup>5, 6</sup>|예|예|예|예|아니요|
+|재해 복구용 장애 조치(failover) 서버<sup>7</sup>|예|예|예|예|아니요|
+|고가용성용 장애 조치(failover) 서버<sup>7</sup>|예|예|예|예|아니요|
+|Azure 내 재해 복구용 장애 조치(failover) 서버<sup>7</sup>|예|예|예|예|아니요|
 
 <sup>1</sup> Server Core에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하는 방법에 대한 자세한 내용은 [Server Core에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.
 
@@ -192,32 +192,32 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
 |Columnstore<sup>1</sup> <sup>2</sup>|예|예|예|예|예|
 |클러스터형 columnstore 인덱스의 큰 개체 이진 파일|예|예|예|예|예|
-|온라인 비클러스터형 columnstore 인덱스 다시 작성|예|아니요|아니요|아니요|아니요|
+|온라인 비클러스터형 columnstore 인덱스 다시 작성|예|예|예|예|아니요|
 |메모리 내 데이터베이스: 메모리 내 OLTP<sup>1</sup>|예|예|예|예<sup>3</sup>|예|
-|메모리 내 데이터베이스: 하이브리드 버퍼 풀|예|예|아니요|아니요|아니요|
-|메모리 내 데이터베이스: 메모리 최적화 tempdb 메타데이터|예|아니요|아니요|아니요|아니요|
+|메모리 내 데이터베이스: 하이브리드 버퍼 풀|예|예|예|예|아니요|
+|메모리 내 데이터베이스: 메모리 최적화 tempdb 메타데이터|예|예|예|예|아니요|
 |메모리 내 데이터베이스: 영구 메모리 지원|예|예|예|예|예|
 |스트레치 데이터베이스|예|예|예|예|예|
 |다중 인스턴스 지원|50|50|50|50|50|
 |테이블 및 인덱스 분할|예|예|예|예|예|
 |데이터 압축|예|예|예|예|예|
-|리소스 관리자|예|아니요|아니요|아니요|아니요|
-|분할된 테이블 병렬 처리|예|아니요|아니요|아니요|아니요|
+|리소스 관리자|예|예|예|예|아니요|
+|분할된 테이블 병렬 처리|예|예|예|예|아니요|
 |여러 Filestream 컨테이너|예|예|예|예|예|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니요|아니요|아니요|아니요|
-|버퍼 풀 확장|예|예|아니요|아니요|아니요|
-|I/O 리소스 거버넌스|예|아니요|아니요|아니요|아니요|
-|미리 읽기|예|아니요|아니요|아니요|아니요|
-|고급 검색|예|아니요|아니요|아니요|아니요|
+|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|예|예|예|아니요|
+|버퍼 풀 확장|예|예|예|예|아니요|
+|I/O 리소스 거버넌스|예|예|예|예|아니요|
+|미리 읽기|예|예|예|예|아니요|
+|고급 검색|예|예|예|예|아니요|
 |지연된 내구성|예|예|예|예|예|
-|지능형 데이터베이스: 자동 조정|예|아니요|아니요|아니요|아니요|
-|지능형 데이터베이스: 행 저장소 일괄 처리 모드<sup>1</sup>|예|아니요|아니요|아니요|아니요|
-|지능형 데이터베이스: 행 모드 메모리 부여 피드백|예|아니요|아니요|아니요|아니요|
+|지능형 데이터베이스: 자동 조정|예|예|예|예|아니요|
+|지능형 데이터베이스: 행 저장소 일괄 처리 모드<sup>1</sup>|예|예|예|예|아니요|
+|지능형 데이터베이스: 행 모드 메모리 부여 피드백|예|예|예|예|아니요|
 |지능형 데이터베이스: 대략적 고유 수|예|예|예|예|예|
 |지능형 데이터베이스: 테이블 변수 지연 컴파일|예|예|예|예|예|
 |지능형 데이터베이스: 스칼라 UDF 인라인 처리|예|예|예|예|예|
-|일괄 처리 모드 적응 조인|예|아니요|아니요|아니요|아니요|
-|일괄 처리 모드 메모리 부여 피드백|예|아니요|아니요|아니요|아니요|
+|일괄 처리 모드 적응 조인|예|예|예|예|아니요|
+|일괄 처리 모드 메모리 부여 피드백|예|예|예|예|아니요|
 |다중 문 테이블 반환 함수에 대한 인터리브 실행|예|예|예|예|예|
 |대량 삽입 기능 개선|예|예|예|예|예|
 
@@ -237,26 +237,26 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |동적 데이터 마스킹|예|예|예|예|예|
 |서버 감사|예|예|예|예|예|
 |데이터베이스 감사|예|예|예|예|예|
-|투명한 데이터베이스 암호화|예|예|예|아니요|아니요|
-|확장 가능 키 관리|예|예|아니요|아니요|예|
+|투명한 데이터베이스 암호화|예|예|예|예|아니요|
+|확장 가능 키 관리|예|예|예|예|예|
 |사용자 정의 역할|예|예|예|예|예|
 |포함된 데이터베이스|예|예|예|예|예|
-|백업을 위한 암호화|예|예|아니요|아니요|아니요|
+|백업을 위한 암호화|예|예|예|예|아니요|
 |데이터 분류 및 감사|예|예|예|예|예|
 
 ## <a name="replication"></a><a name="Replication"></a> 복제
 
 |기능|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
-|다른 유형의 구독자|예|예|아니요|아니요|아니요|
+|다른 유형의 구독자|예|예|예|예|아니요|
 |병합 복제|예|예|예<sup>1</sup>|예<sup>1</sup>|예<sup>1</sup>|
-|Oracle 게시|예|아니요|아니요|아니요|아니요|
-|피어 투 피어 트랜잭션 복제|예|아니요|아니요|아니요|아니요|
+|Oracle 게시|예|예|예|예|아니요|
+|피어 투 피어 트랜잭션 복제|예|예|예|예|아니요|
 |스냅샷 복제|예|예|예<sup>1</sup>|예<sup>1</sup>|예<sup>1</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용 추적|예|예|예|예|예|
 |트랜잭션 복제|예|예|예<sup>1</sup>|예<sup>1</sup>|예<sup>1</sup>|
-|Azure에 대한 트랜잭션 복제|예|예|아니요|아니요|아니요|
-|트랜잭션 복제 업데이트 가능한 구독|예|예|아니요|아니요|아니요|
+|Azure에 대한 트랜잭션 복제|예|예|예|예|아니요|
+|트랜잭션 복제 업데이트 가능한 구독|예|예|예|예|아니요|
 
 <sup>1</sup> 구독자만
 
@@ -270,11 +270,11 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |SQL 구성 관리자|예|예|예|예|예|
 |SQL CMD(명령 프롬프트 도구)|예|예|예|예|예|
 |Distributed Replay - 관리 도구|예|예|예|예|아니요|
-|Distribute Replay - Client|예|예|예|아니요|아니요|
+|Distribute Replay - Client|예|예|예|예|아니요|
 |Distributed Replay - 컨트롤러|예<sup>1</sup>|예<sup>2</sup>|예<sup>2</sup>|아니요|아니요|
 |SQL 프로파일러|예|예|아니요<sup>3</sup>|아니요<sup>3</sup>|아니요<sup>3</sup>|
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|예|예|예|아니요|아니요|
-|Microsoft System Center Operations Manager 관리 팩|예|예|예|아니요|아니요|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|예|예|예|예|아니요|
+|Microsoft System Center Operations Manager 관리 팩|예|예|예|예|아니요|
 |DTA(데이터베이스 튜닝 관리자)|예|예<sup>4</sup>|예<sup>4</sup>|아니요|아니요|
 
 <sup>1</sup> 최대 16개 클라이언트
@@ -289,27 +289,27 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 
 |기능|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
-|사용자 인스턴스|아니요|아니요|아니요|예|예|
-|LocalDB|아니요|아니요|아니요|예|아니요|
+|사용자 인스턴스|아니요|예|예|예|예|
+|LocalDB|아니요|예|예|예|아니요|
 |관리자 전용 연결|예|예|예|예<sup>1</sup>|예<sup>1</sup>|
 |SysPrep 지원<sup>2</sup>|예|예|예|예|예|
 |PowerShell 스크립팅 지원<sup>3</sup>|예|예|예|예|예|
 |데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|예|예|예|예|예|
-|정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니요|예|
-|성능 데이터 수집기|예|예|예|아니요|아니요|
-|다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|예|예|예|아니요|예|
-|표준 성능 보고서|예|예|예|아니요|예|
-|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|아니요|예|
+|정책 자동화(일정 및 변경 내용 검사)|예|예|예|예|예|
+|성능 데이터 수집기|예|예|예|예|아니요|
+|다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|예|예|예|예|예|
+|표준 성능 보고서|예|예|예|예|예|
+|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|예|예|
 |인덱스 뷰의 직접 쿼리(NOEXPAND 힌트 사용)|예|예|예|예|예|
-|SQL Server Analysis Services 직접 쿼리|예|예|아니요|아니요|예|
-|인덱싱된 뷰의 자동 유지 관리|예|예|예|아니요|예|
-|분산형 분할 뷰|예|아니요|아니요|아니요|예|
-|병렬 인덱스 작업|예|아니요|아니요|아니요|예|
-|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|아니요|아니요|아니요|예|
-|병렬 일관성 검사|예|아니요|아니요|아니요|아니요|
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점|예|아니요|아니요|아니요|아니요|
-|버퍼 풀 확장|예|예|아니요|아니요|아니요|
-|빅 데이터 클러스터용 마스터 인스턴스|예|예|아니요|아니요|아니요|
+|SQL Server Analysis Services 직접 쿼리|예|예|예|예|예|
+|인덱싱된 뷰의 자동 유지 관리|예|예|예|예|예|
+|분산형 분할 뷰|예|예|예|예|예|
+|병렬 인덱스 작업|예|예|예|예|예|
+|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|예|예|예|예|
+|병렬 일관성 검사|예|예|예|예|아니요|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점|예|예|예|예|아니요|
+|버퍼 풀 확장|예|예|예|예|아니요|
+|빅 데이터 클러스터용 마스터 인스턴스|예|예|예|예|아니요|
 |호환성 인증|예|예|예|예|예|
 
 <sup>1</sup> 추적 플래그 있음
@@ -325,19 +325,19 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |Microsoft Visual Studio 통합|예|예|예|예|예|
 |Intellisense(Transact-SQL 및 MDX)|예|예|예|예|예|
 |SSDT([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools)|예|예|예|예|아니요|
-|MDX 편집, 디버그 및 디자인 도구|예|예|아니요|아니요|예|
+|MDX 편집, 디버그 및 디자인 도구|예|예|예|예|예|
 
 ## <a name="programmability"></a><a name="Programmability"></a> Programmability
 
 |기능|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |기본 R 통합<sup>1</sup>|예|예|예|예|아니요|
-|고급 R 통합<sup>2</sup>|예|아니요|아니요|아니요|아니요|
+|고급 R 통합<sup>2</sup>|예|예|예|예|아니요|
 |기본 Python 통합|예|예|예|예|아니요|
-|고급 Python 통합|예|아니요|아니요|아니요|아니요|
-|Machine Learning Server(독립 실행형)|예|아니요|아니요|아니요|아니요|
+|고급 Python 통합|예|예|예|예|아니요|
+|Machine Learning Server(독립 실행형)|예|예|예|예|아니요|
 |PolyBase 컴퓨팅 노드|예|예<sup>3</sup>|예<sup>3</sup>|예<sup>3</sup>|예<sup>3</sup> |
-|PolyBase 헤드 노드<sup>4</sup>|예|예|아니요|아니요|아니요|
+|PolyBase 헤드 노드<sup>4</sup>|예|예|예|예|예|
 |JSON|예|예|예|예|예|
 |쿼리 저장소|예|예|예|예|예|
 |임시 테이블|예|예|예|예|예|
@@ -353,7 +353,7 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |전체 텍스트 및 의미 체계 검색|예|예|예|예|아니요|
 |쿼리에서 언어 지정|예|예|예|예|아니요|
 |Service Broker(메시징)|예|예|아니요<sup>5</sup>|아니요<sup>5</sup>|아니요<sup>5</sup>|
-|Transact-SQL 엔드포인트|예|예|예|아니요|예|
+|Transact-SQL 엔드포인트|예|예|예|예|예|
 |그래프|예|예|예|예|예|
 |UTF-8 지원|예|예|예|예|예|
 
@@ -379,11 +379,11 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 
 |기능|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
-|준비 및 데이터 웨어하우스 스키마 자동 생성|예|예|아니요|아니요|아니요|
-|변경 데이터 캡처|예|예|아니요|아니요|아니요|
-|스타 조인 쿼리 최적화|예|아니요|아니요|아니요|아니요|
-|분할된 테이블 및 인덱스의 병렬 쿼리 처리|예|아니요|아니요|아니요|아니요|
-|글로벌 일괄 집계|예|아니요|아니요|아니요|아니요|
+|준비 및 데이터 웨어하우스 스키마 자동 생성|예|예|예|예|아니요|
+|변경 데이터 캡처|예|예|예|예|아니요|
+|스타 조인 쿼리 최적화|예|예|예|예|아니요|
+|분할된 테이블 및 인덱스의 병렬 쿼리 처리|예|예|예|예|아니요|
+|글로벌 일괄 집계|예|예|예|예|아니요|
 
 ## <a name="analysis-services"></a><a name="SSAS"></a> Analysis Services
 
@@ -411,14 +411,14 @@ Developer 버전은 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dist
 |기능 이름|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|예|예|예|예|예|
-|데이터베이스 메일|예|예|예|아니요|아니요|
+|데이터베이스 메일|예|예|예|예|아니요|
 
 ## <a name="other-components"></a><a name="Other"></a> 기타 구성 요소
 
 |기능 이름|Enterprise|Standard|웹|Express with<br/>Advanced Services|고속|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니요|아니요|
-|StreamInsight HA|StreamInsight Premium Edition|아니요|아니요|아니요|아니요|
+|StreamInsight HA|StreamInsight Premium Edition|아니요|예|예|예|
 
 ## <a name="next-steps"></a>다음 단계
 

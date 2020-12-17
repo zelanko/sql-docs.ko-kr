@@ -7,13 +7,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 36b68809377492e3643ebc7c60e0b2111d52f638
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484245"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -137,7 +137,7 @@ ms.locfileid: "92678889"
   
     -   **Reporting Services – SharePoint**  
   
-    -   **SharePoint 제품용 Reporting Services 추가 기능** .  
+    -   **SharePoint 제품용 Reporting Services 추가 기능**.  
   
     -   SharePoint 데이터베이스를 호스트하는 SQL Server 데이터베이스 엔진 인스턴스가 있어야 하지만 필요에 따라 전체 환경에 **데이터베이스 엔진 서비스** 를 선택할 수도 있습니다.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "92678889"
 3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션** 을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  Reporting Services 옵션이 목록에 나타나지 않으면 **Reporting Services 공유 서비스가 설치되어 있지 않음을 나타냅니다** . PowerShell cmdlt을 사용하여 Reporting Services 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
+    >  Reporting Services 옵션이 목록에 나타나지 않으면 **Reporting Services 공유 서비스가 설치되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 Reporting Services 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
 4.  **SQL Server Reporting Services 서비스 애플리케이션 만들기** 페이지에서 애플리케이션의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 설명이 포함된 이름이나 명명 규칙을 사용하면 관리 및 운영 작업을 구성하는 데 도움이 됩니다.  
   

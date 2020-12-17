@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098872"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470954"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server(데이터베이스 내) 인스턴스에서 실행할 수 있도록 R 코드를 변환합니다.
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -103,7 +103,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동할 때 대�
 
 ### <a name="improve-performance-and-security"></a>성능 및 보안 향상
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + 예측 또는 중간 결과를 파일에 기록하지 마세요. 대신, 테이블에 예측을 기록하여 데이터 이동을 방지합니다.
 ::: moniker-end
 
@@ -117,7 +117,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동할 때 대�
 
 + 세트 기반 계산을 위해 R 코드 대신 T-SQL을 사용하는 방법을 알아보세요.
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   예를 들어 이 R 솔루션은 사용자 정의 T-SQL 함수 및 R에서 동일한 기능 엔지니어링 작업을 수행할 수 있는 방법을 보여 줍니다. [데이터 과학 엔드투엔드 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
@@ -139,7 +139,7 @@ R Studio 또는 다른 환경에서 SQL Server로 R 코드를 이동할 때 대�
 
   + [T-SQL 및 R을 사용하는 기능 엔지니어링](../tutorials/r-taxi-classification-create-features.md)
 
-+ 코드가 더 복잡한 경우 R 패키지 **sqlrutils**를 사용하여 코드를 변환합니다. 이 패키지는 숙련된 R 사용자가 적절한 저장 프로시저 코드를 작성하는 데 도움이 되도록 디자인되었습니다. 
++ 코드가 더 복잡한 경우 R 패키지 **sqlrutils** 를 사용하여 코드를 변환합니다. 이 패키지는 숙련된 R 사용자가 적절한 저장 프로시저 코드를 작성하는 데 도움이 되도록 디자인되었습니다. 
 
   첫 번째 단계는 분명히 정의된 입력 및 출력을 사용하여 R 코드를 단일 함수로 다시 작성하는 것입니다.
 
@@ -169,6 +169,6 @@ SQL Server에 R 솔루션을 배포하는 방법에 대한 예제를 보려면 �
 
 + [R 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [엔드투엔드 데이터 과학 솔루션](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) - R 및 T-SQL의 기능 엔지니어링 비교를 포함합니다.
 ::: moniker-end

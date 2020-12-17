@@ -14,13 +14,13 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec7ed61678519716e84e74e13b9d954628a3ea45
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3e09fbc094ddf75a56b2b4c48eac4ecb23b47b7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482158"
 ---
 # <a name="specify-a-target-server39s-location"></a>대상 서버 위치 지정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,23 +44,23 @@ ms.locfileid: "92035541"
   
 #### <a name="to-specify-a-target-servers-location"></a>대상 서버의 위치를 지정하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 대상 서버 위치를 지정하려는 마스터 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 대상 서버 위치를 지정하려는 마스터 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리** 를 가리킨 다음 **대상 서버 관리** 를 선택합니다.  
   
-3.  대상 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+3.  대상 서버를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-4.  **위치** 상자에 서버의 위치를 입력한 다음 **확인**을 클릭합니다.  
+4.  **위치** 상자에 서버의 위치를 입력한 다음 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-specify-a-target-servers-location"></a>대상 서버의 위치를 지정하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     USE msdb ;  

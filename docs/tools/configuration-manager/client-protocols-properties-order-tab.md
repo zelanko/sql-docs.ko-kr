@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b4b16ac626cc68b6b989aa9c68d9ce93b69b6820
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 0265cc910186dd17ee1a23419e6843ee293a779d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481704"
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  **클라이언트 프로토콜 속성** 대화 상자의 **순서**페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
+  **클라이언트 프로토콜 속성** 대화 상자의 **순서** 페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
   
  선택한 프로토콜을 **사용할 수 없는 프로토콜** 또는 **사용할 수 있는 프로토콜** 목록으로 이동하려면 해당 프로토콜을 클릭한 다음 **사용** 또는 **사용 안 함** 을 클릭합니다.  
   

@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3b19e905d68d53764a496ab5ee7745e3529484cf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194495"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489903"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대한 항공 비행 도착 데모 데이터
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 이 연습에서는 R 또는 Python 기본 제공 Airline 데모 데이터 세트에서 가져온 데이터를 저장할 SQL Server 데이터베이스를 만듭니다. R 및 Python 배포는 Management Studio를 사용하여 SQL Server 데이터베이스로 가져올 수 있는 동일한 데이터를 제공합니다.
 
-이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
+이 연습을 완료하려면 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구가 있어야 합니다.
 
 이 데이터 세트를 사용하는 자습서 및 빠른 시작에는 다음이 포함됩니다.
 
@@ -32,15 +32,15 @@ ms.locfileid: "92194495"
 
 1. SQL Server Management Studio를 시작하고 R 또는 Python 통합을 포함하는 데이터베이스 엔진 인스턴스에 연결합니다.  
 
-2. 개체 탐색기에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭하고 **flightdata**라는 새 데이터베이스를 만듭니다.
+2. 개체 탐색기에서 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **flightdata** 라는 새 데이터베이스를 만듭니다.
 
-3. **flightdata**를 마우스 오른쪽 단추로 클릭하고, **작업** 및 **플랫 파일 가져오기**를 차례로 클릭합니다.
+3. **flightdata** 를 마우스 오른쪽 단추로 클릭하고, **작업** 및 **플랫 파일 가져오기** 를 차례로 클릭합니다.
 
 4. 설치한 언어에 따라 R 또는 Python 배포에 제공된 AirlineDemoData.csv 파일을 엽니다.
 
-   R의 경우 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData에서 **AirlineDemoSmall.csv**를 찾습니다.
+   R의 경우 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData에서 **AirlineDemoSmall.csv** 를 찾습니다.
    
-   Python의 경우 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data에서 **AirlineDemoSmall.csv**를 찾습니다.
+   Python의 경우 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data에서 **AirlineDemoSmall.csv** 를 찾습니다.
   
 파일을 선택하면 테이블 이름 및 스키마에 대한 기본값이 채워집니다.
 

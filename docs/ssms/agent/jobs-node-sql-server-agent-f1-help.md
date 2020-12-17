@@ -11,13 +11,13 @@ ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1efc95d2ed7b524c34fb724bc152e5ffb0b27bf0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4d9c15aaf52bc4e5d550b73bbab3bb76947d6866
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464394"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>작업 노드(SQL Server 에이전트 F1 도움말)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

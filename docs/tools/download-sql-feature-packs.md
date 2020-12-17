@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713751"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489793"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>SQL Server 확장 기능 및 도구 다운로드
 
@@ -50,7 +50,7 @@ ms.locfileid: "88713751"
 | [SQL Server 의미 체계 언어 통계](../relational-databases/search/install-and-configure-semantic-search.md) | 의미 체계 언어 통계 데이터베이스는 Microsoft SQL Server의 통계 의미 체계 검색 기능에 필요한 구성 요소입니다. |
 | [SQL Server 공유 관리 개체](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SMO(SQL Server 관리 개체)는 .NET Framework 개체 모델로, 소프트웨어 개발자는 이를 사용하여 SQL Server 개체 및 서비스를 관리하는 클라이언트 쪽 애플리케이션을 만들 수 있습니다. |
 | [시스템 CLR 유형](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types 패키지에는 SQL Server에 새로 추가된 geometry, geography 및 hierarchy ID 형식을 구현하는 구성 요소가 포함되어 있습니다. **참고: 이 구성 요소는 [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** 도 필요로 합니다. |
-| [Microsoft SQL Server용 Windows PowerShell 확장](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | SQL Server용 Microsoft Windows PowerShell 확장에는 관리자 및 개발자가 SQL Server의 인스턴스를 관리하는 데 필요한 PowerShell 스크립트를 작성할 수 있게 하는 cmdlet 집합 및 공급자가 포함되어 있습니다. |
+| [Microsoft SQL Server용 Windows PowerShell 확장](../database-engine/install-windows/install-sql-server-powershell.md) | SQL Server용 Microsoft Windows PowerShell 확장에는 관리자 및 개발자가 SQL Server의 인스턴스를 관리하는 데 필요한 PowerShell 스크립트를 작성할 수 있게 하는 cmdlet 집합 및 공급자가 포함되어 있습니다. |
 |||
 
 ## <a name="database-engine"></a>데이터베이스 엔진

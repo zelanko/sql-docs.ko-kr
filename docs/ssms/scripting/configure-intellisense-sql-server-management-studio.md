@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7b092672a715b48e32b962a509bd7e6aa4ccdf
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 98ad4f0261edbf7468403f388af155a6bc305838
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474324"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense 구성(SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "92005701"
 >
 >
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **텍스트 편집기**를 확장하고 **모든 언어**, **Transact-SQL**또는 **XML**을 확장한 다음 **일반**을 클릭합니다.  
+2.  **텍스트 편집기** 를 확장하고 **모든 언어**, **Transact-SQL** 또는 **XML** 을 확장한 다음 **일반** 을 클릭합니다.  
   
-3.  원하지 않는 문 완료 옵션에 대한 확인란의 선택을 취소한 다음 **확인**을 클릭합니다.  
+3.  원하지 않는 문 완료 옵션에 대한 확인란의 선택을 취소한 다음 **확인** 을 클릭합니다.  
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>Transact-SQL IntelliSense 옵션을 수정하려면  
   
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **텍스트 편집기**를 확장하고 **Transact-SQL**을 확장한 다음 **IntelliSense**를 클릭합니다.  
+2.  **텍스트 편집기** 를 확장하고 **Transact-SQL** 을 확장한 다음 **IntelliSense** 를 클릭합니다.  
   
 3.  원하지 않는 IntelliSense 옵션에 대한 확인란의 선택을 취소합니다.  
   

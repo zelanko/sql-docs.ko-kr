@@ -8,13 +8,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: d4e47c95ec9deb98e06659f85e6ec9840409f629
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870165"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471274"
 ---
 # <a name="plot-histograms-in-python"></a>Python에서 히스토그램 그리기 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -23,15 +23,15 @@ ms.locfileid: "94870165"
 
 ## <a name="prerequisites"></a>필수 조건:
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 * [Windows용 SQL Server](../../database-engine/install-windows/install-sql-server.md) 또는 [Linux용 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 * [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 * [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).

@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471064"
 ---
 # <a name="install-packages-with-r-tools"></a>R 도구를 사용하여 패키지 설치
 
@@ -24,7 +24,7 @@ ms.locfileid: "94869957"
 표준 R 도구 외에도 다음을 사용하여 R 패키지를 설치할 수 있습니다.
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md)(CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ ms.locfileid: "94869957"
 
 + R 패키지 라이브러리는 SQL Server 인스턴스의 Program Files 폴더에 있으며, 기본적으로 이 폴더에 설치하려면 관리자 권한이 필요합니다. 자세한 내용은 [패키지 라이브러리 위치](../package-management/r-package-information.md#default-r-library-location)를 참조하세요.
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   비관리자는 RevoScaleR 9.0.1 이상 또는 CREATE EXTERNAL LIBRARY를 사용하여 패키지를 설치할 수 있습니다. **dbo_owner** 사용자 또는 CREATE EXTERNAL LIBRARY 권한이 있는 사용자는 현재 데이터베이스에 R 패키지를 설치할 수 있습니다. 자세한 내용은 다음을 참조하세요.
   + [RevoScaleR을 사용하여 R 패키지 설치](install-r-packages-with-revoscaler.md)
   + [T-SQL(CREATE EXTERNAL LIBRARY)을 사용하여 SQL Server에 R 패키지 설치](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   비관리자는 RevoScaleR 9.0.1 이상을 사용하여 패키지를 설치할 수 있습니다. **dbo_owner** 사용자는 현재 데이터베이스에 R 패키지를 설치할 수 있습니다. 자세한 내용은 [RevoScaleR을 사용하여 R 패키지 설치](install-r-packages-with-revoscaler.md)를 참조하세요.
   ::: moniker-end
 
@@ -56,13 +56,13 @@ SQL Server가 인터넷에 연결되어 있는 경우에는 표준 패키지 설
 
 1. 인스턴스 라이브러리의 위치를 확인하고([R 패키지 정보 가져오기](../package-management/r-package-information.md) 참조) R 도구가 설치된 폴더로 이동합니다.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    예를 들어 SQL Server 기본 인스턴스의 기본 경로는 다음과 같습니다.
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    예를 들어 SQL Server 기본 인스턴스의 기본 경로는 다음과 같습니다.
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ SQL Server의 인스턴스가 병렬로 여럿이라면 패키지를 사용하�
 
 1. 인스턴스 라이브러리의 위치를 확인하고([R 패키지 정보 가져오기](../package-management/r-package-information.md) 참조) R 도구가 설치된 폴더로 이동합니다. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    예를 들어 SQL Server 기본 인스턴스의 기본 경로는 다음과 같습니다.
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    예를 들어 SQL Server 기본 인스턴스의 기본 경로는 다음과 같습니다.
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

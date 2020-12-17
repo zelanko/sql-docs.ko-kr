@@ -16,13 +16,13 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 77438199f38c3120e6445a0c4bef5a130bd20af0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5c973d0f1ee4921361ead88ef734b4fc85b02d90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474414"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "92030602"
   
 #### <a name="to-send-sql-server-agent-error-messages"></a>SQL Server 에이전트 오류 메시지를 보내려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 net send를 통해 오류 메시지를 보내려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 net send를 통해 오류 메시지를 보내려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **일반** 페이지에 있는 **오류 로그**에서 **Net send 수신자** 상자에 오류 메시지를 보내려는 사용자 이름 또는 컴퓨터 이름을 입력합니다.  
+3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **일반** 페이지에 있는 **오류 로그** 에서 **Net send 수신자** 상자에 오류 메시지를 보내려는 사용자 이름 또는 컴퓨터 이름을 입력합니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  

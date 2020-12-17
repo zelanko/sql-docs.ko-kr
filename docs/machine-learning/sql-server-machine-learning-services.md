@@ -8,13 +8,13 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: b73b8521593b81e38d5b0b3931da793f943c45a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94582635"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470694"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Python 및 R을 사용하는 SQL Server Machine Learning Services란?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -23,7 +23,7 @@ Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R �
 
 다른 SQL 플랫폼의 기계 학습에 대한 내용은 [SQL 기계 학습 설명서](index.yml)를 참조하세요.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > SQL Server에서 Java를 실행하는 방법은 [Java 언어 확장 설명서](../language-extensions/java-overview.md)를 참조하세요.
 ::: moniker-end
@@ -44,7 +44,7 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 
 ## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services 시작
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 또는 [Windows에 SQL Server Machine Learning Services를 설치합니다](install/sql-machine-learning-services-windows-install.md). [빅 데이터 클러스터의 Machine Learning Services](../big-data-cluster/machine-learning-services.md) 및 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)를 사용할 수도 있습니다.
 
 1. 개발 도구 구성. [Azure Data Studio Notebook에서 Python 및 R 스크립트를 실행](install/sql-machine-learning-azure-data-studio.md)할 수 있습니다. 또한 [Azure Data Studio](../azure-data-studio/what-is.md)에서 T-SQL을 실행할 수 있습니다.
@@ -55,14 +55,14 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
    + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + 첫 번째 Python 또는 R 스크립트를 작성합니다.
 
    + [SQL 기계 학습용 Python 자습서](tutorials/python-tutorials.md)
    + [SQL 기계 학습용 R 자습서](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. [Windows에 SQL Server Machine Learning Services 설치](install/sql-machine-learning-services-windows-install.md)
 
 1. 개발 도구 구성. [Azure Data Studio Notebook에서 Python 및 R 스크립트를 실행](install/sql-machine-learning-azure-data-studio.md)할 수 있습니다. [Azure Data Studio](../azure-data-studio/what-is.md)에서 T-SQL을 사용할 수도 있습니다.
@@ -104,13 +104,13 @@ Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 
 
 Machine Learning Services와 함께 설치되는 패키지와 기타 패키지를 설치하는 방법에 대한 자세한 내용은 다음을 참조하세요.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + [Python 패키지 정보 가져오기](package-management/python-package-information.md)
 + [sqlmlutils를 사용하여 Python 패키지 설치](package-management/install-additional-python-packages-on-sql-server.md)
 + [R 패키지 정보 가져오기](package-management/r-package-information.md)
 + [sqlmlutils를 사용하여 새 R 패키지 설치](package-management/install-additional-r-packages-on-sql-server.md)
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Python 패키지 정보 가져오기](package-management/python-package-information.md)
 + [SQL Server에서 Python 도구를 사용하여 패키지 설치](package-management/install-python-packages-standard-tools.md)
 + [R 패키지 정보 가져오기](package-management/r-package-information.md)

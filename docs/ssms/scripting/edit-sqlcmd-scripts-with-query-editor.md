@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474314"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
 
@@ -56,7 +56,7 @@ ms.locfileid: "89093450"
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리[!INCLUDE[ssDE](../../includes/ssde-md.md)]를 클릭하여 새** 쿼리 편집기 창을 엽니다.  
   
-2.  **쿼리** 메뉴에서 **SQLCMD 모드**를 클릭합니다.  
+2.  **쿼리** 메뉴에서 **SQLCMD 모드** 를 클릭합니다.  
   
      쿼리 편집기의 컨텍스트에서 **sqlcmd** 문이 실행됩니다.  
   
@@ -86,12 +86,12 @@ ms.locfileid: "89093450"
     -   (4개 행 적용됨)  
   
 > [!IMPORTANT]  
->  명령줄에서 **sqlcmd** 유틸리티를 실행하면 운영 체제와의 전체 상호 작용이 허용됩니다. **SQLCMD 모드**에서 쿼리 편집기를 사용할 때는 대화형 문을 실행하지 않도록 주의해야 합니다. 쿼리 편집기에는 운영 체제 프롬프트에 응답하는 기능이 없습니다.  
+>  명령줄에서 **sqlcmd** 유틸리티를 실행하면 운영 체제와의 전체 상호 작용이 허용됩니다. **SQLCMD 모드** 에서 쿼리 편집기를 사용할 때는 대화형 문을 실행하지 않도록 주의해야 합니다. 쿼리 편집기에는 운영 체제 프롬프트에 응답하는 기능이 없습니다.  
   
  SQLCMD 실행 방법은 [sqlcmd Utility](../../tools/sqlcmd-utility.md)를 참조하거나 SQLCMD 자습서를 따라하십시오.  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>SQLCMD 스크립팅을 기본적으로 설정  
- SQLCMD 스크립팅을 기본적으로 설정하려면 **도구** 메뉴에서 **옵션**을 선택하고 **쿼리 실행**, **SQL Server**를 차례로 확장한 다음 **일반** 페이지를 클릭하고 **기본적으로 SQLCMD 모드로 새 쿼리를 엽니다.** 상자를 선택합니다.  
+ SQLCMD 스크립팅을 기본적으로 설정하려면 **도구** 메뉴에서 **옵션** 을 선택하고 **쿼리 실행**, **SQL Server** 를 차례로 확장한 다음 **일반** 페이지를 클릭하고 **기본적으로 SQLCMD 모드로 새 쿼리를 엽니다.** 상자를 선택합니다.  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD 스크립트 작성 및 편집  
  스크립팅 모드를 설정한 후 SQLCMD 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성할 수 있습니다. 다음 규칙이 적용됩니다.  

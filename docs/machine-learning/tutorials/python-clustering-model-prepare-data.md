@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2cd244454b78e1199d59dcfe6539498328eac674
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 518406668e890aeddf656394ca9277610bc34f3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470414"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 고객을 분류하는 데이터 준비
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 Python에서 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 데이터로 클러스터링 모델을 학습시키고 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 이 데이터를 사용하여 SQL Server Machine Learning Services와 함께 Python에서 클러스터링 모델을 학습시키고 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 이 데이터를 사용하여 Azure SQL Managed Instance Machine Learning Services와 함께 Python에서 클러스터링 모델을 학습시키고 배포합니다.
 ::: moniker-end
 

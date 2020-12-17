@@ -8,13 +8,13 @@ ms.date: 06/25/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c4d12382cf1e498b33f202bb1b775ba63458a5a5
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 2d62bb52d114c819dbd7de7e9244d50c27bcf248
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471774"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 언어 확장에서 Java 런타임을 호출하는 방법
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

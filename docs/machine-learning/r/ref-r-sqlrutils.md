@@ -7,18 +7,18 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ac81810036e4159843142cb419deb3d06c57848c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470794"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils(SQL Server Machine Learning Services의 R 패키지)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-**sqlrutils**는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공하는 Microsoft의 R 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
+**sqlrutils** 는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공하는 Microsoft의 R 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
 단일 저장 프로시저 내에서 실행되도록 R 코드를 변환하면 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대한 매개 변수로 R 스크립트를 포함해야 하는 SQL Server R Services를 보다 효과적으로 사용할 수 있습니다. **sqlrutils** 패키지를 사용하면 이 포함된 R 스크립트를 작성하고 관련 매개 변수를 적절히 설정할 수 있습니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "92195814"
 + 저장 프로시저 생성 및 등록    
 + 저장 프로시저 실행  
 
-R 세션에서 `library(sqlrutils)`를 입력하여 명령줄에서 **sqlrutils**를 로드합니다.
+R 세션에서 `library(sqlrutils)`를 입력하여 명령줄에서 **sqlrutils** 를 로드합니다.
 
 > [!Note]
 > 컴퓨팅 컨텍스트를 SQL Server로 변경하고 해당 컴퓨팅 컨텍스트에서 코드를 실행하는 경우에는 SQL Server가 없는 컴퓨터(예: R Client 인스턴스)에서 이 패키지를 로드할 수 있습니다.

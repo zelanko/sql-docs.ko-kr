@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: =sql-server-2016
+ms.openlocfilehash: 05802b7d3a0bc9f4922cb1db68162d89a576f18c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471134"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 
@@ -66,13 +66,13 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 1. SQL Server 2016용 설치 마법사를 시작합니다.
 
-1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.
+1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.
 
     ![R Services(데이터베이스 내) 설치](media/2016-setup-installation-rsvcs.png "R Services를 사용하여 데이터베이스 엔진 설치 시작")
 
 1. **기능 선택** 페이지에서 다음 옵션을 선택합니다.
 
-    + **데이터베이스 엔진 서비스**를 선택합니다. 기계 학습을 사용하는 각 인스턴스에 데이터베이스 엔진이 필요합니다.
+    + **데이터베이스 엔진 서비스** 를 선택합니다. 기계 학습을 사용하는 각 인스턴스에 데이터베이스 엔진이 필요합니다.
     + **R Services(데이터베이스 내)** 를 선택합니다. 데이터베이스 내의 R 사용에 대한 지원을 설치합니다.
 
     ![R Services 기능 선택](media/2016setup-rsvcs-features.png "데이터베이스 내 R Services에 대해 이러한 기능 선택")
@@ -80,13 +80,13 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
     > [!IMPORTANT]
     > R Server 및 R Services를 동시에 설치하지 않도록 합니다. 
 
-1. **Microsoft R Open 설치에 동의** 페이지에서 **동의**를 클릭합니다.
+1. **Microsoft R Open 설치에 동의** 페이지에서 **동의** 를 클릭합니다.
   
     이 사용권 계약은 Microsoft R 개발 팀의 연결 공급자 및 고급 R 패키지와 함께 오픈 소스 R 기본 패키지 및 도구 배포가 포함된 Microsoft R Open을 다운로드하는 데 필요합니다.
   
 1. 사용권 계약에 동의하면 설치 관리자가 준비되는 동안 잠깐 중지됩니다. **다음** 단추를 사용할 수 있게 되면 클릭합니다.
 
-1. **설치 준비 완료** 페이지에서 다음 항목이 포함되어 있는지 확인한 다음, **설치**를 선택합니다.
+1. **설치 준비 완료** 페이지에서 다음 항목이 포함되어 있는지 확인한 다음, **설치** 를 선택합니다.
 
     + 데이터베이스 엔진 서비스
     + R Services(In-database)
@@ -97,7 +97,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel MKL(Math Kernel Library) 계산에서 [일관성 있는 출력을 보장](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)해야 합니다.
 
-1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수**를 클릭합니다.
+1. 제어판에서 **시스템 및 보안** > **시스템** > **고급 시스템 설정** > **환경 변수** 를 클릭합니다.
 
 1. 새 사용자 또는 시스템 변수를 만듭니다.
 
@@ -112,13 +112,13 @@ R 기능 통합의 경우에만 **MKL_CBWR** 환경 변수를 설정하여 Intel
 
 1. [SSMS(SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) 또는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 엽니다.
 
-1. R Services를 설치한 인스턴스에 연결하고 **새 쿼리**를 클릭하여 쿼리 창을 열고 다음 명령을 실행합니다.
+1. R Services를 설치한 인스턴스에 연결하고 **새 쿼리** 를 클릭하여 쿼리 창을 열고 다음 명령을 실행합니다.
 
    ```sql
    sp_configure
    ```
 
-    이때 속성 값 `external scripts enabled`는 **0**이어야 합니다. 기능이 기본적으로 해제되어 있기 때문입니다. R 스크립트를 실행하려면 먼저 관리자가 이 기능을 명시적으로 사용하도록 설정해야 합니다.
+    이때 속성 값 `external scripts enabled`는 **0** 이어야 합니다. 기능이 기본적으로 해제되어 있기 때문입니다. R 스크립트를 실행하려면 먼저 관리자가 이 기능을 명시적으로 사용하도록 설정해야 합니다.
 
 1. 외부 스크립팅 기능을 사용하도록 설정하려면 다음 문을 실행합니다.
   
@@ -145,9 +145,9 @@ SSMS 인스턴스에 대한 오른쪽 클릭 **다시 시작** 명령을 사용�
     EXEC sp_configure 'external scripts enabled'
     ```
 
-    이제 **run_value**가 1로 설정되어야 합니다.
+    이제 **run_value** 가 1로 설정되어야 합니다.
 
-1. SQL Server 구성 관리자를 열고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인합니다. R이 설치된 모든 데이터베이스 엔진 인스턴스에 서비스가 하나씩 있어야 합니다. 서비스에 대한 자세한 내용은 [확장성 프레임워크](../concepts/extensibility-framework.md)를 참조하세요.
+1. SQL Server 구성 관리자를 열고 **SQL Server 실행 패드 서비스** 가 실행 중인지 확인합니다. R이 설치된 모든 데이터베이스 엔진 인스턴스에 서비스가 하나씩 있어야 합니다. 서비스에 대한 자세한 내용은 [확장성 프레임워크](../concepts/extensibility-framework.md)를 참조하세요.
 
 1. 실행 패드가 실행 중인 경우 간단한 R을 실행하여 외부 스크립팅 런타임이 SQL Server와 통신할 수 있는지 확인할 수 있어야 합니다.
 

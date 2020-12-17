@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7a6907a20ecbfad89820c3afb792b50a7f2a6f8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d61f509fa07528b71cd7cbb23488bc14f33959ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247212"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472494"
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
   *rs:Format* URL 매개 변수를 사용하여 선택적으로 보고서를 렌더링할 형식을 지정할 수 있습니다.  HTML4.0 및 HTM5 형식(렌더링 확장 프로그램)은 브라우저에서 렌더링하고 다른 형식의 경우 브라우저는 로컬 파일에 보고서 출력을 저장하라는 메시지가 나타납니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "87247212"
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  또한 SharePoint 통합 모드 보고서 서버에서 가져오는 경우 다음을 사용합니다.  
   

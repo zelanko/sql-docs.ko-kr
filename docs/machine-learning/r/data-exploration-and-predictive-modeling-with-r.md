@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 60aecdbd44d13308a30434f42a01f3919fc72aa5
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 283eaa89b214e9324e6b63bffe34735f6067bd39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470884"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server에서 R을 사용한 데이터 탐색 및 예측 모델링
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91956652"
 
 **RevoScaleR** 패키지에는 R의 인기 있는 일부 함수가 구현되었고 병렬 처리 및 확장성을 제공하도록 다시 설계되었습니다. 자세한 내용은 [RevoScaleR을 사용한 분산 컴퓨팅](/machine-learning-server/r/how-to-revoscaler-distributed-computing)을 참조하세요.
 
-또한, RevoScaleR 패키지는 *실행 컨텍스트*변경을 지원합니다. 즉, 전체 솔루션 또는 하나의 함수에 대하여 로컬 워크스테이션이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 리소스를 사용하여 계산이 수행되도록 지정할 수 있습니다. 이러한 방식은 불필요한 데이터 이동을 방지하고 서버 컴퓨터의 더 큰 계산 리소스를 활용할 수 있는 등의 여러 가지 장점이 있습니다.
+또한, RevoScaleR 패키지는 *실행 컨텍스트* 변경을 지원합니다. 즉, 전체 솔루션 또는 하나의 함수에 대하여 로컬 워크스테이션이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 리소스를 사용하여 계산이 수행되도록 지정할 수 있습니다. 이러한 방식은 불필요한 데이터 이동을 방지하고 서버 컴퓨터의 더 큰 계산 리소스를 활용할 수 있는 등의 여러 가지 장점이 있습니다.
 
 ## <a name="r-environment-and-packages"></a>R 환경 및 패키지
 
@@ -62,7 +62,7 @@ Microsoft Machine Learning에 포함된 독점 R 라이브러리 외에도 다�
   
      이러한 패키지 및 사용 방법에 대한 자세한 내용은 [RevoScaleR이란?](/machine-learning-server/r/concept-what-is-revoscaler) 및 [RevoPemaR 시작](/machine-learning-server/r/how-to-developer-pemar)을 참조하세요. 
 
-+ **MicrosoftML**에는 Microsoft 데이터 과학 팀의 고도로 최적화된 기계 학습 알고리즘 및 데이터 변환 컬렉션이 포함되어 있습니다. 대부분의 알고리즘은 Azure Machine Learning에서도 사용됩니다. 자세한 내용은 [SQL Server의 MicrosoftML](ref-r-microsoftml.md)을 참조하세요.
++ **MicrosoftML** 에는 Microsoft 데이터 과학 팀의 고도로 최적화된 기계 학습 알고리즘 및 데이터 변환 컬렉션이 포함되어 있습니다. 대부분의 알고리즘은 Azure Machine Learning에서도 사용됩니다. 자세한 내용은 [SQL Server의 MicrosoftML](ref-r-microsoftml.md)을 참조하세요.
 
 ### <a name="r-development-tools"></a>R 개발 도구
 
@@ -70,7 +70,7 @@ R 솔루션을 개발할 때는 Microsoft R Client를 다운로드해야 합니�
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** 표준 R 작업 성능을 향상하는 패키지 집합(Intel 수학 커널 라이브러리 등) 및 R 런타임 배포입니다.  
   
-+ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 계산을 푸시할 수 있게 해주는 R 패키지입니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]입니다. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx**가 추가됩니다.
++ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 계산을 푸시할 수 있게 해주는 R 패키지입니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]입니다. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx** 가 추가됩니다.
 
 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)], RStudio와 같이 R을 지원하는 모든 Windows 기반 코드 편집기를 사용할 수 있습니다. [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 다운로드에는 RGui.exe 등과 같은 R의 공통 명령줄 도구도 포함되어 있습니다.
 
@@ -80,9 +80,9 @@ RevoScaleR 패키지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 + **RxSqlServerData** 은(는) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이(가) 포함된 R 기능을 사용하여 이러한 단점을 해결할 수 있습니다.
   
-     R 코드에서 이 함수를 사용하여 *데이터 원본*을 정의할 수 있습니다. 데이터 원본 개체는 데이터가 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 읽고 쓰는 작업을 관리하는 서버와 테이블을 지정합니다.
+     R 코드에서 이 함수를 사용하여 *데이터 원본* 을 정의할 수 있습니다. 데이터 원본 개체는 데이터가 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 읽고 쓰는 작업을 관리하는 서버와 테이블을 지정합니다.
   
--   **RxInSqlServer** 함수를 사용하여 *컴퓨팅 컨텍스트*를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 [RevoScaleR Functions](/machine-learning-server/r-reference/revoscaler/revoscaler)를 참조하세요.
+-   **RxInSqlServer** 함수를 사용하여 *컴퓨팅 컨텍스트* 를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 [RevoScaleR Functions](/machine-learning-server/r-reference/revoscaler/revoscaler)를 참조하세요.
   
      컴퓨팅 컨텍스트를 설정하는 경우 원격 실행 컨텍스트를 지원하는 컴퓨팅, 즉 RevoScaleR 패키지에서 제공하는 R 작업 및 관련 함수에만 영향을 줍니다. 일반적으로 표준 CRAN 패키지를 기반으로 하는 R 솔루션은 원격 컴퓨팅 컨텍스트에서 실행할 수 없습니다. 단, T-SQL에서 시작된 경우에는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행할 수 있습니다. 그러나 `rxExec` 함수를 사용하여 개별 R 함수를 호출하고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 원격으로 실행할 수 있습니다.
 

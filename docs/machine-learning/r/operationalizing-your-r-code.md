@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 0ed09befa391211f8fc5457036f4362bfbf45894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098842"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470874"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 저장 프로시저를 사용하여 R 코드 운영화
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,11 +49,11 @@ R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL�
 
 다음 자습서에서는 일괄 처리 모드와 단일 행 모드로 저장 프로시저를 사용하여 점수를 매기는 예제를 제공합니다.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [SQL Server의 R에 대한 종단 간 데이터 과학 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + [R 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측](../tutorials/r-taxi-classification-introduction.md)
 ::: moniker-end
 
@@ -63,7 +63,7 @@ R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL�
 
 사용 중인 R 솔루션이 복합 집계를 사용하거나 큰 데이터 세트에서 실행되는 경우에는 효율성이 뛰어난 SQL Server의 메모리 내 집계 및 columnstore 인덱스를 활용할 수 있으며 R 코드가 통계 계산 및 채점을 수행하도록 지정할 수 있습니다.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>다른 플랫폼 또는 컴퓨팅 컨텍스트에 맞게 R 코드 조정
 

@@ -8,13 +8,13 @@ ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 28b2d4cf892aa21b44d989fb56351a6ab5448bff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482286"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -241,7 +241,7 @@ ms.locfileid: "87864327"
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|테이블 형식 모델의 계산 그룹| 계산 그룹은*계산 항목*으로 일반적인 측정값 식을 그룹화하여 중복 측정값 수를 크게 줄일 수 있습니다. 자세한 내용은 [테이블 형식 모델의 계산 그룹](/analysis-services/tabular-models/calculation-groups)을 참조하세요. |
+|테이블 형식 모델의 계산 그룹| 계산 그룹은 *계산 항목* 으로 일반적인 측정값 식을 그룹화하여 중복 측정값 수를 크게 줄일 수 있습니다. 자세한 내용은 [테이블 형식 모델의 계산 그룹](/analysis-services/tabular-models/calculation-groups)을 참조하세요. |
 |쿼리 인터리빙| 쿼리 인터리빙은 고급 동시성 시나리오에서 사용자 쿼리 응답 시간을 향상시킬 수 있는 테이블 형식 모드 시스템 구성입니다. 자세한 내용은 [쿼리 인터리빙](/analysis-services/tabular-models/query-interleaving)을 참조하세요. |
 |테이블 형식 모델의 다 대 다 관계| 모두 열이 고유하지 않은 두 테이블 간의 다 대 다 관계를 허용합니다. 자세히 알아보려면 [테이블 형식 모델의 관계](/analysis-services/tabular-models/relationships-ssas-tabular)를 참조하세요.|
 |리소스 거버넌스에 대한 속성 설정| 이 릴리스에는 리소스 관리를 위한 새 메모리 설정(Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit 및 OLAP\Query\RowsetSerializationLimit)이 포함되어 있습니다. 자세히 알아보려면 [메모리 설정](/analysis-services/server-properties/memory-properties)을 참조하세요.|

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0a8e216069b831e14e4888aced79013ab5b55770
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 94f54e84a7f78dd92bacee399415149ca3b08a07
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173728"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470904"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy를 사용하여 여러 모델 만들기
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ RevoScaleR의 rxExecBy 함수는 대량의 소규모 데이터 세트에 대한 
 
 ## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 구문 및 예
 
-**rxExecBy**에는 4개의 입력이 사용됩니다. 입력 중 하나는 데이터 세트 또는 데이터 원본 개체로 사용되며, 지정된 **키** 열로 분할될 수 있습니다. 이 함수는 각 파티션에 대해 출력을 반환합니다. 출력 형식은 인수로 전달된 함수에 따라 달라집니다. 예를 들어 rxLinMod와 같은 모델링 함수를 전달하는 경우, 데이터 세트의 각 파티션에 대해 개별적인 학습 모델을 반환할 수 있습니다.
+**rxExecBy** 에는 4개의 입력이 사용됩니다. 입력 중 하나는 데이터 세트 또는 데이터 원본 개체로 사용되며, 지정된 **키** 열로 분할될 수 있습니다. 이 함수는 각 파티션에 대해 출력을 반환합니다. 출력 형식은 인수로 전달된 함수에 따라 달라집니다. 예를 들어 rxLinMod와 같은 모델링 함수를 전달하는 경우, 데이터 세트의 각 파티션에 대해 개별적인 학습 모델을 반환할 수 있습니다.
 
 ### <a name="supported-functions"></a>지원되는 함수
 

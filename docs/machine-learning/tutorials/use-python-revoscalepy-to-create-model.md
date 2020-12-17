@@ -8,31 +8,31 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: aa5e3e9da0e13a9946ed0a2c985512a7e9452307
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193635"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470074"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>revoscalepy와 함께 Python을 사용하여 SQL Server에서 원격으로 실행되는 모델 만들기
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Microsoft의 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 라이브러리는 데이터 탐색, 시각화, 변환 및 분석을 위한 데이터 과학 알고리즘을 제공합니다. 이 라이브러리는 SQL Server의 Python 통합 시나리오에서 전략적으로 중요합니다. 다중 코어 서버에서는 **revoscalepy** 함수를 병렬로 실행할 수 있습니다. 중앙 서버와 클라이언트 워크스테이션(별도의 물리적 컴퓨터, 모두 동일한 **revoscalepy** 라이브러리를 갖고 있음)을 사용하는 분산 아키텍처에서는 실행을 로컬로 시작한 후 데이터가 상주하는 원격 SQL Server 인스턴스로 이동하는 Python 코드를 작성할 수 있습니다.
 
-**revoscalepy**는 다음과 같은 Microsoft 제품 및 배포판에서 찾을 수 있습니다.
+**revoscalepy** 는 다음과 같은 Microsoft 제품 및 배포판에서 찾을 수 있습니다.
 
 + [SQL Server Machine Learning Services(데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server(비-SQL, 독립 실행형 서버)](/machine-learning-server/index)
 + [클라이언트 쪽 Python 라이브러리(개발 워크스테이션의 경우)](/machine-learning-server/install/python-libraries-interpreter) 
 
-이 연습에서는 컴퓨팅 컨텍스트를 입력으로 허용하는 **revoscalepy**의 알고리즘 중 하나인 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)를 기반으로 선형 회귀 모델을 만드는 방법을 보여줍니다. 이 연습에서 실행할 코드는 원격 컴퓨팅 컨텍스트를 지원하는 **revoscalepy** 함수를 사용하여 코드 실행을 로컬에서 원격 컴퓨팅 환경으로 이동합니다.
+이 연습에서는 컴퓨팅 컨텍스트를 입력으로 허용하는 **revoscalepy** 의 알고리즘 중 하나인 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)를 기반으로 선형 회귀 모델을 만드는 방법을 보여줍니다. 이 연습에서 실행할 코드는 원격 컴퓨팅 컨텍스트를 지원하는 **revoscalepy** 함수를 사용하여 코드 실행을 로컬에서 원격 컴퓨팅 환경으로 이동합니다.
 
 이 자습서를 완료하면 다음 작업 방법을 배울 수 있습니다.
 
 > [!div class="checklist"]
-> * **revoscalepy**를 사용하여 선형 모델 만들기
+> * **revoscalepy** 를 사용하여 선형 모델 만들기
 > * 작업을 로컬에서 원격 컴퓨팅 컨텍스트로 이동
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -52,9 +52,9 @@ Microsoft의 [revoscalepy](/machine-learning-server/python-reference/revoscalepy
 
 SQL Server에서 Python 코드를 실행 하려면 **revoscalepy** 패키지가 필요합니다. 이 패키지는 Microsoft에서 제공하는 특수 Python 패키지이며, R 언어용 **RevoScaleR** 패키지와 비슷합니다. **revoscalepy** 패키지는 컴퓨팅 컨텍스트 만들기를 지원하며, 로컬 워크스테이션과 원격 서버 간에 데이터와 모델을 전달하기 위한 인프라를 제공합니다. 데이터베이스 내 코드 실행을 지원하는 **revoscalepy** 함수는 [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)입니다.
 
-이 단원에서는 매우 큰 데이터 세트에 대한 회귀를 지원하는 **revoscalepy**의 함수인 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)를 기반으로 SQL Server의 데이터를 사용하여 선형 모델을 학습시킵니다. 
+이 단원에서는 매우 큰 데이터 세트에 대한 회귀를 지원하는 **revoscalepy** 의 함수인 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)를 기반으로 SQL Server의 데이터를 사용하여 선형 모델을 학습시킵니다. 
 
-또한 이 단원에서는 Python에서 **SQL Server 컴퓨팅 컨텍스트**를 설정하고 사용하는 방법의 기본 사항도 보여줍니다. 컴퓨팅 컨텍스트가 다른 플랫폼과 함께 작동하는 방법 및 지원되는 컴퓨팅 컨텍스트에 대한 자세한 내용은 [Machine Learning Server에서 스크립트를 실행하기 위한 컴퓨팅 컨텍스트](/machine-learning-server/r/concept-what-is-compute-context)를 참조하세요.
+또한 이 단원에서는 Python에서 **SQL Server 컴퓨팅 컨텍스트** 를 설정하고 사용하는 방법의 기본 사항도 보여줍니다. 컴퓨팅 컨텍스트가 다른 플랫폼과 함께 작동하는 방법 및 지원되는 컴퓨팅 컨텍스트에 대한 자세한 내용은 [Machine Learning Server에서 스크립트를 실행하기 위한 컴퓨팅 컨텍스트](/machine-learning-server/r/concept-what-is-compute-context)를 참조하세요.
 
 
 ## <a name="run-the-sample-code"></a>샘플 코드 실행
@@ -65,7 +65,7 @@ SQL Server에서 Python 코드를 실행 하려면 **revoscalepy** 패키지가 
 
 1. 필요한 라이브러리 및 함수를 가져옵니다.
 2. SQL Server에 대한 연결을 만듭니다. 데이터를 작업하기 위한 **데이터 원본** 개체를 만듭니다.
-3. 로지스틱 회귀 알고리즘에 사용할 수 있도록 **변환**을 사용하여 데이터를 수정합니다.
+3. 로지스틱 회귀 알고리즘에 사용할 수 있도록 **변환** 을 사용하여 데이터를 수정합니다.
 4. `rx_lin_mod`를 호출하고 모델 조정에 사용되는 수식을 정의합니다.
 5. 원본 데이터를 기반으로 예측 세트를 생성합니다.
 6. 예상된 값을 기준으로 요약을 만듭니다.
@@ -125,13 +125,13 @@ def test_linmod_sql():
 
 ### <a name="defining-a-data-source-vs-defining-a-compute-context"></a>데이터 원본 정의와 컴퓨팅 컨텍스트 정의의 비교
 
-데이터 원본은 컴퓨팅 컨텍스트와 다릅니다. *데이터 원본*은 코드에 사용되는 데이터를 정의합니다. 컴퓨팅 컨텍스트는 코드가 실행될 위치를 정의합니다. 그러나 다음과 같은 동일한 정보를 둘 다 사용합니다.
+데이터 원본은 컴퓨팅 컨텍스트와 다릅니다. *데이터 원본* 은 코드에 사용되는 데이터를 정의합니다. 컴퓨팅 컨텍스트는 코드가 실행될 위치를 정의합니다. 그러나 다음과 같은 동일한 정보를 둘 다 사용합니다.
 
 + 데이터 원본을 정의하는 `sql_query` 및 `sql_connection_string` 같은 Python 변수. 
 
-    이러한 변수를 [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) 생성자에 전달하여 `data_source`라는 **데이터 원본 개체**을 구현합니다.
+    이러한 변수를 [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) 생성자에 전달하여 `data_source`라는 **데이터 원본 개체** 을 구현합니다.
 
-+ [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 생성자를 사용하여 **컴퓨팅 컨텍스트 개체**를 만듭니다. 그 결과로 얻는 **컴퓨팅 컨텍스트 개체**의 이름은 `sql_cc`입니다.
++ [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 생성자를 사용하여 **컴퓨팅 컨텍스트 개체** 를 만듭니다. 그 결과로 얻는 **컴퓨팅 컨텍스트 개체** 의 이름은 `sql_cc`입니다.
 
     이 예제에서는 데이터가 컴퓨팅 컨텍스트로 사용할 SQL Server 인스턴스와 동일한 인스턴스에 있다는 가정 하에 데이터 원본에서 사용한 것과 동일한 연결 문자열을 다시 사용 합니다. 
     
@@ -139,7 +139,7 @@ def test_linmod_sql():
  
 ### <a name="changing-compute-contexts"></a>컴퓨팅 컨텍스트 변경
 
-컴퓨팅 컨텍스트를 정의한 후에는 **활성 컴퓨팅 컨텍스트**를 설정해야 합니다. 
+컴퓨팅 컨텍스트를 정의한 후에는 **활성 컴퓨팅 컨텍스트** 를 설정해야 합니다. 
 
 기본적으로 대부분의 작업은 로컬로 실행됩니다. 즉, 다른 컴퓨팅 컨텍스트를 지정하지 않으면 데이터 원본에서 데이터가 페치되고, 코드가 현재 Python 환경에서 실행됩니다.
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 107b4cc7c68f1fdf91a685235d336556740547c7
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8e2f37542ae3363e654370f6dcdcbc76cc941335
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956594"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470854"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>R에서 olapR을 사용하여 MDX 쿼리를 만드는 방법
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91956594"
      
      + `axis()` 쿼리에서 사용할 추가 축의 이름을 지정합니다. 
      
-         OLAP 큐브에는 최대 128개의 쿼리 축이 포함될 수 있습니다. 일반적으로 처음 4개 축을 **열**, **행**, **페이지** 및 **장**이라고 합니다. 
+         OLAP 큐브에는 최대 128개의 쿼리 축이 포함될 수 있습니다. 일반적으로 처음 4개 축을 **열**, **행**, **페이지** 및 **장** 이라고 합니다. 
          
          쿼리가 비교적 단순한 경우 `columns`, `rows`등의 함수를 사용하여 쿼리를 작성할 수 있습니다. 그러나 인덱스 값이 0이 아닌 `axis()` 함수를 사용하여 한정자가 많은 MDX 쿼리를 작성하거나 추가 차원을 한정자로 추가할 수도 있습니다.
 
@@ -81,7 +81,7 @@ Analysis Services에 쉽게 복원될 수 있는 백업 파일을 포함하여 �
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. 슬라이서가 포함된 기본 MDX
 
-이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_ 을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서*로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
+이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_ 을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서* 로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -93,7 +93,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 + 열에서 쉼표로 구분된 문자열의 요소로 여러 측정값을 지정할 수 있습니다.
 + 행 축은 "제품군" 차원의 가능한 모든 값(모든 MEMBERS)을 사용합니다. 
 + 이 쿼리는 모든 국가의 인터넷 판매에 대한 _롤업_ 요약을 포함하며 열이 세 개인 테이블을 반환합니다.
-+ WHERE 절은 _slicer 축_을 지정합니다. 이 예에서 슬라이서는 **SalesTerritory** 차원의 멤버를 사용하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
++ WHERE 절은 _slicer 축_ 을 지정합니다. 이 예에서 슬라이서는 **SalesTerritory** 차원의 멤버를 사용하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>olapR에서 제공하는 함수를 사용하여 이 쿼리를 작성하려면
 

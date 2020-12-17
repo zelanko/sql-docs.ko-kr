@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65ca95f3aa2cef72b49a9f80bdbf615e890a85d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038985"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478774"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>편집기 및 보기 모드 관리
 
@@ -36,15 +36,15 @@ ms.locfileid: "92038985"
 
 ## <a name="changing-the-view-mode"></a>보기 모드 변경  
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 **탭 문서**라는 보기 모드가 있는데 이 기능을 사용하면 여러 개의 편집기와 문서를 동시에 열어서 편집기 상단 탭을 통해 액세스할 수 있습니다. 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 MDI(다중 문서 인터페이스) 모드로 열 수도 있습니다. 이 모드에서는 탭이 없는 창을 여러 개 열어 바둑판식으로 배열하거나 창 크기를 최소화할 수도 있습니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 **탭 문서** 라는 보기 모드가 있는데 이 기능을 사용하면 여러 개의 편집기와 문서를 동시에 열어서 편집기 상단 탭을 통해 액세스할 수 있습니다. 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 MDI(다중 문서 인터페이스) 모드로 열 수도 있습니다. 이 모드에서는 탭이 없는 창을 여러 개 열어 바둑판식으로 배열하거나 창 크기를 최소화할 수도 있습니다.  
   
 #### <a name="to-switch-between-view-modes"></a>보기 모드를 전환하려면  
   
 1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **환경**을 클릭하고 **일반**을 클릭합니다.  
+2.  **환경** 을 클릭하고 **일반** 을 클릭합니다.  
   
-3.  **탭 문서** 또는 **MDI 환경**을 클릭합니다.  
+3.  **탭 문서** 또는 **MDI 환경** 을 클릭합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 다시 시작할 때까지 변경 내용이 적용되지 않습니다.  
@@ -69,11 +69,11 @@ ms.locfileid: "92038985"
   
 1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **텍스트 편집기**를 클릭합니다.  
+2.  **텍스트 편집기** 를 클릭합니다.  
   
 3.  해당 언어 폴더(모든 언어에 적용하려면 **모든 언어** )를 엽니다.  
   
-4.  **자동 줄 바꿈**을 선택합니다.  
+4.  **자동 줄 바꿈** 을 선택합니다.  
   
 ## <a name="enabling-virtual-space-mode"></a>가상 공간 모드 설정  
  **가상 공간** 모드로 편집기를 열면 각 줄의 끝을 넘어서는 공간은 무한한 공간처럼 보이기 때문에 표시되는 화면 영역 밖으로 코드 줄이 계속 이어집니다.  
@@ -82,11 +82,11 @@ ms.locfileid: "92038985"
   
 1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **텍스트 편집기**를 클릭합니다.  
+2.  **텍스트 편집기** 를 클릭합니다.  
   
 3.  해당 언어 폴더(모든 언어에 적용하려면 **모든 언어** )를 엽니다.  
   
-4.  **가상 공간 활성화**를 선택합니다.  
+4.  **가상 공간 활성화** 를 선택합니다.  
   
  가상 공간 모드를 활성화하지 않은 경우 커서는 한 줄의 끝에서 다음 줄의 첫 번째 문자로 또는 그 반대로 줄 바꿈됩니다.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "92038985"
   
 1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
   
-2.  **텍스트 편집기**를 클릭합니다.  
+2.  **텍스트 편집기** 를 클릭합니다.  
   
-3.  **모든 언어**를 클릭합니다.  
+3.  **모든 언어** 를 클릭합니다.  
   
-4.  **일반**을 클릭합니다.  
+4.  **일반** 을 클릭합니다.  
   
-5.  **줄 번호**를 선택합니다.  
+5.  **줄 번호** 를 선택합니다.  
   
  일부 프로그래밍 언어에만 줄 번호 매기기를 지정하려면 해당 폴더에서 **줄 번호** 를 선택합니다.  
   

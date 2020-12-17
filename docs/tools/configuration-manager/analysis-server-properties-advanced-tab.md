@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20d68cc928fe43b48b146c0b392e2bb91f3d024b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 1831107a38ec8a00de0fee7c51eb7dd977217334
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900936"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483855"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>분석 서버 속성(고급 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88900936"
  오류 발생 시 메모리 덤프가 추가될 위치를 표시합니다.  
   
  **오류 보고**  
- 이 속성을 **예**로 설정하면 오류 발생 시 Dr. Watson 프로그램에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 사용자의 오류 서버로 정보를 전달합니다. 오류 보고에 대한 자세한 내용은 온라인 설명서에서 "오류 및 사용 보고서 설정" 항목을 참조하십시오.  
+ 이 속성을 **예** 로 설정하면 오류 발생 시 Dr. Watson 프로그램에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 사용자의 오류 서버로 정보를 전달합니다. 오류 보고에 대한 자세한 내용은 온라인 설명서에서 "오류 및 사용 보고서 설정" 항목을 참조하십시오.  
   
  **인스턴스 ID**  
  이 서비스를 사용하는 인스턴스를 나타냅니다.  

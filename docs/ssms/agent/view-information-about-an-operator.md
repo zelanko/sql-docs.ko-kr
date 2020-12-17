@@ -18,13 +18,13 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7ee5c9f7a26979891a26ff44c34a5b4502b6026
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a9fb20b3a5d161c4d69d15740defc3dd10ebe7a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480714"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "92038716"
   
 #### <a name="to-view-information-about-an-operator"></a>운영자에 대한 정보를 보려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 보려는 운영자가 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 보려는 운영자가 들어 있는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
 3.  더하기 기호를 클릭하여 **운영자** 폴더를 확장합니다.  
   
-4.  보려는 운영자를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+4.  보려는 운영자를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
     _operator_name_**속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하십시오.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "92038716"
   
     -   [운영자 속성&#40;기록 페이지&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  완료되었으면 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-view-information-about-an-operator"></a>운영자에 대한 정보를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- reports information about operator François Ajenstat   

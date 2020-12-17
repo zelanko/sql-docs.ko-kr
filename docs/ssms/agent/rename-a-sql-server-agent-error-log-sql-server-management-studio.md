@@ -16,13 +16,13 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e636d3a46feb104325e86fd53f98bbc108ce5be5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28f93c2923c68f2f0585eced379548a87e1275f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472314"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그 이름 바꾸기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "92034953"
   
 #### <a name="to-rename-a-sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그 이름을 바꾸려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 이름을 바꾸려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 이름을 바꾸려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **오류 로그** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 선택합니다.  
+3.  **오류 로그** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **구성** 을 선택합니다.  
   
 4.  **SQL Server 에이전트 오류 로그 구성** 대화 상자의 **오류 로그 파일** 상자에서 오류 로그에 대한 새 파일 경로 및 파일 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **에이전트 오류 로그 위치를 지정하십시오.** 대화 상자를 엽니다.  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  완료되었으면 **확인** 을 클릭합니다.  

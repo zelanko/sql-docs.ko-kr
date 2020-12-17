@@ -7,18 +7,18 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d435340ec276de3dd2b08f340ecd49bb8c03787
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1fcaa82829b35926e2707dda792ac2c376241650
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956906"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470934"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy(SQL Server Machine Learning Services의 Python 패키지)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-**revoscalepy**는 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 Python 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있습니다.
+**revoscalepy** 는 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 Python 패키지입니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에 포함되어 있습니다.
 
 패키지는 다음 기능을 제공합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "91956906"
 + 분산 또는 병렬 처리를 통해 확장 가능한 데이터 과학 함수
 + Intel 수학 라이브러리 사용을 포함하는 향상된 성능
 
-**revoscalepy**에서 만든 데이터 원본 및 컴퓨팅 컨텍스트를 기계 학습 알고리즘에서도 사용할 수 있습니다. 이러한 알고리즘에 대한 소개를 보려면 [SQL Server의 microsoftml Python 모듈](ref-py-microsoftml.md)을 참조하세요.
+**revoscalepy** 에서 만든 데이터 원본 및 컴퓨팅 컨텍스트를 기계 학습 알고리즘에서도 사용할 수 있습니다. 이러한 알고리즘에 대한 소개를 보려면 [SQL Server의 microsoftml Python 모듈](ref-py-microsoftml.md)을 참조하세요.
 
 ## <a name="full-reference-documentation"></a>전체 참조 설명서
 
@@ -42,7 +42,7 @@ ms.locfileid: "91956906"
 + [데이터 과학 클라이언트용 Python 클라이언트 라이브러리](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 이상의 **revoscalepy**에서 둘 다 지원됩니다.
+> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 이상의 **revoscalepy** 에서 둘 다 지원됩니다.
 
 ## <a name="functions-by-category"></a>범주별 함수
 
@@ -50,11 +50,11 @@ ms.locfileid: "91956906"
 
 ## <a name="1-data-source-and-compute"></a>1 - 데이터 원본 및 컴퓨팅
 
-**revoscalepy**에는 데이터 원본을 만들고 위치를 설정하기 위한 함수 또는 컴퓨팅이 수행되는 *컴퓨팅 컨텍스트*가 포함되어 있습니다. SQL Server 시나리오와 관련된 함수는 아래 표에 나와 있습니다.
+**revoscalepy** 에는 데이터 원본을 만들고 위치를 설정하기 위한 함수 또는 컴퓨팅이 수행되는 *컴퓨팅 컨텍스트* 가 포함되어 있습니다. SQL Server 시나리오와 관련된 함수는 아래 표에 나와 있습니다.
 
 경우에 따라 SQL Server와 Python은 다른 데이터 형식을 사용합니다. SQL 및 Python 데이터 형식 간 매핑 목록은 [Python-SQL 데이터 형식](python-libraries-and-data-types.md)을 참조하세요.
 
-| 기능| Description|
+| 함수| 설명|
 | ------- | ---------- |
 | [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  SQL Server 컴퓨팅 컨텍스트 개체를 만들어 원격 인스턴스에 컴퓨팅을 푸시합니다. 여러 **revoscalepy** 함수는 컴퓨팅 컨텍스트를 인수로 사용합니다. 컨텍스트 전환 예제는 [revoscalepy를 사용하여 모델 만들기](../tutorials/use-python-revoscalepy-to-create-model.md)를 참조하세요.|
 | [RxSqlServerData](/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | SQL Server 쿼리나 테이블을 기준으로 데이터 개체를 만듭니다. |
@@ -66,7 +66,7 @@ ms.locfileid: "91956906"
 
 ## <a name="2-data-manipulation-etl"></a>2 - 데이터 조작(ETL)
 
-| 기능 | Description |
+| 함수 | 설명 |
 |----------|-------------|
 |[rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import) | .xdf 파일 또는 데이터 프레임으로 데이터를 가져옵니다.|
 |[rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 입력 데이터 세트의 데이터를 출력 데이터 세트로 변환합니다.|
@@ -75,7 +75,7 @@ ms.locfileid: "91956906"
 
 ## <a name="3-training-and-summarization"></a>3 - 학습 및 요약
 
-| 기능| Description|
+| 함수| 설명|
 | ------- | ---------- |
 |[rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 확률 그래디언트 부스팅 의사 결정 트리 맞추기|
 |[rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 분류 및 회귀 의사 결정 포리스트 맞추기|
@@ -99,7 +99,7 @@ ms.locfileid: "91956906"
 
 ## <a name="how-to-work-with-revoscalepy"></a>revoscalepy로 작업하는 방법
 
-**revoscalepy**의 함수는 저장 프로시저에서 캡슐화된 Python 코드에서 호출할 수 있습니다. 대부분의 개발자는 **revoscalepy** 솔루션을 로컬로 빌드한 다음, 완성된 Python 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
+**revoscalepy** 의 함수는 저장 프로시저에서 캡슐화된 Python 코드에서 호출할 수 있습니다. 대부분의 개발자는 **revoscalepy** 솔루션을 로컬로 빌드한 다음, 완성된 Python 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
 
 로컬로 실행하는 경우 일반적으로 명령줄 또는 Python 개발 환경에서 Python 스크립트를 실행하고, **revoscalepy** 함수 중 하나를 사용하여 SQL Server 컴퓨팅 컨텍스트를 지정합니다. 전체 코드 또는 개별 함수에 대한 원격 컴퓨팅 컨텍스트를 사용할 수 있습니다. 예를 들어, 최신 데이터를 사용하고 데이터 이동을 방지하도록 모델 학습을 서버에 오프로드할 수 있습니다.
 

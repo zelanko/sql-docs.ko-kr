@@ -24,13 +24,13 @@ ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf18385b89ac7af32bfde26d704880eb4e9bb300
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: de6830e6256a0cff840d34e179b198803f03016d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464424"
 ---
 # <a name="create-a-user-defined-event"></a>사용자 정의 이벤트 만들기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

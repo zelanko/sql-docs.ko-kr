@@ -19,13 +19,13 @@ ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10c8ab37bd23fde67f9632f8f54c94d49dcc3ebf
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: cb23dfc48779bd0f85f876d5f084764ebb2df8d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039181"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474474"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,25 +49,25 @@ ms.locfileid: "92039181"
   
 #### <a name="to-delete-an-operator"></a>운영자를 삭제하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 삭제할 운영자가 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 삭제할 운영자가 들어 있는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
 3.  더하기 기호를 클릭하여 **운영자** 폴더를 확장합니다.  
   
-4.  삭제할 운영자를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+4.  삭제할 운영자를 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다.  
   
-5.  **개체 삭제** 대화 상자에서 올바른 운영자를 선택했는지 확인한 다음 **확인**을 클릭합니다. 삭제한 운영자에게 전송된 경고와 작업을 다른 운영자가 받도록 하려면 **재할당 대상** 을 선택하고 목록에서 운영자를 선택합니다.  
+5.  **개체 삭제** 대화 상자에서 올바른 운영자를 선택했는지 확인한 다음 **확인** 을 클릭합니다. 삭제한 운영자에게 전송된 경고와 작업을 다른 운영자가 받도록 하려면 **재할당 대상** 을 선택하고 목록에서 운영자를 선택합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-delete-an-operator"></a>운영자를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- deletes operator 'Test Operator' and reassigns all alerts and jobs

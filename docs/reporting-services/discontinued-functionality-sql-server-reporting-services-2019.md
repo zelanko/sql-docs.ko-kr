@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/19/2019
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d062e301346e11984b0ab0d72c418f71db992fd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 7324c40b38ed25b1a603586ef90b4077acb0f36e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472554"
 ---
 # <a name="discontinued-functionality-in-sql-server-2019-reporting-services-ssrs"></a>SQL Server 2019 Reporting Services(SSRS)에서 지원되지 않는 기능
 
@@ -22,7 +22,7 @@ ms.locfileid: "74320297"
 
 이 항목에서는 SQL Server 2019에서 SQL Server Reporting Services가 더 이상 지원하지 않는 기능들에 대해 설명합니다. 운영 체제 또는 Microsoft 인터넷 정보 서비스(IIS)의 특정 버전에 대해 더 이상 지원되지 않는 기능은 언급하지 않습니다.
 
-_제공이 중단된 기능_은 Reporting Services에서 더 이상 지원되지 않는 기능입니다. 이러한 기능은 제품에서 실제로 제거되었을 수도 있습니다. Reporting Services는 다음과 같은 기능의 제공을 중단했습니다.
+_제공이 중단된 기능_ 은 Reporting Services에서 더 이상 지원되지 않는 기능입니다. 이러한 기능은 제품에서 실제로 제거되었을 수도 있습니다. Reporting Services는 다음과 같은 기능의 제공을 중단했습니다.
 
 | Category | 사용되지 않는 기능 | 대체 기능 |
 | --- | --- | --- |

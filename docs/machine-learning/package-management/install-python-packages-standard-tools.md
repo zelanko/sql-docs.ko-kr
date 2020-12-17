@@ -7,13 +7,13 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 67d5a323cfdbdb7eb765430ba264ff0bde2074f5
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2017
+ms.openlocfilehash: f9c5d221c2deec5506b8d6b80f1000f315e6a352
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471074"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>SQL Server에서 Python 도구를 사용하여 패키지 설치
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]

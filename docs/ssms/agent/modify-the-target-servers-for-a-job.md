@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e070d2afa3b26d7c7d0c63f597571a3f526ae1d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035586"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482191"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
 
@@ -51,11 +51,11 @@ sysadmin 고정 서버 역할의 멤버는 기본적으로 이 저장 프로시�
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
-3.  **작업 속성** 대화 상자에서 **대상**페이지를 선택하고 **대상 로컬 서버**또는 **대상 다중 서버**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **대상** 페이지를 선택하고 **대상 로컬 서버** 또는 **대상 다중 서버** 를 클릭합니다.  
   
-    **대상 다중 서버**를 선택한 경우 서버 이름 왼쪽에 있는 확인란을 선택하여 작업 대상으로 사용할 서버를 지정합니다. 작업 대상으로 지정하지 않을 서버의 확인란 선택이 취소되어 있는지 확인합니다.  
+    **대상 다중 서버** 를 선택한 경우 서버 이름 왼쪽에 있는 확인란을 선택하여 작업 대상으로 사용할 서버를 지정합니다. 작업 대상으로 지정하지 않을 서버의 확인란 선택이 취소되어 있는지 확인합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
@@ -63,9 +63,9 @@ sysadmin 고정 서버 역할의 멤버는 기본적으로 이 저장 프로시�
   
 1.  [!INCLUDE[ssDE](../../includes/ssde_md.md)]에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 다중 서버 작업 Weekly Sales Backups를 SEATTLE2 서버에 할당합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다. 이 예에서는 다중 서버 작업 Weekly Sales Backups를 SEATTLE2 서버에 할당합니다.  
   
 ```  
 USE msdb ;  

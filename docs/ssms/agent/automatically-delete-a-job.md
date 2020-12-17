@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19e400c410187f369672d12e2ee624e6f2a3d6c4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7da6affa2c92686c681566a929bb16dc688e9698
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466594"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
 
@@ -60,11 +60,11 @@ ms.locfileid: "92037402"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **알림** 페이지를 선택합니다.  
   
-4.  **자동으로 작업 삭제**를 선택하고 다음 중 하나를 선택합니다.  
+4.  **자동으로 작업 삭제** 를 선택하고 다음 중 하나를 선택합니다.  
   
     -   작업이 성공적으로 완료되었을 때 작업 상태를 삭제하려면 **작업 성공 시** 를 클릭합니다.  
   

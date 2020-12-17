@@ -8,13 +8,13 @@ ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: d3c051a2c72e911ddbf9d310929fe15628b8b5a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471324"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>SQL 테이블 데이터를 Python pandas 데이터 프레임에 삽입
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -23,15 +23,15 @@ ms.locfileid: "94870248"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 * [Windows용 SQL Server](../../database-engine/install-windows/install-sql-server.md) 또는 [Linux용 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 * [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 * [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 샘플 데이터베이스를 Azure SQL Managed Instance로 복원하기 위한 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).

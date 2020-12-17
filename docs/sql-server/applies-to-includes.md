@@ -8,13 +8,13 @@ ms.technology: release-landing
 author: MashaMSFT
 ms.author: mathoma
 ms.topic: conceptual
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f85806b9aa7102fd96b26860b8aacb98008bd15
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 97ff19bf81a574c4b6eb89a7c65e39ddfb4c74cc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410560"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server에 버전 관리 및 적용 대상 파일이 포함되어 있는 경우
 

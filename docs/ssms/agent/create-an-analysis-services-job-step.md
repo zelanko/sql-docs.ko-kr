@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b828996ad806ad3c98694ed5065466e6b5f8c9f
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e65aa07cff708a7112b7a0c4e0bbc0338cb40860
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344049"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477114"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -70,13 +70,13 @@ ms.locfileid: "92344049"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
+2.  **SQL Server 에이전트** 를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
   
-3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기** 를 클릭합니다.  
   
-4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름** 을 입력합니다.  
   
-5.  **유형** 목록에서 **SQL Server Analysis Services 명령**을 클릭합니다.  
+5.  **유형** 목록에서 **SQL Server Analysis Services 명령** 을 클릭합니다.  
   
 6.  **다음 계정으로 실행** 목록에서 Analysis Services 명령 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "92344049"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
+2.  **SQL Server 에이전트** 를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../../ssms/agent/create-jobs.md)를 참조하세요.  
   
-3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기** 를 클릭합니다.  
   
-4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름** 을 입력합니다.  
   
-5.  **유형** 목록에서 **SQL Server Analysis Services 쿼리**를 클릭합니다.  
+5.  **유형** 목록에서 **SQL Server Analysis Services 쿼리** 를 클릭합니다.  
   
 6.  **다음 계정으로 실행** 목록에서 Analysis Services 쿼리 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "92344049"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Analysis Services 명령 작업 단계를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates a job step that uses XMLA to create a relational data source that
@@ -153,11 +153,11 @@ ms.locfileid: "92344049"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services 쿼리 작업 단계를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- Creates a job step that uses MDX to return data  

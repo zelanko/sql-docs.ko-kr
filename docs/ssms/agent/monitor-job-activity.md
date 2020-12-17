@@ -22,13 +22,13 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 39ca7d0b175f8627badf168fe5433e32a90aaa30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d5cea1ad802ada770cd5e30c1b6c532741d78e61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472334"
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "92035576"
   
 -   특정 작업의 기록을 표시합니다.  
   
--   **에이전트 작업 활동** 표의 정보를 수동으로 새로 고치거나 **새로 고침 설정 보기**를 클릭하여 자동 새로 고침 간격을 설정합니다.  
+-   **에이전트 작업 활동** 표의 정보를 수동으로 새로 고치거나 **새로 고침 설정 보기** 를 클릭하여 자동 새로 고침 간격을 설정합니다.  
   
 작업 활동 모니터를 사용하여 실행이 예약된 작업과 현재 세션 동안 실행된 작업의 최종 결과를 알아보고 현재 실행 중이거나 유휴 상태의 작업을 알 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 예기치 않게 중지될 경우 작업 활동 모니터의 이전 세션을 살펴보면 실행 중이었던 작업을 알 수 있습니다.  
   
-작업 활동 모니터를 열려면 **개체 탐색기에서** SQL Server 에이전트 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 확장하고 **작업 활동 모니터**를 마우스 오른쪽 단추로 클릭한 다음 **작업 활동 보기**를 클릭합니다.  
+작업 활동 모니터를 열려면 **개체 탐색기에서** SQL Server 에이전트 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 확장하고 **작업 활동 모니터** 를 마우스 오른쪽 단추로 클릭한 다음 **작업 활동 보기** 를 클릭합니다.  
   
-**sp_help_jobactivity**저장 프로시저를 사용하여 현재 세션의 작업 활동을 볼 수도 있습니다.  
+**sp_help_jobactivity** 저장 프로시저를 사용하여 현재 세션의 작업 활동을 볼 수도 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

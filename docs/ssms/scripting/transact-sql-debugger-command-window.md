@@ -13,19 +13,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3465a430f9b9103088e08db045d1c42338c0224f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 983f6d846d1cb9be973c4976798fb55580dc7f2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476804"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL 디버거 - 명령 창
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**명령 창**을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기 창에서 현재 디버그 중인 코드에 디버그 및 편집 명령과 같은 명령을 실행합니다. **명령 창**을 사용하려면 디버그 모드여야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **명령** 창에서도 지원되는 많은 명령을 지원합니다. 자세한 내용은 [Visual Studio 명령 창](https://go.microsoft.com/fwlink/?LinkId=112007)을 참조하십시오.  
+**명령 창** 을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기 창에서 현재 디버그 중인 코드에 디버그 및 편집 명령과 같은 명령을 실행합니다. **명령 창** 을 사용하려면 디버그 모드여야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **명령** 창에서도 지원되는 많은 명령을 지원합니다. 자세한 내용은 [Visual Studio 명령 창](https://go.microsoft.com/fwlink/?LinkId=112007)을 참조하십시오.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -33,19 +33,19 @@ ms.locfileid: "88901426"
 
 **명령 창에 액세스하려면**
 
-- **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
+- **디버그** 메뉴에서 **디버깅 시작** 을 클릭합니다.
 
 **변수 값을 인쇄하려면**
 
-- **명령 창**에서 **Debug.Print \<VariableName>** 를 입력하고 Enter 키를 누릅니다.
+- **명령 창** 에서 **Debug.Print \<VariableName>** 를 입력하고 Enter 키를 누릅니다.
 
 **현재 스레드에 대한 정보를 표시하려면**
 
-- **명령 창**에서 **Debug.ListThread**를 입력하고 Enter 키를 누릅니다.
+- **명령 창** 에서 **Debug.ListThread** 를 입력하고 Enter 키를 누릅니다.
 
 **간략한 조사식 창에 변수를 추가하려면**
 
-- **명령 창**에서 **Debug.QuickWatch \<VariableName>** 을 입력하고 Enter 키를 누릅니다.
+- **명령 창** 에서 **Debug.QuickWatch \<VariableName>** 을 입력하고 Enter 키를 누릅니다.
 
 ## <a name="see-also"></a>참고 항목
 

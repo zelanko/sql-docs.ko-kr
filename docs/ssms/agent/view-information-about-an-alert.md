@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3b87208c7e1105d881816297cc70c8cee54f46f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96aaa12ce934da18818bd99fde009f6ec0747aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037262"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480734"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 
@@ -47,11 +47,11 @@ ms.locfileid: "92037262"
   
 1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 경고에 대한 정보를 보려는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
 3.  더하기 기호를 클릭하여 **경고** 폴더를 확장합니다.  
   
-4.  보려는 정보가 포함된 경고를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+4.  보려는 정보가 포함된 경고를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
     _alert\_name_**경고 속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하세요.  
   
@@ -63,17 +63,17 @@ ms.locfileid: "92037262"
   
     -   [경고 속성&#40;기록 페이지&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  완료되었으면 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-view-information-about-an-alert"></a>경고에 대한 정보를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

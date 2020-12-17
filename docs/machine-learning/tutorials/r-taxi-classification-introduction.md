@@ -9,30 +9,30 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: afc692cdd0b7766ff0366f0de5d13e47d6dc27e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585062"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470184"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)의 R 통합에 대해 알아봅니다.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)의 R 통합에 대해 알아봅니다.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server 2016 R Services](../sql-server-machine-learning-services.md)의 R 통합에 대해 알아봅니다.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 R 통합에 대해 알아봅니다.
 ::: moniker-end
 
@@ -61,11 +61,11 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL M
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)를 설치
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + [SQL Server Machine Learning Services 및 R](../install/sql-machine-learning-services-windows-install.md#verify-installation)을 설치
 ::: moniker-end
 
@@ -73,7 +73,7 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL M
 
 + [Python 스크립트를 실행할 수 있는 권한을 부여](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + SQL Server 2019부터 격리 메커니즘을 사용하려면 플롯 파일이 저장된 디렉터리에 대한 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
 ::: moniker-end
 

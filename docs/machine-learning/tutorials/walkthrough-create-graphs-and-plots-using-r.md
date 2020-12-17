@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ada99a4058b2b3657a9064e42f2f2ca1f2aedbb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196237"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470014"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용하여 그래프 및 플롯 만들기(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "92196237"
     > [!NOTE]
     > 그래프가 다르게 보이나요?.
     >  
-    > _inDataSource_가 상위 1,000개 행만 사용하기 때문입니다. TOP을 사용하는 행의 순서 매기기는 ORDER BY 절이 없으면 비결정적으로 수행되므로 데이터와 결과 그래프가 다를 수 있습니다.
+    > _inDataSource_ 가 상위 1,000개 행만 사용하기 때문입니다. TOP을 사용하는 행의 순서 매기기는 ORDER BY 절이 없으면 비결정적으로 수행되므로 데이터와 결과 그래프가 다를 수 있습니다.
     > 이 특정 이미지는 약 10,000개의 데이터 행으로 생성되었습니다. 여러 행 수로 실험하여 각기 다른 그래프를 가져오고 환경의 결과를 반환하는 데 걸리는 시간을 확인하는 것이 좋습니다.
 
 ## <a name="create-a-map-plot"></a>지도 그림 만들기
 
 일반적으로 데이터베이스 서버는 인터넷 액세스를 차단합니다. 따라서 플롯을 생성하기 위해 지도나 다른 이미지를 다운로드해야 하는 R 패키지를 사용하는 경우에는 불편할 수 있습니다. 그렇지만 고유한 애플리케이션을 개발할 때 유용할 수 있는 해결 방법이 있습니다. 기본적으로 클라이언트에서 지도 표현을 생성한 다음, SQL Server 테이블에 특성으로 저장된 지점을 지도에 오버레이합니다.
 
-1. R 그림 개체를 만드는 함수를 정의합니다. 사용자 지정 함수 *mapPlot*은 택시 승차 위치를 사용하고 각 위치에서 시작된 승차 수를 그리는 산점도를 만듭니다. 이미 [설치되고 로드되어](walkthrough-data-science-end-to-end-walkthrough.md#add-packages) 있어야 하는 **ggplot2** 및 **ggmap** 패키지를 사용합니다.
+1. R 그림 개체를 만드는 함수를 정의합니다. 사용자 지정 함수 *mapPlot* 은 택시 승차 위치를 사용하고 각 위치에서 시작된 승차 수를 그리는 산점도를 만듭니다. 이미 [설치되고 로드되어](walkthrough-data-science-end-to-end-walkthrough.md#add-packages) 있어야 하는 **ggplot2** 및 **ggmap** 패키지를 사용합니다.
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -72,7 +72,7 @@ ms.locfileid: "92196237"
     ```
 
     + *mapPlot* 함수는 앞에서 RxSqlServerData를 사용하여 정의한 기존 데이터 개체와 클라이언트에서 전달된 지도 표현의 두 인수를 사용합니다.
-    + *ds* 변수로 시작하는 줄에서 rxImport를 사용하여 이전에 만든 데이터 원본 *inDataSource*에서 메모리 데이터를 로드합니다. (이 데이터 원본에는 1,000개의 행만 포함되어 있습니다. 더 많은 데이터 요소가 포함된 지도를 만들려면 다른 데이터 원본을 대체할 수 있습니다.)
+    + *ds* 변수로 시작하는 줄에서 rxImport를 사용하여 이전에 만든 데이터 원본 *inDataSource* 에서 메모리 데이터를 로드합니다. (이 데이터 원본에는 1,000개의 행만 포함되어 있습니다. 더 많은 데이터 요소가 포함된 지도를 만들려면 다른 데이터 원본을 대체할 수 있습니다.)
     + 오픈 소스 R 함수를 사용할 때마다 로컬 메모리의 데이터 프레임에 데이터를 로드해야 합니다. 그러나 [rxImport](/r-server/r-reference/revoscaler/rximport) 함수를 호출하여 원격 컴퓨팅 컨텍스트의 메모리에서 실행할 수 있습니다.
 
 2. 컴퓨팅 컨텍스트를 로컬로 변경하고 지도를 만드는 데 필요한 라이브러리를 로드합니다.
@@ -97,7 +97,7 @@ ms.locfileid: "92196237"
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + `googMap`의 지도 데이터가 원격으로 실행되는 함수 *mapPlot*에 인수로 전달됩니다. 지도가 로컬 환경에서 생성되었으므로 SQL Server의 컨텍스트에서 그림을 만들기 위해 함수에 전달되어야 합니다.
+    + `googMap`의 지도 데이터가 원격으로 실행되는 함수 *mapPlot* 에 인수로 전달됩니다. 지도가 로컬 환경에서 생성되었으므로 SQL Server의 컨텍스트에서 그림을 만들기 위해 함수에 전달되어야 합니다.
 
     + `plot`로 시작하는 줄이 실행될 때 렌더링된 데이터는 R 클라이언트에서 볼 수 있도록 로컬 R 환경으로 다시 serialize됩니다.
 

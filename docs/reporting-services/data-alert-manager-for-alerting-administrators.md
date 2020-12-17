@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7bd656cc4b543ecb2c291adcd9745f3c4b1c79bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484345"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
 

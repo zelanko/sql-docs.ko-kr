@@ -17,13 +17,13 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f888cc014c5cce3280f572c8a7eeddf194704624
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482152"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92037266"
 > [!IMPORTANT]  
 > Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
-> 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
+> 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 토큰이 간단하고 효율적으로 바뀝니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰을 해당하는 리터럴 문자열 값으로 바꿉니다. 모든 토큰은 대/소문자가 구분되며 작업 단계에서 이를 고려하여 사용하는 토큰을 따옴표로 올바르게 묶거나 교체 문자열을 올바른 데이터 형식으로 변환해야 합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "92037266"
 |**(TIME)**|현재 시간(HHMMSS 형식)입니다.|  
 |**(STRTTM)**|작업이 실행을 시작하는 시간(HHMMSS 형식)입니다.|  
 |**(STRTDT)**|작업이 실행을 시작하는 날짜(YYYYMMDD 형식)입니다.|  
-|**(WMI(** _property_ **))**|WMI 경고에 대한 응답으로 실행되는 작업의 경우 *property*에 의해 지정되는 속성 값입니다. 예를 들어 `$(WMI(DatabaseName))` 는 경고를 실행시킨 WMI 이벤트에 대한 **DatabaseName** 속성 값을 제공합니다.|  
+|**(WMI(** _property_ **))**|WMI 경고에 대한 응답으로 실행되는 작업의 경우 *property* 에 의해 지정되는 속성 값입니다. 예를 들어 `$(WMI(DatabaseName))` 는 경고를 실행시킨 WMI 이벤트에 대한 **DatabaseName** 속성 값을 제공합니다.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 에이전트 이스케이프 매크로  
   
@@ -97,11 +97,11 @@ ms.locfileid: "92037266"
 |**$(ESCAPE_NONE(** _token\_name_ **))**|문자열에서 아무 문자도 이스케이프하지 않고 토큰을 바꿉니다. 이 매크로는 신뢰할 수 있는 사용자만 토큰 교체 문자열을 제공할 수 있는 환경에서 이전 버전과의 호환성을 지원하기 위해 제공됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "매크로를 사용하도록 작업 단계 업데이트"를 참조하십시오.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>매크로를 사용하도록 작업 단계 업데이트  
-다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰 바꾸기를 처리하는 방법에 대해 설명합니다. 경고 토큰 바꾸기를 설정하거나 해제하려면 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 확인란을 선택하거나 선택을 취소합니다.  
+다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰 바꾸기를 처리하는 방법에 대해 설명합니다. 경고 토큰 바꾸기를 설정하거나 해제하려면 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 확인란을 선택하거나 선택을 취소합니다.  
   
 |토큰 구문|경고 토큰 바꾸기 설정|경고 토큰 바꾸기 해제|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**및 **WMI(** _property_ **)** 가 있습니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
+|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** 및 **WMI(** _property_ **)** 가 있습니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
 |ESCAPE 매크로가 사용되지 않음|토큰이 포함된 모든 작업이 실패합니다.|토큰이 포함된 모든 작업이 실패합니다.|  
   
 ## <a name="token-syntax-update-examples"></a>토큰 구문 업데이트 예  

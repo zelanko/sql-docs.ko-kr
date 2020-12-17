@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d10d65f8be4ff8e53cbfad795f1e515a22eada71
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 08d4948ac89f3771c264f9d24d692ca023fa57c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470894"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R과 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "92098862"
 
 SQL Server 2016 R Services 및 R이 포함된 SQL Server Machine Learning Services는 Microsoft R Open의 특정 릴리스에 맞춰져 있습니다. 예를 들어 최신 릴리스인 SQL Server 2019 Machine Learning Services는 Microsoft R Open 3.5.2를 기반으로 해서 빌드됩니다.
 
-특정 SQL Server 인스턴스와 연결된 R 버전을 보려면 SQL 인스턴스에서 **RGui**를 엽니다. 예를 들어 SQL Server 2019의 기본 인스턴스 경로는 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`가 됩니다.
+특정 SQL Server 인스턴스와 연결된 R 버전을 보려면 SQL 인스턴스에서 **RGui** 를 엽니다. 예를 들어 SQL Server 2019의 기본 인스턴스 경로는 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`가 됩니다.
 
 이 도구는 기본 R 및 기타 라이브러리를 로드합니다. 패키지 버전 정보는 세션 시작 시 로드되는 각 패키지에 대한 알림으로 제공됩니다.
 
@@ -72,9 +72,9 @@ SQL Server 2016 R Services 및 R이 포함된 SQL Server Machine Learning Servic
 
 ## <a name="data-types-that-might-convert-poorly"></a>잘못 변환될 수 있는 데이터 형식
 
-+ **datetimeoffset**을 제외한 대부분의 날짜/시간 형식이 제대로 실행됩니다.
++ **datetimeoffset** 을 제외한 대부분의 날짜/시간 형식이 제대로 실행됩니다.
 + 대부분의 숫자 데이터 형식이 지원되지만 **money** 및 **smallmoney** 변환은 실패할 수 있습니다.
-+ **varchar**가 지원되지만 SQL Server는 유니코드를 규칙으로 사용하므로 가능하면 **nvarchar** 및 기타 유니코드 텍스트 데이터 형식을 사용하는 것이 좋습니다.
++ **varchar** 가 지원되지만 SQL Server는 유니코드를 규칙으로 사용하므로 가능하면 **nvarchar** 및 기타 유니코드 텍스트 데이터 형식을 사용하는 것이 좋습니다.
 + RevoScaleR 라이브러리에서 접두사가 rx인 함수는 SQL 이진 데이터 형식(**binary** 및 **varbinary**)을 처리할 수 있지만 대부분의 시나리오에서는 이러한 형식에 대한 특수 처리가 필요합니다. 이진 열을 사용할 경우 대부분의 R 코드가 작동하지 않을 수 있습니다.
 
   
@@ -100,7 +100,7 @@ Microsoft SQL Server 2016 이상의 데이터 형식 변환 및 여러 가지 �
 R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원하지 않지만 R 스크립트에서 데이터 열을 사용해야 하는 경우 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 R 스크립트에서 데이터를 사용하기 전에 데이터 형식 변환이 의도한 대로 시행되었는지 확인하는 것이 좋습니다.  
 
 > [!WARNING]
-> 데이터를 이동하는 동안 **rxDataStep**을 사용하여 호환되지 않는 열을 삭제할 경우 **RxSqlServerData** 데이터 원본 형식에는 인수 _varsToKeep_ 및 _varsToDrop_이 지원되지 않습니다.
+> 데이터를 이동하는 동안 **rxDataStep** 을 사용하여 호환되지 않는 열을 삭제할 경우 **RxSqlServerData** 데이터 원본 형식에는 인수 _varsToKeep_ 및 _varsToDrop_ 이 지원되지 않습니다.
 
 
 ## <a name="examples"></a>예

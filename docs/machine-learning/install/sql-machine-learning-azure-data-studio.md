@@ -7,13 +7,13 @@ ms.date: 03/09/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: bd7dacd4807e4e779f43d396d9d1e9b19d4134dc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471204"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "91956987"
 
 Azure Data Studio에서 SQL Notebook과 함께 Machine Learning Services를 사용할 수 있습니다. 새 Notebook을 만들려면 다음 단계를 수행합니다.
 
-1. **파일**, **새 Notebook**을 차례로 클릭하여 새 Notebook을 만듭니다. Notebook은 기본적으로 **SQL 커널**을 사용합니다.
+1. **파일**, **새 Notebook** 을 차례로 클릭하여 새 Notebook을 만듭니다. Notebook은 기본적으로 **SQL 커널** 을 사용합니다.
 
-1. **연결 대상**, **연결 변경**을 차례로 클릭합니다. 
+1. **연결 대상**, **연결 변경** 을 차례로 클릭합니다. 
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL Notebook 연결 변경](media/ads-attach-to-connection.png)
     
 1. 기존 SQL Server나 새 SQL Server에 연결합니다. 다음 작업 중 하나를 수행할 수 있습니다.
 
-    1. **최근 연결** 또는 **저장된 연결**에서 기존 연결을 선택합니다.
+    1. **최근 연결** 또는 **저장된 연결** 에서 기존 연결을 선택합니다.
 
-    1. **연결 정보**에서 새 연결을 만듭니다. SQL Server 및 데이터베이스에 대한 연결 정보를 입력합니다.
+    1. **연결 정보** 에서 새 연결을 만듭니다. SQL Server 및 데이터베이스에 대한 연결 정보를 입력합니다.
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL Notebook 연결 정보](media/ads-connection-details.png)  
@@ -61,7 +61,7 @@ SQL Notebook은 코드와 텍스트 셀로 구성됩니다. 코드 셀은 저장
 
 Python 스크립트를 실행하려면 다음 단계를 수행합니다.
 
-1. **+ 코드**를 클릭하여 코드 셀을 추가합니다.
+1. **+ 코드** 를 클릭하여 코드 셀을 추가합니다.
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL Notebook 코드 블록 추가](media/ads-add-code.png)  
@@ -93,7 +93,7 @@ Python 스크립트를 실행하려면 다음 단계를 수행합니다.
 
 R 스크립트를 실행하려면 다음 단계를 수행합니다.
 
-1. **+ 코드**를 클릭하여 코드 셀을 추가합니다.
+1. **+ 코드** 를 클릭하여 코드 셀을 추가합니다.
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL Notebook 코드 블록 추가](media/ads-add-code.png)  

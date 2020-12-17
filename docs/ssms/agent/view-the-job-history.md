@@ -17,13 +17,13 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b22dc30718a2b3f97252d14fcb98235834fd644
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 38af7227ffc682b786c767c4cde4dc5bad9283d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038156"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482134"
 ---
 # <a name="view-the-job-history"></a>View the Job History
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,23 +56,23 @@ ms.locfileid: "92038156"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장한 다음 **작업**을 확장합니다.  
+2.  **SQL Server 에이전트** 를 확장한 다음 **작업** 을 확장합니다.  
   
-3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **기록 보기**를 클릭합니다.  
+3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **기록 보기** 를 클릭합니다.  
   
 4.  로그 파일 뷰어에서 작업 기록을 봅니다.  
   
-5.  작업 기록을 업데이트하려면 **새로 고침**을 클릭합니다. 행을 적게 표시하려면 **필터** 단추를 클릭하고 필터 매개 변수를 입력합니다.  
+5.  작업 기록을 업데이트하려면 **새로 고침** 을 클릭합니다. 행을 적게 표시하려면 **필터** 단추를 클릭하고 필터 매개 변수를 입력합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   
 #### <a name="to-view-the-job-history-log"></a>작업 기록 로그를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- lists all job information for the NightlyBackups job.  
