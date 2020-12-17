@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3a7962855feb076faad1ffe26d21b9273354f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 614f8f4444ab470530cea01133b34adffc505b78
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723164"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638031"
 ---
 # <a name="required-client-settings"></a>필수 클라이언트 설정
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "91723164"
   
 -   [Connection 개체 (ado)](../../reference/ado-api/connection-object-ado.md) 개체 [공급자 속성 (ado)](../../reference/ado-api/provider-property-ado.md) 속성 또는 **연결** 개체 연결 문자열 "**provider**=" 키워드에 "provider = MS Remote"를 지정 합니다.  
   
--   [CursorLocation 속성 (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 합니다.  
+-   [CursorLocation 속성 (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 합니다.  
   
 -   [DataControl 개체 (RDS)](../../reference/rds-api/datacontrol-object-rds.md) 개체의 **Handler** 속성 또는 [레코드 집합 개체 (ADO)](../../reference/ado-api/recordset-object-ado.md) 개체의 연결 문자열 "**handler**=" 키워드에 사용할 처리기의 이름을 지정 합니다. **연결** 개체 연결 문자열에는 처리기를 설정할 수 없습니다.  
   
@@ -81,6 +81,5 @@ rs.CursorLocation = adUseClient
  [사용자 지정 파일 SQL 섹션](./customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](./customization-file-userlist-section.md)   
  [DataFactory 사용자 지정](./datafactory-customization.md)   
- [필수 클라이언트 설정]()   
  [사용자 지정 파일 이해](./understanding-the-customization-file.md)   
  [고유한 사용자 지정된 처리기 작성](./writing-your-own-customized-handler.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891233"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466654"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 
@@ -83,7 +83,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 제품을 사용하는 경우에는  [SharePoint 2016의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 
@@ -147,7 +147,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  SharePoint 2016 브라우저 지원에 대한 자세한 내용은 [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 

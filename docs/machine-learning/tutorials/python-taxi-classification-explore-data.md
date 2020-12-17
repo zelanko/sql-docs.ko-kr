@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bd2c27bbefa22355c63d78a3f5822951b4ca3a94
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0f52df34bb04a94baf14076a9ea345712166ae5a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470324"
 ---
 # <a name="python-tutorial-explore-and-visualize-data"></a>Python 자습서: 데이터 탐색 및 시각화
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -85,7 +85,7 @@ _hack_license_ 열은 택시 기사의 운전 면허 번호(익명)를 포함합
 
 저장 프로시저는 직렬화된 Python `figure` 개체를 **varbinary** 데이터의 스트림으로 반환합니다. 이진 데이터를 직접 볼 수 없지만, 클라이언트에서 Python 코드를 사용하여 역직렬화하고 숫자를 확인한 후 클라이언트 컴퓨터에 이미지 파일을 저장할 수 있습니다.
 
-1. PowerShell 스크립트로 아직 저장 프로시저 **PyPlotMatplotlib**가 만들어지지 않았으면, 만듭니다.
+1. PowerShell 스크립트로 아직 저장 프로시저 **PyPlotMatplotlib** 가 만들어지지 않았으면, 만듭니다.
 
     - `@query` 변수는 스크립트 입력 변수 `@input_data_1`에 대한 인수로 Python 코드 블록에 전달되는 쿼리 텍스트 `SELECT tipped FROM nyctaxi_sample`을 정의합니다.
     - Python 스크립트는 상당히 단순합니다. 히스토그램 및 산점도를 만들기 위해 **matplotlib** `figure` 개체가 사용되고, 해당 개체는 `pickle` 라이브러리를 사용하여 직렬화됩니다.

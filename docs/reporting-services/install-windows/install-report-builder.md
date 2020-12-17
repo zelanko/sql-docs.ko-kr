@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425134"
 ---
 # <a name="install-report-builder"></a>보고서 작성기 설치
 
@@ -33,11 +33,11 @@ ms.locfileid: "92496987"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작할 수 있습니다. 자세한 내용은 [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)을 참조하세요.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>다음과 통합된 SharePoint 사이트 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 **새 문서** 메뉴에 **보고서 작성기 보고서** , **보고서 작성기 모델** 및 **보고서 데이터 원본** 옵션이 나열되지 않은 경우 해당 내용 유형을 SharePoint 라이브러리에 추가해야 합니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 **새 문서** 메뉴에 **보고서 작성기 보고서**, **보고서 작성기 모델** 및 **보고서 데이터 원본** 옵션이 나열되지 않은 경우 해당 내용 유형을 SharePoint 라이브러리에 추가해야 합니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  
 
 ::: moniker-end
  

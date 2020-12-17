@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c9e8343d1743d90472d10095e18e66294b9ea99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036314"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466254"
 ---
 # <a name="specify-a-breakpoint-condition"></a>중단점 조건 지정
 
@@ -45,10 +45,10 @@ ms.locfileid: "92036314"
   
 2. **중단점 조건** 대화 상자에서 **조건** 상자에 올바른 부울 식을 입력합니다.  
   
-3. 식의 결과가 **true** 일 경우 중단하려면 **참인 경우**를 선택하고, 식의 값이 변경될 경우 중단하려면 **이(가) 변경된 경우** 를 선택합니다.  
+3. 식의 결과가 **true** 일 경우 중단하려면 **참인 경우** 를 선택하고, 식의 값이 변경될 경우 중단하려면 **이(가) 변경된 경우** 를 선택합니다.  
   
     > [!NOTE]  
-    >  중단점에 처음 도달할 때까지 디버거는 부울 식을 평가하지 않습니다. **이(가) 변경된 경우**를 선택한 경우 디버거는 첫 번째 평가를 변경으로 간주하지 않으므로 첫 번째 평가 시에는 중단하지 않습니다.  
+    >  중단점에 처음 도달할 때까지 디버거는 부울 식을 평가하지 않습니다. **이(가) 변경된 경우** 를 선택한 경우 디버거는 첫 번째 평가를 변경으로 간주하지 않으므로 첫 번째 평가 시에는 중단하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478794"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 
@@ -57,7 +57,7 @@ ms.locfileid: "92036606"
   
 -   sp_start_job 저장 프로시저를 실행하는 방법으로 실행됩니다.  
   
-작업 내 각 동작은 *작업 단계*입니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하거나 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지를 실행하거나 Analysis Services 서버로 명령을 실행하는 것으로 작업 단계를 구성할 수 있습니다. 작업 단계는 작업의 일부로 관리됩니다.  
+작업 내 각 동작은 *작업 단계* 입니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하거나 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 패키지를 실행하거나 Analysis Services 서버로 명령을 실행하는 것으로 작업 단계를 구성할 수 있습니다. 작업 단계는 작업의 일부로 관리됩니다.  
   
 각 작업 단계는 특정 보안 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 작업 단계의 경우 EXECUTE AS 문을 사용하여 해당 작업 단계에 대한 보안 컨텍스트를 설정합니다. 다른 작업 단계 유형의 경우에는 프록시 계정을 사용하여 해당 작업 단계에 대한 보안 컨텍스트를 설정합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "92036606"
 -   **Net Send**  
   
 > [!NOTE]  
-> **net send**를 사용하여 알림을 보내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 상주하는 컴퓨터에서 Windows Messenger 서비스를 시작해야 합니다.  
+> **net send** 를 사용하여 알림을 보내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 상주하는 컴퓨터에서 Windows Messenger 서비스를 시작해야 합니다.  
   
 > [!IMPORTANT]  
 > **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
@@ -115,10 +115,10 @@ ms.locfileid: "92036606"
 개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [연산자](../../ssms/agent/operators.md)를 참조하세요.  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 에이전트 관리 보안  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 **msdb**데이터베이스에서 **sysadmin**고정 서버 역할의 멤버가 아닌 사용자의 **에이전트에 대한 액세스를 제어하는** SQLAgentUserRole **,** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 사용합니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 **msdb** 데이터베이스에서 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자의 **에이전트에 대한 액세스를 제어하는** SQLAgentUserRole **,** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 사용합니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
   
 ### <a name="roles"></a>역할  
-**msdb**의 **SQLAgentUserRole**, **SQLAgentReaderRole** 및 **SQLAgentOperatorRole**고정 데이터베이스 역할 멤버와 **sysadmin** 고정 서버 역할 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 액세스할 수 있습니다. 이러한 역할 중 하나에 속하지 않는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 역할에 대한 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+**msdb** 의 **SQLAgentUserRole**, **SQLAgentReaderRole** 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할 멤버와 **sysadmin** 고정 서버 역할 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 액세스할 수 있습니다. 이러한 역할 중 하나에 속하지 않는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 역할에 대한 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ### <a name="subsystems"></a>하위 시스템  
 하위 시스템은 작업 단계에서 사용할 수 있는 기능을 나타내는 미리 정의된 개체입니다. 각 프록시는 하나 이상의 하위 시스템에 액세스할 수 있습니다. 하위 시스템은 프록시에 사용할 수 있는 기능에 대한 액세스를 구분하므로 보안을 제공합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 제외한 각 작업 단계는 프록시 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계는 EXECUTE AS 명령을 사용하여 작업 소유자에 대해 보안 컨텍스트를 설정합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "92036606"
 ### <a name="proxies"></a>프록시  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 프록시를 사용하여 보안 컨텍스트를 관리합니다. 프록시는 둘 이상의 작업 단계에서 사용할 수 있습니다. **sysadmin** 고정 서버 역할의 멤버는 프록시를 만들 수 있습니다.  
   
-각 프록시는 보안 자격 증명에 해당됩니다. 각 프록시는 하위 시스템 집합 및 로그인 집합과 연결할 수 있으며 프록시는 해당 프록시와 연결된 하위 시스템을 사용하는 작업 단계에서만 사용할 수 있습니다. 특정 프록시를 사용하는 작업 단계를 만들려면 작업 소유자가 해당 프록시와 연결된 로그인을 사용하거나 프록시에 무제한 액세스할 수 있는 역할의 멤버여야 합니다. **sysadmin** 고정 서버 역할의 멤버는 프록시에 무제한 액세스할 수 있습니다. **SQLAgentUserRole**, **SQLAgentReaderRole**또는 **SQLAgentOperatorRole** 의 멤버는 특정 액세스 권한이 부여된 프록시만 사용할 수 있습니다. 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할의 멤버인 각 사용자에게 특정 프록시에 대한 액세스 권한을 부여해야만 사용자가 해당 프록시를 사용하는 작업 단계를 만들 수 있습니다.  
+각 프록시는 보안 자격 증명에 해당됩니다. 각 프록시는 하위 시스템 집합 및 로그인 집합과 연결할 수 있으며 프록시는 해당 프록시와 연결된 하위 시스템을 사용하는 작업 단계에서만 사용할 수 있습니다. 특정 프록시를 사용하는 작업 단계를 만들려면 작업 소유자가 해당 프록시와 연결된 로그인을 사용하거나 프록시에 무제한 액세스할 수 있는 역할의 멤버여야 합니다. **sysadmin** 고정 서버 역할의 멤버는 프록시에 무제한 액세스할 수 있습니다. **SQLAgentUserRole**, **SQLAgentReaderRole** 또는 **SQLAgentOperatorRole** 의 멤버는 특정 액세스 권한이 부여된 프록시만 사용할 수 있습니다. 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할의 멤버인 각 사용자에게 특정 프록시에 대한 액세스 권한을 부여해야만 사용자가 해당 프록시를 사용하는 작업 단계를 만들 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
 다음 단계를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리를 자동화하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성합니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "92036606"
 3.  정의한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행합니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 이름이 SQLSERVERAGENT입니다. 명명된 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 이름이 SQLAgent$*instancename*입니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 이름이 SQLSERVERAGENT입니다. 명명된 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 이름이 SQLAgent$*instancename* 입니다.  
   
 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 경우 다중 서버 관리를 사용하여 전체 인스턴스에 걸쳐 공통되는 태스크를 자동화할 수 있습니다. 자세한 내용은 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)를 참조하세요.  
   

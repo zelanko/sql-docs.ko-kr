@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037977"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423497"
 ---
 # <a name="designate-a-fail-safe-operator"></a>유사 시 대기 운영자 지정
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "92037977"
   
 1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 유사 시 대기로 지정할 SQL Server 에이전트 운영자가 포함된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **페이지 선택**에서 **경고 시스템**을 선택합니다.  
+3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **페이지 선택** 에서 **경고 시스템** 을 선택합니다.  
   
-4.  **유사 시 대기 운영자**에서 **유사 시 대기 운영자 설정**을 선택합니다.  
+4.  **유사 시 대기 운영자** 에서 **유사 시 대기 운영자 설정** 을 선택합니다.  
   
 5.  **운영자** 목록에서 유사 시 대기 운영자로 설정할 운영자를 선택합니다.  
   
-6.  **전자 메일**, **호출기**또는 **Net send**확인란 중 하나 이상을 선택하여 운영자에게 알림을 보낼 방법을 지정합니다.  
+6.  **전자 메일**, **호출기** 또는 **Net send** 확인란 중 하나 이상을 선택하여 운영자에게 알림을 보낼 방법을 지정합니다.  
   
-7.  완료되었으면 **확인**을 클릭합니다.  
+7.  완료되었으면 **확인** 을 클릭합니다.  

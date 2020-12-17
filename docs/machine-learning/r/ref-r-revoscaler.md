@@ -7,19 +7,19 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0095984a9358f742147e84e69847ab32781cab07
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 87d4fbcfa114b9f80f19495b3d3728c2dd7678ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956890"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470834"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR(SQL Server Machine Learning Services의 R 패키지)
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-**RevoScaleR**은 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 R 패키지입니다. 또한 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
+**RevoScaleR** 은 분산 컴퓨팅, 원격 컴퓨팅 컨텍스트 및 고성능 데이터 과학 알고리즘을 지원하는 Microsoft의 R 패키지입니다. 또한 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원합니다. 이 패키지는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](sql-server-r-services.md)에 포함되어 있습니다.
 
 기본 R 함수와 달리, RevoScaleR 작업은 분산 파일 시스템에서 대규모 데이터 세트에 대해 병렬로 수행할 수 있습니다. 함수는 청크를 사용하고, 작업이 완료될 때 결과를 다시 어셈블하여 메모리에 맞지 않는 데이터 세트를 처리합니다.
 
@@ -41,7 +41,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
 > [!NOTE]
-> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md)의 **RevoScaleR**에서 둘 다 지원됩니다.
+> 전체 제품 릴리스 버전은 SQL Server 2017에서 Windows 전용입니다. Windows 및 Linux는 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md)의 **RevoScaleR** 에서 둘 다 지원됩니다.
 
 ## <a name="functions-by-category"></a>범주별 함수
 
@@ -49,7 +49,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 ## <a name="1-data-source-and-compute"></a>1 - 데이터 원본 및 컴퓨팅
 
-**RevoScaleR**에는 데이터 원본을 만들고 위치를 설정하기 위한 함수 또는 컴퓨팅이 수행되는 *컴퓨팅 컨텍스트*가 포함되어 있습니다. 데이터 원본 개체는 원하는 데이터 집합과 함께 연결 문자열을 지정하는 컨테이너로서, 테이블, 뷰 또는 쿼리로 정의됩니다. 저장 프로시저 호출은 지원되지 않습니다. SQL Server 시나리오와 관련된 함수는 아래 표에 나와 있습니다.
+**RevoScaleR** 에는 데이터 원본을 만들고 위치를 설정하기 위한 함수 또는 컴퓨팅이 수행되는 *컴퓨팅 컨텍스트* 가 포함되어 있습니다. 데이터 원본 개체는 원하는 데이터 집합과 함께 연결 문자열을 지정하는 컨테이너로서, 테이블, 뷰 또는 쿼리로 정의됩니다. 저장 프로시저 호출은 지원되지 않습니다. SQL Server 시나리오와 관련된 함수는 아래 표에 나와 있습니다.
 
 경우에 따라 SQL Server와 R은 다른 데이터 형식을 사용합니다. SQL 및 R 데이터 형식 간 매핑 목록은 [R-SQL 데이터 형식](r-libraries-and-data-types.md)을 참조하세요.
 
@@ -141,7 +141,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 ## <a name="how-to-work-with-revoscaler"></a>RevoScaleR로 작업하는 방법
 
-**RevoScaleR**의 함수는 저장 프로시저에서 캡슐화된 R 코드에서 호출할 수 있습니다. 대부분의 개발자는 **RevoScaleR** 솔루션을 로컬로 빌드한 다음, 완성된 R 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
+**RevoScaleR** 의 함수는 저장 프로시저에서 캡슐화된 R 코드에서 호출할 수 있습니다. 대부분의 개발자는 **RevoScaleR** 솔루션을 로컬로 빌드한 다음, 완성된 R 코드를 배포 연습으로 사용하기 위해 저장 프로시저로 마이그레이션합니다.
 
 로컬로 실행하는 경우 일반적으로 명령줄 또는 R 개발 환경에서 R 스크립트를 실행하고, **RevoScaleR** 함수 중 하나를 사용하여 SQL Server 컴퓨팅 컨텍스트를 지정합니다. 전체 코드 또는 개별 함수에 대한 원격 컴퓨팅 컨텍스트를 사용할 수 있습니다. 예를 들어, 최신 데이터를 사용하고 데이터 이동을 방지하도록 모델 학습을 서버에 오프로드할 수 있습니다.
 

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e8df9091a470672acb3a52e13c1e8f62bf478bbe
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7201a76acbca92060a90ebbc4cf881a774821571
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038236"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472324"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>운영자 속성 - 새 운영자(알림 페이지)
 
@@ -52,7 +52,7 @@ ms.locfileid: "92038236"
 호출기 주소로 전자 메일을 보내 이 운영자에게 알립니다.  
   
 **Net Send**  
-**net send**를 사용하여 이 운영자에게 알립니다.  
+**net send** 를 사용하여 이 운영자에게 알립니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [연산자](../../ssms/agent/operators.md)  

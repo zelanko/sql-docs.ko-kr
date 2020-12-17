@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: d5422c524cdd275f0afbb64cb5efabb9da0b224d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098672"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638041"
 ---
 # <a name="ado-md-collections"></a>ADO MD 컬렉션
 
@@ -34,7 +34,7 @@ ms.locfileid: "92098672"
 |[위치](./positions-collection-ado-md.md)|축의 점을 정의 하는 **위치** 개체를 포함 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO MD API 참조](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 참조](./ado-md-object-model.md)   
  [ADO MD 코드 예제](./ado-md-code-examples.md)   
  [ADO MD 열거 상수](./ado-md-enumerated-constants.md)   
  [ADO MD 메서드](./ado-md-methods.md)   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c7fa9d7702fb93fd4fe8334f873eb1b66c0f61d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: d07154cdde04c173f1d775df9597f5ccdbc62e61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115279"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470714"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>사용자에게 SQL Server Machine Learning Services를 사용하여 Python 및 R 스크립트를 실행할 수 있는 권한 부여
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -52,7 +52,7 @@ R 또는 Python 스크립트를 실행하는 각 Windows 사용자 계정 또는
 + 개체를 데이터베이스에 저장하려면 `db_datawriter`.
 + 학습 및 직렬화된 데이터를 포함하는 테이블, 저장 프로시저 등의 개체를 만들려면 `db_ddladmin`.
 
-예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 *ML_Samples* 데이터베이스에서 T-SQL 쿼리를 실행할 수 있는 권한을 SQL 로그인 *MySQLLogin*에 부여합니다. 이 문을 실행하려면 SQL 로그인이 서버의 보안 컨텍스트에 이미 있어야 합니다.
+예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 *ML_Samples* 데이터베이스에서 T-SQL 쿼리를 실행할 수 있는 권한을 SQL 로그인 *MySQLLogin* 에 부여합니다. 이 문을 실행하려면 SQL 로그인이 서버의 보안 컨텍스트에 이미 있어야 합니다.
 
 ```sql
 USE ML_Samples

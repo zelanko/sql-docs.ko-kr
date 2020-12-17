@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3bb4aa40995db27909162f791ddfbdb3701bb0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470654"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>SQL Machine Learning 문제를 해결하기 위해 데이터 수집
 
@@ -120,7 +120,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 Machine Learning Services가 실행되고 있지 않으면 pythonlauncher.config 파일을 보고 설치된 Python 버전을 확인할 수 있습니다. 실수로 속성을 변경하지 않도록 파일의 복사본을 만들고 여는 것이 좋습니다.
 
 1. SQL Server 2017에만 해당: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
-2. **PYTHONHOME**에 대한 값을 가져옵니다.
+2. **PYTHONHOME** 에 대한 값을 가져옵니다.
 3. 현재 작업 디렉터리의 값을 가져옵니다.
 
 > [!NOTE]
@@ -266,9 +266,9 @@ SQL Server 구성 관리자를 열어 프로토콜이 설치되어 있는지 여
 
 작업자 계정의 경우:
 
-1. 제어판에서 **사용자 및 그룹**을 열고 외부 스크립트 작업을 실행하는 데 사용되는 그룹을 찾습니다. 기본적으로 그룹은 **SQLRUserGroup**입니다.
+1. 제어판에서 **사용자 및 그룹** 을 열고 외부 스크립트 작업을 실행하는 데 사용되는 그룹을 찾습니다. 기본적으로 그룹은 **SQLRUserGroup** 입니다.
 2. 그룹이 있고 하나 이상의 작업자 계정이 포함되어 있는지 확인합니다.
-3. SQL Server Management Studio에서 R 또는 Python 작업이 실행될 인스턴스를 선택하고 **Security**를 선택한 다음, SQLRUserGroup에 대한 로그온이 있는지 여부를 확인합니다.
+3. SQL Server Management Studio에서 R 또는 Python 작업이 실행될 인스턴스를 선택하고 **Security** 를 선택한 다음, SQLRUserGroup에 대한 로그온이 있는지 여부를 확인합니다.
 4. 사용자 그룹에 대한 사용 권한을 검토합니다.
 
 개별 사용자 계정의 경우:
@@ -277,7 +277,7 @@ SQL Server 구성 관리자를 열어 프로토콜이 설치되어 있는지 여
 2. R 코드를 실행해야 하는 각 사용자에 대해 R에서 개체를 작성하거나 데이터에 액세스하거나, 개체를 생성할 각 데이터베이스에 필요한 권한 수준을 결정합니다.
 3. 스크립트 실행을 사용하도록 설정하려면 필요에 따라 역할을 만들거나 다음 역할에 사용자를 추가합니다.
 
-   - *db_owner*를 제외한 모든 항목: 모든 외부 스크립트를 실행해야 합니다.
+   - *db_owner* 를 제외한 모든 항목: 모든 외부 스크립트를 실행해야 합니다.
    - *db_datawriter*: R 또는 Python에서 결과를 작성합니다.
    - *db_ddladmin*: 새 개체를 만듭니다.
    - *db_datareader*: R 또는 Python 코드에서 사용되는 데이터를 읽습니다.

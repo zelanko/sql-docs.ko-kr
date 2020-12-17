@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 0ed29ad1b6a6b548b910ecce3d2b89da9bfb0180
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96121298"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478884"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server의 연장 보안 업데이트란 무엇입니까?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

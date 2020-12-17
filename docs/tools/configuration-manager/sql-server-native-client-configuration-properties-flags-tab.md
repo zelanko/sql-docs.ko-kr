@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2aad9be6d7231b6c5dab3c5e9d77185a2138832
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: bd8d00c4db1a327ca46ffcae1761faf5af85d32a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481514"
 ---
 # <a name="sql-server-native-client-configuration-properties-flags-tab"></a>SQL Server Native Client 구성 속성(플래그 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "88901352"
  TLS를 사용하여 연결을 요청합니다.  
   
  **서버 인증서 신뢰**  
- **아니요**로 설정하면 클라이언트 프로세스에서 서버 인증서의 유효성을 검사합니다. 클라이언트와 서버는 각각 공인 인증 기관에서 발급한 인증서를 가지고 있어야 합니다. 클라이언트 컴퓨터에 인증서가 없거나 인증서 유효성 검사에 실패하면 연결이 종료됩니다.  
+ **아니요** 로 설정하면 클라이언트 프로세스에서 서버 인증서의 유효성을 검사합니다. 클라이언트와 서버는 각각 공인 인증 기관에서 발급한 인증서를 가지고 있어야 합니다. 클라이언트 컴퓨터에 인증서가 없거나 인증서 유효성 검사에 실패하면 연결이 종료됩니다.  
   
- **예**로 설정하면 클라이언트가 서버 인증서의 유효성을 검사하지 않으므로 자체 서명된 인증서를 사용할 수 있습니다.  
+ **예** 로 설정하면 클라이언트가 서버 인증서의 유효성을 검사하지 않으므로 자체 서명된 인증서를 사용할 수 있습니다.  
   
- **서버 인증서 신뢰** 는 **프로토콜 암호화 강제 사용** 이 **예**로 설정된 경우에만 사용할 수 있습니다.  
+ **서버 인증서 신뢰** 는 **프로토콜 암호화 강제 사용** 이 **예** 로 설정된 경우에만 사용할 수 있습니다.  
   
   

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793780"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469984"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포하고 SQL Server에서 사용(연습)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "92793780"
 이 문서에서는 점수 매기기에서 모델을 사용하는 다음과 같은 가장 일반적인 두 가지 방법을 보여 줍니다.
 
 > [!div class="checklist"]
-> * **일괄 처리 점수 매기기 모드** : 여러 예측 생성
-> * **개별 점수 매기기 모드** : 한 번에 하나씩 예측 생성
+> * **일괄 처리 점수 매기기 모드**: 여러 예측 생성
+> * **개별 점수 매기기 모드**: 한 번에 하나씩 예측 생성
 
 ## <a name="batch-scoring"></a>일괄 처리 점수 매기기
 
@@ -192,13 +192,13 @@ ms.locfileid: "92793780"
     END
     ```
 
-2. SQL Server Management Studio에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 프로시저(또는 **EXECUTE** )를 사용하여 저장 프로시저를 호출하고 필요한 입력을 전달합니다. 예를 들어, Management Studio에서 다음 문을 실행해 봅니다.
+2. SQL Server Management Studio에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 프로시저(또는 **EXECUTE**)를 사용하여 저장 프로시저를 호출하고 필요한 입력을 전달합니다. 예를 들어, Management Studio에서 다음 문을 실행해 봅니다.
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    여기서 전달되는 값은 각각 _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
+    여기서 전달되는 값은 각각 _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
 
 3. R 코드에서 이 동일한 호출을 실행하려면 다음과 같이 전체 저장 프로시저 호출이 포함된 R 변수를 정의하면 됩니다.
 
@@ -206,9 +206,9 @@ ms.locfileid: "92793780"
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    여기서 전달되는 값은 각각 _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
+    여기서 전달되는 값은 각각 _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ 및 _dropoff\_longitude_ 변수에 사용됩니다.
 
-4. `sqlQuery`( **RODBC** 패키지에서)를 호출하고 저장 프로시저 호출이 포함된 문자열 변수 및 연결 문자열을 함께 전달합니다.
+4. `sqlQuery`(**RODBC** 패키지에서)를 호출하고 저장 프로시저 호출이 포함된 문자열 변수 및 연결 문자열을 함께 전달합니다.
 
     ```R
     # predict with stored procedure in single mode

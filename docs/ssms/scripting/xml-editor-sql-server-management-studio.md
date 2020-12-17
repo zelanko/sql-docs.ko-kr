@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7215b2bc235b846e67484e19a77ba75cea2f9881
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480564"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
 
@@ -85,7 +85,7 @@ XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 �
 ## <a name="data-view"></a>데이터 뷰  
  데이터 뷰는 .xml 파일을 수정하는 데 사용할 수 있는 데이터 표를 제공합니다. 데이터 뷰에서는 XML 파일의 내용만 편집할 수 있으며 태그와 구조는 편집할 수 없습니다.  
   
- 데이터 뷰에는 **데이터 테이블**과 **데이터**의 두 가지 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
+ 데이터 뷰에는 **데이터 테이블** 과 **데이터** 의 두 가지 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
   
 > [!NOTE]  
 >  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 구조화된 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 "이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다"라는 메시지가 표시됩니다.  
@@ -102,7 +102,7 @@ XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 �
  XML 뷰는 원시 XML을 편집할 수 있는 편집기와 IntelliSense 및 색 구분 기능을 제공합니다. 스키마가 연결되어 있는 .xml 파일과 .xsd 파일로 작업할 때는 문 완성 기능을 사용할 수 있습니다. 태그를 시작하는 <를 입력하면 해당 위치에 들어갈 수 있는 요소가 목록으로 표시됩니다. 요소 이름을 입력한 후 스페이스바를 누르면 요소가 지원하는 특성이 목록으로 표시됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 도구 모음에서 사용할 수 없습니다. XML 편집기에서 이 옵션을 사용하려면 **편집** 메뉴에서 **IntelliSense**를 클릭합니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 도구 모음에서 사용할 수 없습니다. XML 편집기에서 이 옵션을 사용하려면 **편집** 메뉴에서 **IntelliSense** 를 클릭합니다.  
   
 ## <a name="showplan-view"></a>실행 계획 뷰  
  SET SHOWPLAN_XML ON 옵션을 사용하여 만든 쿼리 계획을 XML 형식으로 저장할 수 있습니다. 쿼리 계획을 열려면 확장명이 .showplan인 파일을 두 번 클릭하십시오.  

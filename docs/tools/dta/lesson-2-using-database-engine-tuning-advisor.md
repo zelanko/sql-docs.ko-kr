@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713811"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489913"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>2단원: 데이터베이스 엔진 튜닝 관리자 사용
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713811"
 
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md?view=sql-server-2017)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)을 참조하세요.
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.
 
   >[!NOTE]
   > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용하는 데 익숙한 사용자를 위한 것입니다. 
@@ -43,7 +43,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 ## <a name="tuning-a-workload"></a>작업 튜닝
 데이터베이스 엔진 튜닝 관리자를 사용하여 튜닝하려고 선택한 데이터베이스와 테이블의 쿼리 성능에 가장 적합한 물리적 데이터베이스 디자인을 찾을 수 있습니다.  
 
-1.  샘플 [SELECT](../../t-sql/queries/select-examples-transact-sql.md) 문을 복사하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에 붙여 넣습니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql**이라는 이름으로 파일을 저장합니다. AdventureWorks2017 데이터베이스에 대해 작동하는 예제는 아래에 제공되어 있습니다.  
+1.  샘플 [SELECT](../../t-sql/queries/select-examples-transact-sql.md) 문을 복사하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에 붙여 넣습니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql** 이라는 이름으로 파일을 저장합니다. AdventureWorks2017 데이터베이스에 대해 작동하는 예제는 아래에 제공되어 있습니다.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -65,15 +65,15 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 
   ![SQL 쿼리 저장](media/dta-tutorials/dta-save-query.png)
   
-2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. SSMS(SQL Server Management Studio)의 **도구** 메뉴에서 **데이터베이스 튜닝 관리자**를 선택합니다.  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. **서버 연결** 대화 상자에서 SQL Server에 연결합니다.  
+2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. SSMS(SQL Server Management Studio)의 **도구** 메뉴에서 **데이터베이스 튜닝 관리자** 를 선택합니다.  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. **서버 연결** 대화 상자에서 SQL Server에 연결합니다.  
   
-3.  데이터베이스 엔진 튜닝 관리자 GUI 오른쪽 창의 **일반** 탭에서 **세션 이름**에 **MySession**을 입력합니다. 
+3.  데이터베이스 엔진 튜닝 관리자 GUI 오른쪽 창의 **일반** 탭에서 **세션 이름** 에 **MySession** 을 입력합니다. 
   
-4.  **워크로드**에 대한 **파일**을 선택하고 쌍안경 아이콘을 선택하여 **워크로드 파일을 찾습니다**. 1단계에서 저장한 **MyScript** 파일을 찾습니다.  
+4.  **워크로드** 에 대한 **파일** 을 선택하고 쌍안경 아이콘을 선택하여 **워크로드 파일을 찾습니다**. 1단계에서 저장한 **MyScript** 파일을 찾습니다.  
 
    ![이전에 저장한 스크립트 찾기](media/dta-tutorials/dta-script.png)
   
-5.  **작업 분석용 데이터베이스** 목록에서 AdventureWorks2017을 선택하고 **튜닝할 데이터베이스 및 테이블 선택** 그리드에서 AdventureWorks2017을 선택하고 **튜닝 로그 저장**을 선택합니다. **작업 분석용 데이터베이스** 는 작업 튜닝 시 데이터베이스 엔진 튜닝 관리자가 연결하는 첫 번째 데이터베이스를 지정합니다. 튜닝이 시작된 후 데이터베이스 엔진 튜닝 관리자는 작업에 포함된 `USE DATABASE` 문으로 지정한 데이터베이스에 연결합니다.  
+5.  **작업 분석용 데이터베이스** 목록에서 AdventureWorks2017을 선택하고 **튜닝할 데이터베이스 및 테이블 선택** 그리드에서 AdventureWorks2017을 선택하고 **튜닝 로그 저장** 을 선택합니다. **작업 분석용 데이터베이스** 는 작업 튜닝 시 데이터베이스 엔진 튜닝 관리자가 연결하는 첫 번째 데이터베이스를 지정합니다. 튜닝이 시작된 후 데이터베이스 엔진 튜닝 관리자는 작업에 포함된 `USE DATABASE` 문으로 지정한 데이터베이스에 연결합니다.  
 
   ![db에 대한 DTA 옵션](media/dta-tutorials/dta-select-db.png)
   
@@ -88,13 +88,13 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   ![DTA 분석 시작](media/dta-tutorials/dta-start-analysis.png)
 
   
-8.  분석을 완료한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 **메뉴에서** 권장 구성 저장 **을 클릭하여** 스크립트로 권장 구성을 저장합니다. **다른 이름으로 저장** 대화 상자에서 권장 구성 스크립트를 저장할 디렉터리로 이동하고 파일 이름 **MyRecommendations**를 입력합니다.  
+8.  분석을 완료한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 **메뉴에서** 권장 구성 저장 **을 클릭하여** 스크립트로 권장 구성을 저장합니다. **다른 이름으로 저장** 대화 상자에서 권장 구성 스크립트를 저장할 디렉터리로 이동하고 파일 이름 **MyRecommendations** 를 입력합니다.  
 
   ![DTA 권장 구성 저장](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>튜닝 권장 구성 보기
   
-1.  **권장 구성** 탭에서 탭 페이지 맨 아래의 스크롤 막대를 사용하여 모든 **인덱스 권장 구성** 열을 볼 수 있습니다. 각 행은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장하는 데이터베이스 개체(인덱스 또는 인덱싱된 뷰)가 삭제되는지 만들어지는지 나타냅니다. 맨 오른쪽 열로 스크롤하여 **정의**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 해당 행에서 데이터베이스 개체를 만들거나 삭제하는 **스크립트를 볼 수 있는** SQL 스크립트 미리 보기 [!INCLUDE[tsql](../../includes/tsql-md.md)] 창이 표시됩니다. **닫기** 를 클릭하여 미리 보기 창을 닫습니다.  
+1.  **권장 구성** 탭에서 탭 페이지 맨 아래의 스크롤 막대를 사용하여 모든 **인덱스 권장 구성** 열을 볼 수 있습니다. 각 행은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장하는 데이터베이스 개체(인덱스 또는 인덱싱된 뷰)가 삭제되는지 만들어지는지 나타냅니다. 맨 오른쪽 열로 스크롤하여 **정의** 를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 해당 행에서 데이터베이스 개체를 만들거나 삭제하는 **스크립트를 볼 수 있는** SQL 스크립트 미리 보기 [!INCLUDE[tsql](../../includes/tsql-md.md)] 창이 표시됩니다. **닫기** 를 클릭하여 미리 보기 창을 닫습니다.  
   
     링크를 포함하는 **정의** 를 찾기 힘든 경우 탭 페이지 맨 아래에 있는 **기존 개체 표시** 확인란의 선택을 취소합니다. 그러면 표시되는 행 수가 줄어듭니다. 이 확인란의 선택을 취소하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장 구성을 생성한 개체만 표시합니다. 현재 **데이터베이스에 있는 모든 데이터베이스 개체를 보려면** 기존 개체 표시 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 확인란을 선택합니다. 탭 페이지 오른쪽의 스크롤 막대를 사용하여 모든 개체를 볼 수 있습니다.
 
@@ -104,7 +104,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
  
    ![인덱스 권장 사항에 대한 선택 메뉴](media/dta-tutorials/dta-index-recommendation-options.png)
   
-3.  **동작** 메뉴에서 **권장 구성 저장** 을 클릭하여 모든 권장 구성을 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에 저장합니다. 스크립트 이름을 **MySessionRecommendations.sql**로 지정합니다.  
+3.  **동작** 메뉴에서 **권장 구성 저장** 을 클릭하여 모든 권장 구성을 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에 저장합니다. 스크립트 이름을 **MySessionRecommendations.sql** 로 지정합니다.  
   
     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기에서 MySessionRecommendations.sql 스크립트를 열어 봅니다. 쿼리 편집기에서 스크립트를 실행하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 권장 구성을 적용할 수 있지만 이렇게 하지 마십시오. 쿼리 편집기에서 스크립트를 실행하지 않고 닫습니다.  
   
@@ -112,9 +112,9 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 4.  **권장 구성** 탭에 권장 구성이 2개 이상 있는 경우 **인덱스 권장 구성** 표에서 데이터베이스 개체를 나열하는 행의 일부를 지웁니다.  
   
-5.  **동작** 메뉴에서 **권장 구성 평가**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 MySession의 원래 권장 구성의 하위 집합을 평가할 수 있는 새 튜닝 세션이 만들어집니다.  
+5.  **동작** 메뉴에서 **권장 구성 평가** 를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 MySession의 원래 권장 구성의 하위 집합을 평가할 수 있는 새 튜닝 세션이 만들어집니다.  
   
-6.  새 **세션 이름** 으로 **EvaluateMySession**을 입력하고 도구 모음에서 **분석 시작** 단추를 클릭합니다. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
+6.  새 **세션 이름** 으로 **EvaluateMySession** 을 입력하고 도구 모음에서 **분석 시작** 단추를 클릭합니다. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
   
 ### <a name="summary"></a>요약  
 튜닝 권장 구성의 하위 집합 평가는 세션 실행 후 튜닝 옵션을 변경해야 할 경우에 필요할 수 있습니다. 예를 들어 세션에 대한 튜닝 옵션을 지정할 때 인덱싱된 뷰를 고려하도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 요청했지만 권장 구성이 생성된 후 인덱싱된 뷰를 사용하지 않도록 결정하는 경우를 가정해 봅니다. 이 경우 **동작** 메뉴의 **권장 구성 평가** 옵션을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 인덱싱된 뷰를 고려하지 않고 세션을 다시 평가하도록 할 수 있습니다. **권장 구성 평가** 옵션을 사용하면 이전에 생성된 권장 구성이 현재 물리적 디자인에 가상으로 적용되어 두 번째 튜닝 세션의 물리적 디자인에 전달됩니다.  
@@ -126,7 +126,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 
 
 1. 데이터베이스 튜닝 관리자에서 **보고서** 탭을 선택합니다. 
-2. **튜닝 요약** 창에서 이 튜닝 세션에 대한 정보를 볼 수 있습니다. 스크롤 막대를 사용하여 모든 창 내용을 볼 수 있습니다. **예상 향상률** 과 **권장 구성이 사용하는 공간**을 확인합니다. 튜닝 옵션을 설정할 때 권장 구성이 사용하는 공간을 제한할 수 있습니다. **튜닝 옵션** 탭에서 **고급 옵션**을 선택합니다. **권장 구성에 필요한 최대 공간 정의**를 선택하고 권장 구성이 사용할 수 있는 최대 공간(MB)을 지정합니다. 도움말 브라우저의 **뒤로** 단추를 사용하여 이 자습서로 돌아올 수 있습니다. 
+2. **튜닝 요약** 창에서 이 튜닝 세션에 대한 정보를 볼 수 있습니다. 스크롤 막대를 사용하여 모든 창 내용을 볼 수 있습니다. **예상 향상률** 과 **권장 구성이 사용하는 공간** 을 확인합니다. 튜닝 옵션을 설정할 때 권장 구성이 사용하는 공간을 제한할 수 있습니다. **튜닝 옵션** 탭에서 **고급 옵션** 을 선택합니다. **권장 구성에 필요한 최대 공간 정의** 를 선택하고 권장 구성이 사용할 수 있는 최대 공간(MB)을 지정합니다. 도움말 브라우저의 **뒤로** 단추를 사용하여 이 자습서로 돌아올 수 있습니다. 
 
     ![DTA 튜닝 요약](media/dta-tutorials/dta-tuning-summary.png)
   
@@ -134,7 +134,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 
     ![DTA 보고서 - 문 비용](media/dta-tutorials/dta-statement-cost.png)
   
-4.  표 영역에서 **문 비용 보고서** 창을 마우스 오른쪽 단추로 클릭하고 **파일로 내보내기**를 클릭합니다. **MyReport**라는 이름으로 보고서를 저장합니다. 파일 이름에 .xml 확장명이 자동으로 추가됩니다. 즐겨 사용하는 XML 편집기나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MyReport.xml을 열어 보고서 내용을 볼 수 있습니다.  
+4.  표 영역에서 **문 비용 보고서** 창을 마우스 오른쪽 단추로 클릭하고 **파일로 내보내기** 를 클릭합니다. **MyReport** 라는 이름으로 보고서를 저장합니다. 파일 이름에 .xml 확장명이 자동으로 추가됩니다. 즐겨 사용하는 XML 편집기나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MyReport.xml을 열어 보고서 내용을 볼 수 있습니다.  
   
 5.  데이터베이스 엔진 튜닝 관리자의 **보고서** 탭으로 돌아가서 **문 비용 보고서** 를 마우스 오른쪽 단추로 다시 클릭합니다. 사용 가능한 다른 옵션을 검토합니다. 보고 있는 보고서의 글꼴을 변경할 수 있습니다. 여기에서 글꼴을 변경하면 다른 탭 페이지에서도 변경됩니다.  
   

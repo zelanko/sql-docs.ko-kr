@@ -17,13 +17,13 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f51138ef9e52a8bd44f160f0f9f2fa8366a290a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 79a7b516e7c108cc6e57eca4bf38f959f4ce779a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038134"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474334"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>실행 추적 메시지를 SQL Server 에이전트 오류 로그에 쓰기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "92038134"
 ## <a name="SSMSProcedure"></a>  
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>실행 추적 메시지를 SQL Server 에이전트 오류 로그에 쓰려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 실행 추적 메시지를 기록하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 실행 추적 메시지를 기록하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **일반** 페이지에 있는 **오류 로그**에서 **실행 추적 메시지 포함** 확인란을 선택합니다.  
+3.  **SQL Server 에이전트 속성 –**_server\_name_ 대화 상자의 **일반** 페이지에 있는 **오류 로그** 에서 **실행 추적 메시지 포함** 확인란을 선택합니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  

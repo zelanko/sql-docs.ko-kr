@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 77bcd682aa8d58437421134a697bcb715efe595d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584964"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470474"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서용 뉴욕시 택시 데모 데이터
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "94584964"
 
 파일 크기는 약 90MB입니다.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 >[!NOTE]
 >[SQL Server 빅 데이터 클러스터](../../big-data-cluster/big-data-cluster-overview.md)에서 샘플 데이터베이스를 복원하려면 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 다운로드하고 [SQL Server 빅 데이터 클러스터 마스터 인스턴스로 데이터베이스 복원](../../big-data-cluster/data-ingestion-restore-database.md)의 지침을 따릅니다.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 >[!NOTE]
 >[Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 샘플 데이터베이스를 복원하려면 [빠른 시작: 데이터베이스를 Azure SQL Managed Instance로 복원](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)(뉴욕시 택시 데모 데이터베이스 .bak 파일: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 사용)의 지침을 따릅니다.
 ::: moniker-end

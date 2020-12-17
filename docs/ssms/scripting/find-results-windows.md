@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e72e8fa66c442b8bd0edf5c0c2afb3fc961560
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 74b2483037d44436bb0ae3ef6f1c3de2fe9fa852
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466354"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
    두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  
   
- 이렇게 하면 항목을 찾을 때마다 자동으로 선택한 찾기 결과 창이 열립니다. 찾기 결과 창을 수동으로 표시하려면 **보기** 메뉴에서 **다른 창** 을 클릭한 다음 **찾기 결과 1** 이나 **찾기 결과 2**를 클릭합니다.  
+ 이렇게 하면 항목을 찾을 때마다 자동으로 선택한 찾기 결과 창이 열립니다. 찾기 결과 창을 수동으로 표시하려면 **보기** 메뉴에서 **다른 창** 을 클릭한 다음 **찾기 결과 1** 이나 **찾기 결과 2** 를 클릭합니다.  
   
  코드 파일을 표시하고 항목이 있는 줄로 이동하려면 결과 목록에서 해당 줄을 두 번 클릭합니다. 그러면 코드 편집기에 원본 파일이 표시되고 삽입 지점은 일치하는 텍스트가 시작하는 위치에 표시됩니다. 편집기의 표시기 여백에는 일치하는 항목이 있는 줄을 표시하는 기호가 나타나고 상태 표시줄에는 전체 텍스트가 표시됩니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88901258"
 -   항목이 있는 줄의 전체 텍스트  
   
 > [!TIP]  
->  **빠른 찾기** 를 사용하여 길이가 긴 결과 목록을 검색할 수 있습니다. 찾기 결과 창을 열어 도킹한 다음 **찾기** 탭의 삼각형 **보기** 단추를 클릭하고 **빠른 찾기**로 전환합니다. 검색의 **찾는 위치** 필드를 **활성 창**으로 설정하고 **찾을 내용** 문자열을 입력한 후 **다음 찾기**를 클릭합니다. 이렇게 하면 결과 목록에서 특정 폴더나 파일에서 찾은 항목이나 다른 중요한 용어가 포함된 코드 줄을 검색할 수 있습니다.  
+>  **빠른 찾기** 를 사용하여 길이가 긴 결과 목록을 검색할 수 있습니다. 찾기 결과 창을 열어 도킹한 다음 **찾기** 탭의 삼각형 **보기** 단추를 클릭하고 **빠른 찾기** 로 전환합니다. 검색의 **찾는 위치** 필드를 **활성 창** 으로 설정하고 **찾을 내용** 문자열을 입력한 후 **다음 찾기** 를 클릭합니다. 이렇게 하면 결과 목록에서 특정 폴더나 파일에서 찾은 항목이나 다른 중요한 용어가 포함된 코드 줄을 검색할 수 있습니다.  
   
 ## <a name="summary-lines"></a>요약 줄  
  각 검색 결과 집합은 검색 매개 변수를 나타내는 줄로 시작하여 통계 줄로 끝납니다. 예를 들어 **파일에서 찾기** 검색 기능을 사용하여 열려 있는 모든 문서에서 "`var[1-3]&par`" 정규식과 일치하는 문자열이 있는지 검색한 결과 목록은 다음과 같은 검색 매개 변수 줄로 시작합니다.  

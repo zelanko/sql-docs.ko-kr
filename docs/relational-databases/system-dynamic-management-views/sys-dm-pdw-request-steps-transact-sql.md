@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482500"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644044"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97482500"
 |request_id|**nvarchar(32)**|request_id 및 step_index이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청과 연결 된 고유 숫자 ID입니다.|[Sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
 |step_index|**int**|request_id 및 step_index이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청을 구성 하는 단계 시퀀스에서이 단계를 수행 하는 위치입니다.|n 단계가 포함 된 요청의 경우 0 ~ (n-1)입니다.|  
 |plan_node_id|**int**|실행 계획의 해당 단계에 대 한 연산자 ID에 해당 하는 노드 ID입니다.|없음|  
-|operation_type|**nvarchar(35)**|이 단계가 나타내는 작업의 유형입니다.|**DMS 쿼리 계획 작업:** ' ReturnOperation ', ' 파티션 Moveoperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL 쿼리 계획 작업:** ' OnOperation ', ' RemoteOperation '<br /><br /> **다른 쿼리 계획 작업:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **읽기의 외부 작업:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce에 대 한 외부 작업:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **쓰기에 대 한 외부 작업:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 자세한 내용은에서 "쿼리 계획 이해"를 참조 하십시오 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  또한 데이터베이스 설정에 따라 쿼리 계획이 영향을 받을 수 있습니다.  자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) 을 확인 하세요.|  
+|operation_type|**nvarchar(35)**|이 단계가 나타내는 작업의 유형입니다.|**DMS 쿼리 계획 작업:** ' ReturnOperation ', ' 파티션 Moveoperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL 쿼리 계획 작업:** ' OnOperation ', ' RemoteOperation '<br /><br /> **다른 쿼리 계획 작업:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **읽기의 외부 작업:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce에 대 한 외부 작업:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **쓰기에 대 한 외부 작업:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 자세한 내용은에서 "쿼리 계획 이해"를 참조 하십시오 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  또한 데이터베이스 설정에 따라 쿼리 계획이 영향을 받을 수 있습니다.  자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) 을 확인 하세요.|  
 |distribution_type|**nvarchar(32)**|배포 유형이 단계를 수행 합니다.|' AllNodes ', ' AllDistributions ', ' AllComputeNodes ', ' ComputeNode ', ' 분포 ', ' SubsetNodes ', ' SubsetDistributions ', ' 지정 되지 않음 '|  
 |location_type|**nvarchar(32)**|단계가 실행 되는 위치입니다.|' Compute ', ' Control ', ' DMS '|  
 |상태|**nvarchar(32)**|이 단계의 상태입니다.|보류 중, 실행 중, 완료, 실패, 작업 취소 실패, PendingCancel, 취소 됨, 취소 됨, 중단 됨|  

@@ -16,13 +16,13 @@ ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b4ce368d462ced9b5bbcbf21193802a510c760dc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d00c7cb8ee961dca15a7fcdfe0950963e7dec7b2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402491"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,15 +46,15 @@ ms.locfileid: "92035515"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **SQL Server 에이전트 속성** 대화 상자에서 **기록** 페이지를 선택합니다.  
   
 4.  다음 옵션 중에서 선택 합니다.  
   
-    1.  **작업 기록 로그 크기 제한**을 선택한 다음 작업 기록 로그의 최대 행 수와 작업당 최대 행 수를 입력합니다.  
+    1.  **작업 기록 로그 크기 제한** 을 선택한 다음 작업 기록 로그의 최대 행 수와 작업당 최대 행 수를 입력합니다.  
   
-    2.  **자동으로 에이전트 기록 제거**를 선택한 다음 해당 기간보다 오래된 기록은 로그에서 삭제되도록 기간을 지정합니다.  
+    2.  **자동으로 에이전트 기록 제거** 를 선택한 다음 해당 기간보다 오래된 기록은 로그에서 삭제되도록 기간을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [작업 구현](../../ssms/agent/implement-jobs.md)  

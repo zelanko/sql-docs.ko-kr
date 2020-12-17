@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235507"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409699"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  

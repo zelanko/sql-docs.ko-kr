@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8f8ece77ca6d756ff621ded095e25e062508a23
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96ed98a5be4ad75dadb232a6ace2d15170f9390f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036347"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478764"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "92036347"
   
 #### <a name="to-search-using-wildcards"></a>와일드카드를 사용하여 검색하려면  
   
-1.  빠른 찾기, **파일에서 찾기** , **빠른 바꾸기**또는 **파일에서 바꾸기**작업 중에 **찾을 내용** 필드에서 와일드카드를 사용할 수 있게 하려면 **찾기 옵션** 아래에서 **사용** 옵션을 선택한 다음 **와일드카드**를 선택합니다.  
+1.  빠른 찾기, **파일에서 찾기** , **빠른 바꾸기** 또는 **파일에서 바꾸기** 작업 중에 **찾을 내용** 필드에서 와일드카드를 사용할 수 있게 하려면 **찾기 옵션** 아래에서 **사용** 옵션을 선택한 다음 **와일드카드** 를 선택합니다.  
   
-2.  그러면 **찾을 내용** 필드 옆에 있는 삼각형 **참조 목록** 단추를 사용할 수 있습니다. 이 단추를 클릭하여 사용할 수 있는 와일드카드 목록을 표시합니다. **참조 목록**에서 임의의 항목을 선택하면 해당 항목이 **찾을 대상** 문자열에 삽입됩니다.  
+2.  그러면 **찾을 내용** 필드 옆에 있는 삼각형 **참조 목록** 단추를 사용할 수 있습니다. 이 단추를 클릭하여 사용할 수 있는 와일드카드 목록을 표시합니다. **참조 목록** 에서 임의의 항목을 선택하면 해당 항목이 **찾을 대상** 문자열에 삽입됩니다.  
   
- 다음 표에서는 **참조 목록**에서 사용할 수 있는 와일드카드를 설명합니다.  
+ 다음 표에서는 **참조 목록** 에서 사용할 수 있는 와일드카드를 설명합니다.  
   
 |식|구문|Description|  
 |----------------|------------|-----------------|  

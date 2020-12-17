@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7c7f28e92a29dd355d4b74de2121e1c386816116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245172"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425368"
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
 
@@ -45,7 +45,7 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
   
 1.  **다음 사람 대신** 에는 데이터 경고 정의를 만든 사용자의 이름이 포함되어 있습니다.  
   
-2.  경고 정의에 설명을 지정한 경우 설명이 **다음 사람 대신**아래에 표시됩니다.  
+2.  경고 정의에 설명을 지정한 경우 설명이 **다음 사람 대신** 아래에 표시됩니다.  
   
 3.  **경고 결과** 는 경고 정의에 지정된 규칙을 만족하는 보고서 데이터 피드의 행을 테이블 형식으로 표시하거나 오류 설명을 표시합니다. 표시되는 행 수에 대한 제한은 없습니다.  
   
@@ -57,7 +57,7 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
   
 7.  **컨텍스트 값** 은 보고서 데이터 영역 밖에 있는 보고서 항목의 이름과 값을 나열합니다. 항목은 일반적으로 입력란입니다. 예: 보고서의 제목 또는 설명과 같은 상수 값을 가진 입력란  
   
- 두 메시지 형식 간의 유일한 차이점은 항목 5, **경고 결과**입니다. 데이터 경고 인스턴스 또는 데이터 경고 메시지를 만들 때 오류가 발생한 경우 **경고 결과** 에 문제를 설명하는 오류 메시지가 표시됩니다. 모든 받는 사람에게 보낸 오류 메시지를 통해 비즈니스 의사 결정을 내리는 데 필요한 원하는 경고 결과를 사용할 수 없다는 것을 알 수 있습니다.  
+ 두 메시지 형식 간의 유일한 차이점은 항목 5, **경고 결과** 입니다. 데이터 경고 인스턴스 또는 데이터 경고 메시지를 만들 때 오류가 발생한 경우 **경고 결과** 에 문제를 설명하는 오류 메시지가 표시됩니다. 모든 받는 사람에게 보낸 오류 메시지를 통해 비즈니스 의사 결정을 내리는 데 필요한 원하는 경고 결과를 사용할 수 없다는 것을 알 수 있습니다.  
   
   
 ##  <a name="related-tasks"></a><a name="HowTo"></a> 관련 작업  

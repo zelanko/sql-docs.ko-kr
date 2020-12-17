@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870501"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471194"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -39,7 +39,7 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
   + 서로 다른 라이브러리와 실행 파일을 사용하면 SQL Server에서 실행할 경우보다 일관되지 않은 결과로 이어집니다.
   + 외부 라이브러리에서 실행되는 R 및 Python 스크립트는 SQL Server로 관리할 수 없으며 리소스 경합이 발생할 수 있습니다.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Machine Learning Services는 기본적으로 **SQL Server 빅 데이터 클러스터** 에 설치됩니다. **빅 데이터 클러스터** 를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
 ::: moniker-end
@@ -51,11 +51,11 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버전에 대한 자세한 내용은 [SQL Server 2019(15.x)의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.
 ::: moniker-end
 
@@ -67,17 +67,17 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
   
 1. **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가** 를 선택합니다.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![새 SQL Server 독립 실행형 설치](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![새 SQL Server 독립 실행형 설치](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. **기능 선택** 페이지에서 다음 옵션을 선택합니다.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **데이터베이스 엔진 서비스**
      
@@ -89,7 +89,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **데이터베이스 엔진 서비스**
      
@@ -109,15 +109,15 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
      
      Microsoft Python 패키지, Python 3.5 실행 파일을 추가하고 Anaconda 배포에서 라이브러리를 선택하려면 이 옵션을 선택합니다.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    Java 설치와 사용에 대한 자세한 내용은 [Windows에 SQL Server 언어 확장 설치](../../language-extensions/install/windows-java.md)를 참조하세요.
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![R 및 Python에 대한 기능 옵션](media/2017setup-features-page-mls-rpy.PNG "R 및 Python에 대한 설치 옵션")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![R 및 Python에 대한 기능 옵션](media/2019setup-features-page-mls-rpy.png "R 및 Python에 대한 설치 옵션")
    ::: moniker-end
    
@@ -125,7 +125,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
    > 
    > **Machine Learning Server(독립 실행형)** 에 대한 옵션을 선택하지 마세요. **공유 기능** 에서 Machine Learning Server를 설치하는 옵션은 별도의 컴퓨터에서 사용하기 위한 것입니다.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. **Microsoft R Open 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. 
 
@@ -151,7 +151,7 @@ Machine Learning Services와 Python 및 R 통합을 지원하는 SQL Server 버�
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. **Microsoft R Open 설치에 동의** 페이지에서 **동의** 를 선택한 다음 **다음** 을 선택합니다. 이 사용권 계약은 Microsoft 개발 팀의 연결 공급자 및 고급 R 패키지와 함께 오픈 소스 R 기본 패키지 및 도구 배포가 포함된 Microsoft R Open에 적용됩니다.
 
@@ -272,7 +272,7 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
 >
 > 예를 들어 다음 줄을 추가하여 임의의 열 이름을 생성할 수 있습니다. `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -313,7 +313,7 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
 * [SQLRUserGroup에 대한 로그인 만들기](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [디스크 할당량을 관리](/windows/desktop/fileio/managing-disk-quotas)하여 디스크 공간을 소모하는 작업을 실행하는 외부 스크립트 방지
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Windows의 SQL Server 2019에서는 격리 메커니즘이 변경되었습니다. 이 메커니즘은 **SQLRUserGroup**, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다. 자세한 내용은 [Machine Learning Services에 대한 격리 변경 사항](sql-server-machine-learning-services-2019.md)을 참조하세요.
 ::: moniker-end
 
@@ -331,7 +331,7 @@ Windows의 SQL Server 2019에서는 격리 메커니즘이 변경되었습니다
 
 이제 모두 제대로 작동하므로 기계 학습을 지원하도록 서버를 최적화하거나 사전 교육된 기계 학습 모델을 설치할 수도 있습니다.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### <a name="add-more-worker-accounts"></a>더 많은 작업자 계정 추가
 
 여러 사용자가 동시에 스크립트를 실행할 것으로 예상되는 경우 실행 패드 서비스에 할당된 작업자 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에서 외부 스크립트의 동시 실행 확장](../administration/scale-concurrent-execution-external-scripts.md)을 참조하세요.

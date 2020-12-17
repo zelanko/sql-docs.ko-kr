@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713741"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489234"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88713741"
 - [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)을 참조하세요.
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.
 
   >[!NOTE]
   > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용하는 데 익숙한 사용자를 위한 것입니다. 
@@ -56,7 +56,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>DTA 명령 프롬프트 유틸리티 도움말 메뉴 액세스
   
   
-1.  **시작** 메뉴에서 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **명령 프롬프트**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **보조프로그램** 을 차례로 가리킨 다음 **명령 프롬프트** 를 클릭합니다.  
   
 2.  명령 프롬프트에 다음을 입력하고 Enter 키를 누릅니다.  
   

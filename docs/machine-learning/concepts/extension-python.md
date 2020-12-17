@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: da47f54b73faf9507e5c815526bb14d1aa6d8396
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956524"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471294"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 Python 언어 확장
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,7 +42,7 @@ SQL Server는 Python 실행 파일을 수정하지 않지만, 설치 프로그�
 
 | 라이브러리 | Description |
 |---------|-------------|
-| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. 자세한 내용은 [SQL Server와 revoscalepy 모듈](../python/ref-py-revoscalepy.md)을 참조하세요.  |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod** 와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. 자세한 내용은 [SQL Server와 revoscalepy 모듈](../python/ref-py-revoscalepy.md)을 참조하세요.  |
 | [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server와 microsoftml 모듈](../python/ref-py-microsoftml.md)을 참조하세요. |
 
 Microsoftml과 revoscalepy는 긴밀하게 결합되어 있으며, microsoftml에 사용되는 데이터 원본은 revoscalepy 개체로 정의됩니다. revoscalepy 전송에서 컴퓨팅 컨텍스트를 microsoftml로 제한합니다. 즉, 모든 기능을 로컬 작업에 사용할 수 있지만 원격 컴퓨팅 컨텍스트로 전환하려면 RxInSqlServer가 필요합니다.
@@ -89,7 +89,7 @@ Linux에서 SQL은 **실행 패드** 서비스를 사용하여 각 사용자에 
 
 ![remote-sqlcc-from-python](../../machine-learning/python/media/remote-sqlcc-from-python3.png)
 
-1. **revoscalepy**에서 지원되는 함수의 경우 Python 런타임이 연결 함수를 호출하고, 이 함수는 BxlServer를 호출합니다.
+1. **revoscalepy** 에서 지원되는 함수의 경우 Python 런타임이 연결 함수를 호출하고, 이 함수는 BxlServer를 호출합니다.
 2. BxlServer는 Machine Learning Services(데이터베이스 내)에 포함되어 있으며 Python 런타임과 별도의 프로세스에서 실행됩니다.
 3. BxlServer가 연결 대상을 결정하고 ODBC를 통해 연결을 시작한 다음, Python 스크립트에 연결 문자열의 일부로 제공된 자격 증명을 전달합니다.
 4. BxlServer가 SQL Server 인스턴스에 대한 연결을 엽니다.

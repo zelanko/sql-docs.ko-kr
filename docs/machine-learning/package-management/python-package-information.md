@@ -8,25 +8,25 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07166159b1d637b58f9eb7056218d1fc504a66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471024"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 이 문서에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 버전 및 설치 위치를 포함하여 설치된 Python 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 Python 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ SQL Server를 사용하여 기계 학습을 설치하는 경우 설치하는 각
 SQL Server의 데이터베이스 내에서 실행되는 모든 스크립트나 코드는 인스턴스 라이브러리에서 함수를 로드해야 합니다. SQL Server는 다른 라이브러리에 설치된 패키지에 액세스할 수 없습니다. 이것은 원격 클라이언트에도 적용됩니다. 서버 컴퓨팅 컨텍스트에서 실행되는 모든 Python 코드는 인스턴스 라이브러리에 설치된 패키지만 사용할 수 있습니다.
 서버 자산을 보호하려면 컴퓨터 관리자만 기본 인스턴스 라이브러리를 수정할 수 있습니다.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Python에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
@@ -45,7 +45,7 @@ Python에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 여기서는 기본 SQL 인스턴스인 MSSQLSERVER를 가정합니다. SQL Server가 사용자 정의 명명된 인스턴스로 설치된 경우에는 지정된 이름이 대신 사용됩니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Python에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
@@ -60,7 +60,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 > [!IMPORTANT]
 > SQL Managed Instance에서 sp_configure 및 RECONFIGURE 명령을 실행하면 RG 설정을 적용하기 위해 SQL Server 다시 시작이 트리거됩니다. 이 경우 몇 초 동안 사용이 불가능할 수 있습니다.
 ::: moniker-end
@@ -75,7 +75,7 @@ EXECUTE sp_execute_external_script
 
 변수 `sys.path` 및 이 변수가 모듈에 대한 인터프리터의 검색 경로를 설정하는 데 사용되는 방법에 대한 자세한 내용은 [모듈 검색 경로](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)를 참조하세요.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > **pip** 또는 유사한 메서드를 사용하여 SQL 패키지 라이브러리에 직접 Python 패키지를 설치하지 마세요. 대신 **sqlmlutils** 를 사용하여 SQL 인스턴스에 패키지를 설치합니다. 자세한 내용은 [sqlmlutils를 사용하여 Python 패키지 설치](install-additional-python-packages-on-sql-server.md)를 참조하세요.
 ::: moniker-end
@@ -161,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>다음 단계
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Python 도구를 사용하여 패키지 설치](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [sqlmlutils를 사용하여 새 Python 패키지 설치](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

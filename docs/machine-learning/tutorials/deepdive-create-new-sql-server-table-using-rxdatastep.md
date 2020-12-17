@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 31aafedd59bc94d5b80359c8335421569dd510bf
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 011f2c80f7b59f28fbc5ba49de3613716b27a68a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470614"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>rxDataStep을 사용하여 새 SQL Server 테이블 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,11 +66,11 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> XDF 파일로 데이터를 로드하기 위해 다른 함수를 호출할 필요가 없으며 데이터에서 즉시 **rxGetVarInfo** 를 호출할 수 있다는 사실을 알아차리셨나요? 그 이유는 XDF가 **RevoScaleR**의 기본 임시 스토리지 방법이기 때문입니다. XDF 파일 외에도 **rxGetVarInfo** 함수는 이제 여러 원본 유형을 지원합니다.
+> XDF 파일로 데이터를 로드하기 위해 다른 함수를 호출할 필요가 없으며 데이터에서 즉시 **rxGetVarInfo** 를 호출할 수 있다는 사실을 알아차리셨나요? 그 이유는 XDF가 **RevoScaleR** 의 기본 임시 스토리지 방법이기 때문입니다. XDF 파일 외에도 **rxGetVarInfo** 함수는 이제 여러 원본 유형을 지원합니다.
 
 ## <a name="move-contents-to-sql-server"></a>SQL Server로 콘텐츠 이동
 
-XDF 데이터 원본이 로컬 R 세션에 생성되었으면 이제 이 데이터를 데이터베이스 테이블로 이동하고 1~7까지의 정수 값으로 *DayOfWeek*를 저장할 수 있습니다.
+XDF 데이터 원본이 로컬 R 세션에 생성되었으면 이제 이 데이터를 데이터베이스 테이블로 이동하고 1~7까지의 정수 값으로 *DayOfWeek* 를 저장할 수 있습니다.
 
 1. SQL Server 데이터 원본 개체를 정의하고, 데이터를 포함할 테이블 및 원격 서버에 대한 연결을 지정합니다.
   
@@ -84,7 +84,7 @@ XDF 데이터 원본이 로컬 R 세션에 생성되었으면 이제 이 데이�
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-3. **rxDataStep**을 사용하여 데이터를 테이블에 로드합니다. 이 함수는 이미 정의된 데이터 원본 사이에 데이터를 이동하고 선택적으로 중간에 데이터를 변환할 수 있습니다.
+3. **rxDataStep** 을 사용하여 데이터를 테이블에 로드합니다. 이 함수는 이미 정의된 데이터 원본 사이에 데이터를 이동하고 선택적으로 중간에 데이터를 변환할 수 있습니다.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -99,7 +99,7 @@ XDF 데이터 원본이 로컬 R 세션에 생성되었으면 이제 이 데이�
 
 테이블에 데이터가 있으면, 간단한 SQL 쿼리를 사용하여 이를 로드할 수 있습니다. 
 
-1. 새 SQL Server 데이터 원본을 만듭니다. 입력은 바로 전에 만들고 데이터를 로드한 새 테이블에 대한 쿼리입니다. 이 정의는 **RxSqlServerData**에 대해 *colInfo* 인수를 사용하여 *DayOfWeek* 열에 대한 요소 수준을 추가합니다.
+1. 새 SQL Server 데이터 원본을 만듭니다. 입력은 바로 전에 만들고 데이터를 로드한 새 테이블에 대한 쿼리입니다. 이 정의는 **RxSqlServerData** 에 대해 *colInfo* 인수를 사용하여 *DayOfWeek* 열에 대한 요소 수준을 추가합니다.
   
     ```R
     sqlServerAirDemo2 <- RxSqlServerData(
@@ -109,7 +109,7 @@ XDF 데이터 원본이 로컬 R 세션에 생성되었으면 이제 이 데이�
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. **rxSummary**를 한 번 더 호출하여 쿼리의 데이터 요약을 검토합니다.
+2. **rxSummary** 를 한 번 더 호출하여 쿼리의 데이터 요약을 검토합니다.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

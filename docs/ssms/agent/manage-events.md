@@ -19,13 +19,13 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28b554a05c8ffae76d643b3da3bf6a178691a53c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466444"
 ---
 # <a name="manage-events"></a>이벤트 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "92037337"
 > [!IMPORTANT]  
 > 현재 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)에서는 SQL Server 에이전트 기능이 대부분 지원됩니다. 자세한 내용은 [SQL Server와 Azure SQL Managed Instance 간의 T-SQL 차이점](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
+특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달* 이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
   
-한 대의 서버가 다른 서버 그룹에 대한 이벤트를 받을 때 이벤트를 받는 서버를 *경고 관리 서버*라고 합니다. 다중 서버 환경에서는 마스터 서버를 경고 관리 서버로 지정합니다.  
+한 대의 서버가 다른 서버 그룹에 대한 이벤트를 받을 때 이벤트를 받는 서버를 *경고 관리 서버* 라고 합니다. 다중 서버 환경에서는 마스터 서버를 경고 관리 서버로 지정합니다.  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>경고 관리 서버 사용의 장점  
 경고 관리 서버를 설정하면 다음과 같은 장점이 있습니다.  

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ee5c83fee1028b7e165db6dfb8015129c29e4eca
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767042"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641480"
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정
 이 문서에서는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도를 결정 하는 방법을 설명 합니다.  
@@ -30,9 +30,9 @@ PDW는 경고 발생 시 현재 사전 알림을 지원 하지 않으므로 모�
   
 -   성능 카운터-3 초  
   
-시스템 센터 에서도 사용 되는 경고를 폴링하는 일반적인 간격은 **15 분**입니다.  분명히 또는 덜 자주 쿼리를 할 수 있지만, 6 시간 이내에 폴링 하지 않는 것이 좋습니다.  
+시스템 센터 에서도 사용 되는 경고를 폴링하는 일반적인 간격은 **15 분** 입니다.  분명히 또는 덜 자주 쿼리를 할 수 있지만, 6 시간 이내에 폴링 하지 않는 것이 좋습니다.  
   
-더 자주 폴링하는 것이 가능 하지만, 너무 자주 폴링은 [dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) DMV를 복잡 하 게 만들 수 있습니다.  너무 자주 폴링하는 경우 사용자가 신속 하 게 뷰를 사용할 수 없을 때 쿼리 성능 문제를 진단 하기 어려울 수 있습니다.  
+더 자주 폴링하는 것이 가능 하지만, 너무 자주 폴링은 [Sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV를 복잡 하 게 만들 수 있습니다.  너무 자주 폴링하는 경우 사용자가 신속 하 게 뷰를 사용할 수 없을 때 쿼리 성능 문제를 진단 하기 어려울 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

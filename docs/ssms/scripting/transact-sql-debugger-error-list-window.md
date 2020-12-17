@@ -16,19 +16,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9b7df8a2ca180e2f34fbfbc87fe7c000691af1fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476774"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 디버거 - 오류 목록 창
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록**은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -42,18 +42,18 @@ ms.locfileid: "88901413"
   
 -   표시되는 항목 및 각 항목에 대해 표시되는 정보 열을 필터링할 수 있습니다.  
   
--   오류를 수정하면 해당 오류 항목이 **오류 목록**에서 제거됩니다.  
+-   오류를 수정하면 해당 오류 항목이 **오류 목록** 에서 제거됩니다.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일 탭을 닫으면 해당 파일에 대한 오류가 **오류 목록**에서 제거됩니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일 탭을 닫으면 해당 파일에 대한 오류가 **오류 목록** 에서 제거됩니다.  
   
 ## <a name="working-with-the-error-list"></a>오류 목록 작업  
- **오류 목록**을 표시하려면 다음 중 하나를 수행합니다.  
+ **오류 목록** 을 표시하려면 다음 중 하나를 수행합니다.  
   
--   **보기** 메뉴에서 **오류 목록**을 클릭합니다.  
+-   **보기** 메뉴에서 **오류 목록** 을 클릭합니다.  
   
 -   Ctrl+\\, Ctrl+E 바로 가기 키를 누릅니다.  
   
- **오류 목록**을 연 후에는 다음 동작을 수행하여 보기를 사용자 지정할 수 있습니다.  
+ **오류 목록** 을 연 후에는 다음 동작을 수행하여 보기를 사용자 지정할 수 있습니다.  
   
 -   목록을 정렬하려면 열 머리글을 클릭합니다. 추가 열을 기준으로 다시 정렬하려면 Shift 키를 누른 상태에서 다른 열 머리글을 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88901413"
   
 -   **쿼리 편집기 창의 아래쪽에 있는** 메시지 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 스크립트가 실행될 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 반환하는 모든 오류 및 메시지가 표시됩니다. 이 목록은 스크립트를 다시 실행하기 전에는 변경되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 한 개 또는 두 개의 컴파일 오류를 발견한 경우 일괄 처리 구문 분석을 중지하므로 **메시지** 탭에 포함되지 않는 스크립트 오류가 있을 수 있습니다.  
   
- 두 위치 모두에 오류가 나열되는 경우도 있습니다. 예를 들어 스크립트 파일에 **오류 목록**에 나열된 구문 오류가 포함될 수 있습니다. 이 오류를 수정하기 전에 스크립트를 실행하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 파서가 동일한 조건을 검색하고 **메시지** 탭에 똑같은 오류 메시지를 반환할 수 있습니다.  
+ 두 위치 모두에 오류가 나열되는 경우도 있습니다. 예를 들어 스크립트 파일에 **오류 목록** 에 나열된 구문 오류가 포함될 수 있습니다. 이 오류를 수정하기 전에 스크립트를 실행하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 파서가 동일한 조건을 검색하고 **메시지** 탭에 똑같은 오류 메시지를 반환할 수 있습니다.  
   
 > [!NOTE]  
 >  **오류 목록** 에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 오류만 표시되며 MDX, DMX 또는 XML/A 편집기의 오류는 표시되지 않습니다. 모든 MDX, DMX 및 XML/A 오류는 해당 편집기의 **메시지** 탭에 표시됩니다.  

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: e8eb32776aa72095c03305d4eb31cf5bb220ebe4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956974"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471244"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning Services 설치
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -45,7 +45,7 @@ Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning S
 원격 데이터 과학 클라이언트에서 액세스를 활성화하려면 다음을 수행합니다.
 
 1. 가상 머신에서 고급 보안이 포함된 Windows 방화벽을 엽니다.
-2. **아웃바운드 규칙**을 선택합니다.
+2. **아웃바운드 규칙** 을 선택합니다.
 3. 다음 규칙을 사용하지 않도록 설정합니다.
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`

@@ -9,26 +9,26 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 2dd02ddc0dccb0ca41d16688039fa33ad406abd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585075"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470364"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python 자습서: 이진 분류를 사용하여 뉴욕시 택시 요금 예측
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)의 Python 통합에 대해 알아봅니다.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)의 Python 통합에 대해 알아봅니다.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL Managed Instance의 Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)의 Python 통합에 대해 알아봅니다.
 ::: moniker-end
 
@@ -57,7 +57,7 @@ SQL 프로그래머를 위한 이 5부 자습서 시리즈에서는 [Azure SQL M
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + [SQL Server Machine Learning Services 및 Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)을 설치
 ::: moniker-end
 

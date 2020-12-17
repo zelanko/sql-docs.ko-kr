@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869976"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471004"
 ---
 # <a name="get-r-package-information"></a>R 패키지 정보 가져오기
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 설치된 R 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 R 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 설치된 R 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 R 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 이 문서에서는 [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)에서 설치된 R 패키지에 대한 정보를 가져오는 방법을 설명합니다. 예제 R 스크립트는 설치 경로 및 버전과 같은 패키지 정보를 나열하는 방법을 보여 줍니다.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ SQL Server를 사용하여 기계 학습을 설치하는 경우 설치하는 각
 SQL Server의 데이터베이스 내에서 실행되는 모든 스크립트는 인스턴스 라이브러리에서 함수를 로드해야 합니다. SQL Server는 다른 라이브러리에 설치된 패키지에 액세스할 수 없습니다. 이것은 원격 클라이언트에도 적용됩니다. 서버 컴퓨팅 컨텍스트에서 실행되는 모든 R 스크립트는 인스턴스 라이브러리에 설치된 패키지만 사용할 수 있습니다.
 서버 자산을 보호하려면 컴퓨터 관리자만 기본 인스턴스 라이브러리를 수정할 수 있습니다.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 R에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ R에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 여기서는 기본 SQL 인스턴스인 MSSQLSERVER를 가정합니다. SQL Server가 사용자 정의 명명된 인스턴스로 설치된 경우에는 지정된 이름이 대신 사용됩니다.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 R에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ R에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 여기서는 기본 SQL 인스턴스인 MSSQLSERVER를 가정합니다. SQL Server가 사용자 정의 명명된 인스턴스로 설치된 경우에는 지정된 이름이 대신 사용됩니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 R에 대한 이진 파일의 기본 경로는 다음과 같습니다.
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>기본 Microsoft R 패키지
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 다음 Microsoft R 패키지는 SQL Server R Services와 함께 설치됩니다.
 
@@ -84,7 +84,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 설치하는 동안 R 기능을 선택하면 다음 Microsoft R 패키지가 SQL Server Machine Learning Services와 함께 설치됩니다.
 
@@ -97,7 +97,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 설치하는 동안 R 기능을 선택하면 다음 Microsoft R 패키지가 SQL Server Machine Learning Services와 함께 설치됩니다.
 
@@ -114,7 +114,7 @@ GO
 
 기본적으로 R 패키지는 서비스 팩 및 누적 업데이트를 통해 새로 고쳐집니다. 핵심 R 구성 요소의 추가 패키지 및 전체 버전 업그레이드는 제품 업그레이드를 통해서 또는 R 지원을 Microsoft Machine Learning Server에 바인딩하는 경우에만 가능합니다.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 또한 구성 요소 업그레이드를 통해 SQL Server 인스턴스에 MicrosoftML 및 olapR 패키지를 추가할 수 있습니다.
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>다음 단계
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [R 도구를 사용하여 패키지 설치](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

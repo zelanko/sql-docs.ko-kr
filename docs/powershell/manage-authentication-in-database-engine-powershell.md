@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: seo-lt-2019
 ms.date: 10/14/2020
-ms.openlocfilehash: 59f7fdf4427a6f63da0a36a73697b2f5dbce7784
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 28369cdd9f2336e9666f65bbaa99b13a31c77d13
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081562"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489803"
 ---
 # <a name="manage-authentication-to-sql-server-in-powershell"></a>PowerShell에서 SQL Server에 대한 인증 관리
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소는 Windows 인증을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 연결합니다. PowerShell 가상 드라이브를 정의하거나 **Invoke-Sqlcmd**에 대한 **-Username** 및 **-Password**매개 변수를 지정하여 SQL Server 인증을 사용할 수 있습니다.
+기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소는 Windows 인증을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 연결합니다. PowerShell 가상 드라이브를 정의하거나 **Invoke-Sqlcmd** 에 대한 **-Username** 및 **-Password** 매개 변수를 지정하여 SQL Server 인증을 사용할 수 있습니다.
 
 [!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
@@ -66,10 +66,10 @@ function sqldrive
 }  
   
 ## Use the sqldrive function to create a SQLAuth virtual drive.  
-sqldrive SQLAuth  
+sqldrive SQLAuth
   
-## CD to the virtual drive, which invokes the supplied authentication credentials.  
-cd SQLAuth  
+## Set-Location to the virtual drive, which invokes the supplied authentication credentials.  
+sl SQLAuth:
 ```
 
 ## <a name="sql-server-authentication-using-invoke-sqlcmd"></a>Invoke-Sqlcmd를 통한 SQL Server 인증

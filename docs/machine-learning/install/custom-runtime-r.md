@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471234"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server용 R 사용자 지정 런타임 설치
 
@@ -26,7 +26,7 @@ ms.locfileid: "94870055"
 
 + SQL Server 2019를 사용하는 Machine Learning Services를 설치합니다. 언어 확장은 몇 가지 추가 구성 단계를 완료한 후 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)와 함께 사용할 수 있습니다.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 이 문서에서는 Windows에 R용 사용자 지정 런타임을 설치하는 방법을 설명합니다. Linux에 설치하려면 [Linux에 SQL Server용 R 사용자 지정 런타임 설치](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)를 참조하세요.
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에 설치할 수 있습니다. 자세한 내용은 [Installation guidance for SQL Server on Linux(SQL Server on Linux 설치 지침)의 Supported platforms(지원되는 플랫폼) 섹션](../../linux/sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 

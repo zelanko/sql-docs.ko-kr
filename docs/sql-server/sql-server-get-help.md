@@ -9,13 +9,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38930a6380ab38a2c95086435481857e91518d2e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 7e3375c3d9cfe8d9671151901f4b64d23bc79e85
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409121"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 
@@ -59,7 +59,7 @@ SQL Server 콘텐츠 팀에 문의하는 가장 좋은 방법은 Git 문제를 �
 
 ![Git 문제 콘텐츠 피드백](media/sql-server-get-help/git-issues.png)
 
-아이디어, 제안, 피드백 등 공유할 다른 항목이 있다면 -- [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)으로 이동하고 **새 문제**를 선택하여 일반 Git 문제를 열 수 있습니다. 
+아이디어, 제안, 피드백 등 공유할 다른 항목이 있다면 -- [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)으로 이동하고 **새 문제** 를 선택하여 일반 Git 문제를 열 수 있습니다. 
 
 ![새 Git 문제](media/sql-server-get-help/new-git-issue.png)
 
