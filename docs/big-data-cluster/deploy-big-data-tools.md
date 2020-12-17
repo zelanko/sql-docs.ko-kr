@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e6571c92f68412a464b96964be4b02d22a106a0b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257233"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489703"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -33,7 +33,7 @@ ms.locfileid: "92257233"
 | `kubectl`<sup>1</sup> | 예 | 기본 Kubernetes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | 예 | SQL Server를 쿼리하기 위한 플랫폼 간 그래픽 도구입니다. | [설치](../azure-data-studio/download-azure-data-studio.md) |
 | **데이터 가상화 확장** | 예 | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [설치](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
+| **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](/cli/azure/)). | [설치](/cli/azure/install-azure-cli) |
 | **mssql-cli** | 옵션 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](../tools/sqlcmd-utility.md)). SQLCMD 패키지를 설치하기 전에 Microsoft ODBC Driver 11 for SQL Server를 설치해야 할 수 있습니다. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
@@ -61,7 +61,7 @@ ms.locfileid: "92257233"
 - **Azure Data Studio**
 - **데이터 가상화 확장**
 
-나머지 도구는 특정 시나리오에서만 필요합니다. **Azure CLI**는 AKS 배포와 관련된 Azure 서비스를 관리하는 데 사용할 수 있습니다. **mssql-cli**는 선택 사항이지만, 클러스터의 SQL Server 마스터 인스턴스에 연결하고 명령줄에서 쿼리를 실행할 수 있도록 하는 유용한 도구입니다. 또한 GitHub 스크립트를 사용하여 샘플 데이터를 설치하려는 경우 **sqlcmd** 및 `curl`이 필요합니다.
+나머지 도구는 특정 시나리오에서만 필요합니다. **Azure CLI** 는 AKS 배포와 관련된 Azure 서비스를 관리하는 데 사용할 수 있습니다. **mssql-cli** 는 선택 사항이지만, 클러스터의 SQL Server 마스터 인스턴스에 연결하고 명령줄에서 쿼리를 실행할 수 있도록 하는 유용한 도구입니다. 또한 GitHub 스크립트를 사용하여 샘플 데이터를 설치하려는 경우 **sqlcmd** 및 `curl`이 필요합니다.
 
 ### <a name="install-python-offline"></a><a id="python"></a> python 오프라인 설치
 

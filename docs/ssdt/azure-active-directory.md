@@ -9,13 +9,13 @@ ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 564e6ad8cc4ab7cc14d816b34e5332412f912739
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300366"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489733"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -49,7 +49,7 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기** 를 
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 대화형 인증
 
-*Active Directory 대화형 인증* 은 SSDT 그러나 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 이상 버전만 사용하여 나열된 Azure SQL 제품에 연결할 때 사용할 수 있습니다.
+*Active Directory 대화형 인증* 은 SSDT 그러나 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) 이상 버전만 사용하여 나열된 Azure SQL 제품에 연결할 때 사용할 수 있습니다.
 
 - [.NET Framework 모든 버전을 다운로드하고 설치합니다](https://www.microsoft.com/net/download/all).
 - [Visual Studio 2017 버전 15.6](/visualstudio/releasenotes/vs2017-relnotes) 또는 이상 버전.

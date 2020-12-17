@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891603"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489833"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -31,7 +31,7 @@ SharePoint 팜 외부에 있는 데이터 원본에 대해 Windows 인증을 사
 
 1. SSRS 서비스 계정을 확인하고, SPN을 설정하고, RSWindowsNegotiate 인증 형식을 사용하도록 rsreportserver.config 파일을 업데이트하여 Kerberos 인증을 위해 Reporting Services(기본 모드) 인스턴스를 구성합니다. [보고서 서버의 SPN(서비스 사용자 이름) 등록](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. [c2WTS를 구성하는 데 필요한 단계](?view=sql-server-2017#steps-needed-to-configure-c2wts)를 따릅니다.
+2. [c2WTS를 구성하는 데 필요한 단계](#steps-needed-to-configure-c2wts)를 따릅니다.
  
 
 ## <a name="sharepoint-mode-integration"></a>SharePoint 모드 통합
@@ -54,7 +54,7 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
    
     * SharePoint 중앙 관리 > 보안 > 서비스 계정 구성 > Windows 서비스 - Windows 토큰 서비스에 대한 클레임을 통해 관리되는 계정을 사용하도록 C2WTS 서비스 구성
 
-    C2WTS를 사용하는 각 서버의 로컬 관리자 그룹에 C2WTS 서비스 계정을 추가합니다. **보고서 뷰어 웹 파트**의 경우, WFE(웹 프런트 엔드) 서버가 사용됩니다. **SharePoint 통합 모드**의 경우, Reporting Services 서비스가 실행되고 있는 애플리케이션 서버가 사용됩니다.
+    C2WTS를 사용하는 각 서버의 로컬 관리자 그룹에 C2WTS 서비스 계정을 추가합니다. **보고서 뷰어 웹 파트** 의 경우, WFE(웹 프런트 엔드) 서버가 사용됩니다. **SharePoint 통합 모드** 의 경우, Reporting Services 서비스가 실행되고 있는 애플리케이션 서버가 사용됩니다.
     * 로컬 정책 > 사용자 권한 할당에서 로컬 보안 정책의 다음 권한을 C2WTS 계정에 부여합니다.
         * 운영 체제의 일부로 작동
         * 인증 후 클라이언트 가장
@@ -66,13 +66,13 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
     계정에 대해 프로토콜 전환을 포함하는 제한된 위임을 구성해야 합니다. 또한 이 계정에는 통신해야 하는 서비스(예: SQL Server Database Engine, SQL Server Analysis Services)에 대한 위임 권한이 있어야 합니다. 위임을 구성하려는 경우 Active Directory 사용자 및 컴퓨터 스냅인을 사용할 수 있으며 도메인 관리자여야 합니다.
 
     > [!IMPORTANT]
-    > 위임 탭에서 C2WTS 서비스 계정에 대해 어떤 설정을 구성하든 간에 사용 중인 주 서비스 계정과 일치해야 합니다. **보고서 뷰어 웹 파트**의 경우, SharePoint 웹 애플리케이션에 대한 서비스 계정입니다. **SharePoint 통합 모드**의 경우, Reporting Services 서비스 계정입니다.
+    > 위임 탭에서 C2WTS 서비스 계정에 대해 어떤 설정을 구성하든 간에 사용 중인 주 서비스 계정과 일치해야 합니다. **보고서 뷰어 웹 파트** 의 경우, SharePoint 웹 애플리케이션에 대한 서비스 계정입니다. **SharePoint 통합 모드** 의 경우, Reporting Services 서비스 계정입니다.
     >
     > 예를 들어 C2WTS 서비스 계정이 SQL 서비스에 위임할 수 있게 하는 경우 SharePoint 통합 모드에 대한 Reporting Services 서비스 계정에 대해서도 동일한 작업을 수행해야 합니다.
 
     * 각 서비스 계정을 마우스 오른쪽 단추로 클릭하고 속성 대화 상자를 엽니다. 대화 상자에서 **위임** 탭을 클릭합니다.
 
-        개체에 SPN(서비스 사용자 이름)이 할당된 경우에만 위임 탭이 표시됩니다. C2WTS는 C2WTS 계정에서 SPN이 필수는 아니지만 SPN이 없을 경우 **위임** 탭이 표시되지 않습니다. 제한된 위임을 구성하는 다른 방법으로는 **ADSIEdit**와 같은 유틸리티를 사용할 수 있습니다.
+        개체에 SPN(서비스 사용자 이름)이 할당된 경우에만 위임 탭이 표시됩니다. C2WTS는 C2WTS 계정에서 SPN이 필수는 아니지만 SPN이 없을 경우 **위임** 탭이 표시되지 않습니다. 제한된 위임을 구성하는 다른 방법으로는 **ADSIEdit** 와 같은 유틸리티를 사용할 수 있습니다.
 
     * 위임 탭에 대한 키 구성 옵션은 다음과 같습니다.
 
@@ -81,16 +81,16 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
 
     * **추가** 를 선택하여 위임할 서비스를 추가합니다.
 
-    * **사용자 또는 컴퓨터...&#42;** 를 선택하고 서비스를 호스트하는 계정을 입력합니다. 예를 들어 *sqlservice*라는 계정으로 SQL Server를 실행 중이면 `sqlservice`를 입력합니다. 
-      **보고서 뷰어 웹 파트**의 경우, Reporting Services(기본 모드) 인스턴스의 서비스 계정입니다.
+    * **사용자 또는 컴퓨터...&#42;** 를 선택하고 서비스를 호스트하는 계정을 입력합니다. 예를 들어 *sqlservice* 라는 계정으로 SQL Server를 실행 중이면 `sqlservice`를 입력합니다. 
+      **보고서 뷰어 웹 파트** 의 경우, Reporting Services(기본 모드) 인스턴스의 서비스 계정입니다.
 
-    * 서비스 목록을 선택합니다. 해당 계정에서 사용할 수 있는 SPN이 표시됩니다. 해당 계정에 서비스가 표시되지 않는 경우 누락되었거나 다른 계정에 배치되었을 수 있습니다. SetSPN 유틸리티를 사용하여 SPN을 조정할 수 있습니다. **보고서 뷰어 웹 파트**의 경우 [보고서 뷰어 웹 파트 구성](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)에 구성된 http SPN이 표시됩니다.
+    * 서비스 목록을 선택합니다. 해당 계정에서 사용할 수 있는 SPN이 표시됩니다. 해당 계정에 서비스가 표시되지 않는 경우 누락되었거나 다른 계정에 배치되었을 수 있습니다. SetSPN 유틸리티를 사용하여 SPN을 조정할 수 있습니다. **보고서 뷰어 웹 파트** 의 경우 [보고서 뷰어 웹 파트 구성](#report-viewer-native-mode-web-part-configuration)에 구성된 http SPN이 표시됩니다.
 
     * 확인을 선택하여 대화 상자를 종료합니다.
 
-3. C2WTS *AllowedCallers*를 구성합니다.
+3. C2WTS *AllowedCallers* 를 구성합니다.
 
-    C2WTS에는 구성 파일 **C2WTShost.exe.config**에 명시적으로 나열된 'callers' ID가 필요합니다. C2WTS는 특별히 구성되지 않은 한 시스템의 모든 인증된 사용자로부터의 요청을 허용하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. C2WTShost.exe.config 파일은 다음 위치에 저장됩니다.
+    C2WTS에는 구성 파일 **C2WTShost.exe.config** 에 명시적으로 나열된 'callers' ID가 필요합니다. C2WTS는 특별히 구성되지 않은 한 시스템의 모든 인증된 사용자로부터의 요청을 허용하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. C2WTShost.exe.config 파일은 다음 위치에 저장됩니다.
 
     SharePoint 중앙 관리 내에서 C2WTS 서비스에 대한 서비스 계정을 변경하면 WSS_WPG 그룹에 해당 계정이 추가됩니다.
 

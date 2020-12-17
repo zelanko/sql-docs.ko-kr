@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1914ed4748a14bc7af7fc7113493e18c34604e8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 21163660db53b31179420a2c1079c39319ee5be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036309"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466214"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92036309"
 ## <a name="create-a-script-file"></a>스크립트 파일 만들기  
  메모장을 사용하여 간단한 Transact-SQL 스크립트 파일을 만들려면 다음 단계를 따르세요.  
   
-1.  **시작**을 클릭하고 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **메모장**을 클릭합니다.  
+1.  **시작** 을 클릭하고 **모든 프로그램**, **보조프로그램** 을 차례로 가리킨 다음 **메모장** 을 클릭합니다.  
   
 2.  다음 Transact-SQL 코드를 복사하여 메모장에 붙여넣습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "92036309"
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트 창에 **sqlcmd -S myServer\instanceName -i C:\myScript.sql**을 입력합니다.  
+2.  명령 프롬프트 창에 **sqlcmd -S myServer\instanceName -i C:\myScript.sql** 을 입력합니다.  
   
 3.  Enter 키를 누릅니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "92036309"
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트 창에 **sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt**를 입력합니다.  
+2.  명령 프롬프트 창에 **sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt** 를 입력합니다.  
   
 3.  Enter 키를 누릅니다.  
   
