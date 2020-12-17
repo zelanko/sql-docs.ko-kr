@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 121799da3fe6d259c92deb900fe21833cbfceef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037821"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464374"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
 
@@ -49,7 +49,7 @@ ms.locfileid: "92037821"
 -   **계정 지정**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되는 Windows 도메인 계정을 지정할 수 있습니다. Windows **Administrators** 그룹의 멤버가 아닌 Windows 사용자 계정을 선택하는 것이 좋습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 로컬 **Administrators** 그룹의 멤버가 아니면 다중 서버 관리 작업 시 제한 사항이 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 '지원되는 서비스 계정 유형'을 참조하십시오.  
   
 ## <a name="windows-domain-account-permissions"></a>Windows 도메인 계정의 권한  
-보안 향상을 위해 Windows 도메인 계정을 지정하는 **계정 지정**을 선택합니다. 지정한 Windows 도메인 계정에는 다음 권한이 있어야 합니다.  
+보안 향상을 위해 Windows 도메인 계정을 지정하는 **계정 지정** 을 선택합니다. 지정한 Windows 도메인 계정에는 다음 권한이 있어야 합니다.  
   
 -   모든 Windows 버전에서 서비스로 로그온할 수 있는 권한(SeServiceLogonRight)  
   

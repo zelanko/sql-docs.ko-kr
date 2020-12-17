@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e9c615e709d31b9bd1632d77490ac84ad9081aa0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 6428428fb893073aebfdc6b161b6b0055b20d055
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892113"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439358"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>SharePoint 모드에서 Reporting Services 2016 설치
 
@@ -36,7 +36,7 @@ SharePoint 모드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 |설치|설명|  
 |------------------|-----------------|  
 |**보고서 서버:** SharePoint 모드로 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버|보고서 서버는 데이터 및 보고서 처리와 렌더링은 물론 등록 및 데이터 경고 처리를 수행합니다. SharePoint 모드 보고서 서버는 SharePoint 공유 서비스로 디자인되고 설치됩니다.<br /><br /> **방법:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버를 설치하려면 설치 미디어를 사용합니다.|  
-|**추가 기능:** SharePoint 모드로 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 **rssharepoint.msi**입니다.|이 추가 기능은 SharePoint 웹 프런트 엔드 서버에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] UI(사용자 인터페이스) 페이지 및 기능을 설치합니다. UI 기능에는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], SharePoint 중앙 관리의 관리 페이지, SharePoint 문서 라이브러리 내에 사용되는 기능 페이지 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 페이지가 포함됩니다.<br /><br /> **방법:**  추가 기능은 웹 다운로드 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에서 설치될 수 있습니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.|  
+|**추가 기능:** SharePoint 모드로 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 **rssharepoint.msi** 입니다.|이 추가 기능은 SharePoint 웹 프런트 엔드 서버에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] UI(사용자 인터페이스) 페이지 및 기능을 설치합니다. UI 기능에는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], SharePoint 중앙 관리의 관리 페이지, SharePoint 문서 라이브러리 내에 사용되는 기능 페이지 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 페이지가 포함됩니다.<br /><br /> **방법:**  추가 기능은 웹 다운로드 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에서 설치될 수 있습니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.|  
   
 ## <a name="in-this-section"></a>섹션 내용
 

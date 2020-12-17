@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 908cfdd1726f7074da28711d82d8f6be9877d503
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440388"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL 코드 조각 삽입
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92039027"
   
     -   Ctrl+K, Ctrl+X를 누릅니다.  
   
-    -   **편집** 메뉴에서 **IntelliSense**를 가리킨 다음 **조각 삽입**을 클릭합니다.  
+    -   **편집** 메뉴에서 **IntelliSense** 를 가리킨 다음 **조각 삽입** 을 클릭합니다.  
   
     -   마우스 오른쪽 단추를 클릭한 다음 바로 가기 메뉴에서 **조각 삽입** 을 선택합니다.  
   

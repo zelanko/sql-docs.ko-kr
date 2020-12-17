@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97be95a8db2160bb75a7a4fe4947aa96deca05a7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 6e637bb0dd5979e5149ef70cba59ed8a4ac7f583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463884"
 ---
 # <a name="client-protocols---named-pipes-properties-protocol-tab"></a>클라이언트 프로토콜 - 명명된 파이프 속성(프로토콜 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88900576"
  기본 파이프에 연결하려면 `sql\query`  
   
  **Enabled**  
- 가능한 값은 **예** 및 **아니요**입니다.  
+ 가능한 값은 **예** 및 **아니요** 입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 선택](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  

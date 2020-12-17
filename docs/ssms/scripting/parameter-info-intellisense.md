@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 806d153589f05f8e2a945f7c8e1e34b1aab57aab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab9c16561c8fa8169cdb8562167edc93b777917b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036446"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440364"
 ---
 # <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "92036446"
   
 #### <a name="to-manually-start-parameter-info"></a>수동으로 매개 변수 정보를 시작하려면  
   
-1.  **편집** 메뉴에서 **IntelliSense** 를 선택한 다음 **매개 변수 정보**를 선택합니다.  
+1.  **편집** 메뉴에서 **IntelliSense** 를 선택한 다음 **매개 변수 정보** 를 선택합니다.  
   
 2.  바로 가기 키 Ctrl+Shift+스페이스바를 누릅니다.  
   

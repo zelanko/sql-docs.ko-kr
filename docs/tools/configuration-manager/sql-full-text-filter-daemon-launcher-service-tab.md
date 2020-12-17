@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1be2d280499ab73f7d71056a8c9f8882f1077896
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c682e1e3598750cbbcc2e0e508b427ed88dc1e1f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463774"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 전체 텍스트 필터 데몬 시작 관리자(서비스 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트에서 SQL 전체 텍스트 필터 데몬 시작 관리자(FDHOST Launcher) 서비스가 사용됩니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 데몬 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하십시오.  
   
- **SQL 전체 텍스트 필터 디먼 시작 관리자 속성**대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 보거나 지정할 수 있습니다.  
+ **SQL 전체 텍스트 필터 디먼 시작 관리자 속성** 대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 보거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이진 경로**  

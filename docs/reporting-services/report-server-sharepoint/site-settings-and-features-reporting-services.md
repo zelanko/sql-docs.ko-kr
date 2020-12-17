@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: feabf5c1a0847983af4a10dea5d4c15a5f51199d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767376"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461434"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 사이트 설정 및 사이트 기능(SharePoint 모드)
 
@@ -35,9 +35,9 @@ Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>Reporting Services 사이트 설정 페이지 열기
   
-1.  SharePoint 사이트의 **사이트 동작** 메뉴에서 **사이트 설정**을 선택합니다.  
+1.  SharePoint 사이트의 **사이트 동작** 메뉴에서 **사이트 설정** 을 선택합니다.  
   
-2.  **Reporting Services** 섹션에서 **Reporting Services 사이트 설정**을 선택합니다.  
+2.  **Reporting Services** 섹션에서 **Reporting Services 사이트 설정** 을 선택합니다.  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 사이트 설정을 위한 옵션
   

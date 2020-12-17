@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461414"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 애플리케이션 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -55,21 +55,21 @@ ms.locfileid: "84547965"
   
 -   시스템 구성 변경을 통해 원하는 성능 효과를 얻었는지 확인합니다.  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 성능 개체  
 SQL Server 2016 Reporting Services 이상(SSRS)에는 다음과 같은 성능 개체가 포함됩니다.  
   
--   보고서 서버 성능을 모니터링하기 위한**MSRS 2011 Web Service** 및 **MSRS 2011 SharePoint Mode Web Service** . 이러한 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
+-   보고서 서버 성능을 모니터링하기 위한 **MSRS 2011 Web Service** 및 **MSRS 2011 SharePoint Mode Web Service** . 이러한 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
--   예약된 작업 및 보고서 배달을 모니터링하기 위한**MSRS 2011 Windows Service** 및 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 및 report delivery. 이러한 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함됩니다.  
+-   예약된 작업 및 보고서 배달을 모니터링하기 위한 **MSRS 2011 Windows Service** 및 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 및 report delivery. 이러한 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함됩니다.  
   
--   HTTP 관련 이벤트 및 메모리 관리를 모니터링하기 위한**ReportServer:Service** 및 **ReportServerSharePoint:Service**. 이러한 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그인 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 이 성능 개체에는 메모리 관리 관련 카운터도 들어 있습니다.  
+-   HTTP 관련 이벤트 및 메모리 관리를 모니터링하기 위한 **ReportServer:Service** 및 **ReportServerSharePoint:Service**. 이러한 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그인 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 이 성능 개체에는 메모리 관리 관련 카운터도 들어 있습니다.  
   
  한 시스템에 보고서 서버 인스턴스가 여러 개 있을 경우 인스턴스를 함께 모니터링하거나 별도로 모니터링할 수 있습니다. 카운터 추가 시 포함할 인스턴스를 선택합니다. 성능 콘솔(perfmon.msc) 사용 및 카운터를 추가하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제품 설명서를 참조하세요.  
   
 ## <a name="other-performance-counters"></a>기타 성능 카운터  
- 사용자 지정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 카운터는 **MSRS 2008 Web Service**, **MSRS 2008 Windows Service**및 **ReportServer:Service**용으로만 제공됩니다. 다음 성능 개체는 보고서 서버에 대한 추가 성능 모니터링 데이터를 제공합니다.  
+ 사용자 지정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 카운터는 **MSRS 2008 Web Service**, **MSRS 2008 Windows Service** 및 **ReportServer:Service** 용으로만 제공됩니다. 다음 성능 개체는 보고서 서버에 대한 추가 성능 모니터링 데이터를 제공합니다.  
   
 |성능 개체|메모|  
 |------------------------|-----------|  

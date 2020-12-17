@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 01ec0494fa258aed08c723869efb414600eb8359
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 95742efced8c5b5704863d2582c6ca80c5b227e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988730"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440485"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
   이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "91988730"
 |**Cache Misses/Sec**|캐시에서 보고서를 반환하지 못한 초당 요청 수입니다. 캐싱(디스크 또는 메모리)에 사용된 리소스가 충분한지 여부를 확인할 때 이 카운터를 사용합니다.|  
 |**Cache Misses/Sec (Semantic Models)**|캐시에서 모델을 반환하지 못한 초당 요청 수입니다. 캐싱(디스크 또는 메모리)에 사용된 리소스가 충분한지 여부를 확인할 때 이 카운터를 사용합니다.|  
 |**Delivers/Sec**|배달 확장 프로그램에서 초당 보고서를 배달한 수입니다.|  
-|**Events/Sec**|초당 처리된 이벤트 수입니다. 모니터링된 이벤트에는 **SnapshotUpdated** 및 **TimedSubscription**이 있습니다.|  
+|**Events/Sec**|초당 처리된 이벤트 수입니다. 모니터링된 이벤트에는 **SnapshotUpdated** 및 **TimedSubscription** 이 있습니다.|  
 |**First Session Requests/Sec**|초당 만들어진 새 보고서 실행 세션 수입니다.|  
 |**Memory Cache Hits/Sec**|메모리 내 캐시에서 보고서가 검색된 초당 횟수입니다. *메모리 내 캐시* 는 캐시 중 CPU 메모리에 보고서를 저장하는 부분입니다. 메모리 내 캐시가 사용되면 보고서 서버는 캐시된 내용에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 쿼리하지 않습니다.|  
 |**Memory Cache Misses/Sec**|메모리 내 캐시에서 보고서를 검색하지 못한 초당 횟수입니다.|  
@@ -104,10 +104,10 @@ ms.locfileid: "91988730"
 |**Requests/Sec**|보고서 서버 서비스가 초당 성공적으로 처리한 총 요청 수입니다.|  
 |**Snapshot Updates/Sec**|초당 총 보고서 실행 스냅샷 업데이트 수입니다.|  
 |**Total App Domain Recycles**|보고서 서버 Windows 서비스 시작 이후 애플리케이션 도메인의 총 재활용 횟수입니다.|  
-|**Total Cache Flushes**|서비스 시작 이후 보고서 서버 캐시의 총 업데이트 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Flushes/Sec**를 참조하세요.|  
-|**Total Cache Hits**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 보고서에 대한 총 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
+|**Total Cache Flushes**|서비스 시작 이후 보고서 서버 캐시의 총 업데이트 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Flushes/Sec** 를 참조하세요.|  
+|**Total Cache Hits**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 보고서에 대한 총 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec** 를 참조하세요.|  
 |**Total Cache Hits (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 총 모델 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Cache Misses**|보고서 서버 Windows 서비스 시작 이후 캐시에서 보고서를 반환하지 못한 총 횟수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Misses/Sec**를 참조하세요.|  
+|**Total Cache Misses**|보고서 서버 Windows 서비스 시작 이후 캐시에서 보고서를 반환하지 못한 총 횟수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Misses/Sec** 를 참조하세요.|  
 |**Total Cache Misses (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 모델을 반환하지 못한 총 횟수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Deliveries**|모든 배달 확장 프로그램의 일정 예약 및 배달 프로세서에서 배달한 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Events**|보고서 서버 Windows 서비스 시작 이후 이벤트의 총 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  

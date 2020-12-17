@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d1a544f300e6e49e5355294a1e0f99515482113
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 8a6513ab2798152e49afc09ae7e67b001b4ea4bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461484"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 애플리케이션
 
@@ -33,27 +33,27 @@ ms.locfileid: "91934641"
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>프록시 그룹과 서비스 애플리케이션의 연결 수정
 
- 서비스 애플리케이션을 만들기 위한 새 페이지에는 **웹 애플리케이션 연결**섹션이 있습니다. 이 섹션에서 만들어지는 서비스 애플리케이션에 연결할 수 있습니다. 다음 단계를 사용하여 연결을 변경하고 사용자 구성을 서비스 애플리케이션에 할당합니다. 사용자 지정 그룹에 대한 서비스 애플리케이션의 연결을 변경하지 않고 동일한 일반 프로세스를 사용하여 기본 그룹에 프록시를 추가할 수도 있습니다.  
+ 서비스 애플리케이션을 만들기 위한 새 페이지에는 **웹 애플리케이션 연결** 섹션이 있습니다. 이 섹션에서 만들어지는 서비스 애플리케이션에 연결할 수 있습니다. 다음 단계를 사용하여 연결을 변경하고 사용자 구성을 서비스 애플리케이션에 할당합니다. 사용자 지정 그룹에 대한 서비스 애플리케이션의 연결을 변경하지 않고 동일한 일반 프로세스를 사용하여 기본 그룹에 프록시를 추가할 수도 있습니다.  
   
-1.  SharePoint 중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 연결 구성**을 클릭합니다.  
+1.  SharePoint 중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 연결 구성** 을 클릭합니다.  
   
-2.  서비스 애플리케이션 연결 페이지에서 보기를 **서비스 애플리케이션**으로 변경합니다.  
+2.  서비스 애플리케이션 연결 페이지에서 보기를 **서비스 애플리케이션** 으로 변경합니다.  
   
 3.  새 Reporting Services 서비스 애플리케이션의 이름을 찾아서 클릭합니다. 또한 애플리케이션 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
   
-4.  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정**을 선택합니다.  
+4.  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정** 을 선택합니다.  
   
-5.  해당 프록시의 상자를 선택하고 **확인**클릭합니다.  
+5.  해당 프록시의 상자를 선택하고 **확인** 클릭합니다.  
   
 ## <a name="edit-service-application-properties"></a>서비스 애플리케이션 속성 편집
 
  서비스 애플리케이션의 속성 페이지를 다시 열어서 속성을 수정할 수 있습니다.  
   
-1.  SharePoint 중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
 2.  전체 행을 선택하려면 유형 열을 클릭하여 서비스 애플리케이션을 선택합니다. 애플리케이션 이름을 클릭하면 서비스 애플리케이션의 속성을 여는 대신 서비스에 대한 관리 옵션 페이지가 열립니다.  
   
-3.  서비스 애플리케이션 리본에서 **속성**을 클릭합니다.  
+3.  서비스 애플리케이션 리본에서 **속성** 을 클릭합니다.  
   
 ## <a name="create-a-reporting-services-service-application-using-powershell"></a>PowerShell을 사용하여 Reporting Services 서비스 애플리케이션 만들기
 

@@ -16,13 +16,13 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4bd4131d55022e494c54a4350d666615ac59493
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f603cebc7157aa57c7f72cf2017a898cb7c6d119
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035699"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440454"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,17 +43,17 @@ ms.locfileid: "92035699"
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>작업 범주의 멤버를 변경하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 편집하려는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 작업 범주를 편집하려는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
+3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리** 를 선택합니다.  
   
-4.  **작업 범주 관리**_server_name_ 대화 상자에서 편집하려는 작업 범주를 선택한 다음 **작업 보기**를 클릭합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 편집하려는 작업 범주를 선택한 다음 **작업 보기** 를 클릭합니다.  
   
 5.  **모든 작업 표시** 확인란을 선택합니다.  
   
-6.  범주에 작업을 추가하려면 주 표 형태의 **선택** 열에서 해당 작업에 대한 확인란을 선택합니다. 범주에서 작업을 제거하려면 해당 확인란의 선택을 취소합니다. 완료되었으면 **확인**을 클릭합니다.  
+6.  범주에 작업을 추가하려면 주 표 형태의 **선택** 열에서 해당 작업에 대한 확인란을 선택합니다. 범주에서 작업을 제거하려면 해당 확인란의 선택을 취소합니다. 완료되었으면 **확인** 을 클릭합니다.  
   
 7.  **작업 범주 관리**_server_name_ 대화 상자를 닫습니다.  
   
@@ -61,11 +61,11 @@ ms.locfileid: "92035699"
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>작업 범주의 멤버를 변경하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

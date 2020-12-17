@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbe9bfd3727e90b330ea894ba3e2fdc590486a29
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 33a2a8e5eee76214f9d7fdf3cedd8baaf4eeaa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035676"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440444"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 
@@ -50,23 +50,23 @@ ms.locfileid: "92035676"
 ## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio 사용  
 **SQL Server 에이전트 고정 데이터베이스 역할에 SQL 로그인이나 msdb 역할을 추가하려면**  
   
-1.  **개체 탐색기**에서 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 서버를 확장합니다.  
   
-2.  **보안**을 확장한 다음 **로그인**을 확장합니다.  
+2.  **보안** 을 확장한 다음 **로그인** 을 확장합니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할에 추가하려는 로그인을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할에 추가하려는 로그인을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
-4.  **로그인 속성** 대화 상자의 **사용자 매핑** 에서 **msdb**를 포함하는 행을 선택합니다.  
+4.  **로그인 속성** 대화 상자의 **사용자 매핑** 에서 **msdb** 를 포함하는 행을 선택합니다.  
   
-5.  **데이터베이스 역할 멤버 자격: msdb**에서 적합한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할을 선택합니다.  
+5.  **데이터베이스 역할 멤버 자격: msdb** 에서 적합한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할을 선택합니다.  
   
 **SQL Server 에이전트 작업 단계를 만들고 관리하는 프록시 계정을 구성하려면**  
   
-1.  **개체 탐색기**에서 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장합니다.  
+2.  **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **프록시** 를 마우스 오른쪽 단추로 클릭하고 **새 프록시**를 선택합니다.  
+3.  **프록시** 를 마우스 오른쪽 단추로 클릭하고 **새 프록시** 를 선택합니다.  
   
 4.  **새 프록시 계정** 대화 상자의 **일반** 페이지에서 새 프록시의 프록시 이름, 자격 증명 이름 및 설명을 지정합니다. SQL Server 에이전트 프록시를 만들기 전에 자격 증명을 먼저 만들어야 합니다. 자격 증명을 만드는 방법에 대한 자세한 내용은 [방법: 자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md) 및 [CREATE CREDENTIAL(Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)을 참조하세요.  
   

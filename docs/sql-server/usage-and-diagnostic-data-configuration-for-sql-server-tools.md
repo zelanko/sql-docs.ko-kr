@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
+ms.openlocfilehash: 8f12acd87a21cca6047621abfb985906295b58c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461444"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>SQL Server 도구(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
@@ -43,11 +43,11 @@ ms.locfileid: "86000421"
   
 1.  Visual Studio를 시작합니다.  
   
-2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정**을 선택합니다.  
+2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정** 을 선택합니다.  
   
-3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
+3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인** 을 클릭합니다.  
   
-     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
+     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인** 을 클릭합니다.  
   
 
   
@@ -87,11 +87,11 @@ ms.locfileid: "86000421"
   
 1.  Visual Studio를 시작합니다.  
   
-2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정**을 선택합니다.  
+2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정** 을 선택합니다.  
   
-3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
+3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인** 을 클릭합니다.  
   
-     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
+     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인** 을 클릭합니다.  
   
 
   
@@ -125,13 +125,13 @@ ms.locfileid: "86000421"
   
 1.  도구를 시작하고 Analysis Services 또는 Integration Services에 대한 새 또는 기존 프로젝트를 엽니다.  
   
-2.  도움말 메뉴에서 **Microsoft SQL Server 사용자 의견 옵션**을 선택합니다.  
+2.  도움말 메뉴에서 **Microsoft SQL Server 사용자 의견 옵션** 을 선택합니다.  
   
-3.  CEIP를 해제하려면 **아니요, 참여하지 않겠습니다**를 클릭합니다.  
+3.  CEIP를 해제하려면 **아니요, 참여하지 않겠습니다** 를 클릭합니다.  
   
-     CEIP를 설정하려면 **예, 참여하겠습니다**를 클릭합니다.  
+     CEIP를 설정하려면 **예, 참여하겠습니다** 를 클릭합니다.  
   
-4.  **확인**을 클릭합니다.  
+4.  **확인** 을 클릭합니다.  
   
  **레지스트리 기반 정책 또는 그룹 정책 사용**  
   

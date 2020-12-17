@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0c5e38eb93aa8394836edc7d92726a0d2c9bd13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 894dfe8b6b3c4832a687cd10b2ed21644d1f7227
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439348"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
 

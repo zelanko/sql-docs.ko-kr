@@ -15,13 +15,13 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fd2f7210ed0c585088d979d9eb52600078869d20
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9a1dc39795646c704d8168858475095cd549cb0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037351"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461364"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "92037351"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 3.  **소유자** 목록에서 로그인을 선택합니다. 작업 소유자를 변경하려면 시스템 관리자여야 합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "92037351"
   
 1.  개체 탐색기에서 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  쿼리 창에서 [sp_manage_jobs_by_login(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md) 시스템 저장 프로시저를 사용하는 다음 문을 입력합니다. 다음 예에서는 `danw` 의 모든 작업을 `françoisa`에 다시 할당합니다.  
   

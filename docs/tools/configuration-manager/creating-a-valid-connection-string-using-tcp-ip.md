@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e4cbb0942e3aead7b4150e788a5f064f6a240dbc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 19c218d9047d31145a7172628cc5e64d941cb645
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900460"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463873"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP를 사용하여 유효한 연결 문자열 만들기
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   TCP/IP를 사용하여 유효한 연결 문자열을 만들려면 다음을 수행해야 합니다.  
   
--   **별칭**을 지정합니다.  
+-   **별칭** 을 지정합니다.  
   
--   **서버**에 **PING** 유틸리티를 사용하여 연결할 수 있는 서버 이름을 입력하거나 **PING** 유틸리티를 사용하여 연결할 수 있는 IP 주소를 입력합니다. 명명된 인스턴트에 인스턴트 이름을 추가합니다.  
+-   **서버** 에 **PING** 유틸리티를 사용하여 연결할 수 있는 서버 이름을 입력하거나 **PING** 유틸리티를 사용하여 연결할 수 있는 IP 주소를 입력합니다. 명명된 인스턴트에 인스턴트 이름을 추가합니다.  
   
--   **프로토콜** 로 **TCP/IP**를 지정합니다.  
+-   **프로토콜** 로 **TCP/IP** 를 지정합니다.  
   
--   필요에 따라 **포트 번호**에 포트 번호를 입력합니다. 기본값은 1433으로, 서버에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기본 인스턴스의 포트 번호입니다. 포트 1433에서 수신하지 않는 기본 인스턴스나 명명된 인스턴스에 연결하려면 해당 포트 번호를 제공하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 구성하는 방법은 [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)를 참조하세요.  
+-   필요에 따라 **포트 번호** 에 포트 번호를 입력합니다. 기본값은 1433으로, 서버에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기본 인스턴스의 포트 번호입니다. 포트 1433에서 수신하지 않는 기본 인스턴스나 명명된 인스턴스에 연결하려면 해당 포트 번호를 제공하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 구성하는 방법은 [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)를 참조하세요.  
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 구성 요소는 지정한 별칭에 대한 서버, 프로토콜 및 포트 값을 레지스트리에서 읽어온 후 `tcp:<servername>[\<instancename>],<port>` 또는 `tcp:<IPAddress>[\<instancename>],<port>`형식으로 연결 문자열을 만듭니다.  
   
