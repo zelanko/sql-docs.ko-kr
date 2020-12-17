@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713831"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489415"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>1단원: DTA(데이터베이스 엔진 튜닝 관리자) 기본 탐색
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713831"
 
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md?view=sql-server-2017)를 다운로드합니다.
+- [AdventureWorks2017 샘플 데이터베이스](../../samples/adventureworks-install-configure.md)를 다운로드합니다.
 
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)을 참조하세요.
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.
 
   >[!NOTE]
   > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용하는 데 익숙한 사용자를 위한 것입니다. 
@@ -44,12 +44,12 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 ## <a name="launch-database-tuning-advisor"></a>데이터베이스 튜닝 관리자 시작 
 시작하려면 DTA(데이터베이스 엔진 튜닝 관리자) GUI(그래픽 사용자 인터페이스)를 엽니다. 처음 사용할 때는 **sysadmin** 고정 서버 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 시작하여 애플리케이션을 초기화해야 합니다. 초기화 후에는 **db_owner** 고정 데이터베이스 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 사용하여 자신이 소유한 데이터베이스를 튜닝할 수 있습니다. 데이터베이스 엔진 튜닝 관리자를 초기화하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
-1. SSMS(SQL Server Management Studio)를 시작합니다. Windows **시작 메뉴**에서 **모든 프로그램**을 가리키고 **SQL Server Management Studio**를 찾습니다. 
-2. SSMS가 열리면 **도구** 메뉴를 선택하고 **데이터베이스 튜닝 관리자**를 선택합니다. 
+1. SSMS(SQL Server Management Studio)를 시작합니다. Windows **시작 메뉴** 에서 **모든 프로그램** 을 가리키고 **SQL Server Management Studio** 를 찾습니다. 
+2. SSMS가 열리면 **도구** 메뉴를 선택하고 **데이터베이스 튜닝 관리자** 를 선택합니다. 
 
   ![SSMS에서 DTA 시작](media/dta-tutorials/launch-dta.png)
 
-3. 데이터베이스 튜닝 관리자가 시작되고 **서버에 연결** 대화 상자가 열립니다. 기본 설정을 확인한 다음 **연결**을 선택하여 SQL Server에 연결합니다.  
+3. 데이터베이스 튜닝 관리자가 시작되고 **서버에 연결** 대화 상자가 열립니다. 기본 설정을 확인한 다음 **연결** 을 선택하여 SQL Server에 연결합니다.  
   
 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 그림에 있는 구성으로 열립니다.  
   
@@ -69,7 +69,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 ## <a name="configure-tool-options-and-layout"></a>도구 옵션 및 레이아웃 구성 
 
-1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다.  
 
    ![DTA 옵션](media/dta-tutorials/dta-settings.png) 
   
@@ -79,7 +79,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
     -   **글꼴 변경** 을 클릭하여 **일반** 탭의 데이터베이스 및 테이블 목록에 대해 선택할 수 있는 글꼴을 확인합니다. 이 옵션에 대해 선택한 글꼴은 튜닝을 수행한 후 데이터베이스 엔진 튜닝 관리자 권장 사항 표와 보고서에도 사용됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자에서는 시스템 글꼴을 사용합니다.  
   
-    -   **가장 최근에 사용한 목록의 항목 수** 는 **1** 과 **10**사이에서 설정할 수 있습니다. 그러면 **파일** 메뉴에서 **최근에 사용한 세션** 이나 **최근에 사용한 파일** 을 클릭할 때 표시되는 목록의 최대 항목 수가 설정됩니다. 기본적으로 이 옵션은 **4**로 설정되어 있습니다.  
+    -   **가장 최근에 사용한 목록의 항목 수** 는 **1** 과 **10** 사이에서 설정할 수 있습니다. 그러면 **파일** 메뉴에서 **최근에 사용한 세션** 이나 **최근에 사용한 파일** 을 클릭할 때 표시되는 목록의 최대 항목 수가 설정됩니다. 기본적으로 이 옵션은 **4** 로 설정되어 있습니다.  
   
     -   **마지막 튜닝 옵션 저장** 을 선택하면 기본적으로 데이터베이스 엔진 튜닝 관리자에서 마지막 튜닝 세션에 대해 지정된 튜닝 옵션을 다음 튜닝 세션에 사용합니다. 데이터베이스 엔진 튜닝 관리자 옵션 기본값을 사용하려면 이 확인란의 선택을 취소합니다. 기본적으로 이 옵션은 선택되어 있습니다.  
   

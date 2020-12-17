@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b8010bda8e05b30eae24fd58f74622d4526ce8ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036086"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480614"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>IntelliSense를 사용하여 문제 식별 - SSMS(SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "92036086"
   
 -   IntelliSense 기능은 편집기 창이 데이터베이스에 연결된 후 다른 연결에서 만든 데이터베이스 개체를 처리하지 않습니다. 개체가 완성 목록과 같은 IntelliSense 기능에서 누락되어 있는 경우 다음 세 가지 메커니즘 중 하나를 선택하여 편집기 창의 개체 캐시를 새로 고칠 수 있습니다.  
   
-    -   **편집** 메뉴를 선택하고 **IntelliSense**를 선택한 다음 **로컬 캐시 새로 고침**을 선택합니다.  
+    -   **편집** 메뉴를 선택하고 **IntelliSense** 를 선택한 다음 **로컬 캐시 새로 고침** 을 선택합니다.  
   
     -   바로 가기 키 Ctrl+Shift+R을 사용합니다.  
   

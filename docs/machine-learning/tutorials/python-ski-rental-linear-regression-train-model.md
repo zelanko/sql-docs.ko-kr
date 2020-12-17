@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e4c25f5fedb0671840406bcb2364fa918de1219a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7dd974d77b60d3b03cf8799f7707481f32e91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173394"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470374"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 선형 회귀 모델 학습
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 이 4부 자습서 시리즈의 3부에서는 Python에서 선형 회귀 모델을 학습합니다. 이 시리즈의 다음 파트에서는 Machine Learning Services를 사용하는 SQL Server 데이터베이스 또는 빅 데이터 클러스터에 이 모델을 배포합니다.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 이 4부 자습서 시리즈의 3부에서는 Python에서 선형 회귀 모델을 학습합니다. 이 시리즈의 다음 부분에서는 Machine Learning Services가 있는 SQL Server 데이터베이스에 이 모델을 배포합니다.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 이 4부 자습서 시리즈의 3부에서는 Python에서 선형 회귀 모델을 학습합니다. 이 시리즈의 다음 부분에서는 Machine Learning Services를 사용하여 Azure SQL Managed Instance 데이터베이스에 이 모델을 배포합니다.
 ::: moniker-end
 
@@ -48,9 +48,9 @@ ms.locfileid: "88173394"
 
 ## <a name="train-the-model"></a>모델 학습
 
-예측하려면 데이터 세트의 변수 간의 종속성을 가장 잘 설명하는 함수(모델)를 찾아야 합니다. 이를 모델 학습이라고 합니다. 학습 데이터 세트는 이 시리즈의 2부에서 만든 pandas 데이터 프레임 **df**에서 전체 데이터 세트의 하위 집합입니다.
+예측하려면 데이터 세트의 변수 간의 종속성을 가장 잘 설명하는 함수(모델)를 찾아야 합니다. 이를 모델 학습이라고 합니다. 학습 데이터 세트는 이 시리즈의 2부에서 만든 pandas 데이터 프레임 **df** 에서 전체 데이터 세트의 하위 집합입니다.
 
-선형 회귀 알고리즘을 사용하여 모델 **lin_model**을 학습합니다.
+선형 회귀 알고리즘을 사용하여 모델 **lin_model** 을 학습합니다.
 
 ```python
 # Store the variable we'll be predicting on.
@@ -82,7 +82,7 @@ Testing set shape: (91, 7)
 
 ## <a name="make-predictions"></a>예측 만들기
 
-예측 함수를 사용하여 모델 **lin_model**을 통해 임대 횟수를 예측합니다.
+예측 함수를 사용하여 모델 **lin_model** 을 통해 임대 횟수를 예측합니다.
 
 ```python
 # Generate our predictions for the test set.

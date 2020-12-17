@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4bcf579688bd00c845a9c51a724e623805daf7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9f18cec0f6ac8754fc5826e75325c810e965b692
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480584"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "92036096"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>실행 계획 연산자의 속성을 보려면  
   
-1.  **쿼리** 메뉴에서 **실제 실행 계획 포함**을 클릭합니다.  
+1.  **쿼리** 메뉴에서 **실제 실행 계획 포함** 을 클릭합니다.  
   
 2.  SQL 쿼리 편집기에서 쿼리를 입력 및 실행합니다.  
   

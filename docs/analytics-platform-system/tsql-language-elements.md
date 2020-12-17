@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778412"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641556"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 t-sql 언어 요소
 PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫폼 시스템)의 t-sql 언어 요소입니다.
@@ -23,7 +23,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [구문 표기 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [개체 명명 규칙](../relational-databases/databases/database-identifiers.md)
 * [예약 된 키워드](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [정렬과](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [정렬과](../t-sql/statements/collations.md)
 * [주석만](../t-sql/language-elements/comment-transact-sql.md)
 * [상수가](../t-sql/data-types/constants-transact-sql.md)
 * [데이터 형식](../t-sql/data-types/data-types-transact-sql.md)

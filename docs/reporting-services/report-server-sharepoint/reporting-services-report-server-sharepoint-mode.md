@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 73963eb8f7f1e9b1d15e709929fce713301aa450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934713"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425048"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91934713"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  **SharePoint 모드**에 구성된 Reporting Services 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 협업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 Reporting Services 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
+  **SharePoint 모드** 에 구성된 Reporting Services 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 협업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 Reporting Services 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
   
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.

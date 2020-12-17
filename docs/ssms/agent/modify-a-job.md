@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7027d8f478ba0f0841e085ada61ef8ff1f379a0c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 785d22adc5bb1047618a14f8931e728753c2a957
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482216"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 
@@ -46,7 +46,7 @@ ms.locfileid: "92038860"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 수정할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 수정할 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 3.  **작업 속성** 대화 상자에서 해당 페이지를 사용하여 작업의 속성, 단계, 일정, 경고 및 알림을 업데이트합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "92038860"
   
 1.  개체 탐색기에서 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
 3.  쿼리 창에서 다음 시스템 저장 프로시저를 사용하여 작업을 수정합니다.  
   

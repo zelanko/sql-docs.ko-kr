@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412989"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643333"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives(Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ Azure SQL database 또는 Azure Synapse Analytics의 버전 (서비스 계층), 
   
  가격 책정에 대 한 자세한 내용은 [SQL Database 옵션 및 성능: SQL Database 가격](https://azure.microsoft.com/pricing/details/sql-database/) 책정 및 [Azure Synapse Analytics 가격 책정](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)을 참조 하세요.  
   
- 서비스 설정을 변경 하려면 [ALTER database (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) 및 [Alter Database (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)를 참조 하세요.  
+ 서비스 설정을 변경 하려면 [ALTER database (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) 및 [Alter Database (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)를 참조 하세요.  
   
  Sys.database_service_objectives 뷰에는 다음 열이 포함 되어 있습니다.  
   

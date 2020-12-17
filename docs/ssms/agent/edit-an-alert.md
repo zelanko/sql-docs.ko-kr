@@ -15,13 +15,13 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ccc873742a2c2c8d547d3d0a8200e6fbf6beb90
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 50ea1739cda75e303e3f0d9f1d6ac50b8c876950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423726"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,25 +44,25 @@ ms.locfileid: "92034996"
   
 1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 편집하려는 경고가 들어 있는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
 3.  더하기 기호를 클릭하여 **경고** 폴더를 확장합니다.  
   
-4.  편집할 경고를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+4.  편집할 경고를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 선택합니다.  
   
-5.  **일반**, **응답**및 **옵션** 페이지에서 경고 속성을 업데이트합니다.  
+5.  **일반**, **응답** 및 **옵션** 페이지에서 경고 속성을 업데이트합니다.  
   
-6.  완료되었으면 **확인**을 클릭합니다.  
+6.  완료되었으면 **확인** 을 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-edit-an-alert"></a>경고를 편집하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

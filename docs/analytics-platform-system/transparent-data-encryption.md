@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777732"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641569"
 ---
 # <a name="transparent-data-encryption"></a>투명한 데이터 암호화
 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)를 도난당 한 경우에는 악의적 파티에서 데이터베이스를 복원 하거나 연결 하 여 데이터를 찾아볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
@@ -142,7 +142,7 @@ TDE와 관련 된 메타 데이터를 보려면 `CONTROL SERVER` 권한이 필�
 ## <a name="considerations"></a>고려 사항  
 처리 중인 데이터베이스 암호화 작업에 대해 재암호화를 검색하는 동안에는 데이터베이스에 대한 유지 관리 작업이 비활성화됩니다.  
   
-**Dm_pdw_nodes_database_encryption_keys** 동적 관리 뷰를 사용 하 여 데이터베이스 암호화의 상태를 찾을 수 있습니다. 자세한 내용은이 문서의 앞부분에 나오는 *카탈로그 뷰 및 동적 관리 뷰* 섹션을 참조 하십시오.  
+**Sys.dm_pdw_nodes_database_encryption_keys** 동적 관리 뷰를 사용 하 여 데이터베이스 암호화의 상태를 찾을 수 있습니다. 자세한 내용은이 문서의 앞부분에 나오는 *카탈로그 뷰 및 동적 관리 뷰* 섹션을 참조 하십시오.  
   
 ### <a name="restrictions"></a>제한  
 `CREATE DATABASE ENCRYPTION KEY`,, `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY` 또는 문 중에는 다음 작업을 수행할 수 없습니다 `ALTER DATABASE...SET ENCRYPTION` .  
@@ -197,7 +197,7 @@ SELECT TOP 1 encryption_state
 데이터베이스 암호화 키를 변경하기 전에 트랜잭션 로그에 작성된 모든 데이터는 이전 데이터베이스 암호화 키를 사용하여 암호화됩니다.  
   
 ### <a name="pdw-activity-logs"></a>PDW 활동 로그  
-SQL Server PDW 문제를 해결 하기 위한 로그 집합을 유지 관리 합니다. 이는 트랜잭션 로그, SQL Server 오류 로그 또는 Windows 이벤트 로그가 아닙니다. 이러한 PDW 활동 로그는 일반 텍스트의 전체 문을 포함할 수 있으며, 그 중 일부는 사용자 데이터를 포함할 수 있습니다. 일반적인 예는 **INSERT** 및 **UPDATE** 문입니다. 사용자 데이터 마스킹은 **sp_pdw_log_user_data_masking**를 사용 하 여 명시적으로 설정 하거나 해제할 수 있습니다. SQL Server PDW에서 암호화를 사용 하도록 설정 하면 자동으로 PDW 활동 로그의 사용자 데이터 마스킹을 설정 하 여 보호 합니다. TDE를 사용 하지 않을 때 문을 마스크 하는 데 사용할 수도 있지만, Microsoft 지원 팀이 문제를 분석 하는 기능이 크게 감소 하기 때문에 권장 되지 않습니다. **sp_pdw_log_user_data_masking**  
+SQL Server PDW 문제를 해결 하기 위한 로그 집합을 유지 관리 합니다. 이는 트랜잭션 로그, SQL Server 오류 로그 또는 Windows 이벤트 로그가 아닙니다. 이러한 PDW 활동 로그는 일반 텍스트의 전체 문을 포함할 수 있으며, 그 중 일부는 사용자 데이터를 포함할 수 있습니다. 일반적인 예는 **INSERT** 및 **UPDATE** 문입니다. 사용자 데이터 마스킹은 **sp_pdw_log_user_data_masking** 를 사용 하 여 명시적으로 설정 하거나 해제할 수 있습니다. SQL Server PDW에서 암호화를 사용 하도록 설정 하면 자동으로 PDW 활동 로그의 사용자 데이터 마스킹을 설정 하 여 보호 합니다. TDE를 사용 하지 않을 때 문을 마스크 하는 데 사용할 수도 있지만, Microsoft 지원 팀이 문제를 분석 하는 기능이 크게 감소 하기 때문에 권장 되지 않습니다. **sp_pdw_log_user_data_masking**  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>투명한 데이터 암호화 및 tempdb 시스템 데이터베이스  
 [Sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)를 사용 하 여 암호화를 사용 하도록 설정 하면 tempdb 시스템 데이터베이스가 암호화 됩니다. 이는 데이터베이스에서 TDE를 사용 하기 전에 필요 합니다. 이는 동일한 SQL Server PDW 인스턴스의 암호화 되지 않은 데이터베이스에 대 한 성능에 영향을 미칠 수 있습니다.  
@@ -207,12 +207,12 @@ DEK (데이터베이스 암호화 키)는 master 데이터베이스에 저장 �
   
 시스템은 암호를 제공 하는 것과 같이 사람이 개입할 필요 없이 키에 액세스할 수 있습니다. 인증서를 사용할 수 없는 경우 적절 한 인증서를 사용할 수 있을 때까지 DEK의 암호를 해독할 수 없다는 오류 메시지가 출력 됩니다.  
   
-한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 이동 하는 경우 ' DEK를 보호 하는 데 사용 된 인증서를 대상 서버에서 먼저 복원 해야 합니다. 그런 다음 평소와 같이 데이터베이스를 복원할 수 있습니다. 자세한 내용은 표준 SQL Server 설명서에서 [TDE로 보호 되는 데이터베이스를 다른 SQL Server으로 이동](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15)을 참조 하세요.  
+한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 이동 하는 경우 ' DEK를 보호 하는 데 사용 된 인증서를 대상 서버에서 먼저 복원 해야 합니다. 그런 다음 평소와 같이 데이터베이스를 복원할 수 있습니다. 자세한 내용은 표준 SQL Server 설명서에서 [TDE로 보호 되는 데이터베이스를 다른 SQL Server으로 이동](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)을 참조 하세요.  
   
 DEKs를 암호화 하는 데 사용 되는 인증서는 해당 인증서를 사용 하는 데이터베이스 백업이 있는 한 보존 해야 합니다. 인증서 백업은 인증서 개인 키를 포함 해야 합니다. 개인 키가 없으면 데이터베이스 복원에 인증서를 사용할 수 없기 때문입니다. 이러한 인증서 개인 키 백업은 인증서 복원을 위해 제공 해야 하는 암호로 보호 되는 별도의 파일에 저장 됩니다.  
   
 ## <a name="restoring-the-master-database"></a>Master 데이터베이스 복원  
-Master 데이터베이스는 재해 복구의 일부로 **Dwconfig**를 사용 하 여 복원할 수 있습니다.  
+Master 데이터베이스는 재해 복구의 일부로 **Dwconfig** 를 사용 하 여 복원할 수 있습니다.  
   
 -   제어 노드가 변경 되지 않은 경우, 즉 master 데이터베이스가 master 데이터베이스의 백업을 수행 하는 것과 동일 하 고 변경 되지 않은 어플라이언스에서 복원 되는 경우에는 추가 작업 없이 DMK 및 모든 인증서를 읽을 수 있습니다.  
   
@@ -244,9 +244,9 @@ Master 데이터베이스는 재해 복구의 일부로 **Dwconfig**를 사용 �
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-업그레이드 하는 동안 사용자 DB를 암호화 하 고 DMK 암호를 제공 하지 않으면 업그레이드 작업은 실패 합니다. Replace 중에 DMK 있을 때 올바른 암호를 제공 하지 않으면 작업에서 DMK 복구 단계를 건너뜁니다. 다른 모든 단계는 VM 바꾸기 작업 끝에 완료 되지만 작업은 끝에 추가 단계가 필요 함을 나타내는 오류를 보고 합니다. 설치 로그 ( **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<타임 스탬프> \detail-setup**에 있음)에서 다음 경고가 끝 부분에 표시 됩니다.  
+업그레이드 하는 동안 사용자 DB를 암호화 하 고 DMK 암호를 제공 하지 않으면 업그레이드 작업은 실패 합니다. Replace 중에 DMK 있을 때 올바른 암호를 제공 하지 않으면 작업에서 DMK 복구 단계를 건너뜁니다. 다른 모든 단계는 VM 바꾸기 작업 끝에 완료 되지만 작업은 끝에 추가 단계가 필요 함을 나타내는 오류를 보고 합니다. 설치 로그 ( **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<타임 스탬프> \detail-setup** 에 있음)에서 다음 경고가 끝 부분에 표시 됩니다.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 PDW에서 수동으로 이러한 문을 실행 하 고 DMK를 복구 하기 위해 어플라이언스를 다시 시작 합니다.  
   

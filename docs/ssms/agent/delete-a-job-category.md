@@ -17,13 +17,13 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 346cdbc84fb6d4af293f96b7044b0afae07dabe7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c78142b6608ccce1d633faa08ca499383d8416de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036591"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424832"
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "92036591"
   
 #### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
   
-2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
+2.  더하기 기호를 클릭하여 **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
+3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리** 를 선택합니다.  
   
 4.  **작업 범주 관리**_server\_name_ 대화 상자에서 삭제할 작업 범주를 선택합니다.  
   
-5.  **삭제**를 클릭합니다.  
+5.  **삭제** 를 클릭합니다.  
   
-6.  **작업 범주** 대화 상자에서 **예**를 클릭합니다.  
+6.  **작업 범주** 대화 상자에서 **예** 를 클릭합니다.  
   
 7.  **작업 범주 관리**_server\_name_ 대화 상자를 닫습니다.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "92036591"
   
 #### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- deletes the job category named AdminJobs.  

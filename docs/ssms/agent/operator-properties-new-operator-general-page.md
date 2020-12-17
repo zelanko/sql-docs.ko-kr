@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b66b4f303572e5eaad5d8b6a8d0e85c3f725015d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: de726644bbd239dfe095a1c2a1860d95f213eb29
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034896"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408896"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>운영자 속성 - 새 운영자(일반 페이지)
 
@@ -41,7 +41,7 @@ ms.locfileid: "92034896"
 운영자의 전자 메일 주소를 지정합니다.  
   
 **Net Send 주소**  
-**net send**에 사용할 주소를 지정합니다.  
+**net send** 에 사용할 주소를 지정합니다.  
   
 **호출기 전자 메일 이름**  
 운영자의 호출기에 사용할 전자 메일 주소를 지정합니다.  

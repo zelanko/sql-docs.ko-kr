@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810214"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641908"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,4 +100,4 @@ ms.locfileid: "91810214"
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>시스템 테이블을 수동으로 업데이트 한 후 DBCC_CHECKDB 명령 실행
 메시지 3859: 경고: 시스템 카탈로그가 데이터베이스 ID 17에서 직접 업데이트 되었습니다 (가장 최근에 date_time.
 
-시스템 테이블에 대해 수동 업데이트를 수행 하 고 문제가 발생 하는 경우 백업에서 복원 하거나 영향을 받는 데이터베이스의 데이터를 새 데이터베이스로 복사 하 라는 메시지가 표시 될 수 있습니다. [사용자 작업 오류 메시지](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action)에 대해 자세히 알아보세요.
+시스템 테이블에 대해 수동 업데이트를 수행 하 고 문제가 발생 하는 경우 백업에서 복원 하거나 영향을 받는 데이터베이스의 데이터를 새 데이터베이스로 복사 하 라는 메시지가 표시 될 수 있습니다. [사용자 작업 오류 메시지](../errors-events/mssqlserver-8992-database-engine-error.md#user-action)에 대해 자세히 알아보세요.

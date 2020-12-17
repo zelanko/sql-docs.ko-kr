@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470634"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196329"
 이 문서에서는 다양한 SQL Server 기계 학습 솔루션 템플릿을 설명합니다. 이 템플릿은 모범 사례를 보여주고 기계 학습 솔루션을 빠르게 구현할 수 있도록 구성 요소를 제공합니다. 각 템플릿은 특정 업종 또는 업계의 특정 데이터 과학 문제를 해결하도록 설계되었습니다.
 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 작동 방법을 알아보려면 이러한 템플릿을 사용하세요. 그런 다음, 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정하고 사용자 지정 솔루션을 빌드할 수 있습니다.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 이러한 템플릿을 사용하여 SQL Server Machine Learning Services의 작동 방식을 알아보세요. 그런 다음, 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정하고 사용자 지정 솔루션을 빌드할 수 있습니다.
 ::: moniker-end
 
@@ -85,7 +85,7 @@ ms.locfileid: "92196329"
   
     **이진 분류 모델** 은 특정 기간 내에 엔진에서 오류가 발생할지 여부를 예측합니다.
 
-    **다중 클래스 분류 모델**은 특정 엔진에서 오류가 발생할지 여부를 예측하고 가능한 오류 발생 시간 범위를 제공합니다. 예를 들어 주어진 날짜에 대해 해당 날짜나 주어진 날짜 이후의 일정 기간 동안 디바이스에서 오류가 발생할지 여부를 예측할 수 있습니다.
+    **다중 클래스 분류 모델** 은 특정 엔진에서 오류가 발생할지 여부를 예측하고 가능한 오류 발생 시간 범위를 제공합니다. 예를 들어 주어진 날짜에 대해 해당 날짜나 주어진 날짜 이후의 일정 기간 동안 디바이스에서 오류가 발생할지 여부를 예측할 수 있습니다.
 
 ## <a name="energy-demand-forecasting"></a>에너지 수요 예측
 
@@ -93,7 +93,7 @@ ms.locfileid: "92196329"
 
 **내용:** 수요 예측은 에너지, 소매 및 서비스를 비롯한 다양한 분야에서 중요한 문제입니다. 기업은 정확한 수요 예측을 통해 프로덕션 계획과 리소스 할당을 보다 효율적으로 수행하고 다른 중요한 비즈니스 의사 결정을 내릴 수 있습니다. 에너지 분야에서 수요 예측은 에너지 저장 비용을 절감하고 공급 및 수요를 분산하는 데 매우 중요합니다.
 
-**방법:** 이 템플릿에서는 SQL Server R Services를 사용하여 전기 수요를 예측합니다. 예측에 사용되는 모델은 Microsoft R Server에 포함된 고성능 기계 학습 알고리즘인 **rxDForest**를 기반으로 하는 임의 포리스트 회귀 모델입니다. 솔루션에는 수요 시뮬레이터, 모델 학습에 필요한 모든 R 및 T-SQL 코드, 예측 생성 및 보고에 사용할 수 있는 저장 프로시저가 포함되어 있습니다. 
+**방법:** 이 템플릿에서는 SQL Server R Services를 사용하여 전기 수요를 예측합니다. 예측에 사용되는 모델은 Microsoft R Server에 포함된 고성능 기계 학습 알고리즘인 **rxDForest** 를 기반으로 하는 임의 포리스트 회귀 모델입니다. 솔루션에는 수요 시뮬레이터, 모델 학습에 필요한 모든 R 및 T-SQL 코드, 예측 생성 및 보고에 사용할 수 있는 저장 프로시저가 포함되어 있습니다. 
 
 
 ## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>템플릿 사용 방법

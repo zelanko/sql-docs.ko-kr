@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86ff8b00da8989d3e9ffb3d24c84cbefa3d51bfd
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f4b42286216e543c3c2101a140057ed4c4939589
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483835"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88900538"
  클라이언트는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 연결할 때 서버 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에서 포트 번호 가져오기를 시도합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 실행되지 않는 경우 이 설정 또는 연결 문자열의 일부로 포트 번호를 제공해야 합니다.  
   
  **Enabled**  
- 가능한 값은 **예** 및 **아니요**입니다.  
+ 가능한 값은 **예** 및 **아니요** 입니다.  
   
  **Keep Alive**  
  이 매개 변수(밀리초)는 연결을 유지하기 위해 TCP에서 **KEEPALIVE** 패킷을 보내는 빈도를 제어합니다. 기본값은 30000밀리초입니다.  

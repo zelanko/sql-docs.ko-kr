@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196989"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642980"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의 - CREATE MEMBER
 
@@ -75,7 +75,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  이 동작을 사용하면 특정 계산 구현을 고려할 필요 없이 일반 클라이언트 애플리케이션에서 복잡한 계산이 포함된 큐브 작업을 수행할 수 있습니다. 그러나 특정 시나리오에서는 큐브에서 특정 계산을 수행 하기 전에 세션 또는 쿼리 범위 계산 멤버를 실행 하 고 **집계** 함수와 **visualtotals** 함수를 모두 사용할 수 없습니다. 이를 위해서는 SCOPE_ISOLATION 계산 속성을 사용하십시오.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
  다음 스크립트는 올바른 결과를 생성하기 위해 SCOPE_ISOLATION 계산 속성이 필요한 경우의 예입니다.  
   
  **큐브의 MDX 스크립트**  
@@ -114,8 +114,8 @@ WHERE ProfitRatio
 |-------------------------|-------------|  
 |SOLVE_ORDER|계산 멤버가 다른 계산 멤버를 참조하는 경우(즉, 계산 멤버가 서로 교차하는 경우) 계산 멤버를 확인하는 순서입니다.|  
 |FORMAT_STRING|클라이언트 응용 프로그램에서 셀 값을 표시할 때 사용할 수 있는 Office 스타일 서식 문자열입니다.|  
-|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다. [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수를 사용 하 여 집합에 표시 되는 계산 멤버를 추가할 수 있습니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *표시*됩니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
-|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> 경고이 속성은 사용 되지 않습니다. ** \* \* \* \* ** 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) 을 참조 하세요.|  
+|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다. [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수를 사용 하 여 집합에 표시 되는 계산 멤버를 추가할 수 있습니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *표시* 됩니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
+|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> 경고이 속성은 사용 되지 않습니다. **\* \* \* \*** 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) 을 참조 하세요.|  
 |CAPTION|클라이언트 애플리케이션이 멤버에 대한 캡션으로 사용하는 문자열입니다.|  
 |DISPLAY_FOLDER|클라이언트 애플리케이션이 멤버를 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 에서 제공 하는 도구 및 클라이언트의 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백슬래시 ( \\ )는 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  

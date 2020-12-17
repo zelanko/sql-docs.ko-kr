@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73ca53f14b81c42bf32f6dbc42ed8229a87a0aa4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca0cfe4e93efb41bf49f2744da0968e0deebf284
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480574"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>개체 탐색기에서 공간 데이터 보기
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92036076"
 4.  **투영 선택** 목록에서 지리 데이터에 사용할 투영 모드를 선택합니다. 기본 투영 모드는 Equirectangular이며 Mercator, Robinson 또는 Bonne도 사용할 수 있습니다.  
   
     > [!NOTE]  
-    >  공간 열에 기하 도형 데이터가 포함되어 있지 않으면**투영 선택** 을 사용할 수 없습니다.  
+    >  공간 열에 기하 도형 데이터가 포함되어 있지 않으면 **투영 선택** 을 사용할 수 없습니다.  
   
 5.  **확대/축소** 슬라이더를 조정하여 매핑된 요소의 시각적 크기를 늘립니다. 다각형 모양의 경우 레이블 텍스트를 넣을 수 있을 만큼 큰 경우에만 레이블이 표시됩니다.  
   

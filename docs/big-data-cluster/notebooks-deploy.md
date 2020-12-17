@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 24fef9f2290a85a8e87e8b3b3dd2098b31a9d792
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725846"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489620"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -37,7 +37,7 @@ Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
 * [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI(Azure에서 배포하는 경우)](/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Azure CLI(Azure에서 배포하는 경우)](/cli/azure/install-azure-cli)
 
 ## <a name="launch-the-notebook"></a>Notebook 시작
 
@@ -47,9 +47,9 @@ Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
    ![SQL Server 배포](media/notebooks-deploy/deploy-notebooks.png)
 
-3. 배포 옵션에서 **SQL Server 빅 데이터 클러스터**를 선택합니다.
+3. 배포 옵션에서 **SQL Server 빅 데이터 클러스터** 를 선택합니다.
 
-4. **배포 대상**의 **옵션**에서 **새 Azure Kubernetes 클러스터** 또는 **기존 Azure Kubernetes Service 클러스터**를 선택합니다.
+4. **배포 대상** 의 **옵션** 에서 **새 Azure Kubernetes 클러스터** 또는 **기존 Azure Kubernetes Service 클러스터** 를 선택합니다.
 
 5. 개인정보취급방침 및 사용 조건에 동의합니다.
 
@@ -94,7 +94,7 @@ Notebook을 시작하는 데 필요한 필수 조건은 다음과 같습니다.
 
 ### <a name="service-settings"></a>서비스 설정
 
-이 화면에는 **크기 조정**, **엔드포인트**, **스토리지**, 기타 **고급 스토리지 설정** 등 다양한 설정에 대한 입력이 있습니다. 적절한 값을 입력하고 **다음**을 선택하세요.
+이 화면에는 **크기 조정**, **엔드포인트**, **스토리지**, 기타 **고급 스토리지 설정** 등 다양한 설정에 대한 입력이 있습니다. 적절한 값을 입력하고 **다음** 을 선택하세요.
 
 #### <a name="scale-settings"></a>크기 조정 설정
 
@@ -120,7 +120,7 @@ Spark 인스턴스는 HDFS에 함께 포함될 수 있습니다. 스토리지 �
 
 #### <a name="advanced-storage-settings"></a>고급 스토리지 설정
 
-**고급 스토리지 설정**에서 추가 스토리지 설정을 추가할 수 있습니다.
+**고급 스토리지 설정** 에서 추가 스토리지 설정을 추가할 수 있습니다.
 
 * 스토리지 풀(HDFS)
 * 데이터 풀
@@ -130,7 +130,7 @@ Spark 인스턴스는 HDFS에 함께 포함될 수 있습니다. 스토리지 �
 
 ### <a name="summary"></a>요약
 
-이 화면에는 SQL Server 2019 빅 데이터 클러스터 배포를 위해 제공된 모든 입력이 요약되어 있습니다. **구성 파일 저장** 단추를 사용하여 구성 파일을 다운로드할 수 있습니다. 전체 배포 구성을 Notebook으로 스크립트하려면 **Notebook으로 스크립트**를 선택합니다. Notebook이 열리면 **셀 실행**을 선택하여 선택한 대상으로 SQL Server 2019 BDC 배포를 시작합니다.
+이 화면에는 SQL Server 2019 빅 데이터 클러스터 배포를 위해 제공된 모든 입력이 요약되어 있습니다. **구성 파일 저장** 단추를 사용하여 구성 파일을 다운로드할 수 있습니다. 전체 배포 구성을 Notebook으로 스크립트하려면 **Notebook으로 스크립트** 를 선택합니다. Notebook이 열리면 **셀 실행** 을 선택하여 선택한 대상으로 SQL Server 2019 BDC 배포를 시작합니다.
 
    ![요약](media/notebooks-deploy/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 

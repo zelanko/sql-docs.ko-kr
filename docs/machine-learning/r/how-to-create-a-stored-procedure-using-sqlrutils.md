@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: f90c1b004dae28f98b1b7f250cf16e0ed0d2ae5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098832"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470864"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils를 사용하여 저장 프로시저 만들기
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92098832"
 - 논리
 - raw
 
-입력 형식이 위 형식 중 하나가 아닌 경우 직렬화하고 *raw*로 함수에 전달해야 합니다. 이 경우 입력을 역직렬화하는 코드도 함수에 있어야 합니다.
+입력 형식이 위 형식 중 하나가 아닌 경우 직렬화하고 *raw* 로 함수에 전달해야 합니다. 이 경우 입력을 역직렬화하는 코드도 함수에 있어야 합니다.
 
 ### <a name="outputs"></a>outputs
 
@@ -55,7 +55,7 @@ ms.locfileid: "92098832"
 
 R 코드가 정리되고 단일 함수로 호출될 수 있으면 **sqlrutils** 패키지의 함수를 사용하여 실제로 저장 프로시저를 빌드하는 생성자에 전달될 수 있는 형식으로 입력 및 출력을 준비합니다.
 
-**sqlrutils**는 입력 데이터 스키마와 형식을 정의하고 출력 데이터 스키마와 형식을 정의하는 함수를 제공합니다. 또한 R 개체를 필요한 출력 형식으로 변환할 수 있는 함수가 포함됩니다. 코드에서 사용하는 데이터 형식에 따라 여러 함수 호출을 수행하여 필요한 개체를 만들 수 있습니다.
+**sqlrutils** 는 입력 데이터 스키마와 형식을 정의하고 출력 데이터 스키마와 형식을 정의하는 함수를 제공합니다. 또한 R 개체를 필요한 출력 형식으로 변환할 수 있는 함수가 포함됩니다. 코드에서 사용하는 데이터 형식에 따라 여러 함수 호출을 수행하여 필요한 개체를 만들 수 있습니다.
 
 ### <a name="inputs"></a>입력
 
@@ -68,7 +68,7 @@ R 코드가 정리되고 단일 함수로 호출될 수 있으면 **sqlrutils** 
 
 ### <a name="outputs"></a>outputs
 
-**sqlrutils**는 목록과 같은 R 개체를 SQL Server에 필요한 데이터 프레임으로 변환하기 위한 여러 함수를 제공합니다.
+**sqlrutils** 는 목록과 같은 R 개체를 SQL Server에 필요한 데이터 프레임으로 변환하기 위한 여러 함수를 제공합니다.
 함수가 데이터 프레임을 목록에 먼저 래핑하지 않고 직접 출력하는 경우 이 단계를 건너뛸 수 있습니다.
 또한 함수가 NULL을 반환하는 경우 이 단계의 변환을 생략할 수 있습니다.
 
@@ -87,11 +87,11 @@ R 코드가 정리되고 단일 함수로 호출될 수 있으면 **sqlrutils** 
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-설명을 위해 다음 매개 변수를 사용하여 **sp_rsample**이라는 저장 프로시저를 생성한다고 가정해보겠습니다.
+설명을 위해 다음 매개 변수를 사용하여 **sp_rsample** 이라는 저장 프로시저를 생성한다고 가정해보겠습니다.
 
-- 기존 함수 **foosql**을 사용합니다. 함수는 R 함수 **foo**의 기존 코드를 기반으로 하지만, [이 섹션](#bkmk_rewrite)에서 설명한 것처럼 요구 사항을 준수하기 위해 함수를 다시 작성하고 업데이트된 함수의 이름을 **foosql**로 지정했습니다.
-- 데이터 프레임 **queryinput**을 입력으로 사용합니다.
-- R 변수 이름이 **sqloutput**인 데이터 프레임을 출력하여 생성합니다.
+- 기존 함수 **foosql** 을 사용합니다. 함수는 R 함수 **foo** 의 기존 코드를 기반으로 하지만, [이 섹션](#bkmk_rewrite)에서 설명한 것처럼 요구 사항을 준수하기 위해 함수를 다시 작성하고 업데이트된 함수의 이름을 **foosql** 로 지정했습니다.
+- 데이터 프레임 **queryinput** 을 입력으로 사용합니다.
+- R 변수 이름이 **sqloutput** 인 데이터 프레임을 출력하여 생성합니다.
 - 나중에 SQL Server Management Studio를 사용하여 실행할 수 있도록 T-SQL 코드를 `C:\Temp` 폴더에 파일로 생성하려고 합니다.
 
 ```R
@@ -119,9 +119,9 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 R을 사용하여 저장 프로시저를 등록하거나, T-SQL에서 CREATE PROCEDURE 문을 실행할 수 있습니다.
 
 - T-SQL 사용.  T-SQL이 더 편한 경우 SQL Server Management Studio(또는 SQL DDL 명령을 실행할 수 있는 다른 클라이언트)를 열고 `StoredProcedure` 함수에서 준비된 코드를 사용하여 CREATE PROCEDURE 문을 실행합니다.
-- R 사용. R 환경에서는 `registerStoredProcedure`sqlrutils**의**  함수를 사용하여 저장 프로시저를 데이터베이스에 등록할 수 있습니다.
+- R 사용. R 환경에서는 `registerStoredProcedure`sqlrutils **의**  함수를 사용하여 저장 프로시저를 데이터베이스에 등록할 수 있습니다.
 
-  예를 들어 다음 R 호출을 수행하여 **sqlConnStr**에 정의된 데이터베이스와 인스턴스에 저장 프로시저 *sp_rsample*을 등록할 수 있습니다.
+  예를 들어 다음 R 호출을 수행하여 **sqlConnStr** 에 정의된 데이터베이스와 인스턴스에 저장 프로시저 *sp_rsample* 을 등록할 수 있습니다.
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -189,7 +189,7 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> *RxSqlServerData* 함수를 호출하는 대신 ODBC 연결을 사용하는 경우 데이터베이스에서 작업을 수행하기 전에 *rxOpen*을 사용하여 연결을 열어야 합니다.
+> *RxSqlServerData* 함수를 호출하는 대신 ODBC 연결을 사용하는 경우 데이터베이스에서 작업을 수행하기 전에 *rxOpen* 을 사용하여 연결을 열어야 합니다.
 
 
 ### <a name="after-code-preparation"></a>코드 준비 후
@@ -228,7 +228,7 @@ myetl1function <- function() {
 
 > [!NOTE]
 > 
-> ODBC 연결을 코드의 일부로 명시적으로 열 필요는 없지만 **sqlrutils**를 사용하려면 ODBC 연결이 필요합니다.
+> ODBC 연결을 코드의 일부로 명시적으로 열 필요는 없지만 **sqlrutils** 를 사용하려면 ODBC 연결이 필요합니다.
 
 ## <a name="see-also"></a>참고 항목
 

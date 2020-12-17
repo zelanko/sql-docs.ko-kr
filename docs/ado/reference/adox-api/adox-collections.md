@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc807900a08869ef46628b8aca2456326e617c87
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d256e9a650359a9fdc961a04ddb3c32216961094
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985824"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641366"
 ---
 # <a name="adox-collections"></a>ADOX 컬렉션
 
@@ -32,10 +32,10 @@ ms.locfileid: "88985824"
 |[절차](./procedures-collection-adox.md)|카탈로그의 모든 **프로시저** 개체를 포함 합니다.|  
 |[테이블](./tables-collection-adox.md)|카탈로그의 모든 **테이블** 개체를 포함 합니다.|  
 |[사용자](./users-collection-adox.md)|카탈로그 또는 그룹의 모든 저장 된 **사용자** 개체를 포함 합니다.|  
-|[Views](./views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
+|[뷰](./views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ADOX API 참조](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 참조](./adox-object-model.md)   
  [ADOX 개체 모델](./adox-object-model.md)   
  [ADOX 개체](./adox-objects.md)   
  [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

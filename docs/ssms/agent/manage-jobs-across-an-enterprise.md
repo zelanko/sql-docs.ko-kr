@@ -17,13 +17,13 @@ ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e54498ffd749417a6ae4991cfcdaeeb1c91a85d8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 62e4eb1574d48ecd40af46ba081f6443bdafb000
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482226"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>기업 내 작업 관리
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 -   [sp_detach_schedule(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
     > [!NOTE]  
-    > 저장 프로시저에서는 요청된 변경 내용을 다운로드 목록에 자동 게시하기 때문에 **sp_update_job** 이나 **sp_delete_job** 을 호출한 다음에 **sp_post_msx_operation**을 호출하지 않아도 됩니다.  
+    > 저장 프로시저에서는 요청된 변경 내용을 다운로드 목록에 자동 게시하기 때문에 **sp_update_job** 이나 **sp_delete_job** 을 호출한 다음에 **sp_post_msx_operation** 을 호출하지 않아도 됩니다.  
   
 다음은 기업 전체에 걸쳐 업무 관리에 사용하는 공통 태스크입니다.  
   

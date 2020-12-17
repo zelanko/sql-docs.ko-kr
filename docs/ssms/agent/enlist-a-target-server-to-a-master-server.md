@@ -17,13 +17,13 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a936e1a601401787a36470d3119897ec0c5c5b77
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 63798bf4c5697adabfce39317883792ff73de2c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424041"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>마스터 서버에 대상 서버 등록
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "92038887"
   
 #### <a name="to-enlist-a-target-server"></a>대상 서버를 등록하려면  
   
-1.  **개체 탐색기**에서 마스터 서버로 구성된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 마스터 서버로 구성된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 추가**를 클릭합니다.  
+2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리** 를 가리킨 다음 **대상 서버 추가** 를 클릭합니다.  
   
 3.  전체 프로세스를 안내하는 대상 서버 마법사를 완료합니다.  
   

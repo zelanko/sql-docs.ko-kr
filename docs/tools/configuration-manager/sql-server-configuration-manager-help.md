@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a881d4e40717fa943f0674d5af7c570e41bf2fcc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a9804ef6634a576cbdb8ee32a21b1b1d174d9825
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483795"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -71,12 +71,12 @@ ms.locfileid: "88901790"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 열려면  
   
--   **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server** (버전), **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+-   **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server** (버전), **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭합니다.  
   
   
  **[!INCLUDE[win8](../../includes/win8-md.md)]을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 액세스하려면**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../../includes/win8-md.md)]을(를) 실행할 때 애플리케이션으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**아래에 **SQLServerManager12.msc**([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 또는 **SQLServerManager11.msc**([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])를 입력한 다음, **Enter**키를 누릅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../../includes/win8-md.md)]을(를) 실행할 때 애플리케이션으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱** 아래에 **SQLServerManager12.msc**([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 또는 **SQLServerManager11.msc**([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])를 입력한 다음, **Enter** 키를 누릅니다.  
   
 
 ## <a name="see-also"></a>참고 항목  

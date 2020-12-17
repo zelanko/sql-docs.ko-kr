@@ -23,13 +23,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 82e633e1a0614882fef7775b9119077d3b9b9e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039227"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424831"
 ---
 # <a name="alerts"></a>경고
 
@@ -98,9 +98,9 @@ ms.locfileid: "92039227"
   
 -   **경고 발생 카운터** 및 **값**  
   
-    경고의 임계값과 경고를 생성하는 동작입니다. 임계값은 숫자입니다. 동작은 값에 지정된 숫자 **미만**, **동일**또는 **초과**중 하나입니다. **값** 은 성능 조건 카운터를 나타내는 숫자입니다. 예를 들어 **Lock Wait Time** 이 30분을 초과할 때 성능 개체 **SQLServer:Locks** 에 대해 경고가 발생하도록 설정하려면 **초과** 를 선택하고 **값으로30을 지정**합니다.  
+    경고의 임계값과 경고를 생성하는 동작입니다. 임계값은 숫자입니다. 동작은 값에 지정된 숫자 **미만**, **동일** 또는 **초과** 중 하나입니다. **값** 은 성능 조건 카운터를 나타내는 숫자입니다. 예를 들어 **Lock Wait Time** 이 30분을 초과할 때 성능 개체 **SQLServer:Locks** 에 대해 경고가 발생하도록 설정하려면 **초과** 를 선택하고 **값으로30을 지정** 합니다.  
   
-    다른 예로 **tempdb** 의 사용 가능한 공간이 1000KB 미만일 때 성능 개체 **SQLServer:Transactions** 에 대해 경고가 발생하도록 지정할 수도 있습니다. 이렇게 설정하려면 **Free space in tempdb (KB)** 카운터, **미만**및 **값****1000**을 선택합니다.  
+    다른 예로 **tempdb** 의 사용 가능한 공간이 1000KB 미만일 때 성능 개체 **SQLServer:Transactions** 에 대해 경고가 발생하도록 지정할 수도 있습니다. 이렇게 설정하려면 **Free space in tempdb (KB)** 카운터, **미만** 및 **값****1000** 을 선택합니다.  
   
     > [!NOTE]  
     > 성능 데이터를 주기적으로 샘플링하므로 도달할 임계값과 성능 경고의 발생 간에 몇 초 정도 지연될 수 있습니다.  

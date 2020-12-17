@@ -16,13 +16,13 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0f74ab9949662ceffce1965ebf4fefcc9086e5e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c3141dfe74272758450b33a1302be4fe339eeb82
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038697"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480664"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "92038697"
   
 #### <a name="to-view-job-step-information"></a>작업 단계 정보를 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 보려는 작업 단계가 포함된 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장한 다음 보려는 작업 단계가 포함된 작업을 마우스 오른쪽 단추로 클릭하고 **속성** 을 클릭합니다.  
   
 3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭합니다.  
   
-4.  보려는 작업 단계를 클릭하고 **편집**을 클릭합니다.  
+4.  보려는 작업 단계를 클릭하고 **편집** 을 클릭합니다.  
   
 5.  **작업 단계 속성** 대화 상자의 **일반** 페이지에서 작업 단계의 유형 및 역할을 볼 수 있습니다.  
   

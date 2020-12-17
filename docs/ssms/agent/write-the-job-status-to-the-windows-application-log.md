@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6589593d7d040f4e2f9a2bf5a690dbb42d89d142
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c85762cabe7b30c2873e5bbdfef5301f1fcefddf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482092"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태 쓰기
 
@@ -53,17 +53,17 @@ ms.locfileid: "92038141"
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업** 을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭합니다.  
   
 3.  **알림** 페이지를 선택합니다.  
   
-4.  **Windows 애플리케이션 이벤트 로그에 쓰기**를 선택하고 다음 중 하나를 선택합니다.  
+4.  **Windows 애플리케이션 이벤트 로그에 쓰기** 를 선택하고 다음 중 하나를 선택합니다.  
   
-    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 성공 시**를 클릭합니다.  
+    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면 **작업 성공 시** 를 클릭합니다.  
   
-    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 실패 시**를 클릭합니다.  
+    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면 **작업 실패 시** 를 클릭합니다.  
   
-    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 완료 시** 를 클릭합니다.  
+    -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면 **작업 완료 시** 를 클릭합니다.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 **Windows 애플리케이션 로그에 작업 상태를 쓰려면**  

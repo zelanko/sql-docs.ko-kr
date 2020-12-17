@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8c954d708a6dba6a0caad4122149cfcecdb5a182
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195095"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470514"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R을 사용하여 데이터 변환(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "92195095"
 이 자습서에서는 다양한 분석 단계에서 데이터를 변환하기 위한 **RevoScaleR** 함수에 대해 알아봅니다.
 
 > [!div class="checklist"]
-> * **rxDataStep**을 사용하여 데이터 하위 세트를 만들고 변환합니다.
-> * 가져오는 동안 **rxImport**를 사용하여 전송 중인 데이터를 XDF 파일 또는 메모리 내 데이터 프레임으로 변환합니다.
+> * **rxDataStep** 을 사용하여 데이터 하위 세트를 만들고 변환합니다.
+> * 가져오는 동안 **rxImport** 를 사용하여 전송 중인 데이터를 XDF 파일 또는 메모리 내 데이터 프레임으로 변환합니다.
 
-특별히 데이터 이동에 사용되지는 않지만 **rxSummary**, **rxCube**, **rxLinMod**및 **rxLogit** 함수도 모두 데이터 변환을 지원합니다.
+특별히 데이터 이동에 사용되지는 않지만 **rxSummary**, **rxCube**, **rxLinMod** 및 **rxLogit** 함수도 모두 데이터 변환을 지원합니다.
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>rxDataStep을 사용하여 변수 변환
 
@@ -38,7 +38,7 @@ ms.locfileid: "92195095"
 **boot** 패키지에서 로짓의 역수를 계산하는 **inv.logit** 함수를 사용합니다. 즉, **inv.logit** 함수는 로짓을 다시 [0,1] 눈금의 확률로 변환합니다.
 
 > [!TIP] 
-> 이 눈금의 예측을 구하는 또 다른 방법은 원래의 *rxPredict* 호출에서 **type** 매개 변수를 **response**로 설정하는 것입니다.
+> 이 눈금의 예측을 구하는 또 다른 방법은 원래의 *rxPredict* 호출에서 **type** 매개 변수를 **response** 로 설정하는 것입니다.
 
 1. 먼저 `ccScoreOutput` 테이블에 사용되는 데이터를 저장할 데이터 원본을 만듭니다.
   
@@ -98,7 +98,7 @@ Var 8: creditLine, Type: integer
 Var 9: ccFraudProb, Type: numeric
 ```
 
-원래 로짓 점수는 유지되지만 새 열 *ccFraudProb*가 추가되어 로짓 점수가 0과 1 사이의 값으로 표시됩니다.
+원래 로짓 점수는 유지되지만 새 열 *ccFraudProb* 가 추가되어 로짓 점수가 0과 1 사이의 값으로 표시됩니다.
 
 요소 변수가 테이블 `ccScoreOutput2`에 문자 데이터로 기록되었습니다. 이후 분석에서 요소로 사용하려면 *colInfo* 매개 변수를 사용하여 수준을 지정합니다.
 

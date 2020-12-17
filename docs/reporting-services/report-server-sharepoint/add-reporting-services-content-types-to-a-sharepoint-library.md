@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e2988bfecf08ad5987519ae0c4e166089973d745
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043841"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424896"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "93043841"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 데이터 원본(.rsds) 파일, 보고서 모델(.smdl) 및 보고서 작성기 보고서 정의(.rdl) 파일을 관리하는 데 사용되는 미리 정의된 SharePoint 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서** , **보고서 모델** 및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 데이터 원본(.rsds) 파일, 보고서 모델(.smdl) 및 보고서 작성기 보고서 정의(.rdl) 파일을 관리하는 데 사용되는 미리 정의된 SharePoint 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델** 및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
@@ -124,7 +124,7 @@ ms.locfileid: "93043841"
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2010)  
   
-1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기** , **업로드** , **동작** 및 **설정** 메뉴가 표시됩니다. **설정** 이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
+1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기**, **업로드**, **동작** 및 **설정** 메뉴가 표시됩니다. **설정** 이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
   
 2.  **라이브러리 도구** 리본에서 **라이브러리** 를 클릭합니다.  
   

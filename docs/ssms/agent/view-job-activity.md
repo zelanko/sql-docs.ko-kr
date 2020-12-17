@@ -16,13 +16,13 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04c42de9a98d507367cb2c2256a7c1f241baf1fc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1476f1e4ad5699ddfef144f33947911b6c731343
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482139"
 ---
 # <a name="view-job-activity"></a>작업 활동 보기
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,27 +43,27 @@ ms.locfileid: "92030710"
   
 #### <a name="to-view-job-activity"></a>작업 활동을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장합니다.  
+2.  **SQL Server 에이전트** 를 확장합니다.  
   
-3.  **작업 활동 모니터** 를 마우스 오른쪽 단추로 클릭한 다음 **작업 활동 보기**를 클릭합니다.  
+3.  **작업 활동 모니터** 를 마우스 오른쪽 단추로 클릭한 다음 **작업 활동 보기** 를 클릭합니다.  
   
-4.  **작업 활동 모니터**에서 이 서버에 정의되어 있는 각 작업에 대한 정보를 볼 수 있습니다.  
+4.  **작업 활동 모니터** 에서 이 서버에 정의되어 있는 각 작업에 대한 정보를 볼 수 있습니다.  
   
 5.  작업을 시작하거나 중지하거나, 활성화하거나 비활성화하거나, 작업 활동 모니터에 표시된 작업 상태를 새로 고치거나, 작업을 삭제하거나 작업의 기록 또는 속성을 보려면 작업을 마우스 오른쪽 단추로 클릭합니다.  여러 작업을 시작하거나 중지하거나, 활성화하거나 비활성화하거나 새로 고치려면 작업 활동 모니터에서 여러 행을 선택한 다음 선택 사항을 마우스 오른쪽 단추로 클릭합니다.  
   
-6.  작업 활동 모니터를 업데이트하려면 **새로 고침**을 클릭합니다. 더 적은 수의 행을 보려면 **필터** 를 클릭하고 필터 매개 변수를 입력합니다.  
+6.  작업 활동 모니터를 업데이트하려면 **새로 고침** 을 클릭합니다. 더 적은 수의 행을 보려면 **필터** 를 클릭하고 필터 매개 변수를 입력합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   
 #### <a name="to-view-job-activity"></a>작업 활동을 보려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리** 를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행** 을 클릭합니다.  
   
     ```  
     -- lists activity for all jobs that the current user has permission to view.  

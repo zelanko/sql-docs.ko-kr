@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425488"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>SharePoint용 Reporting Services 추가 기능(SSRS) 설치 또는 제거
 
@@ -84,7 +84,7 @@ Rssharepoint.msi /?
 ###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> 파일만 설치  
  파일을 설치하고 설치 중 사용자 지정 동작 단계를 건너뛰려면 SKIPCA 옵션을 사용하여 명령줄에서 rssharepoint.msi를 실행합니다.  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
 2.  사용자 지정 동작 실행 파일 실행:  
   
-    1.  **rsCustomAction.exe**파일이 포함된 폴더로 이동합니다. 이 파일은 추가 기능의 파일만 설치에 따라 컴퓨터에 복사됩니다. **rsCustomAction.exe** 는 **%Temp%** 디렉터리에 있습니다. 파일로 이동하려면 명령 프롬프트에서 다음을 입력합니다.  
+    1.  **rsCustomAction.exe** 파일이 포함된 폴더로 이동합니다. 이 파일은 추가 기능의 파일만 설치에 따라 컴퓨터에 복사됩니다. **rsCustomAction.exe** 는 **%Temp%** 디렉터리에 있습니다. 파일로 이동하려면 명령 프롬프트에서 다음을 입력합니다.  
   
          **CD %temp%** .  
   
@@ -123,7 +123,7 @@ Rssharepoint.msi /?
   
  자동 설치를 수행하려면  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
@@ -157,16 +157,16 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>Windows 제어판에서 제거하려면  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제어판에서 마법사를 시작하고 추가 기능을 제거하려면  
   
-1.  제어판의 **프로그램**에서 **프로그램 제거**를 선택합니다.  
+1.  제어판의 **프로그램** 에서 **프로그램 제거** 를 선택합니다.  
   
-2.  **SharePoint용 Microsoft SQL Server RS 추가 기능**을 선택합니다. 명령 프롬프트에서 스위치 없이 **rssharepoint.msi** 를 실행하여 제거 마법사를 시작할 수도 있습니다.  
+2.  **SharePoint용 Microsoft SQL Server RS 추가 기능** 을 선택합니다. 명령 프롬프트에서 스위치 없이 **rssharepoint.msi** 를 실행하여 제거 마법사를 시작할 수도 있습니다.  
   
-3.  **제거**를 클릭합니다.  
+3.  **제거** 를 클릭합니다.  
   
 ### <a name="uninstall-from-the-command-line"></a>명령줄에서 제거  
  명령줄에서 추가 기능을 제거하려면  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
@@ -174,12 +174,12 @@ Rssharepoint.msi /?
     msiexec.exe /uninstall rsSharePoint.msi  
     ```  
   
-3.  확인 메시지 상자가 표시됩니다. **예**를 클릭합니다.  
+3.  확인 메시지 상자가 표시됩니다. **예** 를 클릭합니다.  
   
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>로컬 서버에서만 추가 기능 제거  
  이전 방법으로 추가 기능을 제거하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능 및 개체가 팜에서 제거됩니다. 다중 서버 팜에서 로컬 컴퓨터의 추가 기능만 제거하고 SharePoint 팜은 계속 작동하게 유지하려면 다음 단계를 완료합니다.  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
@@ -191,7 +191,7 @@ Rssharepoint.msi /?
   
  SharePoint에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능의 등록을 해제하지만 나중에 사용할 수 있도록 디스크에 파일을 남겨 두려면 다음 단계를 완료합니다.  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
@@ -204,7 +204,7 @@ Rssharepoint.msi /?
 ##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 명령줄에서 rssharepoint.msi를 복구하는 방법  
  명령줄을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 복구하거나 제거하려면 다음 단계를 완료합니다.  
   
-1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
+1.  **관리자 권한으로** 명령 프롬프트를 엽니다.  
   
 2.  다음 명령 실행:  
   
