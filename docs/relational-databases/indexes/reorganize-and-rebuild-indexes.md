@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867351"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478254"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>인덱스를 다시 구성하거나 다시 빌드하여 인덱스 조각화 해결
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 자세한 내용은 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 참조하세요.
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 columnstore 인덱스의 조각화 확인
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>Transact-SQL을 사용하여 columnstore 인덱스의 조각화 확인
 
 다음 예에서는 `AdventureWorksDW2016` 데이터베이스의 `dbo.FactResellerSalesXL_CCI` 테이블에 있는 모든 인덱스의 평균 조각화 백분율을 찾습니다.
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 인덱스 조각화 확인
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]는 SQL Server에서 columnstore 인덱스의 조각화를 컴퓨팅하는 데 사용할 수 없으며 Azure SQL Database에서 인덱스의 조각화를 컴퓨팅하는 데 사용할 수 없습니다. 이러한 시나리오에는 앞에 나온 [!INCLUDE[tsql](../../includes/tsql-md.md)] [예제](#to-check-the-fragmentation-of-a-columnstore-index-using-)를 사용하세요.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]는 SQL Server에서 columnstore 인덱스의 조각화를 컴퓨팅하는 데 사용할 수 없으며 Azure SQL Database에서 인덱스의 조각화를 컴퓨팅하는 데 사용할 수 없습니다. 위의 [!INCLUDE[tsql](../../includes/tsql-md.md)] [예](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql)를 사용하세요.
 
 1. 개체 탐색기에서 인덱스의 조각화를 확인할 테이블이 포함된 데이터베이스를 확장합니다.
 2. **테이블** 폴더를 확장합니다.
