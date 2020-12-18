@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467304"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "91867606"
 
 상시 암호화 키와 키 관리를 설명할 때는 실제 암호화 키와 키를 *설명* 하는 메타데이터 개체 간의 차이를 이해하는 것이 중요합니다. **열 암호화 키** 와 **열 마스터 키** 라는 용어는 실제 암호화 키를 가리키고, **열 암호화 키 메타데이터** 와 **열 마스터 키 메타데이터** 라는 용어는 데이터베이스의 상시 암호화 키 *설명* 을 가리킵니다.
 
-- ***열 암호화 키*** 는 데이터를 암호화하는 데 사용되는 콘텐츠 암호화 키입니다. 이름에서 알 수 있듯이 열 암호화 키를 사용하여 데이터베이스 열의 데이터를 암호화합니다. 동일한 열 암호화 키를 사용하여 하나 이상의 열을 암호화하거나, 애플리케이션 요구 사항에 따라 여러 개의 열 암호화 키를 사용할 수 있습니다. 열 암호화 키 자체가 암호화되며, 열 암호화 키의 암호화된 값만 열 암호화 키 메타데이터의 일부로 데이터베이스에 저장됩니다. 열 암호화 키 메타데이터는 [sys.column_encryption_keys(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 및 [sys.column_encryption_key_values(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 카탈로그 뷰에 저장됩니다. AES-256 알고리즘에서 사용되는 열 암호화 키는 256비트입니다.
+- ‘**열 암호화 키**’*_는 데이터를 암호화하는 데 사용되는 콘텐츠 암호화 키입니다. 이름에서 알 수 있듯이 열 암호화 키를 사용하여 데이터베이스 열의 데이터를 암호화합니다. 동일한 열 암호화 키를 사용하여 하나 이상의 열을 암호화하거나, 애플리케이션 요구 사항에 따라 여러 개의 열 암호화 키를 사용할 수 있습니다. 열 암호화 키 자체가 암호화되며, 열 암호화 키의 암호화된 값만 열 암호화 키 메타데이터의 일부로 데이터베이스에 저장됩니다. 열 암호화 키 메타데이터는 [sys.column_encryption_keys(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 및 [sys.column_encryption_key_values(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 카탈로그 뷰에 저장됩니다. AES-256 알고리즘에서 사용되는 열 암호화 키는 256비트입니다.
 
 
-- ***열 마스터 키*** 는 열 암호화 키를 암호화하는 데 사용되는 키를 보호하는 키입니다. 열 마스터 키는 Windows 인증서 저장소, Azure 주요 자격 증명 모음, 하드웨어 보안 모듈 등의 신뢰할 수 있는 키 저장소에 저장해야 합니다. 데이터베이스에는 열 마스터 키에 대한 메타데이터(키 저장소 유형 및 위치)만 포함됩니다. 열 마스터 키 메타데이터는 [sys.column_master_keys(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 카탈로그 뷰에 저장됩니다.  
+- ‘*_열 마스터 키_*’는 열 암호화 키를 암호화하는 데 사용되는 키를 보호하는 키입니다. 열 마스터 키는 Windows 인증서 저장소, Azure 주요 자격 증명 모음, 하드웨어 보안 모듈 등의 신뢰할 수 있는 키 저장소에 저장해야 합니다. 데이터베이스에는 열 마스터 키에 대한 메타데이터(키 저장소 유형 및 위치)만 포함됩니다. 열 마스터 키 메타데이터는 [sys.column_master_keys(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 카탈로그 뷰에 저장됩니다.  
 
 데이터베이스 시스템의 키 메타데이터에는 일반 텍스트 열 마스터 키 또는 일반 텍스트 열 암호화 키가 포함되지 않습니다. 데이터베이스에는 열 마스터 키의 유형 및 위치와 열 암호화 키의 암호화된 값에 대한 정보만 포함됩니다. 즉, 데이터베이스 시스템이 손상된 경우에도 상시 암호화를 사용하여 보호된 데이터가 안전하도록 일반 텍스트 키는 데이터베이스 시스템에 노출되지 않습니다. 데이터베이스 시스템이 일반 텍스트 키에 액세스할 수 없게 하려면 데이터베이스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 키 관리 도구를 실행해야 합니다. 자세한 내용은 아래 [키 관리에 대한 보안 고려 사항](#security-considerations-for-key-management) 섹션을 참조하세요.
 
@@ -42,7 +42,7 @@ ms.locfileid: "91867606"
 
 키 관리 프로세스는 다음과 같은 상위 수준 태스크로 나누어질 수 있습니다.
 
-- **키 프로비저닝** - 신뢰할 수 있는 키 저장소(예: Windows 인증서 저장소, Azure 주요 자격 증명 모음 또는 하드웨어 보안 모듈)에 물리적 키 만들기, 열 마스터 키를 사용하여 열 암호화 키 암호화, 데이터베이스에 두 가지 유형의 키에 대한 메타데이터 만들기
+- _ *키 프로비저닝* - 신뢰할 수 있는 키 저장소(예: Windows 인증서 저장소, Azure Key Vault 또는 하드웨어 보안 모듈)에 물리적 키 만들기, 열 마스터 키를 사용하여 열 암호화 키 암호화, 데이터베이스에 두 가지 유형의 키에 대한 메타데이터 만들기
 
 - **키 순환** - 정기적으로 기존 키를 새 키로 교체 키가 손상된 경우 또는 암호화 키를 순환하도록 요구하는 조직의 정책이나 규정 준수 규칙을 준수하려면 키를 순환해야 할 수 있습니다. 
 
@@ -54,7 +54,7 @@ ms.locfileid: "91867606"
 - **보안 관리자** - 열 암호화 키와 열 마스터 키를 생성하고 열 마스터 키를 포함하는 키 저장소를 관리합니다. 이러한 태스크를 수행하려면 보안 관리자가 키와 키 저장소에 액세스할 수 있어야 하지만 데이터베이스에 액세스할 필요는 없습니다.
 - **DBA** – 데이터베이스의 키에 대한 메타데이터를 관리합니다. 키 관리 태스크를 수행하려면 DBA가 데이터베이스의 키 메타데이터를 관리할 수 있어야 하지만 키 또는 열 마스터 키를 포함하는 키 저장소에 액세스할 필요는 없습니다.
 
-위의 역할을 고려할 경우 상시 암호화를 위한 키 관리 태스크를 수행하는 두 가지 방법이 있으며, *역할 구분 사용*및 *역할 구분 사용 안 함*입니다. 조직의 필요에 따라 요구 사항에 가장 적합한 키 관리 프로세스를 선택할 수 있습니다.
+위의 역할을 고려할 경우 상시 암호화를 위한 키 관리 태스크를 수행하는 두 가지 방법이 있으며, *역할 구분 사용* 및 *역할 구분 사용 안 함* 입니다. 조직의 필요에 따라 요구 사항에 가장 적합한 키 관리 프로세스를 선택할 수 있습니다.
 
 ## <a name="managing-keys-with-role-separation"></a>역할 구분을 사용하여 키 관리
 상시 암호화 키가 역할 구분을 사용하여 관리되는 경우 조직 내의 서로 다른 사용자가 보안 관리자 및 DBA 역할을 맡습니다. 역할 구분을 사용하는 키 관리 프로세스에서는 DBA가 키 또는 실제 키를 포함하는 키 저장소에 액세스할 수 없고, 보안 관리자가 중요한 데이터를 포함하는 데이터베이스에 액세스할 수 없습니다. 역할 구분을 사용하는 키 관리는 조직의 DBA가 중요한 데이터에 액세스할 수 없도록 하려는 경우에 권장됩니다. 

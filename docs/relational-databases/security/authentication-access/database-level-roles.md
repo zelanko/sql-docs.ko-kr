@@ -38,23 +38,23 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463164"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 ***Windows 운영 체제의*** 그룹 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 과 같습니다. 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  
+  데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 운영 체제의 **‘그룹’** 과 같습니다.*_ 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  
 
 데이터베이스 역할에 사용자를 추가하고 제거하려면 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 문의 [및](../../../t-sql/statements/alter-role-transact-sql.md) 옵션을 사용합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 및 Azure Synapse는 이러한 `ALTER ROLE` 사용을 지원하지 않습니다. 대신 기존의 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 및 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 프로시저를 사용합니다.
   
- 데이터베이스 수준 역할로는 데이터베이스에 미리 정의된 *고정 데이터베이스 역할* 과 사용자가 만들 수 있는 *사용자 정의 데이터베이스 역할* 의 두 가지 유형이 있습니다.  
+ 데이터베이스 수준 역할로는 데이터베이스에 미리 정의된 ‘고정 데이터베이스 역할’과_* 사용자가 만들 수 있는 ‘사용자 정의 데이터베이스 역할’의 두 가지 유형이 있습니다.  
   
  고정 데이터베이스 역할은 데이터베이스 수준에서 정의되며 각 데이터베이스에 존재합니다. **db_owner** 데이터베이스 역할의 멤버는 고정 데이터베이스 역할 멤버 자격을 관리할 수 있습니다. msdb 데이터베이스에는 몇 가지 특수한 용도의 데이터베이스 역할도 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "91867429"
   
 |고정 데이터베이스 역할 이름|Description|  
 |-------------------------------|-----------------|  
-|**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]에서 데이터베이스를 삭제할 수도 있습니다. ([!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse에서 일부 유지 관리 작업은 서버 수준 권한이 필요하여 **db_owners**로 수행할 수 없습니다.)|  
+|**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]에서 데이터베이스를 삭제할 수도 있습니다. ([!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse에서 일부 유지 관리 작업은 서버 수준 권한이 필요하여 **db_owners** 로 수행할 수 없습니다.)|  
 |**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 구성원은 사용자 지정 역할에 대해서만 역할 멤버 자격을 수정하고 사용 권한을 관리할 수 있습니다. 이 역할의 구성원은 잠재적으로 권한을 상승시킬 수 있으며 해당 작업을 모니터링해야 합니다.|  
 |**db_accessadmin**|**db_accessadmin** 고정 데이터베이스 역할의 멤버는 Windows 로그인, Windows 그룹 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인의 데이터베이스에 대한 액세스를 추가하거나 제거할 수 있습니다.|  
 |**db_backupoperator**|**db_backupoperator** 고정 데이터베이스 역할의 멤버는 데이터베이스를 백업할 수 있습니다.|  
@@ -100,8 +100,8 @@ ms.locfileid: "91867429"
 > 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 Azure Synapse의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](/azure/azure-sql/database/logins-create-manage)를 참조하세요. 
 
 일부 데이터베이스 역할은 Azure SQL 또는 Synapse SQL에 적용되지 않습니다.
-- 백업 및 복원 T-SQL 명령을 사용할 수 없으므로 **db_backupoperator**는 Azure SQL 데이터베이스(관리되는 인스턴스가 아님) 및 Synapse SQL 서버리스 풀에는 적용되지 않습니다.
-- **db_datawriter** 및 **db_denydatawriter**는 외부 데이터만 읽기 때문에 Synapse SQL 서버리스에는 적용되지 않습니다.
+- 백업 및 복원 T-SQL 명령을 사용할 수 없으므로 **db_backupoperator** 는 Azure SQL 데이터베이스(관리되는 인스턴스가 아님) 및 Synapse SQL 서버리스 풀에는 적용되지 않습니다.
+- **db_datawriter** 및 **db_denydatawriter** 는 외부 데이터만 읽기 때문에 Synapse SQL 서버리스에는 적용되지 않습니다.
   
 ## <a name="msdb-roles"></a>msdb 역할  
  msdb 데이터베이스에는 다음 표에서 보여 주는 특수한 용도의 역할이 포함되어 있습니다.  

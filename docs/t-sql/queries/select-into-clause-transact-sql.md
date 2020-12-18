@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76045b2b1a1e982d0576f5d5c37998534ae2f1ee
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e1d8f3d96adfd912ae1e4707d8aaaf17ffec20b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115105"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476694"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,11 +57,11 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
  *new_table*   
  선택 목록에 있는 열과 데이터 원본에서 선택한 행을 기반으로 만들려는 새 테이블의 이름을 지정합니다.  
  
- *new_table*의 형식은 선택 목록의 식을 평가하여 결정됩니다. *new_table*의 열은 선택 목록에서 지정한 순서대로 만들어집니다. *new_table*의 각 열은 선택 목록에 있는 해당 식의 이름, 데이터 형식, Null 허용 여부 및 값과 동일합니다. 열의 IDENTITY 속성은 주의 섹션의 "ID 열 작업"에 정의된 경우를 제외하고는 전송됩니다.  
+ *new_table* 의 형식은 선택 목록의 식을 평가하여 결정됩니다. *new_table* 의 열은 선택 목록에서 지정한 순서대로 만들어집니다. *new_table* 의 각 열은 선택 목록에 있는 해당 식의 이름, 데이터 형식, Null 허용 여부 및 값과 동일합니다. 열의 IDENTITY 속성은 주의 섹션의 "ID 열 작업"에 정의된 경우를 제외하고는 전송됩니다.  
   
- 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 데이터베이스에 테이블을 만들려면 *new_table*을 *database.schema.table_name* 형식의 정규화된 이름으로 지정합니다.  
+ 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 데이터베이스에 테이블을 만들려면 *new_table* 을 *database.schema.table_name* 형식의 정규화된 이름으로 지정합니다.  
   
- 원격 서버에는 *new_table*을 만들 수 없지만, 원격 데이터 원본에서 *new_table*을 채울 수 있습니다. 원격 원본 테이블에서 *new_table*을 만들려면 네 부분으로 구성된 *linked_server*.*catalog*.*schema*.*object* 형식의 이름을 사용하여 SELECT 문의 FROM 절에 원본 테이블을 지정합니다. 또는 FROM 절에서 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 함수 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 사용하여 원격 데이터 원본을 지정할 수 있습니다.  
+ 원격 서버에는 *new_table* 을 만들 수 없지만, 원격 데이터 원본에서 *new_table* 을 채울 수 있습니다. 원격 원본 테이블에서 *new_table* 을 만들려면 네 부분으로 구성된 *linked_server*.*catalog*.*schema*.*object* 형식의 이름을 사용하여 SELECT 문의 FROM 절에 원본 테이블을 지정합니다. 또는 FROM 절에서 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 함수 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 사용하여 원격 데이터 원본을 지정할 수 있습니다.  
  
  *filegroup*    
  새 테이블을 만들 파일 그룹의 이름을 지정합니다. 지정한 파일 그룹이 데이터베이스에 있어야 합니다. 그렇지 않으면 SQL Server 엔진에서 오류를 throw합니다.   
@@ -233,13 +233,13 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ORDER BY YearlyIncome;  
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 다른 테이블의 복사본으로 새 테이블 만들기 및 지정된 파일 그룹에 로드
+### <a name="f-copying-the-data-from-one-table-to-another-and-create-the-new-table-on-a-specified-filegroup"></a>F. 테이블 간에 데이터를 복사하고 지정된 파일 그룹에 새 테이블 만들기
 다음 예제에서는 새 테이블을 다른 테이블의 복사본으로 만들고, 이를 사용자의 기본 파일 그룹과 다른 지정된 파일 그룹에 로드하는 방법을 보여 줍니다.
 
  **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -248,7 +248,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>참고 항목  

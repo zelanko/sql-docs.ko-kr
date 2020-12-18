@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175969"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460486"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ CREATE TABLE dbo.soGlobalB
   
 1. 기존의 모든 디스크상 테이블에서처럼 **dbo.soGlobalB** 테이블을 한 번 만듭니다.  
 2. TRANSACT-SQL에서 **&#x23;&#x23;tempGlobalB** 테이블의 생성을 제거합니다.  테이블을 만들면 제공되는 컴파일 오버헤드를 방지하기 위해 런타임 시가 아닌 배포 시 메모리 최적화 테이블을 만드는 것이 중요합니다.
-3. T-SQL에서 **&#x23;&#x23;tempGlobalB**의 모든 멘션을 **dbo.soGlobalB**로 바꿉니다.  
+3. T-SQL에서 **&#x23;&#x23;tempGlobalB** 의 모든 멘션을 **dbo.soGlobalB** 로 바꿉니다.  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 시나리오: 세션 tempdb &#x23;table 바꾸기  
@@ -125,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-첫째, 다음과 같이 테이블 반환 함수를 만들어 **\@\@spid**로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
+첫째, 다음과 같이 테이블 반환 함수를 만들어 **\@\@spid** 로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
   
   
   
@@ -210,7 +210,7 @@ DECLARE @tvTableD TABLE
   
 #### <a name="d1-convert-inline-to-explicit"></a>D.1 명시적으로 인라인 변환  
   
-위의 구문은 테이블 변수가 *인라인*으로 만들어졌습니다. 인라인 구문은 메모리 액세스에 최적화를 지원하지 않습니다. 그러면 인라인 구문을 TYPE의 명시적 구문으로 변환해 보겠습니다.  
+위의 구문은 테이블 변수가 *인라인* 으로 만들어졌습니다. 인라인 구문은 메모리 액세스에 최적화를 지원하지 않습니다. 그러면 인라인 구문을 TYPE의 명시적 구문으로 변환해 보겠습니다.  
   
 *범위:* 첫 번째 go로 구분된 일괄 처리에 의해 만들어진 TYPE 정의는 서버를 종료하고 다시 시작한 후에도 유지됩니다. 하지만 첫 번째 go 구분 기호 이후 선언된 테이블 @tvTableC는 다음 go에 도달하고 일괄 처리가 종료될 때까지만 유지됩니다.  
   
@@ -265,7 +265,7 @@ CREATE TYPE dbo.typeTableD
   
 ## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server에 대한 필수 구성 요소 FILEGROUP  
   
-Microsoft SQL Server에서 메모리 최적화 기능을 사용하려면 데이터베이스에 **MEMORY_OPTIMIZED_DATA**로 선언된 FILEGROUP이 있어야 합니다.  
+Microsoft SQL Server에서 메모리 최적화 기능을 사용하려면 데이터베이스에 **MEMORY_OPTIMIZED_DATA** 로 선언된 FILEGROUP이 있어야 합니다.  
   
 - Azure SQL 데이터베이스에서는 이 FILEGROUP을 만들지 않아도 됩니다.  
   
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Batch execution completed 5001 times.
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [메모리 최적화 테이블의 테이블 및 행 크기: 계산 예제](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-큰 테이블 변수의 경우 비클러스터형 인덱스는 메모리 최적화 *테이블*보다 더 많은 메모리를 사용합니다. 행 개수 및 인덱스 키가 클수록 차이가 증가합니다.  
+큰 테이블 변수의 경우 비클러스터형 인덱스는 메모리 최적화 ‘테이블’보다 더 많은 메모리를 사용합니다._* 행 개수 및 인덱스 키가 클수록 차이가 증가합니다.  
   
 메모리 최적화 테이블 변수가 액세스당 하나의 정확한 키 값에만 액세스하는 경우 비클러스터형 인덱스보다 해시 인덱스가 더 적합할 수 있습니다. 그러나 적절한 BUCKET_COUNT를 예측할 수 없는 경우 비클러스터형 인덱스가 차선책입니다.  
   

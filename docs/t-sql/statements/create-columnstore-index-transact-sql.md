@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300440"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464174"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 테이블에 클러스터형 columnstore 인덱스가 이미 있다면 같은 이름을 기존 인덱스로 지정하거나 DROP EXISTING 옵션을 사용하여 새 이름을 지정할 수 있습니다.  
   
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다. 순서가 지정된 클러스터형 열 저장소 인덱스로 변환하려면 기존 인덱스가 클러스터형 columnstore 인덱스여야 합니다.
   
@@ -219,11 +219,11 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    인덱스의 이름을 지정합니다. *index_name* 은 테이블에서 고유해야 하지만 데이터베이스에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     저장할 열을 지정합니다. 비클러스터형 columnstore 인덱스는 1024개 열로 제한됩니다.  
    각 열은 columnstore 인덱스에 대해 지원되는 데이터 형식이어야 합니다. 지원되는 데이터 형식 목록은 [제한 사항](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)을 참조하세요.  
 
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    인덱스를 포함할 테이블의 1, 2 또는 3 부분 이름을 지정합니다.  
 
 #### <a name="with-options"></a>WITH 옵션
@@ -402,7 +402,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 이러한 제한 사항은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에만 적용됩니다. 이 릴리스에서는 업데이트 가능한 클러스터형 columnstore 인덱스를 사용했습니다. 비클러스터형 columnstore 인덱스는 여전히 읽기 전용이었습니다.  
 
 -   변경 내용 추적 columnstore 인덱스에는 변경 내용 추적을 사용할 수 없습니다.  
--   변경 데이터 캡처 읽기 전용인 NCCI(비클러스터형 columnstore 인덱스)에 대해 변경 데이터 캡처를 사용할 수 없습니다. CCI(클러스터형 columnstore 인덱스)에서 작동합니다.  
+-   변경 데이터 캡처 클러스터형 columnstore 인덱스가 있는 테이블에서 변경 데이터 캡처를 사용하도록 설정할 수 없습니다. SQL Server 2016부터는 비클러스터형 columnstore 인덱스가 있는 테이블에서 이 기능을 사용하도록 설정할 수 있습니다.  
 -   읽기용 보조 Always OnReadable 가용성 그룹의 읽기 가능한 보조에서 CCI(클러스터형 columnstore 인덱스)에 액세스할 수 없습니다.  읽기 가능한 보조에서 NCCI(비클러스터형 columnstore 인덱스)에 액세스할 수 있습니다.  
 -   MARS(Multiple Active Result Sets) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다. 그러나 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 columnstore 인덱스가 있는 테이블에서 동시 DML(데이터 조작 언어) 작업에는 MARS를 지원하지 않습니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결을 종료하고 트랜잭션을 중단합니다.  
 -  비클러스터형 columnstore 인덱스는 뷰 또는 인덱싱된 뷰에서 만들 수 없습니다.

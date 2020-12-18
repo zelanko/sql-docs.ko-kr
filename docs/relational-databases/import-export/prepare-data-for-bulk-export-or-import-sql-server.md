@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408240"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866666"
   
 -   고정 길이 또는 고정 너비 필드가 있는 데이터 파일에서 데이터를 가져오려면 서식 파일을 사용합니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
--   CSV(쉼표로 구분된 값) 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 가져오기 작업에서 지원되지 않습니다. 그러나 경우에 따라 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량으로 가져오기 위한 데이터 파일로 CSV(쉼표로 구분된 값) 파일이 사용될 수 있습니다. CSV 파일의 필드 종결자로는 쉼표 이외에 다른 문자도 사용될 수 있습니다. 대량 가져오기를 위한 데이터 파일로 사용하려면 CSV 파일이 다음 제한 사항을 충족해야 합니다.  
+-  SQL Server 2017부터 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량으로 가져오기 위한 데이터 파일로 CSV 파일을 사용할 수 있습니다. CSV 파일의 필드 종결자로는 쉼표 이외에 다른 문자도 사용될 수 있습니다. 대량 가져오기를 위한 데이터 파일로 사용하려면 CSV 파일이 다음 제한 사항을 충족해야 합니다.  
   
     -   데이터 필드에 필드 종결자가 포함되어서는 안 됩니다.  
   

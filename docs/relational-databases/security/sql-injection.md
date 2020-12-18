@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad927941169f7f93f43a534535f80449682c9d60
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ea1d2300b2ff2431d58b8fb2d6139ecad130a965
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432421"
 ---
 # <a name="sql-injection"></a>SQL 삽입
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**;**|쿼리 구분 기호|  
 |**'**|문자 데이터 문자열 구분 기호|  
 |**--**|문자 데이터 문자열 구분 기호<br />.|  
-|**/\*** ... **\*/**|주석 구분 기호. **/\*** 와 **\*/** 사이의 텍스트는 서버에서 검사되지 않습니다.|  
+|**/\**_ ... _*\*/**|주석 구분 기호. **/\* *_와 _* \*/** 사이의 텍스트는 서버에서 평가되지 않습니다.|  
 |**xp_**|`xp_cmdshell`과 같이 카탈로그 확장 저장 프로시저의 이름 첫 자로 사용됩니다.|  
   
 ### <a name="use-type-safe-sql-parameters"></a>형식 안정적 SQL 매개 변수 사용  

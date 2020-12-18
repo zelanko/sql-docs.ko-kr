@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197049"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490013"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services(SSIS) 설치
 
@@ -66,11 +66,11 @@ Microsoft SQL Server가 아직 없는 경우 [SQL Server 다운로드](https://w
 
 설치 마법사를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하는 경우 구성 요소와 옵션을 지정하는 일련의 페이지가 표시됩니다.
 
-- **기능 선택** 페이지의 **공유 기능**에서 **Integration Services**를 선택합니다.
+- **기능 선택** 페이지의 **공유 기능** 에서 **Integration Services** 를 선택합니다.
 
-- **인스턴스 기능**에서, 필요에 따라 SSIS 카탈로그 데이터베이스를 호스팅하려면 **데이터베이스 엔진 서비스**를 선택하고, SSIS 패키지를 저장, 관리, 실행 및 모니터링하려면 `SSISDB`를 선택합니다.
+- **인스턴스 기능** 에서, 필요에 따라 SSIS 카탈로그 데이터베이스를 호스팅하려면 **데이터베이스 엔진 서비스** 를 선택하고, SSIS 패키지를 저장, 관리, 실행 및 모니터링하려면 `SSISDB`를 선택합니다.
 
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로그래밍에 대한 관리 어셈블리를 설치하려면 마찬가지로 **공유 기능** 아래에서 **클라이언트 도구 SDK**를 선택합니다.
+- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로그래밍에 대한 관리 어셈블리를 설치하려면 마찬가지로 **공유 기능** 아래에서 **클라이언트 도구 SDK** 를 선택합니다.
 
 > [!NOTE]
 > 설치 마법사의 **기능 선택** 페이지에서 선택하여 설치할 수 있는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부분만 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기능은 제한됩니다. 예를 들어 **데이터베이스 엔진 서비스** 옵션을 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가져오기 및 내보내기 마법사에 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 설치됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 **기능 선택** 페이지에서 **Integration Services** 를 선택해야 합니다.
@@ -115,7 +115,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 - **SQL Server Data Tools(SSDT)** . Visual Studio 2019에 대한 SSDT 독립 실행형 설치 프로그램이 중단되었습니다. 이제 Visual Studio 2019의 경우 [VS 마켓플레이스](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview)에서 SSIS 디자이너 확장을 가져올 수 있습니다.
 
-- **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 스토리지 및 분석 서비스에 연결할 수 있습니다.
+- **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩](../azure-feature-pack-for-integration-services-ssis.md)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 스토리지 및 분석 서비스에 연결할 수 있습니다.
 
   - Azure Blob Storage.
 

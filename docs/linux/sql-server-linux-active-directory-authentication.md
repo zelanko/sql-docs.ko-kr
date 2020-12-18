@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323661"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: SQL Server on Linux와 Active Directory 인증 사용
 
@@ -53,7 +53,7 @@ SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결�
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자(또는 MSA) 만들기 및 SPN 설정
 
 > [!NOTE]
-> 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure**에서 계속하기 전에 **[AD 사용자를 만들어야](/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
+> 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure** 에서 계속하기 전에 **[AD 사용자를 만들어야](/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
 
 1. 도메인 컨트롤러에서 [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell 명령을 실행하여 만료하지 않는 암호를 사용하여 새 AD 사용자를 만듭니다. 다음 예제에서는 계정의 이름을 `mssql`로 지정하지만 계정 이름은 원하는 대로 지정할 수 있습니다. 계정의 새 암호를 입력하라는 메시지가 표시됩니다.
 
@@ -64,7 +64,11 @@ SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결�
    ```
 
    > [!NOTE]
-   > SQL Server의 전용 AD 계정을 사용하는 것이 보안 모범 사례이므로, SQL Server의 자격 증명은 동일한 계정을 사용하는 다른 서비스와 공유되지 않습니다. 그러나 계정 암호(다음 단계에서 keytab 파일을 생성하는 데 필요함)를 알고 있는 경우 필요에 따라 기존 AD 계정을 다시 사용할 수 있습니다. 또한 사용자 계정에서 128비트 및 256비트 Kerberos AES 암호화(**msDS-SupportedEncryptionTypes** 특성)를 지원하도록 계정을 활성화해야 합니다.
+   > SQL Server의 전용 AD 계정을 사용하는 것이 보안 모범 사례이므로, SQL Server의 자격 증명은 동일한 계정을 사용하는 다른 서비스와 공유되지 않습니다. 그러나 계정 암호(다음 단계에서 keytab 파일을 생성하는 데 필요함)를 알고 있는 경우 필요에 따라 기존 AD 계정을 다시 사용할 수 있습니다. 또한 사용자 계정에서 128비트 및 256비트 Kerberos AES 암호화(**msDS-SupportedEncryptionTypes** 특성)를 지원하도록 계정을 활성화해야 합니다. 계정이 AES 암호화에 대해 활성화되었는지 확인하려면 **Active Directory 사용자 및 컴퓨터** 유틸리티에서 계정을 찾고 **속성** 을 선택합니다. **속성** 에서 **계정** 탭을 찾고 다음의 두 확인란이 선택되어 있는지 확인합니다. 
+   >
+   > 1. **이 계정은 Kerberos AES 128비트 암호화를 지원합니다.**
+   >
+   > 2. **이 계정은 Kerberos AES 256비트 암호화를 지원합니다.**
 
 2. **setspn.exe** 도구를 사용하여 이 계정의 SPN(서비스 사용자 이름)을 설정합니다. SPN은 다음 예제에 지정된 대로 정확하게 형식을 지정해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트에서 `hostname --all-fqdns`를 실행하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 머신의 정규화된 도메인 이름을 찾을 수 있습니다. 다른 포트 번호를 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 구성한 경우가 아니면 TCP 포트는 1433이어야 합니다.
 
@@ -155,7 +159,7 @@ SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 A
     ```
 
     > [!TIP]
-    > 필요에 따라 도메인 컨트롤러에 대한 UDP 연결을 사용하지 않도록 설정하여 성능을 향상합니다. 대부분의 경우 도메인 컨트롤러에 연결할 때 UDP 연결이 지속적으로 실패하므로 **/etc/krb5.conf**에서 구성 옵션을 설정하여 UDP 호출을 건너뛸 수 있습니다. **/etc/krb5.conf**를 편집하고 다음 옵션을 설정합니다.
+    > 필요에 따라 도메인 컨트롤러에 대한 UDP 연결을 사용하지 않도록 설정하여 성능을 향상합니다. 대부분의 경우 도메인 컨트롤러에 연결할 때 UDP 연결이 지속적으로 실패하므로 **/etc/krb5.conf** 에서 구성 옵션을 설정하여 UDP 호출을 건너뛸 수 있습니다. **/etc/krb5.conf** 를 편집하고 다음 옵션을 설정합니다.
     > ```bash
     > /etc/krb5.conf
     > [libdefaults]
@@ -192,7 +196,7 @@ AD 인증을 사용할 클라이언트의 특정 연결 문자열 매개 변수�
 ssh -l user@contoso.com client.contoso.com
 ```
 
-[mssql-tools](sql-server-linux-setup-tools.md) 패키지를 설치했는지 확인한 다음, 자격 증명을 지정하지 않고 **sqlcmd**를 사용하여 연결합니다.
+[mssql-tools](sql-server-linux-setup-tools.md) 패키지를 설치했는지 확인한 다음, 자격 증명을 지정하지 않고 **sqlcmd** 를 사용하여 연결합니다.
 
 ```bash
 sqlcmd -S mssql-host.contoso.com
@@ -201,7 +205,7 @@ SQL Windows와 달리 Kerberos 인증은 SQL Linux의 로컬 연결에서 작동
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>도메인에 가입된 Windows 클라이언트의 SSMS
 
-도메인 자격 증명을 사용하여 도메인에 가입된 Windows 클라이언트에 로그인합니다. SQL Server Management Studio가 설치되어 있는지 확인한 다음 **서버에 연결** 대화 상자에서 **Windows 인증**을 지정하여 SQL Server 인스턴스(예: `mssql-host.contoso.com`)에 연결합니다.
+도메인 자격 증명을 사용하여 도메인에 가입된 Windows 클라이언트에 로그인합니다. SQL Server Management Studio가 설치되어 있는지 확인한 다음 **서버에 연결** 대화 상자에서 **Windows 인증** 을 지정하여 SQL Server 인스턴스(예: `mssql-host.contoso.com`)에 연결합니다.
 
 ### <a name="ad-authentication-using-other-client-drivers"></a>다른 클라이언트 드라이버를 사용하는 AD 인증
 
@@ -215,7 +219,7 @@ SQL Windows와 달리 Kerberos 인증은 SQL Linux의 로컬 연결에서 작동
 
 ## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> 추가 구성 옵션
 
-[PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용하여 Linux 호스트를 AD 도메인에 가입시키며 openldap 라이브러리를 직접 사용할 때 SQL Server를 강제 실행하려는 경우 다음과 같이 **mssql-conf**를 사용하여 **disablesssd** 옵션을 구성할 수 있습니다.
+[PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용하여 Linux 호스트를 AD 도메인에 가입시키며 openldap 라이브러리를 직접 사용할 때 SQL Server를 강제 실행하려는 경우 다음과 같이 **mssql-conf** 를 사용하여 **disablesssd** 옵션을 구성할 수 있습니다.
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -223,7 +227,7 @@ systemctl restart mssql-server
 ```
 
 > [!NOTE]
-> SSSD를 설정하는 **realmd**와 같은 유틸리티가 있지만, PBIS, VAS 및 Centrify와 같은 다른 도구는 SSSD를 설정하지 않습니다. AD 도메인에 가입하는 데 사용되는 유틸리티가 SSSD를 설정하지 않는 경우 **disablesssd** 옵션을 `true`로 구성하는 것이 좋습니다. SQL Server는 openldap 메커니즘으로 대체되기 전에 AD에 SSSD를 사용하려고 시도하므로 이 구성이 필요하지 않지만, 이와 같이 구성하면 SQL Server가 직접 openldap를 호출하여 SSSD 메커니즘을 무시하므로 성능이 향상됩니다.
+> SSSD를 설정하는 **realmd** 와 같은 유틸리티가 있지만, PBIS, VAS 및 Centrify와 같은 다른 도구는 SSSD를 설정하지 않습니다. AD 도메인에 가입하는 데 사용되는 유틸리티가 SSSD를 설정하지 않는 경우 **disablesssd** 옵션을 `true`로 구성하는 것이 좋습니다. SQL Server는 openldap 메커니즘으로 대체되기 전에 AD에 SSSD를 사용하려고 시도하므로 이 구성이 필요하지 않지만, 이와 같이 구성하면 SQL Server가 직접 openldap를 호출하여 SSSD 메커니즘을 무시하므로 성능이 향상됩니다.
 
 도메인 컨트롤러에서 LDAPS를 지원하는 경우 SQL Server에서 도메인 컨트롤러로 모든 연결이 LDAPS를 통해 수행되도록 할 수 있습니다. 클라이언트에서 ldaps를 통해 도메인 컨트롤러에 연결할 수 있는지 확인하려면 bash 명령 `ldapsearch -H ldaps://contoso.com:3269`를 실행합니다. LDAPS만 사용하도록 SQL Server를 설정하려면 다음을 실행합니다.
 
@@ -232,15 +236,15 @@ sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-호스트의 AD 도메인 가입이 SSSD 패키지를 통해 수행되었고 **disablesssd**가 true로 설정되지 않은 경우에는 여기에는 SSSD를 통해 LDAPS가 사용됩니다. **disablesssd**가 true로 설정되고 **forcesecureldap**가 true로 설정된 경우에는 SQL Server에서 수행된 openldap 라이브러리 호출을 통해 LDAPS 프로토콜이 사용됩니다.
+호스트의 AD 도메인 가입이 SSSD 패키지를 통해 수행되었고 **disablesssd** 가 true로 설정되지 않은 경우에는 여기에는 SSSD를 통해 LDAPS가 사용됩니다. **disablesssd** 가 true로 설정되고 **forcesecureldap** 가 true로 설정된 경우에는 SQL Server에서 수행된 openldap 라이브러리 호출을 통해 LDAPS 프로토콜이 사용됩니다.
 
 ### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
 
-SQL Server 2017 CU14부터, SQL Server가 타사 공급자를 사용하여 AD 도메인 컨트롤러에 가입되었고 **disablesssd**를 true로 설정하여 일반적인 AD 조회에 openldap 호출을 사용하도록 구성된 경우에는 **enablekdcfromkrb5** 옵션을 사용하여 SQL Server에서 KDC 서버에 대한 역방향 DNS 조회 대신에 krb5 라이브러리를 KDC 조회에 사용하도록 할 수 있습니다.
+SQL Server 2017 CU14부터, SQL Server가 타사 공급자를 사용하여 AD 도메인 컨트롤러에 가입되었고 **disablesssd** 를 true로 설정하여 일반적인 AD 조회에 openldap 호출을 사용하도록 구성된 경우에는 **enablekdcfromkrb5** 옵션을 사용하여 SQL Server에서 KDC 서버에 대한 역방향 DNS 조회 대신에 krb5 라이브러리를 KDC 조회에 사용하도록 할 수 있습니다.
 
-이 방법은 SQL Server가 통신을 시도하는 도메인 컨트롤러를 수동으로 구성하려는 시나리오에 유용할 수 있습니다. 또한 **krb5.conf**에서 KDC 목록을 사용하여 openldap 라이브러리 메커니즘을 사용합니다.
+이 방법은 SQL Server가 통신을 시도하는 도메인 컨트롤러를 수동으로 구성하려는 시나리오에 유용할 수 있습니다. 또한 **krb5.conf** 에서 KDC 목록을 사용하여 openldap 라이브러리 메커니즘을 사용합니다.
 
-먼저 **disablesssd** 및 **enablekdcfromkrb5conf**를 true로 설정한 다음, SQL Server를 다시 시작합니다.
+먼저 **disablesssd** 및 **enablekdcfromkrb5conf** 를 true로 설정한 다음, SQL Server를 다시 시작합니다.
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -248,7 +252,7 @@ sudo mssql-conf set network.enablekdcfromkrb5conf true
 systemctl restart mssql-server
 ```
 
-그런 다음, **/etc/krb5.conf**에서 다음과 같이 KDC 목록을 구성합니다.
+그런 다음, **/etc/krb5.conf** 에서 다음과 같이 KDC 목록을 구성합니다.
 
 ```/etc/krb5.conf
 [realms]
@@ -259,7 +263,7 @@ CONTOSO.COM = {
 ```
 
 > [!NOTE]
-> 권장하지는 않지만 SQL Server가 Active Directory 관련 호출에 SSSD 대신에 openldap 호출을 사용하도록 **disablesssd**를 true로 구성하면서 Linux 호스트를 도메인에 가입시키는 동안 SSSD를 설정하는 **realmd**와 같은 유틸리티를 사용할 수 있습니다.
+> 권장하지는 않지만 SQL Server가 Active Directory 관련 호출에 SSSD 대신에 openldap 호출을 사용하도록 **disablesssd** 를 true로 구성하면서 Linux 호스트를 도메인에 가입시키는 동안 SSSD를 설정하는 **realmd** 와 같은 유틸리티를 사용할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

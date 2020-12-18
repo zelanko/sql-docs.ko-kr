@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460786"
 ---
 # <a name="copy-transact-sql"></a>COPY(Transact-SQL)
 
@@ -432,6 +432,18 @@ Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>파일 개수 또는 크기에 제한이 있나요?
 파일 개수 또는 크기에 제한이 없습니다. 하지만 최상의 성능을 위해 4MB 이상의 파일을 사용하는 것이 좋습니다.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>COPY 문에 알려진 문제가 있나요?
+2020년 12월 7일 이전에 만든 Synapse 작업 영역이 있는 경우 관리 ID를 사용하여 인증하면 유사한 오류 메시지가 나타날 수 있습니다.
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: 이 서버에서 관리 서비스 ID를 사용하도록 설정하지 않았습니다. 관리 서비스 ID를 사용하도록 설정하고 다시 시도하세요.*
+
+다음 단계에 따라 작업 영역의 관리 ID를 다시 등록하여 이 문제를 해결하세요.
+
+1. Azure Portal에서 Synapse 작업 영역으로 이동합니다.
+2. 관리 ID 블레이드로 이동합니다. 
+3. “파이프라인 허용” 옵션이 이미 선택되어 있는 경우 이 설정을 선택 취소하고 저장해야 합니다.
+4. “파이프라인 허용” 옵션을 선택하고 저장합니다.
 
 
 ## <a name="see-also"></a>참고 항목  

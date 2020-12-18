@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 363f3a4c17ccef494a9de53864dec05a0194c76a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947938"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439038"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -413,7 +413,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. 헤더 행을 건너뛰는 구분 기호로 분리된 텍스트 파일 만들기(Azure SQL DW만 해당)
+### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-synapse-analytics-only"></a>E. 머리글 행을 건너뛰는 구분 기호로 분리된 텍스트 파일 만들기(Azure Synapse Analytics만 해당)
  이 예제에서는 단일 헤더 행이 있는 CSV 파일에 대한 외부 파일 형식을 만듭니다. 
   
 ```sql  

@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1472a8d7117fb45fc7f9d4adb04f690ed9662ea2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c54cdea7db9d713f4a82f9628f497e5b37f1d544
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412672"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484255"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 *data_type*  
-대상 데이터 형식입니다. 여기에는 **xml** , **bigint** 및 **sql_variant** 가 있습니다. 별칭 데이터 형식은 사용할 수 없습니다.
+대상 데이터 형식입니다. 여기에는 **xml**, **bigint** 및 **sql_variant** 가 있습니다. 별칭 데이터 형식은 사용할 수 없습니다.
   
 *length*  
 사용자가 지정한 길이를 허용하는 데이터 형식에 대해 대상 데이터 형식의 길이를 지정하는 선택적 정수입니다. 기본값은 30입니다.
@@ -85,7 +85,7 @@ CONVERT 함수가 *식* 을 변환하는 방법을 지정하는 정수 식입니
   
 |두 자리 연도(yy) (<sup>1</sup>)|네 자리 연도(yyyy)|Standard|입/출력(<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0** 또는 **100** ( <sup>1,</sup><sup>2</sup>)|datetime 및 smalldatetime의 기본값|mon dd yyyy hh:miAM(또는 PM)|  
+|-|**0** 또는 **100** (<sup>1,</sup><sup>2</sup>)|datetime 및 smalldatetime의 기본값|mon dd yyyy hh:miAM(또는 PM)|  
 |**1**|**101**|미국|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|영국/프랑스|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
@@ -94,24 +94,24 @@ CONVERT 함수가 *식* 을 변환하는 방법을 지정하는 정수 식입니
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8** 또는 **24**|**108**|-|hh:mi:ss|  
-|-|**9** 또는 **109** ( <sup>1,</sup><sup>2</sup>)|기본값 + 밀리초|mon dd yyyy hh:mi:ss:mmmAM(또는 PM)|  
+|-|**9** 또는 **109** (<sup>1,</sup><sup>2</sup>)|기본값 + 밀리초|mon dd yyyy hh:mi:ss:mmmAM(또는 PM)|  
 |**10**|**110**|USA| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
 |**11**|**111**|일본| 11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
 |**12**|**112**|ISO| 12 = yymmdd<br /> 112 = yyyymmdd|  
-|-|**13** 또는 **113** ( <sup>1,</sup><sup>2</sup>)|유럽 기본값 + 밀리초|dd mon yyyy hh:mi:ss:mmm(24h)|  
+|-|**13** 또는 **113** (<sup>1,</sup><sup>2</sup>)|유럽 기본값 + 밀리초|dd mon yyyy hh:mi:ss:mmm(24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24h)|  
-|-|**20** 또는 **120** ( <sup>2</sup>)|ODBC 표준|yyyy-mm-dd hh:mi:ss (24h)|  
-|-|**21** 또는 **25** 또는 **121** ( <sup>2</sup>)|time, date, datetime2 및 datetimeoffset의 ODBC 표준(밀리초 포함) 기본값|yyyy-mm-dd hh:mi:ss.mmm (24h)|  
+|-|**20** 또는 **120** (<sup>2</sup>)|ODBC 표준|yyyy-mm-dd hh:mi:ss (24h)|  
+|-|**21** 또는 **25** 또는 **121** (<sup>2</sup>)|time, date, datetime2 및 datetimeoffset의 ODBC 표준(밀리초 포함) 기본값|yyyy-mm-dd hh:mi:ss.mmm (24h)|  
 |**22**|-|미국| mm/dd/yy hh:mi:ss AM (또는 PM)|
 |-|**23**|ISO8601|yyyy-mm-dd|
-|-|**126** ( <sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm(공백 없이)<br /><br /> **참고:** 밀리초(mmm) 값 0의 경우 밀리초 소수 부분 값이 표시되지 않습니다. 예를 들어 '2012-11-07T18:26:20.000' 값은 '2012-11-07T18:26:20'으로 표시됩니다.| 
-|-|**127** ( <sup>6, 7</sup>)|ISO8601(Z 표준 시간대)|yyyy-MM-ddThh:mm:ss.fffZ(공백 없음)<br /><br /> **참고:** 밀리초(mmm) 값 0의 경우 밀리초 소수 값이 표시되지 않습니다. 예를 들어, '2012-11-07T18:26:20.000' 값은 '2012-11-07T18:26:20'으로 표시됩니다.|  
-|-|**130** ( <sup>1,</sup><sup>2</sup>)|회교식(<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 이 스타일에서 **mon** 은 전체 월 이름에 대한 다중 토큰 회교식 유니코드 표현을 나타냅니다. 이 값은 SSMS의 기본 미국 영어 설치에서 올바르게 렌더링되지 않습니다.|  
-|-|**131** ( <sup>2</sup>)|회교식(<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm(공백 없이)<br /><br /> **참고:** 밀리초(mmm) 값 0의 경우 밀리초 소수 부분 값이 표시되지 않습니다. 예를 들어 '2012-11-07T18:26:20.000' 값은 '2012-11-07T18:26:20'으로 표시됩니다.| 
+|-|**127**(<sup>6, 7</sup>)|ISO8601(Z 표준 시간대)|yyyy-MM-ddThh:mm:ss.fffZ(공백 없음)<br /><br /> **참고:** 밀리초(mmm) 값 0의 경우 밀리초 소수 값이 표시되지 않습니다. 예를 들어, '2012-11-07T18:26:20.000' 값은 '2012-11-07T18:26:20'으로 표시됩니다.|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|회교식(<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 이 스타일에서 **mon** 은 전체 월 이름에 대한 다중 토큰 회교식 유니코드 표현을 나타냅니다. 이 값은 SSMS의 기본 미국 영어 설치에서 올바르게 렌더링되지 않습니다.|  
+|-|**131** (<sup>2</sup>)|회교식(<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> 이러한 스타일 값은 비결정적 결과를 반환합니다. 모든 (yy)(두 자리 연도) 스타일과 (yyyy)(네 자리 연도) 스타일의 하위 집합을 포함합니다.
   
-<sup>2</sup> 기본값( **0** 또는 **100** , **9** 또는 **109** , **13** 또는 **113** , **20** 또는 **120** , **23** , 및 **21** 또는 **25** 또는 **121** )은 항상 네 자리 연도(yyyy)를 반환합니다.
+<sup>2</sup> 기본값(**0** 또는 **100**, **9** 또는 **109**, **13** 또는 **113**, **20** 또는 **120**, **23**, 및 **21** 또는 **25** 또는 **121**)은 항상 네 자리 연도(yyyy)를 반환합니다.
 
 <sup>3</sup>**datetime** 으로 변환할 때의 입력이며 문자 데이터로 변환할 때의 출력입니다.
 
@@ -152,7 +152,7 @@ CONVERT 함수가 *식* 을 변환하는 방법을 지정하는 정수 식입니
 |**126**|char(n) 또는 varchar(n)으로 변환하는 경우 스타일 2와 같습니다.|  
   
 ## <a name="xml-styles"></a>xml 스타일
-**xml** ’식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  다른 값은 0으로 처리됩니다.
+**xml**’식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.  다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -167,10 +167,10 @@ CONVERT 함수가 *식* 을 변환하는 방법을 지정하는 정수 식입니
 |값|출력|  
 |---|---|
 |**0** (기본값)|ASCII 문자를 이진 바이트로 또는 이진 바이트를 ASCII 문자로 변환합니다. 각 문자 또는 바이트는 1:1로 변환됩니다.<br /><br /> 이진 *data_type* 인 경우 결과의 왼쪽에 문자 0x가 추가됩니다.|  
-|**1** , **2**|이진 *data_type* 인 경우 식이 문자 식이어야 합니다. *expression* 은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. ‘스타일’이 1로 설정된 경우 식의 처음 두 자가 반드시 0x여야 합니다. 식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type* 의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types* 가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type* 에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type* 의 길이보다 길면 오른쪽이 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type* 이고 변환된 결과의 길이가 *data_type* 의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 2의 경우 변환된 결과의 왼쪽에 문자 0x가 추가됩니다.|  
+|**1**, **2**|이진 *data_type* 인 경우 식이 문자 식이어야 합니다. *expression* 은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. ‘스타일’이 1로 설정된 경우 식의 처음 두 자가 반드시 0x여야 합니다. 식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type* 의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types* 가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type* 에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type* 의 길이보다 길다고 가정합니다. 이런 경우에는 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type* 이고 변환된 결과의 길이가 *data_type* 의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 2의 경우 변환된 결과의 왼쪽에 문자 0x가 추가되지 않습니다.|  
   
 ## <a name="implicit-conversions"></a>암시적 변환
-암시적 변환에서는 CAST 함수나 CONVERT 함수 지정이 필요하지 않습니다. 명시적 변환에서는 CAST 함수나 CONVERT 함수를 지정해야 합니다. 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **bigint** , **sql_variant** 및 **xml** 이 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant** 로는 암시적으로 변환됩니다.
+암시적 변환에서는 CAST 함수나 CONVERT 함수 지정이 필요하지 않습니다. 명시적 변환에서는 CAST 함수나 CONVERT 함수를 지정해야 합니다. 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **bigint**, **sql_variant** 및 **xml** 이 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant** 로는 암시적으로 변환됩니다.
   
 > [!TIP]  
 > 이 차트는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35834)에서 PNG 파일로 다운로드할 수 있습니다.  
@@ -186,16 +186,16 @@ CONVERT 함수가 *식* 을 변환하는 방법을 지정하는 정수 식입니
 > [!TIP]
 > [변환에서 데이터 형식 우선 순위의 효과](#precedence-example)에 대한 실질적인 예는 이 섹션의 뒷부분에서 확인할 수 있습니다.
 
-**datetimeoffset** 과 **char** , **nchar** , **nvarchar** 및 **varchar** 문자 형식 간에 변환할 경우 변환된 표준 시간대 오프셋 부분의 HH 및 MM 부분은 항상 두 자리여야 합니다. 예를 들어 -08:00입니다.
+**datetimeoffset** 과 **char**, **nchar**, **nvarchar** 및 **varchar** 문자 형식 간에 변환할 경우 변환된 표준 시간대 오프셋 부분의 HH 및 MM 부분은 항상 두 자리여야 합니다. 예를 들어 -08:00입니다.
   
 > [!NOTE]   
 > 유니코드 데이터는 항상 짝수 바이트를 사용하므로 **binary** 또는 **varbinary** 와 유니코드 지원 데이터 형식을 서로 변환할 때는 주의해야 합니다. 예를 들어 다음과 같은 변환은 16진수 값 41이 아니라 4100의 16 진수 값을 반환합니다(`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`). 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. 
   
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
-큰 값 데이터 형식은 작은 데이터 형식, 특히 **nvarchar** , **varbinary** 및 **varchar** 데이터 형식과 같은 암시적 및 명시적 변환 동작을 보입니다. 그러나 다음 지침을 고려합니다.
+큰 값 데이터 형식은 작은 데이터 형식, 특히 **nvarchar**, **varbinary** 및 **varchar** 데이터 형식과 같은 암시적 및 명시적 변환 동작을 보입니다. 그러나 다음 지침을 고려합니다.
 -   **image** 와 **varbinary(max)** 간 변환은 암시적 변환이며 **text** 와 **varchar(max)** 간, **ntext** 와 **nvarchar(max)** 간 변환도 암시적 변환입니다.  
 -   **varchar(max)** 등 큰 값 데이터 형식을 **varchar** 등의 작은 데이터 형식으로 변환하는 것은 암시적 변환이지만 작은 데이터 형식에 지정된 길이에 비해 큰 값이 너무 크면 값이 잘립니다.  
--   **nvarchar** , **varbinary** 또는r **varchar** 를 해당하는 큰 값 데이터 형식으로 변환하는 것은 암시적으로 수행됩니다.  
+-   **nvarchar**, **varbinary** 또는r **varchar** 를 해당하는 큰 값 데이터 형식으로 변환하는 것은 암시적으로 수행됩니다.  
 -   **sql_variant** 데이터 형식을 큰 값 데이터 형식으로 변환하는 것은 명시적 변환입니다.  
 -   큰 값 데이터 형식은 **sql_variant** 데이터 형식으로 변환할 수 없습니다.  
   
@@ -215,15 +215,15 @@ CAST 또는 CONVERT 함수가 문자열을 출력하고 문자열 입력을 받�
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>결과 잘라내기 및 반올림
-문자 또는 이진 식( **binary** , **char** , **nchar** , **nvarchar** , **varbinary** 또는 **varchar** )을 데이터 형식이 다른 식으로 변환할 때는 변환 작업에서 출력 데이터를 잘라 출력 데이터의 일부만 표시하거나 오류를 반환할 수 있습니다. 이러한 상황은 결과가 너무 작아 표시할 수 없을 때 발생합니다. **binary** , **char** , **nchar** , **nvarchar** , **varbinary** 또는 **varchar** 로 변환하면 다음 표에 있는 변환을 제외하고 결과가 잘립니다.
+문자 또는 이진 식(**binary**, **char**, **nchar**, **nvarchar**, **varbinary** 또는 **varchar**)을 데이터 형식이 다른 식으로 변환할 때는 변환 작업에서 출력 데이터를 잘라 출력 데이터의 일부만 표시하거나 오류를 반환할 수 있습니다. 이러한 상황은 결과가 너무 작아 표시할 수 없을 때 발생합니다. **binary**, **char**, **nchar**, **nvarchar**, **varbinary** 또는 **varchar** 로 변환하면 다음 표에 있는 변환을 제외하고 결과가 잘립니다.
   
 |원래 데이터 형식|변경할 데이터 형식|결과|  
 |---|---|---|
-|**int** , **smallint** 또는 **tinyint**|**char**|*|  
+|**int**, **smallint** 또는 **tinyint**|**char**|*|  
 ||**varchar**|*|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
-|**money** , **smallmoney** , **numeric** , **decimal** , **float** 또는 **real**|**char**|E|  
+|**money**, **smallmoney**, **numeric**, **decimal**, **float** 또는 **real**|**char**|E|  
 ||**varchar**|E|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
@@ -301,7 +301,7 @@ SELECT  CAST(10.6496 AS INT) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 숫자가 아닌 **char** , **nchar** , **nvarchar** 또는 **varchar** 데이터를 **decimal** , **float** , **int** , **numeric** 으로 변환할 경우 오류 메시지가 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 빈 문자열(" ")을 **numeric** 또는 **decimal** 로 변환해도 오류가 반환됩니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 숫자가 아닌 **char**, **nchar**, **nvarchar** 또는 **varchar** 데이터를 **decimal**, **float**, **int**, **numeric** 으로 변환할 경우 오류 메시지가 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 빈 문자열(" ")을 **numeric** 또는 **decimal** 로 변환해도 오류가 반환됩니다.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>일부 datetime 변환은 비결정적임
 

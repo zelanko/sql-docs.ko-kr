@@ -19,13 +19,13 @@ helpviewer_keywords:
 - PolyBase, create data source
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e85d783f9e06c5b0a7ede983f6ab4d1079ef2a5e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443099"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489423"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -37,7 +37,7 @@ SQL Server, SQL Database, Azure Synapse Analytics 또는 Analytics Platform Syst
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -124,7 +124,8 @@ WITH
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
-`ODBC`를 외부 데이터 원본에 연결할 때 추가 옵션을 지정합니다.
+`ODBC`를 외부 데이터 원본에 연결할 때 추가 옵션을 지정합니다. 여러 연결 옵션을 사용하려면 세미콜론으로 구분합니다.
+
 
 최소한 드라이버 이름이 필요하지만, 설정하면 유용하고 문제 해결에 도움이 되는 `APP='<your_application_name>'`, `ApplicationIntent= ReadOnly|ReadWrite` 등의 다른 옵션도 있습니다.
 
@@ -422,11 +423,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -650,11 +651,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)
@@ -920,11 +921,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)

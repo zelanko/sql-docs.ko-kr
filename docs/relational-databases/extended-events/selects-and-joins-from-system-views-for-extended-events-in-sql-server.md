@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481474"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 
@@ -56,7 +56,7 @@ ms.locfileid: "91868796"
 
 - 실행 중인 이벤트 세션의 *현재 활동* 에 대한 정보를 저장합니다. 그러나 이러한 DMV에는 세션의 정의에 대한 정보가 거의 없습니다.
     - 모든 이벤트 세션이 현재 중지된 경우에도 *sys.dm_xe_packages* 뷰에서 SELECT를 실행하면 다양한 패키지가 서버 시작 시 활성 메모리에 로드되기 때문에 여전히 행이 반환됩니다.
-    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns*도 여전히 행을 반환합니다.
+    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns* 도 여전히 행을 반환합니다.
 
 
 - 확장 이벤트 DMV에 대한 이름 접두사는 다음과 같습니다.
@@ -114,9 +114,9 @@ ms.locfileid: "91868796"
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 관점
 
 
-SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 다음** > **세션**새 세션 **을 마우스 오른쪽 단추로 클릭하면** > **새 세션**대화 상자를 시작할 수 있습니다.
+SSMS의 **개체 탐색기** 에서 **관리** 확장 이벤트 **를 확장한 다음** > **세션** 새 세션 **을 마우스 오른쪽 단추로 클릭하면** > **새 세션** 대화 상자를 시작할 수 있습니다.
 
-큰 **새 세션** 대화 상자의 첫 번째 섹션인 **일반**레이블이 지정된 섹션에서 옵션이 **서버 시작 시 이벤트 세션 시작**으로 선택된 것을 확인할 수 있습니다.
+큰 **새 세션** 대화 상자의 첫 번째 섹션인 **일반** 레이블이 지정된 섹션에서 옵션이 **서버 시작 시 이벤트 세션 시작** 으로 선택된 것을 확인할 수 있습니다.
 
 ![새 세션 > 일반, 서버 시작 시 이벤트 세션 시작](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -128,7 +128,7 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-계속 **이벤트** > **구성** 섹션에서 [**resource_type** 이 **페이지**](#resource_type_dmv_actual_row)로 설정된 것을 확인할 수 있습니다. 즉, **resource_type** 값이 **페이지**가 아니면 이벤트 데이터가 이벤트 엔진에서 대상으로 전송되지 않습니다.
+계속 **이벤트** > **구성** 섹션에서 [**resource_type** 이 **페이지**](#resource_type_dmv_actual_row)로 설정된 것을 확인할 수 있습니다. 즉, **resource_type** 값이 **페이지** 가 아니면 이벤트 데이터가 이벤트 엔진에서 대상으로 전송되지 않습니다.
 
 데이터베이스 이름 및 카운터에 대한 추가 조건자 필터가 표시됩니다.
 
@@ -155,7 +155,7 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 
 이벤트 세션 정의가 생성된 방식에 관계없이 SSMS UI에서 세션을 완벽하게 일치하는 TRANSACT-SQL 스크립트로 리버스 엔지니어링할 수 있습니다. 앞의 새 세션 스크린샷을 검사하고 해당 표시 사양을 다음 생성된 T-SQL **CREATE EVENT SESSION** 스크립트의 절과 비교할 수 있습니다.
 
-이벤트 세션을 리버스 엔지니어링하려면 **개체 탐색기** 에서 사용자 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 스크립팅** > **CREATE** > **클립보드**를 선택합니다.
+이벤트 세션을 리버스 엔지니어링하려면 **개체 탐색기** 에서 사용자 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 스크립팅** > **CREATE** > **클립보드** 를 선택합니다.
 
 다음 T-SQL 스크립트는 SSMS로 리버스 엔지니어링하여 생성되었습니다. 그런 다음 공백만 전략적으로 조작하여 스크립트를 수동으로 수정했습니다.
 
@@ -453,7 +453,7 @@ SELECT  --C.1
 ### <a name="c2-count-of-every-object-type"></a>C.2 각 개체 유형 개수
 
 
-이 섹션에서는 이벤트 패키지에 포함된 개체 유형에 대해 설명합니다. *sys.dm\_xe\_objects*에 있는 모든 개체 유형의 전체 목록이 각 유형의 개수와 함께 표시됩니다.
+이 섹션에서는 이벤트 패키지에 포함된 개체 유형에 대해 설명합니다. *sys.dm\_xe\_objects* 에 있는 모든 개체 유형의 전체 목록이 각 유형의 개수와 함께 표시됩니다.
 
 
 ```sql
@@ -621,7 +621,7 @@ SELECT  -- C.4
 ### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 및 이벤트 필드
 
 
-다음 SELECT는 *sys.dm_xe_map_values*라는 까다로운 뷰에 대한 JOIN을 포함합니다.
+다음 SELECT는 *sys.dm_xe_map_values* 라는 까다로운 뷰에 대한 JOIN을 포함합니다.
 
 SELECT의 목적은 이벤트 세션에 대해 선택할 수 있는 다양한 필드를 표시하는 것입니다. 이벤트 필드는 다음 두 가지 방법으로 사용할 수 있습니다.
 
@@ -675,7 +675,7 @@ SELECT  --C.5
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 다음 SELECT는 대상에 대한 모든 매개 변수를 반환합니다. 각 매개 변수에는 필수 여부를 나타내는 태그가 지정되어 있습니다. 매개 변수에 할당한 값은 대상의 동작에 영향을 줍니다.
 
-- WHERE 절 항목: *object_type = 'customizable'* 을 확인합니다.
+- WHERE 절 항목 _object_type = 'customizable'*을 확인합니다.
 - 또한 *o.name =* 에 대한 WHERE 절 값을 편집해야 합니다.
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 이 DMV SELECT는 활성 이벤트 세션의 대상에서 데이터 행을 반환합니다. 데이터는 XML로 캐스팅되어 SSMS에서 표시하기 쉽도록 반환된 셀을 클릭 가능하게 합니다.
 
 - 이벤트 세션이 중지된 경우 이 SELECT는 0개 행을 반환합니다.
-- *s.name =* 에 대한 WHERE 절 값을 편집해야 합니다.
+- _s.name =*에 대한 WHERE 절 값을 편집해야 합니다.
 
 
 ```sql
@@ -792,7 +792,7 @@ SELECT  --C.7
 이 실행의 경우
 
 - *s.name =* 값이 *checkpoint_begin* 이벤트에 대한 이벤트 세션으로 설정되었습니다.
-- 대상은 *ring_buffer*였습니다.
+- 대상은 *ring_buffer* 였습니다.
 
 
 ```XML
@@ -831,7 +831,7 @@ XML-Cast 셀을 클릭하면 다음과 같은 멋진 표시가 나타납니다.
 ### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 디스크 드라이브에서 event_file 데이터를 검색하기 위해 함수에서 SELECT
 
 
-이벤트 세션이 일부 데이터를 수집하고 나중에 중지되었다고 가정합니다. 세션이 event_file 대상을 사용하도록 정의된 경우에도 *sys.fn_xe_target_read_file*함수를 호출하여 데이터를 검색할 수 있습니다.
+이벤트 세션이 일부 데이터를 수집하고 나중에 중지되었다고 가정합니다. 세션이 event_file 대상을 사용하도록 정의된 경우에도 *sys.fn_xe_target_read_file* 함수를 호출하여 데이터를 검색할 수 있습니다.
 
 - 이 SELECT를 실행하기 전에 함수 호출의 매개 변수에 사용자 경로와 파일 이름을 편집해야 합니다.
     - 세션을 다시 시작할 때마다 SQL 시스템이 실제 .XEL 파일 이름에 포함하는 추가 자릿수는 무시하고, 기본 루트 이름과 확장명만 지정합니다.

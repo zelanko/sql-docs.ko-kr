@@ -10,13 +10,13 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2afdc0e62fdd725584c464bda516fc6284d20f01
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631749"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489993"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -28,18 +28,21 @@ ms.locfileid: "94631749"
 
 이 표에서는 PolyBase의 주요 기능과 이를 사용할 수 있는 제품이 나열되어 있습니다.  
 
-|**기능** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**병렬 데이터 웨어하우스** |
+|**기능** |**SQL Server**(2016부터) |**Azure SQL Database** |**Azure Synapse Analytics** |**병렬 데이터 웨어하우스** |
 |---------|---------|---------|---------|---------|
 |다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|예|예|yes|
 |Hadoop에서 데이터 가져오기|yes|예|예|yes|
 |Hadoop으로 데이터 내보내기  |yes|예|예| yes|
 |Azure HDInsight 쿼리, Azure HDInsight에서 가져오기, Azure HDInsight로 내보내기 |예|예|예|예
 |Hadoop으로 쿼리 계산 푸시다운|yes|예|예|yes|  
-|Azure Blob 스토리지에서 데이터 가져오기|yes|예|yes|yes|
+|Azure Blob 스토리지에서 데이터 가져오기|yes|예<sup>*</sup>|yes|yes|
 |Azure Blob 스토리지로 데이터 내보내기|yes|예|yes|yes|  
 |Azure Data Lake Store에서 데이터 가져오기|예|예|예|예|
 |Azure Data Lake Store로 데이터 내보내기|예|예|예|예|
 |Microsoft BI 도구에서 PolyBase 쿼리 실행|yes|예|yes|yes|
+
+<sup>*</sup> Introduced in SQL Server 2017에서 도입되었으며, [Azure Blob Storage의 데이터에 대량 액세스 예제](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.
+
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 연산자가 지원하는 푸시 다운 계산
 
@@ -71,7 +74,7 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 - 트랜잭션이 true인 Hive 테이블을 사용하는 경우 PolyBase는 Hive 테이블의 디렉터리에 있는 데이터에 액세스할 수 없습니다.
 
 <!--SQL Server 2016-->
-::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-2016 "
 
 - [PolyBase는 SQL Server 2016 장애 조치(failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 

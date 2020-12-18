@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257970"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934053"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257970"
 
 아래 링크에서 해당 SQL Server 버전의 Microsoft Change Data Capture Designer and Service for Oracle by Attunity를 다운로드합니다.
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service 기능 팩](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ ms.locfileid: "92257970"
 -   Oracle Database 10g 릴리스 2
 -   Oracle Database 11g 릴리스 1 및 릴리스 2
 -   클래식 설치의 Oracle Database 12c. (다중 테넌트 설치는 지원되지 않습니다.)  
+-   클래식 설치의 Oracle Database 18c. (다중 테넌트 설치는 지원되지 않습니다.) 
+-   클래식 설치의 Oracle Database 19c. (다중 테넌트 설치는 지원되지 않습니다.) 
   
 ### <a name="target-sql-server-database"></a>대상 SQL Server 데이터베이스  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  

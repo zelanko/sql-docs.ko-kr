@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322220"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -28,8 +28,8 @@ ms.locfileid: "90013676"
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 또는 8 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3~7.8 또는 8.0~8.3 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2~SP5 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
@@ -93,7 +93,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
 
 > [!NOTE]
-> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+> **Ubuntu 18.04** 및 **RHEL 8** 은 CU20부터 SQL Server 2017에서 지원됩니다.
 >
 > Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
 >
@@ -114,7 +114,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
 
 > [!NOTE]
-> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+> **Ubuntu 18.04** 및 **RHEL 8** 은 CU20부터 SQL Server 2017에서 지원됩니다.
 >
 > Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
 >
@@ -135,7 +135,7 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
 
 > [!NOTE]
-> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+> **Ubuntu 18.04** 및 **RHEL 8** 은 CU20부터 SQL Server 2017에서 지원됩니다.
 >
 > Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
 >
@@ -584,7 +584,7 @@ sudo systemctl start mssql-server
 
 - 메모리 내 OLTP를 사용하는 Windows의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스는 Linux의 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에서 복원할 수 없습니다. 메모리 내 OLTP를 사용하는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스를 복원하려면 먼저 백업/복원 또는 분리/연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux로 이동하기 전에 Windows의 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]로 데이터베이스를 업그레이드합니다.
 
-- 현재 사용자 권한 **ADMINISTER BULK OPERATIONS**는 Linux에서 지원되지 않습니다.
+- 현재 사용자 권한 **ADMINISTER BULK OPERATIONS** 는 Linux에서 지원되지 않습니다.
 
 #### <a name="networking"></a>네트워킹
 
@@ -609,7 +609,7 @@ sudo systemctl start mssql-server
 #### <a name="network-file-system-nfs"></a>NFS(네트워크 파일 시스템)
 프로덕션에서 **NFS(네트워크 파일 시스템)** 원격 공유를 사용하는 경우 다음과 같은 지원 요구 사항을 확인합니다.
 
-- NFS 버전 **4.2 이상**을 사용합니다. 이전 버전의 NFS는 최신 파일 시스템에서 일반적으로 필요한 기능(예: fallocate, 스파스 파일 만들기)을 지원하지 않습니다.
+- NFS 버전 **4.2 이상** 을 사용합니다. 이전 버전의 NFS는 최신 파일 시스템에서 일반적으로 필요한 기능(예: fallocate, 스파스 파일 만들기)을 지원하지 않습니다.
 - NFS 탑재에 **/var/opt/mssql** 디렉터리만 배치합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 이진 파일 등의 다른 파일은 지원되지 않습니다.
 - NFS 클라이언트가 원격 공유를 탑재할 때 ‘nolock’ 옵션을 사용하는지 확인합니다.
 

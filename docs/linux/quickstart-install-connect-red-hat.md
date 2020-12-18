@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115676"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471674"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>빠른 시작: Red Hat에 SQL Server 설치 및 데이터베이스 만들기
 
@@ -24,13 +24,13 @@ ms.locfileid: "92115676"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 RHEL(Red Hat Enterprise Linux)에 SQL Server 2017 또는 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 RHEL(Red Hat Enterprise Linux)에 SQL Server 2017 또는 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-이 빠른 시작에서는 RHEL(Red Hat Enterprise Linux) 8에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
+이 빠른 시작에서는 RHEL(Red Hat Enterprise Linux) 8에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd** 를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 ::: moniker-end
 
@@ -40,16 +40,16 @@ ms.locfileid: "92115676"
 ## <a name="prerequisites"></a>필수 구성 요소
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-메모리가 **2GB 이상**인 RHEL 7.3~7.8 또는 8.0~8.2 머신이 있어야 합니다.
+메모리가 **2GB 이상** 인 RHEL 7.3~7.8 또는 8.0~8.3 머신이 있어야 합니다.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-메모리가 **2GB 이상**인 RHEL 7.3, 7.4, 7.5, 7.6 또는 8.0 머신이 있어야 합니다.
+메모리가 **2GB 이상** 인 RHEL 7.3~7.8 또는 8.0~8.3 머신이 있어야 합니다.
 
 ::: moniker-end
 
@@ -100,7 +100,7 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo yum install -y mssql-server
    ```
 
-3. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+3. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -118,7 +118,7 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    systemctl status mssql-server
    ```
 
-5. 원격 연결을 허용하려면 RHEL의 방화벽에서 SQL Server 포트를 엽니다. 기본 SQL Server 포트는 TCP 1433입니다. 방화벽에 **FirewallD**를 사용하는 경우 다음 명령을 사용할 수 있습니다.
+5. 원격 연결을 허용하려면 RHEL의 방화벽에서 SQL Server 포트를 엽니다. 기본 SQL Server 포트는 TCP 1433입니다. 방화벽에 **FirewallD** 를 사용하는 경우 다음 명령을 사용할 수 있습니다.
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -129,7 +129,7 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
 
@@ -162,7 +162,7 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo yum install -y mssql-server
    ```
 
-3. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
+3. 패키지 설치가 완료되면 **mssql-conf setup** 을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -177,7 +177,7 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    systemctl status mssql-server
    ```
 
-5. 원격 연결을 허용하려면 RHEL의 방화벽에서 SQL Server 포트를 엽니다. 기본 SQL Server 포트는 TCP 1433입니다. 방화벽에 **FirewallD**를 사용하는 경우 다음 명령을 사용할 수 있습니다.
+5. 원격 연결을 허용하려면 RHEL의 방화벽에서 SQL Server 포트를 엽니다. 기본 SQL Server 포트는 TCP 1433입니다. 방화벽에 **FirewallD** 를 사용하는 경우 다음 명령을 사용할 수 있습니다.
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -198,19 +198,19 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
-1. 이전 버전의 **mssql-tools**가 설치되어 있는 경우 이전 unixODBC 패키지를 제거합니다.
+1. 이전 버전의 **mssql-tools** 가 설치되어 있는 경우 이전 unixODBC 패키지를 제거합니다.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. 다음 명령을 실행하여 unixODBC 개발자 패키지와 함께 **mssql-tools**를 설치합니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server(Linux) 설치](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
+1. 다음 명령을 실행하여 unixODBC 개발자 패키지와 함께 **mssql-tools** 를 설치합니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server(Linux) 설치](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. 편의를 위해 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다. 이렇게 하면 전체 경로를 지정하지 않고 도구를 실행할 수 있습니다. 다음 명령을 실행하여 로그인 세션과 대화형/비로그인 세션에 대한 **PATH**를 수정합니다.
+1. 편의를 위해 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다. 이렇게 하면 전체 경로를 지정하지 않고 도구를 실행할 수 있습니다. 다음 명령을 실행하여 로그인 세션과 대화형/비로그인 세션에 대한 **PATH** 를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

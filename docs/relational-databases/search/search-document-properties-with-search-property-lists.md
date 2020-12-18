@@ -18,18 +18,18 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468634"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 **varbinary**, **varbinary(max)** ( **FILESTREAM**포함) 또는 **image** 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 `속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
+  이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 **varbinary**, **varbinary(max)** ( **FILESTREAM** 포함) 또는 **image** 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 `속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색* 이라고 합니다.  
   
  연결된 [필터](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter)에 따라 특정 문서 유형에서 속성 검색이 가능한지 여부가 결정됩니다. 일부 문서 유형의 경우 연결된 IFilter가 문서 본문의 내용뿐만 아니라 해당 문서 유형에 대해 정의된 속성의 일부 또는 전부를 추출합니다. 전체 텍스트 인덱싱 중 IFilter가 추출한 속성에 대해서만 속성 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 여러 문서 속성을 추출하는 IFilter 중에는 .docx, .xlsx 및 .pptx와 같은 Microsoft Office 문서 유형에 대한 IFilter가 있습니다. 반면에 XML 필터는 속성을 내보내지 않습니다.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "91868966"
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 검색 속성 목록을 만들려는 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장한 다음 검색 속성 목록을 만들려는 데이터베이스를 확장합니다.  
   
-3.  **스토리지**를 확장하고 **검색 속성 목록**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **스토리지** 를 확장하고 **검색 속성 목록** 을 마우스 오른쪽 단추로 클릭합니다.  
   
-4.  **새 검색 속성 목록**을 선택합니다.  
+4.  **새 검색 속성 목록** 을 선택합니다.  
   
 5.  속성 목록 이름을 지정합니다.  
   
@@ -140,7 +140,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Management Studio에서 속성을 검색 속성 목록에 추가하려면**  
   
- **검색 속성 목록 속성** 대화 상자를 사용하여 검색 속성을 추가하고 제거합니다. 개체 탐색기에서 연결된 데이터베이스의 **스토리지** 노드 아래에서 **검색 속성 목록**을 찾을 수 있습니다.  
+ **검색 속성 목록 속성** 대화 상자를 사용하여 검색 속성을 추가하고 제거합니다. 개체 탐색기에서 연결된 데이터베이스의 **스토리지** 노드 아래에서 **검색 속성 목록** 을 찾을 수 있습니다.  
   
 ###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> 전체 텍스트 인덱스에 검색 속성 목록 연결  
  전체 텍스트 인덱스가 검색 속성 목록에 등록된 속성에 대한 속성 검색을 지원하려면 검색 속성 목록을 인덱스와 연결하고 해당 인덱스를 다시 채워야 합니다. 전체 텍스트 인덱스를 다시 채우면 등록된 각 속성의 검색 단어에 대해 속성 관련 인덱스 항목이 만들어집니다.  
@@ -155,7 +155,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록**의 값을 지정합니다.  
+ **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록** 의 값을 지정합니다.  
   
 ##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS를 사용하여 검색 속성 쿼리  
  속성 범위 전체 텍스트 쿼리를 위한 기본 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 구문은 다음과 같습니다.  
@@ -188,19 +188,19 @@ GO
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **스토리지**를 확장합니다.  
+3.  **스토리지** 를 확장합니다.  
   
-4.  **검색 속성 목록**을 확장하여 검색 속성 목록을 표시합니다.  
+4.  **검색 속성 목록** 을 확장하여 검색 속성 목록을 표시합니다.  
   
-5.  속성 목록을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+5.  속성 목록을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.  
   
-6.  ** 속성 목록 편집기** 대화 상자에서 속성 표를 사용하여 검색 속성을 추가하거나 제거합니다.  
+6.  **속성 목록 편집기** 대화 상자에서 속성 표를 사용하여 검색 속성을 추가하거나 제거합니다.  
   
     1.  문서 속성을 제거하려면 속성 왼쪽에 있는 행 머리글을 클릭하고 Del 키를 누릅니다.  
   
-    2.  문서 속성을 추가하려면 **\*** 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭하고 새 속성에 대한 값을 입력합니다.  
+    2.  문서 속성을 추가하려면 * *\** _ 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭하고 새 속성에 대한 값을 입력합니다.  
   
          이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](../../t-sql/statements/create-search-property-list-transact-sql.md)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> 검색 속성 목록 삭제  
  데이터베이스의 속성 목록이 전체 텍스트 인덱스에 연결되어 있는 경우에는 해당 속성 목록을 삭제할 수 없습니다.  
   
- **Transact-SQL을 사용하여 검색 속성 목록을 삭제하려면**  
+ _ *Transact-SQL을 사용하여 검색 속성 목록을 삭제하려면**  
   
  [DROP SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md) 문을 사용합니다.  
   
@@ -217,11 +217,11 @@ GO
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
+2.  **데이터베이스** 를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **스토리지**를 확장하고 **검색 속성 목록** 노드를 확장합니다.  
+3.  **스토리지** 를 확장하고 **검색 속성 목록** 노드를 확장합니다.  
   
-4.  삭제할 속성 목록을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
+4.  삭제할 속성 목록을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 클릭합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
