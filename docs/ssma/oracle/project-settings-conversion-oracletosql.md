@@ -4,18 +4,18 @@ description: 프로젝트 설정 대화 상자의 변환 페이지를 사용 하
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 ms.author: alexiva
-ms.openlocfilehash: 28a2e3ca4ca6e7bab4ba63c18e2df186a8b1736b
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 5c99ab8dec72a621ddb3f312e581907b0e4ba6d4
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036049"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665874"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>프로젝트 설정(변환)(OracleToSQL)
 
@@ -58,7 +58,7 @@ ms.locfileid: "93036049"
 |**확장 속성 생략**|사용 하도록 설정 하면 SSMA는 대상 데이터베이스에서 만든 개체에 확장 속성을 추가 하지 않습니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 아니요|
 |**오류 코드 변환**|사용 하도록 설정 하면 매핑이 발견 될 경우 대상 SQL Server 쪽의 오류 번호가 Oracle 오류 코드로 변환 됩니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/전체 모드:** 예로<br />**낙관적 모드:** 아니요|
 |**형식 참조에 대 한 전체 형식 지정 사용**|사용 하도록 설정 하면 SSMA는 루틴 매개 변수 및 반환 값에 대 한 전체 형식 사양 (배율 및 전체 자릿수 포함)을 고려 합니다. Oracle에서는 루틴 매개 변수에 대 한 데이터 형식 인수를 허용 하지 않지만 및 특성을 사용 하는 경우와 같이 암시적으로 파생 될 수 있는 경우가 있습니다 `%TYPE` `%ROWTYPE` . 이러한 경우 SSMA는 SQL Server로 변환할 때 전체 형식 사양 (전체 자릿수 및 소수 자릿수 포함)을 사용할 수 있습니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적 모드:** 예로<br />**전체 모드:** 아니요|
-|**문자열 연결에 ISNULL 사용**|문자열 연결이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 포함 하는 경우 Oracle 및는 서로 다른 결과를 반환 `NULL` 합니다. Oracle은 `NULL` 빈 문자 집합과 같은 값을 처리 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 `NULL`를 반환하는 경우<br /><br />**예** 를 선택 하는 경우 Ssma는 Oracle 연결 문자 (&#124;&#124;)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자 (+)로 바꿉니다. 또한 SSMA는 값에 대 한 연결의 양쪽에 있는 식을 확인 `NULL` 합니다.<br /><br />**아니요** 를 선택 하면 ssma는 연결 문자를 대체 하지만 값은 확인 하지 않습니다 `NULL` .<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|
+|**문자열 연결에 ISNULL 사용**|문자열 연결이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 포함 하는 경우 Oracle 및는 서로 다른 결과를 반환 `NULL` 합니다. Oracle은 `NULL` 빈 문자 집합과 같은 값을 처리 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `NULL`을 반환합니다.<br /><br />**예** 를 선택 하는 경우 Ssma는 Oracle 연결 문자 (&#124;&#124;)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자 (+)로 바꿉니다. 또한 SSMA는 값에 대 한 연결의 양쪽에 있는 식을 확인 `NULL` 합니다.<br /><br />**아니요** 를 선택 하면 ssma는 연결 문자를 대체 하지만 값은 확인 하지 않습니다 `NULL` .<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|
 
 ## <a name="objects-conversion"></a>개체 변환
 
@@ -91,10 +91,11 @@ ms.locfileid: "93036049"
 |**ROWID 열 생성**|SSMA가에 테이블 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 만들 때 ROWID 열을 만들 수 있습니다. 데이터가 마이그레이션되면 각 행은 `UNIQUEIDENTIFIER` 함수에 의해 생성 된 새 값을 가져옵니다 `newid()` .<br /><br />**예** 를 선택 하면 `ROWID` 열이 모든 테이블에 생성 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 삽입할 때 guid를 생성 합니다. SSMA 테스터를 사용할 계획인 경우 항상 **예** 를 선택 합니다.<br /><br />**아니요** 를 선택 하면 ROWID 열이 테이블에 추가 되지 않습니다.<br /><br />트리거가 있는 테이블에 **대해 ROWID 열 추가** `ROWID` 는 트리거가 포함 된 테이블에 대해 추가 합니다.<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적 모드:** 트리거가 있는 테이블에 대해 ROWID 열 추가<br /><br />**전체 모드:** 예로|
 |**ROWID 열에 고유 인덱스 생성**|SSMA가 생성 된 열에 고유 인덱스 열을 생성할지 여부를 지정 `ROWID` 합니다. 옵션을 "예"로 설정 하면 고유 인덱스가 생성 되 고 "아니요"로 설정 된 경우 열에 고유 인덱스가 생성 되지 않습니다 `ROWID` .<br /><br />**모드** 상자에서 변환 모드를 선택 하면 ssma가 다음 설정을 적용 합니다.<br /><br />**기본/최적/전체 모드:** 예로|
 
-## <a name="sequence-conversion"></a>시퀀스 변환
+## <a name="sequence-and-identity-conversion"></a>시퀀스 및 Id 변환
 
 |용어|정의|
 |-|-|
+|**Id를로 변환**|Oracle은 id 열에 대 한 여러 구성 옵션을 제공 합니다. 이러한 옵션 중 일부는 SQL Server의 id 기능에서 지원 되지 않습니다.<br /><br />이러한 옵션을 유지 하는 방법은 id를 시퀀스로 변환 하는 것입니다.<br /><br />**시퀀스** 를 선택 하면 Oracle id 열이 더 이상 SQL id 열로 변환 되지 않습니다. 대신 시퀀스를 만들고 사용 하 여 열에 대 한 기본값을 생성 합니다.<br /><br />**Id** 를 선택 하면 Oracle identity 열이 SQL identity 열로 변환 됩니다. 지원 되지 않는 옵션은 변환 되지 않습니다. <br /><br />**최적 맞춤** 을 선택 하는 경우 Ssma는 Oracle id 열의 구성에 따라 가장 적합 한 변환 방법 (Id 또는 시퀀스)을 결정 합니다.|
 |**시퀀스 생성기 변환**|Oracle에서는 시퀀스를 사용 하 여 고유 식별자를 생성할 수 있습니다.<br /><br />SSMA는 시퀀스를 다음으로 변환할 수 있습니다.<br /><br />SQL Server 시퀀스 생성기를 사용 합니다.<br /><br />SSMA 시퀀스 생성기 사용.<br /><br />열 id 사용.<br /><br />기본 옵션은 SQL Server 시퀀스 생성기를 사용 하는 것입니다. 그러나 SQL Server는 현재 시퀀스 값 (예: Oracle 시퀀스 메서드) 가져오기를 지원 하지 않습니다 `CURRVAL` . Oracle 시퀀스 방법 마이그레이션에 대 한 지침은 SSMA 팀 블로그 사이트를 참조 하세요 `CURRVAL` .<br /><br />또한 SSMA는 Oracle 시퀀스를 SSMA 시퀀스 에뮬레이터로 변환 하는 옵션을 제공 합니다. 2012 이전의 SQL Server로 변환할 경우의 기본 옵션입니다.<br /><br />마지막으로 테이블의 열에 할당 된 시퀀스를 변환 하 여 id 값을 SQL Server 수도 있습니다. Oracle **테이블** 탭의 시퀀스와 id 열 간의 매핑을 지정 해야 합니다.|
 |**트리거 외부에서 통화를 변환 합니다.**|**변환 시퀀스 생성기** 가 **열 id를 사용** 하도록 설정 된 경우에만 표시 됩니다. Oracle 시퀀스는 테이블과 별도의 개체 이므로 시퀀스를 사용 하는 많은 테이블은 트리거를 사용 하 여 새 시퀀스 값을 생성 하 고 삽입 합니다. SSMA는 이러한 문을 주석 처리 하거나 주석 처리 시 오류가 생성 될 때 오류로 표시 합니다.<br /><br />**예** 를 선택 하면 ssma는 변환 된 시퀀스의 외부 트리거에 대 한 모든 참조를 `CURRVAL` 경고와 함께 표시 합니다.<br /><br />**아니요** 를 선택 하면 ssma는 변환 된 시퀀스에서 외부 트리거에 대 한 모든 참조를 `CURRVAL` 오류로 표시 합니다.|
 

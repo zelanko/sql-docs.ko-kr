@@ -4,22 +4,32 @@ description: 각 릴리스에 대 한 MySQL (MySQLToSQL)에 대 한 변경 SQL S
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036039"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665834"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+MySQL 용 SSMA의 v 8.16 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 계산 열에 대 한 지원 추가
+* `INSERT`Unique 제약 조건 및 기본 키가 있는 테이블에 대해 문을 변환할 때 발생 하는 문제 해결
+* `ANSI_QUOTES`및 서버 모드로 파서 업데이트 `NO_BACKSLASH_ESCAPES`
+* 레거시 파서의 지원 제거
+* 데이터베이스에서 새로 고치지 않는 개체의 문제 해결
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 

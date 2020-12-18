@@ -4,22 +4,32 @@ description: 각 릴리스에 대 한 DB2 (DB2ToSQL)에 대 한 변경 SQL Serve
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: b35e5a01f28feb8b5dd42f592cf2c310d6c410f3
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 37d0898d242073c9bc842d0d3cca645acc02a851
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036029"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665824"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
 이 문서에서는 각 릴리스의 DB2 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+D b 2 용 SSMA의 v 8.16 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 특수 문자를 사용 하 여 열 별칭 변환 수정
+* 절에 대 한 변환 수정 `SELECTIVITY`
+* 절 변환 개선 `WITH ROW MOVEMENT`
+* 레거시 파서의 지원 제거
+* 데이터베이스에서 새로 고치지 않는 개체의 문제 해결
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 

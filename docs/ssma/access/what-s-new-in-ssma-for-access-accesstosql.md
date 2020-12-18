@@ -4,22 +4,30 @@ description: 각 릴리스에 대 한 AccessToSQL (액세스)에 대 한 변경 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 1482ec079e0410fd7713ac183f6181c2a8793a11
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036066"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665867"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
 이 문서에서는 각 릴리스의 액세스 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+Access 용 SSMA의 v 8.16 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* HTML 변환 보고서에서 쿼리에 대 한 SQL 텍스트 표시
+* 레거시 파서의 지원 제거
+* 데이터베이스에서 새로 고치지 않는 개체의 문제 해결
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -321,7 +329,7 @@ Access 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이
 * 단일 데이터베이스를로 마이그레이션하는 과정을 안내 하는 새 데이터베이스 마이그레이션 마법사가 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
 * Access 데이터베이스를 변환 하 고, 변환 된 개체를에 로드 하 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 모두 한 번에 마이그레이션하는 새 변환, 로드 및 마이그레이션 명령을 추가 했습니다.
 * 향상 된 쿼리 마이그레이션. 이제 쿼리 마이그레이션이 더 많은 SELECT 쿼리를 뷰로 변환 합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)을 참조 하세요.
-* 테이블 탭의 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Table** .
+* 테이블 탭의 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]  .
 * 새 전역 설정이 추가 됨:
   * 편집기 창에 줄 번호를 표시 하도록 선택할 수 있습니다.
   * 중복 된 개체를 바꿀지 묻는 메시지를 표시 하도록 SSMA를 구성 하거나 스키마를 변환 하는 동안 중복 개체를 항상 또는 절대 바꾸지 않도록 구성할 수 있습니다.

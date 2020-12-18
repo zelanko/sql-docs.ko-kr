@@ -4,22 +4,30 @@ description: 각 릴리스에 대 한 Oracle (OracleToSQL)에 대 한 변경 SQL
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036019"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665844"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+Oracle 용 SSMA의 v 8.16 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* Id 열에 대 한 지원 추가
+* 레거시 파서의 지원 제거
+* 데이터베이스에서 새로 고치지 않는 개체의 문제 해결
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -243,7 +251,7 @@ Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 
 * Oracle 용 SSMA는 품질 및 변환 메트릭을 개선 하는 대상 수정 기능으로 향상 되었습니다.
 * 인기 있는 수요에 따라 Oracle 용 SSMA의 32 비트 버전이 다시 사용 됩니다. 이전 구현에 비해 (v 7.4 이전)에는 두 개의 설치 관리자 패키지가 있지만 함께 설치할 수는 없습니다. 따라서 사용 중인 연결 구성 요소에 따라 가장 적합 한 버전을 선택 해야 합니다. 가능 하면 항상 64 비트 버전을 사용 하는 것이 좋습니다.
 * SQL Server 2017 지원은 이제 Linux에서 지원 되는 Oracle 확장 팩 (새 원격 설치 옵션)을 사용 하 여 공식적으로 지원 됩니다. 테스터 및 서버 쪽 데이터 마이그레이션 기능이 지원 되지 않으므로 Linux에 설치 된 경우 확장 팩 기능이 제한 됩니다.
-* Oracle 용 ssma를 사용 하면 구체화 된 뷰를 일반 테이블로 마이그레이션할 수 있습니다 ( **프로젝트 설정** 동기화의 설정을 통해 구성 가능,  ->  **Synchronization**  ->  **구체화 된 뷰에 대 한 지원 테이블 검색** ).
+* Oracle 용 ssma를 사용 하면 구체화 된 뷰를 일반 테이블로 마이그레이션할 수 있습니다 ( **프로젝트 설정** 동기화의 설정을 통해 구성 가능,  ->    ->  **구체화 된 뷰에 대 한 지원 테이블 검색**).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 
